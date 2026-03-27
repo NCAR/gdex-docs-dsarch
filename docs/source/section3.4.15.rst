@@ -57,17 +57,17 @@ permanently
    :widths: auto
    :header-rows: 0
 
-   * - \-(:ref:`DX|DeleteXML <DX>`)
+   * - ``-``(:ref:`DX|DeleteXML <DX>`)
      - calls **dcm** to delete content metadata for the Web files being deleted
-   * - \-(:ref:`EM|EMailNotice <EM>`)
+   * - ``-``(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - \-(:ref:`MD|MyDataset <MD>`)
+   * - ``-``(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - \-(:ref:`NE|NoEmail <NE>`)
+   * - ``-``(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - \-(:ref:`NT|NoTrim <NT>`)
+   * - ``-``(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - \-(:ref:`RD|RemoveDir <RD>`)
+   * - ``-``(:ref:`RD|RemoveDir <RD>`)
      - removes empty Saved or Web directories after deletion
 
   Provide the file names to delete via -:ref:`SF <SF>`, -:ref:`WF <WF>`, -:ref:`HF <HF>`, or -:ref:`QF <QF>`. Use -:ref:`DD <DD>`

@@ -42,27 +42,27 @@ Action Option -**AH** (-**ArchiveHelpFile**) (Aliases: -**ArchiveHelp**, -**Arch
    :widths: auto
    :header-rows: 0
 
-   * - \-(:ref:`BG|BackGround <BG>`)
+   * - ``-``(:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - \-(:ref:`CL|CleanLocal <CL>`)
+   * - ``-``(:ref:`CL|CleanLocal <CL>`)
      - removes local files after all are successfully archived
-   * - \-(:ref:`EM|EMailNotice <EM>`)
+   * - ``-``(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - \-(:ref:`GZ|GMTZone <GZ>`)
+   * - ``-``(:ref:`GZ|GMTZone <GZ>`)
      - uses GMT rather than local time for archiving timestamps
-   * - \-(:ref:`KP|KeepLocalPath <KP>`)
+   * - ``-``(:ref:`KP|KeepLocalPath <KP>`)
      - uses local file paths as relative paths on the GDEX Server
-   * - \-(:ref:`MD|MyDataset <MD>`)
+   * - ``-``(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - \-(:ref:`NE|NoEmail <NE>`)
+   * - ``-``(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - \-(:ref:`NT|NoTrim <NT>`)
+   * - ``-``(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - \-(:ref:`OE|OverrideExist <OE>`)
+   * - ``-``(:ref:`OE|OverrideExist <OE>`)
      - overwrites existing Help files
-   * - \-(:ref:`RO|ResetOrder <RO>`)
+   * - ``-``(:ref:`RO|ResetOrder <RO>`)
      - resets display order indices to match the order files are given per -:ref:`HF <HF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
-   * - \-(:ref:`SC|SetChecksum <SC>`)
+   * - ``-``(:ref:`SC|SetChecksum <SC>`)
      - computes MD5 checksums for Help files and saves them to GDEXDB
 
   Local file names are provided via -:ref:`LF <LF>` (-LocalFile). On the command line,

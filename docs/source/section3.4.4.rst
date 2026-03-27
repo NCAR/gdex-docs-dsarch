@@ -37,11 +37,11 @@ retrieves Web file records from GDEXDB
    :widths: auto
    :header-rows: 0
 
-   * - \-(:ref:`FO|FormatOutput <FO>`)
+   * - ``-``(:ref:`FO|FormatOutput <FO>`)
      - formats each column to a uniform fixed width
-   * - \-(:ref:`RG|RecursiveGroup <RG>`)
+   * - ``-``(:ref:`RG|RecursiveGroup <RG>`)
      - gathers files in subgroups recursively for a given group index
-   * - \-(:ref:`RN|RelativeName <RN>`)
+   * - ``-``(:ref:`RN|RelativeName <RN>`)
      - returns file names with paths relative to the Web path of the dataset or group
 
   Use -:ref:`FN <FN>` (-FieldNames) to specify which Web file fields to retrieve. Defaults
@@ -57,64 +57,64 @@ retrieves Web file records from GDEXDB
      - :ref:`Info Options <section5>`
      - Descriptions
    * - F
-     - \-(:ref:`WF|WebFile <WF>`)
+     - ``-``(:ref:`WF|WebFile <WF>`)
      - Web file names with relative paths
    * - T
-     - \-(:ref:`WT|WebFileType <WT>`)
+     - ``-``(:ref:`WT|WebFileType <WT>`)
      - Web file archiving types
    * - C
-     - \-(:ref:`MC|MD5Checksum <MC>`)
+     - ``-``(:ref:`MC|MD5Checksum <MC>`)
      - Web file MD5 Checksum
    * - I
-     - \-(:ref:`GI|GroupIndex <GI>`)
+     - ``-``(:ref:`GI|GroupIndex <GI>`)
      - group indices for Web files
    * - X
-     - \-(:ref:`TG|TopGroupIndex <TG>`)
+     - ``-``(:ref:`TG|TopGroupIndex <TG>`)
      - top group indices for Web files
    * - V
-     - \-(:ref:`VI|VersionIndex <VI>`)
+     - ``-``(:ref:`VI|VersionIndex <VI>`)
      - Version control index
    * - M
-     - \-(:ref:`AF|ArchiveFormat <AF>`)
+     - ``-``(:ref:`AF|ArchiveFormat <AF>`)
      - file archive formats
    * - N
-     - \-(:ref:`DF|DataFormat <DF>`)
+     - ``-``(:ref:`DF|DataFormat <DF>`)
      - data content formats
    * - O
-     - \-(:ref:`DO|DisplayOrder <DO>`)
+     - ``-``(:ref:`DO|DisplayOrder <DO>`)
      - display order indices
    * - B
-     - \-(:ref:`QF|QuasarFile <QF>`)
+     - ``-``(:ref:`QF|QuasarFile <QF>`)
      - Quasar backup file names
    * - Q
-     - \-(:ref:`QT|QuasarType <QT>`)
+     - ``-``(:ref:`QT|QuasarType <QT>`)
      - Quasar backup file types
    * - L
-     - \-(:ref:`LC|Location <LC>`)
+     - ``-``(:ref:`LC|Location <LC>`)
      - Web file storage location flag
    * - H
-     - \-(:ref:`FS|FileStatus <FS>`)
+     - ``-``(:ref:`FS|FileStatus <FS>`)
      - Web file archiving status
    * - P
-     - \-(:ref:`FF|FileFlag <FF>`)
+     - ``-``(:ref:`FF|FileFlag <FF>`)
      - File type flag, File or Path
    * - S
-     - \-(:ref:`SZ|Size <SZ>`)
+     - ``-``(:ref:`SZ|Size <SZ>`)
      - Web file sizes
    * - J
-     - \-(:ref:`FD|FileDate <FD>`)
+     - ``-``(:ref:`FD|FileDate <FD>`)
      - date data last modified on
    * - K
-     - \-(:ref:`FT|FileTime <FT>`)
+     - ``-``(:ref:`FT|FileTime <FT>`)
      - time data last modified at
    * - A
-     - \-(:ref:`ML|MetaLink <ML>`)
+     - ``-``(:ref:`ML|MetaLink <ML>`)
      - a link to content meta at the file level
    * - E
-     - \-(:ref:`TL|ThreddLink <TL>`)
+     - ``-``(:ref:`TL|ThreddLink <TL>`)
      - a link to Thredd Catalog page at the file level
    * - D
-     - \-(:ref:`DE|Description <DE>`)
+     - ``-``(:ref:`DE|Description <DE>`)
      - Web file descriptions
 
   A dataset number is required unless Web file names are provided. If file

@@ -1,0 +1,89 @@
+Parsing info for Document 'dsarch'
+41 Sections gathered for 'dsarch'
+/Users/zji/git/gdex-docs-dsarch/docs/source: in Directory
+Write rst document 'dsarch' under /Users/zji/git/gdex-docs-dsarch/docs/source
+index.rst created from index.rst.temp
+section1.rst created from section.rst.temp
+2 0   dsarch [[-(DS|Dataset)] dNNNNNN] [Action Option] [Mode Options] [Info Options]
+2 0   dsarch [Option] -(h|help) [Option]
+section2.rst created from section.rst.temp
+section3.rst created from section.rst.temp
+section3.1.rst created from section.rst.temp
+3.1.1 3   dsarch [-(DS|Dataset)] dNNNNNN [-](SD|SetDataset) [Mode Options]
+section3.1.1.rst created from section.rst.temp
+3.1.2 3   dsarch [-(DS|Dataset)] dNNNNNN [-](GD|GetDataset) [Mode Options]
+3.1.2 2   dsarch d260001 GD -FN ALL -PE -OF d260001.ds
+section3.1.2.rst created from section.rst.temp
+section3.2.rst created from section.rst.temp
+3.2.1 3   dsarch [-(DS|Dataset)] dNNNNNN [-](SV|SetVersion) [Mode Options]
+3.2.1 2   dsarch d999009 SV -NV -DN DOINumber
+section3.2.1.rst created from section.rst.temp
+3.2.2 3   dsarch [-(DS|Dataset)] dNNNNNN [-](GV|GetVersion) [Mode Option]
+3.2.2 2   dsarch d132000 GV -FN ALL -OF d132000.vrsn
+section3.2.2.rst created from section.rst.temp
+3.2.3 3   dsarch [-(DS|Dataset)] dNNNNNN [-](TV|TerminateVersion) [Mode Options]
+3.2.3 2   dsarch d999009 TV -VI 5
+section3.2.3.rst created from section.rst.temp
+section3.3.rst created from section.rst.temp
+3.3.1 3   dsarch [-(DS|Dataset)] dNNNNNN [-](SG|SetGroup) [Mode Options]
+3.3.1 2   dsarch SG -IF d744004.grp
+section3.3.1.rst created from section.rst.temp
+3.3.2 3   dsarch [-(DS|Dataset)] dNNNNNN [-](GG|GetGroup)
+section3.3.2.rst created from section.rst.temp
+3.3.3 3   dsarch [-(DS|Dataset)] dNNNNNN [-](DG|DeleteGroup) [Mode Options]
+3.3.3 2   dsarch d744004 DG -GI 2 3
+section3.3.3.rst created from section.rst.temp
+3.3.4 3   dsarch [-(DS|dataset)] dNNNNNN [-](CG|ChangeGroup) [Mode Options]
+3.3.4 2   dsarch d744004 CG -OG 1 2 -GI 2 3
+section3.3.4.rst created from section.rst.temp
+section3.4.rst created from section.rst.temp
+3.4.1 3   dsarch [-(DS|Dataset)] dNNNNNN [-](SS|SetSavedFile) [Mode Options]
+section3.4.1.rst created from section.rst.temp
+3.4.2 3   dsarch [-(DS|Dataset)] dNNNNNN -(GS|GetSavedFile) [Mode Options]
+section3.4.2.rst created from section.rst.temp
+3.4.3 3   dsarch [-(DS|Dataset)] dNNNNNN -(SW|SetWebFile) [Mode Options]
+section3.4.3.rst created from section.rst.temp
+3.4.4 3   dsarch [-(DS|Dataset)] dNNNNNN -(GW|GetWebFile) [Mode Options]
+section3.4.4.rst created from section.rst.temp
+3.4.5 3   dsarch [-(DS|Dataset)] dNNNNNN -(SH|SetHelpFile) [Mode Options]
+section3.4.5.rst created from section.rst.temp
+3.4.6 3   dsarch [-(DS|Dataset)] dNNNNNN -(GH|GetHelpFile) [Mode Options]
+section3.4.6.rst created from section.rst.temp
+3.4.7 3   dsarch [-(DS|Dataset)] dNNNNNN [-](SQ|SetQuasarFile) [Mode Options]
+section3.4.7.rst created from section.rst.temp
+3.4.8 3   dsarch [-(DS|Dataset)] dNNNNNN -(GQ|GetQuasarFile) [Mode Options]
+section3.4.8.rst created from section.rst.temp
+3.4.9 3   dsarch [-(DS|dataset)] dNNNNNN -(AS|ArchiveSavedFile) [Mode Options]
+section3.4.9.rst created from section.rst.temp
+3.4.10 3   dsarch [-(DS|dataset)] dNNNNNN -(AW|ArchiveWebFile) [Mode Options]
+section3.4.10.rst created from section.rst.temp
+3.4.11 3   dsarch [-(DS|dataset)] dNNNNNN -(AH|ArchiveHelpFile) [Mode Options]
+section3.4.11.rst created from section.rst.temp
+3.4.12 3   dsarch [-(DS|dataset)] dNNNNNN -(AQ|ArchiveQuasarFile) [Mode Options]
+section3.4.12.rst created from section.rst.temp
+3.4.13 3   dsarch [-(DS|dataset)] dNNNNNN -(RQ|RestoreQuasarFile) [Mode Options]
+section3.4.13.rst created from section.rst.temp
+3.4.14 3   dsarch [-(DS|Dataset)] dNNNNNN -(MV|MoveFile) [Mode Options]
+3.4.14 3   dsarch [-(DS|Dataset)] dNNNNNN -(MV|MoveFile) [Mode Options]
+3.4.14 3   dsarch [-(DS|Dataset)] dNNNNNN -(MV|MoveFile) [Mode Options]
+3.4.14 3   dsarch [-(DS|Dataset)] dNNNNNN -(MV|MoveFile) [Mode Options]
+3.4.14 3   dsarch [-(DS|Dataset)] dNNNNNN -(MV|MoveFile) [-TS|-TW] [Mode Options]
+section3.4.14.rst created from section.rst.temp
+3.4.15 3   dsarch [-(DS|Dataset)] dNNNNNN -(DL|Delete) [Mode Options]
+3.4.15 3   dsarch [-(DS|Dataset)] dNNNNNN -(DL|Delete) [Mode Options]
+3.4.15 3   dsarch [-(DS|Dataset)] dNNNNNN -(DL|Delete) [Mode Options]
+3.4.15 3   dsarch [-(DS|Dataset)] dNNNNNN -(DL|Delete) [Mode Options]
+section3.4.15.rst created from section.rst.temp
+section3.5.rst created from section.rst.temp
+3.5.1 3   dsarch [-(DS|dataset)] dNNNNNN -(GA|GetAll)
+section3.5.1.rst created from section.rst.temp
+section3.5.2.rst created from section.rst.temp
+section3.6.rst created from section.rst.temp
+3.6.1 3   dsarch [-(DS|Dataset)] dNNNNNN -(UW|UpdateWeb)
+section3.6.1.rst created from section.rst.temp
+3.6.2 3   dsarch [-(DS|Dataset)] dNNNNNN -(UC|UpdateCache)
+section3.6.2.rst created from section.rst.temp
+section4.rst created from section.rst.temp
+section5.rst created from section.rst.temp
+section5.1.rst created from section.rst.temp
+section5.2.rst created from section.rst.temp
