@@ -47,6 +47,9 @@ to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
    * - Header Col 1
      - Header Col 2
      - Header Col 3
+   * - T
+     - :ref:`-(TI|Title) <TI>`
+     - dataset title
    * - Row 1, Cell 1
      - Row 1, Cell 2
      - Row 1, Cell 3
