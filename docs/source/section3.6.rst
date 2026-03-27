@@ -9,6 +9,7 @@
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Regenerate Dataset Webpages <section3.6.1>`
      - rebuild the main webpage and all file lists for the dataset

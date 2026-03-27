@@ -10,6 +10,7 @@
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Set Saved File Information <section3.4.1>`
      - create or modify Saved file records in GDEXDB

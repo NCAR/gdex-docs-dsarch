@@ -9,6 +9,7 @@
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Set Version Control <section3.2.1>`
      - create or update a DOI/Version control record

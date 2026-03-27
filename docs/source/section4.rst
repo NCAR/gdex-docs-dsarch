@@ -11,7 +11,7 @@ take no values — simply include the flag to activate the behavior.
 .. _BG:
 
 Mode Option -**BG** (-**BackGround**) (Alias: -**b**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 runs the action as a background process,
   suppressing all screen output and error messages.
@@ -20,7 +20,7 @@ runs the action as a background process,
 .. _CL:
 
 Mode Option -**CL** (-**CleanLocal**) (Aliases: -**CleanLocFile**, -**CleanLocalFile**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 deletes local
   source files once all have been successfully archived by -:ref:`AS <AS>` or -:ref:`AW <AW>`. Pair
@@ -30,7 +30,7 @@ deletes local
 .. _DX:
 
 Mode Option -**DX** (-**DeleteXML**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 calls **dcm** to delete content metadata for the specified
   Web files. With -:ref:`SW <SW>` (-SetWebFile), it explicitly removes metadata; with -:ref:`DL <DL>`
@@ -40,7 +40,7 @@ calls **dcm** to delete content metadata for the specified
 .. _EM:
 
 Mode Option -**EM** (-**EmailNotice**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 sends the executing specialist an email when an action
   finishes or fails. Applies to -:ref:`AS <AS>`, -:ref:`AW <AW>`, -:ref:`AH <AH>`, -:ref:`AQ <AQ>`, -:ref:`SS <SS>`, -:ref:`SW <SW>`, -:ref:`SH <SH>`, -:ref:`SQ <SQ>`, -:ref:`RQ <RQ>`,
@@ -54,7 +54,7 @@ sends the executing specialist an email when an action
 .. _FO:
 
 Mode Option -**FO** (-**FormatOutput**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 aligns GET action output into fixed-width columns,
   making results easier to read at a glance.
@@ -63,7 +63,7 @@ aligns GET action output into fixed-width columns,
 .. _GF:
 
 Mode Option -**GF** (-**GrowingFile**) (Alias: -**GrowingDataFile**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 lifts the DOI/Version control lock on Web files so
   that -:ref:`AW <AW>` (-ArchiveWebFile) can overwrite them. Use this when a file is
@@ -74,7 +74,7 @@ lifts the DOI/Version control lock on Web files so
 .. _GX:
 
 Mode Option -**GX** (-**GatherXML**) (Alias: -**Grid2XML**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 calls **gatherxml** to extract and
   record content metadata for archived Web files. For -:ref:`MV <MV>` (-MoveFile), metadata
@@ -85,7 +85,7 @@ calls **gatherxml** to extract and
 .. _GZ:
 
 Mode Option -**GZ** (-**GMTZone**) (Aliases: -**GMT**, -**GreenwichZone**, -**UTC**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 records archiving
   timestamps in GMT instead of local time.
@@ -94,7 +94,7 @@ records archiving
 .. _KM:
 
 Mode Option -**KM** (-**KeepMetadata**) (Alias: -**KeepMeta**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 preserves the content metadata
   record when a Web file is converted to a Saved file via -:ref:`MV <MV>` with -:ref:`TS <TS>`.
@@ -103,7 +103,7 @@ preserves the content metadata
 .. _KP:
 
 Mode Option -**KP** (-**KeepPath**) (Alias: -**KeepLocalPath**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 preserves local file paths as-is
   on the GDEX Server during -:ref:`AS <AS>`, -:ref:`AW <AW>`, and -:ref:`AH <AH>`. When -:ref:`KP <KP>` is active, -:ref:`SP <SP>` and -:ref:`WP <WP>`
@@ -114,7 +114,7 @@ preserves local file paths as-is
 .. _MD:
 
 Mode Option -**MD** (-**MyDataset**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 bypasses the dataset ownership check, allowing any
   specialist to modify records in GDEXDB for any dataset.
@@ -123,7 +123,7 @@ bypasses the dataset ownership check, allowing any
 .. _NE:
 
 Mode Option -**NE** (-**NoEmail**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 suppresses the automatic failure email notification.
 
@@ -131,7 +131,7 @@ suppresses the automatic failure email notification.
 .. _NT:
 
 Mode Option -**NT** (-**NoTrim**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 skips stripping leading/trailing spaces and inline comments
   from input values. Use this to speed up processing of large input files.
@@ -140,7 +140,7 @@ skips stripping leading/trailing spaces and inline comments
 .. _NV:
 
 Mode Option -**NV** (-**NewVersion**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 required to create a new DOI/Version control record
   when using -:ref:`SV <SV>` (-SetVersion).
@@ -149,7 +149,7 @@ required to create a new DOI/Version control record
 .. _OE:
 
 Mode Option -**OE** (-**OverrideExist**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 allows an existing file on the GDEX Server to be
   overwritten at the target path. Without this flag, archiving fails if the
@@ -159,7 +159,7 @@ allows an existing file on the GDEX Server to be
 .. _PE:
 
 Mode Option -**PE** (-**ShowPeriod**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 adds data period information (begin/end dates and times)
   for the dataset and any specified groups to the output of -:ref:`GD <GD>` (-GetDataset).
@@ -168,7 +168,7 @@ adds data period information (begin/end dates and times)
 .. _RA:
 
 Mode Option -**RA** (-**RetryArchive**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 deprecated; has no effect and may be removed in a
   future version.
@@ -177,7 +177,7 @@ deprecated; has no effect and may be removed in a
 .. _RD:
 
 Mode Option -**RD** (-**RemoveDir**) (Aliases: -**RemoveDirectory**, -**RemoveEmptyDir**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 removes any
   directories that become empty after file changes from -:ref:`DL <DL>`, -:ref:`SS <SS>`, or -:ref:`SW <SW>`.
@@ -190,7 +190,7 @@ removes any
 .. _RG:
 
 Mode Option -**RG** (-**RecursiveGroup**) (Alias: -**RepeatGroup**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 descends into subgroups
   recursively when used with -:ref:`GG <GG>`, -:ref:`GS <GS>`, or -:ref:`GW <GW>`, gathering all nested records.
@@ -200,7 +200,7 @@ descends into subgroups
 .. _RN:
 
 Mode Option -**RN** (-**RelativeName**) (Aliases: -**RelativePathName**, -**RelativeFileName**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 returns file names as relative paths (relative to the
   dataset or group's Saved or Web path) in the output of -:ref:`GS <GS>` and -:ref:`GW <GW>`.
@@ -209,7 +209,7 @@ returns file names as relative paths (relative to the
 .. _RO:
 
 Mode Option -**RO** (-**ResetOrder**) (Alias: -**Reorder**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 sets display order indices to match
   the order files are listed when passed to -:ref:`SS <SS>`, -:ref:`SW <SW>`, -:ref:`SH <SH>`, or -:ref:`SQ <SQ>`. To set
@@ -222,7 +222,7 @@ sets display order indices to match
 .. _RS:
 
 Mode Option -**RS** (-**GXRSOptions**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 passes the R and S flags to **gatherxml** to speed up
   metadata evaluation. Use alongside -:ref:`GX <GX>` (-GatherXML).
@@ -231,7 +231,7 @@ passes the R and S flags to **gatherxml** to speed up
 .. _RT:
 
 Mode Option -**RT** (-**ResetTIndex**) (Alias: -**ResetTopGroup**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 recalculates and resets the
   top-level group index stored in Saved or Web file records for the dataset
@@ -241,7 +241,7 @@ recalculates and resets the
 .. _SC:
 
 Mode Option -**SC** (-**SetChecksum**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 calculates MD5 checksums for data files on the GDEX
   Server and stores them in GDEXDB for integrity verification.
@@ -250,7 +250,7 @@ calculates MD5 checksums for data files on the GDEX
 .. _TO:
 
 Mode Option -**TO** (-**TarOnly**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 builds the Quasar tar file locally without uploading it
   to the Globus Quasar Server. Useful for testing. Used with -:ref:`AQ <AQ>`.
@@ -259,7 +259,7 @@ builds the Quasar tar file locally without uploading it
 .. _TS:
 
 Mode Option -**TS** (-**ToSaved**) (Aliases: -**ToSavedFile**, -**MovedToSaved**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 used with -:ref:`MV <MV>` (-MoveFile)
   to move Web files to Saved files.
@@ -268,7 +268,7 @@ used with -:ref:`MV <MV>` (-MoveFile)
 .. _TT:
 
 Mode Option -**TT** (-**TotalSummary**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 appends file count and size totals to the output
   of -:ref:`GS <GS>` (-GetSavedFile) and -:ref:`GW <GW>` (-GetWebFile).
@@ -277,7 +277,7 @@ appends file count and size totals to the output
 .. _TW:
 
 Mode Option -**TW** (-**ToWeb**) (Aliases: -**ToWebFile**, -**MovedToWeb**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 used with -:ref:`MV <MV>` (-MoveFile)
   to move Saved files to Web files.
@@ -286,7 +286,7 @@ used with -:ref:`MV <MV>` (-MoveFile)
 .. _UZ:
 
 Mode Option -**UZ** (-**UnzipData**) (Aliases: -**Uncompress**, -**UncompressData**, -**Unzip**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 decompresses files during
   archiving. The tool is selected by extension: 'gunzip' for '.gz', 'uncompress'
@@ -296,7 +296,7 @@ decompresses files during
 .. _WC:
 
 Mode Option -**WC** (-**WithChecksum**) (Aliases: -**ValidateChecksum**, -**WithMD5**, -**ValidateMD5**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 adds MD5 checksum verification on top of size checks
   when validating data files on the GDEX Server.
@@ -305,7 +305,7 @@ adds MD5 checksum verification on top of size checks
 .. _WM:
 
 Mode Option -**WM** (-**WithMetadata**) (Alias: -**WithMeta**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 triggers a fresh **gatherxml** run at the dataset or
   group level when used with -:ref:`SD <SD>` (-SetDataset) or -:ref:`SG <SG>` (-SetGroup).
@@ -314,7 +314,7 @@ triggers a fresh **gatherxml** run at the dataset or
 .. _WN:
 
 Mode Option -**WN** (-**WithFileNumber**) (Alias: -**WithNumber**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 recomputes and updates Saved/Web file counts for the
   dataset and any specified groups. With -:ref:`GD <GD>` (-GetDataset), the counts are
@@ -324,7 +324,7 @@ recomputes and updates Saved/Web file counts for the
 .. _XC:
 
 Mode Option -**XC** (-**CrossCopy**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 used with -:ref:`AW <AW>` or -:ref:`AS <AS>` to fill gaps in storage: copies
   files from Glade disk to Object Store (or vice versa) wherever copies are
@@ -334,7 +334,7 @@ used with -:ref:`AW <AW>` or -:ref:`AS <AS>` to fill gaps in storage: copies
 .. _XM:
 
 Mode Option -**XM** (-**CrossMove**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 like -:ref:`XC <XC>` but moves instead of copying — the original
   file is deleted once the destination copy is confirmed.
@@ -343,7 +343,7 @@ like -:ref:`XC <XC>` but moves instead of copying — the original
 .. _ZD:
 
 Mode Option -**ZD** (-**ZipData**) (Aliases: -**Compress**, -**CompressData**, -**Zip**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 compresses files during -:ref:`AS <AS>` or
   -:ref:`AW <AW>`. The compression tool is selected by the format given via -:ref:`AF <AF>`: 'gzip' for

@@ -8,6 +8,7 @@
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Set Dataset Information <section3.1.1>`
      - update properties of an existing dataset record

@@ -7,7 +7,7 @@ copyright = '2026, zji@ucar.edu'
 author = 'Zaihua Ji'
 
 release = '0.1'
-version = '2.0.1'
+version = '1.0.1'
 
 # -- General configuration
 

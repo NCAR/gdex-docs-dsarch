@@ -8,27 +8,27 @@
 .. _SG:
 
 Action Option -**SG** (-**SetGroup**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 creates new or updates existing group records in GDEXDB
   for the specified dataset. Multiple records can be processed in one run.
 
 | **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](SG|SetGroup) [:ref:`Mode Options <mode3.3.1>`]
-|         [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
-|         [-(:ref:`GN|GroupName <GN>`) GroupNames]
-|         [-(:ref:`PI|ParentIndex <PI>`) ParentGroupIndices]
-|         [-(:ref:`TI|Title <TI>`) GroupTitles]
-|         [-(:ref:`GT|GroupType <GT>`) GroupTypes]
-|         [-(:ref:`GP|GroupPattern <GP>`) FileNamePatterns]
-|         [-(:ref:`BF|BackupFlag <BF>`) QuasarBackupFlags]
-|         [-(:ref:`DA|AccessFlag <DA>`) DataAccessFlags]
-|         [-(:ref:`SP|SavedPath <SP>`) SavedFilePaths]
-|         [-(:ref:`WP|WebPath <WP>`) WebFilePaths]
-|         [-(:ref:`ML|MetaLink <ML>`) MetadataLinks]
-|         [-(:ref:`NW|NoteWeb <NW>`) WebNotes]
-|         [-(:ref:`NI|NoteInternal <NI>`) InternalNotes]
-|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
-|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
+|           [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
+|           [-(:ref:`GN|GroupName <GN>`) GroupNames]
+|           [-(:ref:`PI|ParentIndex <PI>`) ParentGroupIndices]
+|           [-(:ref:`TI|Title <TI>`) GroupTitles]
+|           [-(:ref:`GT|GroupType <GT>`) GroupTypes]
+|           [-(:ref:`GP|GroupPattern <GP>`) FileNamePatterns]
+|           [-(:ref:`BF|BackupFlag <BF>`) QuasarBackupFlags]
+|           [-(:ref:`DA|AccessFlag <DA>`) DataAccessFlags]
+|           [-(:ref:`SP|SavedPath <SP>`) SavedFilePaths]
+|           [-(:ref:`WP|WebPath <WP>`) WebFilePaths]
+|           [-(:ref:`ML|MetaLink <ML>`) MetadataLinks]
+|           [-(:ref:`NW|NoteWeb <NW>`) WebNotes]
+|           [-(:ref:`NI|NoteInternal <NI>`) InternalNotes]
+|           [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|           [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
 .. _mode3.3.1:
 
@@ -36,16 +36,17 @@ creates new or updates existing group records in GDEXDB
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
-   * - -(:ref:`MD|MyDataset <MD>`)
+   * - \-(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(:ref:`NT|NoTrim <NT>`)
+   * - \-(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(:ref:`RT|ResetTGroup <RT>`)
+   * - \-(:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for Saved/Web file records in the affected group
-   * - -(:ref:`WM|WithMetadata <WM>`)
+   * - \-(:ref:`WM|WithMetadata <WM>`)
      - re-gathers Web file content metadata at the group level
-   * - -(:ref:`WN|WithFileNumber <WN>`)
+   * - \-(:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets Saved/Web file counts for the affected groups
 
   If the group index already exists in GDEXDB, the record is updated; otherwise
@@ -67,20 +68,22 @@ creates new or updates existing group records in GDEXDB
 
 Content of input file d744004.grp:
 
-Dataset<=>d744004
-EndDate<=>2005-09-30
-GroupIndex<:>Title<:>GroupPattern<:>DescWeb<:>
-1<:>Blended Wind<:>.bln<:>
-The 'bln' product is the blended wind field output.<:>
-2<:>NCEP Re-analyses<:>.low<:>
-The 'low' fields consist of the NCEP re-analyses splined
-to the 0.5 x 0.5 degree grid (i.e. no QSCAT data blended).<:>
-3<:>Superposition of QSCAT Observations<:>.sub<:>
-The 'sub' product is output from an intermediate step in the blending process
-that consists of the superposition of QSCAT observations on NCEP before
-blending. This product is of no particular scientific value, but very useful
-in identifying the satellite data swaths in each composite of 12-hours of
-QSCAT observations.<:>
+.. code-block:: none
+
+   Dataset<=>d744004
+   EndDate<=>2005-09-30
+   GroupIndex<:>Title<:>GroupPattern<:>DescWeb<:>
+   1<:>Blended Wind<:>.bln<:>
+   The 'bln' product is the blended wind field output.<:>
+   2<:>NCEP Re-analyses<:>.low<:>
+   The 'low' fields consist of the NCEP re-analyses splined
+   to the 0.5 x 0.5 degree grid (i.e. no QSCAT data blended).<:>
+   3<:>Superposition of QSCAT Observations<:>.sub<:>
+   The 'sub' product is output from an intermediate step in the blending process
+   that consists of the superposition of QSCAT observations on NCEP before
+   blending. This product is of no particular scientific value, but very useful
+   in identifying the satellite data swaths in each composite of 12-hours of
+   QSCAT observations.<:>
 
 
 

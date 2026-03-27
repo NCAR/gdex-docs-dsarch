@@ -9,6 +9,7 @@
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Get All Information <section3.5.1>`
      - export all dataset, group, and file records to a file
