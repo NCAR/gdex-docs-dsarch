@@ -38,7 +38,7 @@ reads and displays dataset record fields from GDEXDB
 Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
 to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
-Valid dataset field names and their corresponding :ref:`Info options <section5>`
+
 
 .. list-table:: Optional Table Title
    :widths: 20 20 60
@@ -55,8 +55,8 @@ Valid dataset field names and their corresponding :ref:`Info options <section5>`
      - Row 2, Cell 3
 
 
-.. list-table::
-   :widths: auto
+.. list-table:: Valid dataset field names and their corresponding :ref:`Info options <section5>`
+   :widths: 10 30 50
    :header-rows: 1
 
    * - Names
