@@ -40,6 +40,21 @@ to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
 Valid dataset field names and their corresponding :ref:`Info options <section5>`
 
+.. list-table:: Optional Table Title
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Header Col 1
+     - Header Col 2
+     - Header Col 3
+   * - Row 1, Cell 1
+     - Row 1, Cell 2
+     - Row 1, Cell 3
+   * - Row 2, Cell 1
+     - Row 2, Cell 2
+     - Row 2, Cell 3
+
+
 .. list-table::
    :widths: auto
    :header-rows: 1
