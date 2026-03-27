@@ -8,7 +8,7 @@
 .. _SA:
 
 Action Option -**SA** (-**SetALL**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 creates and updates all dataset, group, and
   Saved/Web/Help/Quasar file records for a dataset in one step. Equivalent to

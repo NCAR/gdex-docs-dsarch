@@ -5,7 +5,7 @@
 =====================
 
 | **dsarch** [[-(:ref:`DS|Dataset <DS>`)] dNNNNNN] [:ref:`Action Option <section3>`] [:ref:`Mode Options <section4>`] [:ref:`Info Options <section5>`]
-|      or
+|        or
 | **dsarch** [-(:ref:`IF|InputFile <IF>`)] InputFileNames
 
 Brackets [] indicate optional elements. A pipe '|' within parentheses, as in
@@ -13,13 +13,19 @@ Brackets [] indicate optional elements. A pipe '|' within parentheses, as in
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - Action options
      - specify what task to execute
    * - Mode options
      - modify how an action behaves
    * - Info options
-     - supply values to the action Options may be given in short or long form (e.g., -:ref:`DS <DS>` or -Dataset). Some options have alias names; for example, -UseRDADB is an alias for -:ref:`UD <UD>` (-UseDSARCH). Option names are case-insensitive, but values following :ref:`Info options <section5>` are case-sensitive.
+     - supply values to the action
+
+Options may be given in short or long form (e.g., -:ref:`DS <DS>` or -Dataset). Some
+options have alias names; for example, -UseRDADB is an alias for -:ref:`UD <UD>`
+(-UseDSARCH). Option names are case-insensitive,
+but values following :ref:`Info options <section5>` are case-sensitive.
 
 Option -:ref:`DS <DS>` specifies the dataset number. It is listed separately because most
 actions require it. When -:ref:`DS <DS>` is the first argument after **dsarch**, the option
@@ -41,14 +47,21 @@ is contained within that file.
 characters enable more precise filtering — they must be quoted or escaped
 on the command line to prevent shell interpretation:
 
-===========================================================================  ====  ========================================================================
-                                                                             '!'   (or \!) — exclude matches; must appear immediately after the option name
-                                                                             '<'   — less-than comparison on the following value                           
-                                                                             '>'   — greater-than comparison on the following value                        
-                                                                             '<>'  — range between two values                                              
-Combining '!' and '<' as "'!' '<' OptionValue" expresses a 'greater than or                                                                                
-equal to OptionValue' condition.                                                                                                                           
-===========================================================================  ====  ========================================================================
+.. list-table::
+   :widths: auto
+   :header-rows: 0
+
+   * - '!'
+     - exclude matches; must appear immediately after the option name
+   * - '<'
+     - less-than comparison on the following value
+   * - '>'
+     - greater-than comparison on the following value
+   * - '<>'
+     - range between two values
+
+Combining '!' and '<' as "'!' '<' OptionValue" expresses a 'greater than or
+equal to OptionValue' condition.
 
 The description of an individual option is shown when **dsarch** is run as
 

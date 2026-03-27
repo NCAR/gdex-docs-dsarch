@@ -17,6 +17,7 @@ Actions are grouped into seven categories based on the information they handle:
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Dataset Actions <section3.1>`
      - create, modify and retrieve dataset information in GDEXDB

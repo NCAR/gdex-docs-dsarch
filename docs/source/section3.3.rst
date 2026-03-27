@@ -9,6 +9,7 @@
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Set Group Information <section3.3.1>`
      - create or update group records

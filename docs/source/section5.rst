@@ -9,6 +9,7 @@ forms:
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
    * - :ref:`Single-Value Info Options <section5.1>`
      - accept exactly one value per invocation

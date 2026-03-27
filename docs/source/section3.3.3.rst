@@ -8,15 +8,15 @@
 .. _DG:
 
 Action Option -**DG** (-**DeleteGroup**) :
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 removes one or more group records from GDEXDB for the
   specified dataset.
 
 | **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](DG|DeleteGroup) [:ref:`Mode Options <mode3.3.3>`]
-|          -(:ref:`GI|GroupIndex <GI>`) GroupIndices
-|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
-|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
+|            -(:ref:`GI|GroupIndex <GI>`) GroupIndices
+|           [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|           [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
 .. _mode3.3.3:
 
@@ -24,14 +24,15 @@ removes one or more group records from GDEXDB for the
 
 .. list-table::
    :widths: auto
+   :header-rows: 0
 
-   * - -(:ref:`MD|MyDataset <MD>`)
+   * - \-(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(:ref:`NT|NoTrim <NT>`)
+   * - \-(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(:ref:`RT|ResetTGroup <RT>`)
+   * - \-(:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for file records in the affected group
-   * - -(:ref:`WN|WithFileNumber <WN>`)
+   * - \-(:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets file counts for the affected groups
 
   Specify groups by index via -:ref:`GI <GI>` and the dataset via -:ref:`DS <DS>`. Deletion is blocked
@@ -46,7 +47,7 @@ removes one or more group records from GDEXDB for the
 
 **EXAMPLE 8. To delete group indices 2 and 3 of d744004:**
 
-  dsarch d744004 DG -:ref:`GI <GI>` 2 3
+| **dsarch** d744004 :ref:`DG <DG>` -:ref:`GI <GI>` 2 3
 
 
 

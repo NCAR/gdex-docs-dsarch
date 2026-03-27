@@ -17,19 +17,15 @@ Before using **dsarch**, a dataset must first be registered in GDEXDB through
 Metadata Manager (https://gdex.ucar.edu/metaman/). Once registered,
 **dsarch** can perform the following major functions:
 
-#. Set up a dataset and its groups/subgroups in GDEXDB to prepare it for
-       data archiving
+* Set up a dataset and its groups/subgroups in GDEXDB to prepare it for data archiving
 * Add, update, and terminate DOI/Version controls for a given dataset
 * Archive data files by copying them from the working area to GDEX Servers
 * Call **gatherxml** to evaluate file content metadata for archived files
-* Cross-archive data files by duplicating them between Object Stores and GDEX
-       Data Disk Servers
+* Cross-archive data files by duplicating them between Object Stores and GDEX Data Disk Servers
 * Save file information for archived data into GDEXDB
 * Retrieve dataset, group, and file information stored in GDEXDB
-* Move data files from one dataset or group to another, or to a different
-       location within the same dataset
-* Tar file lists from one or more datasets and back them up onto the Globus
-       Quasar Server, with an optional disaster recovery copy
+* Move data files from one dataset or group to another, or to a different location within the same dataset
+* Tar file lists from one or more datasets and back them up onto the Globus Quasar Server, with an optional disaster recovery copy
 * Restore damaged data files from the Quasar backup server
 * Remove files from GDEX Servers
 * Automatically resume interrupted **dsarch** commands using records in GDEXDB
