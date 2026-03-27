@@ -21,9 +21,7 @@ reads and displays dataset record fields from GDEXDB
 
 .. _mode3.1.2:
 
-:ref:`Mode options <section4>` that can be specified for this action
-
-.. list-table::
+.. list-table:::ref:`Mode options <section4>` that can be specified for this action
    :widths: auto
    :header-rows: 0
 
@@ -33,7 +31,6 @@ reads and displays dataset record fields from GDEXDB
      - includes associated period information for the dataset and any groups
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - gathers and displays Saved/Web file counts
-
 
 Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
 to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
@@ -74,7 +71,6 @@ to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
 it, results are displayed on screen.
 
-
 .. _3.1.2_e2:
 
 **EXAMPLE 2. To retrieve all dataset fields for d260001 and save to a file:**
@@ -100,8 +96,5 @@ Content of output file d260001.ds:
    GroupIndex<:>BeginDate<:>EndDate<:>BeginTime<:>EndTime<:>
    1<:>1985-01-01<:>2006-12-31<:>00:00:00<:>00:00:59<:>
    2<:>1958-01-01<:>2006-12-31<:>00:00:00<:>00:00:59<:>
-
-
-
 
 :ref:`Back to Top <index>`
