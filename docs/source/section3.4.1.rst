@@ -47,21 +47,21 @@ creates new or updates existing
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`BG|BackGround <BG>`)
+   * - (:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - ``-``(:ref:`EM|EMailNotice <EM>`)
+   * - (:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NE|NoEmail <NE>`)
+   * - (:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - ``-``(:ref:`RD|RemoveDir <RD>`)
+   * - (:ref:`RD|RemoveDir <RD>`)
      - removes empty directories after file changes
-   * - ``-``(:ref:`RO|ResetOrder <RO>`)
+   * - (:ref:`RO|ResetOrder <RO>`)
      - resets display order indices to match the order files are given per -:ref:`SF <SF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
-   * - ``-``(:ref:`SC|SetChecksum <SC>`)
+   * - (:ref:`SC|SetChecksum <SC>`)
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
   Saved file names must be provided via -:ref:`SF <SF>` (-SavedFile) unless -:ref:`ON <ON>`

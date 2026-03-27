@@ -26,13 +26,13 @@ removes one or more group records from GDEXDB for the
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - ``-``(:ref:`RT|ResetTGroup <RT>`)
+   * - (:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for file records in the affected group
-   * - ``-``(:ref:`WN|WithFileNumber <WN>`)
+   * - (:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets file counts for the affected groups
 
   Specify groups by index via -:ref:`GI <GI>` and the dataset via -:ref:`DS <DS>`. Deletion is blocked

@@ -30,11 +30,11 @@ retrieves group records for the specified dataset.
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`FO|FormatOutput <FO>`)
+   * - (:ref:`FO|FormatOutput <FO>`)
      - formats each column to a uniform fixed width
-   * - ``-``(:ref:`RG|RecursiveGroup <RG>`)
+   * - (:ref:`RG|RecursiveGroup <RG>`)
      - gathers subgroups recursively for a given group index
-   * - ``-``(:ref:`WN|WithFileNumber <WN>`)
+   * - (:ref:`WN|WithFileNumber <WN>`)
      - gathers and displays file counts for groups
 
   Use -:ref:`FN <FN>` (-FieldNames) to specify which group fields to retrieve. Defaults
@@ -50,43 +50,43 @@ retrieves group records for the specified dataset.
      - :ref:`Info Options <section5>`
      - Descriptions
    * - I
-     - ``-``(:ref:`GI|GroupIndex <GI>`)
+     - (:ref:`GI|GroupIndex <GI>`)
      - group indices
    * - G
-     - ``-``(:ref:`GN|GroupName <GN>`)
+     - (:ref:`GN|GroupName <GN>`)
      - group names, IDs
    * - X
-     - ``-``(:ref:`PI|ParentIndex <PI>`)
+     - (:ref:`PI|ParentIndex <PI>`)
      - parent group indices
    * - T
-     - ``-``(:ref:`TI|Title <TI>`)
+     - (:ref:`TI|Title <TI>`)
      - group titles
    * - R
-     - ``-``(:ref:`GT|GroupType <GT>`)
+     - (:ref:`GT|GroupType <GT>`)
      - group types
    * - P
-     - ``-``(:ref:`GP|GroupPattern <GP>`)
+     - (:ref:`GP|GroupPattern <GP>`)
      - common file name patterns for each group
    * - Q
-     - ``-``(:ref:`BF|BackupFlag <BF>`)
+     - (:ref:`BF|BackupFlag <BF>`)
      - Quasar Backup flags
    * - A
-     - ``-``(:ref:`DA|DataAccessFlag <DA>`)
+     - (:ref:`DA|DataAccessFlag <DA>`)
      - top group data file list access flags
    * - S
-     - ``-``(:ref:`SP|SavedPath <SP>`)
+     - (:ref:`SP|SavedPath <SP>`)
      - path relative to saved home directory for groups
    * - W
-     - ``-``(:ref:`WP|WebPath <WP>`)
+     - (:ref:`WP|WebPath <WP>`)
      - path relative to web home directory for groups
    * - M
-     - ``-``(:ref:`ML|MetaLink <ML>`)
+     - (:ref:`ML|MetaLink <ML>`)
      - a link to content meta at the group level
    * - D
-     - ``-``(:ref:`NW|NoteWeb <NW>`)
+     - (:ref:`NW|NoteWeb <NW>`)
      - group description of data on GDEX Server
    * - N
-     - ``-``(:ref:`NI|NoteInternal <NI>`)
+     - (:ref:`NI|NoteInternal <NI>`)
      - group description of internal HPSS data
 
   Results can be filtered by group index (-:ref:`GI <GI>`), name (-:ref:`GN <GN>`), or parent index

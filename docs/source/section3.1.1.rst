@@ -46,15 +46,15 @@ updates properties of an existing dataset record in
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - ``-``(:ref:`RT|ResetTGroup <RT>`)
+   * - (:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for all Saved/Web file records
-   * - ``-``(:ref:`WM|WithMetadata <WM>`)
+   * - (:ref:`WM|WithMetadata <WM>`)
      - re-gathers Web file content metadata at dataset level
-   * - ``-``(:ref:`WN|WithFileNumber <WN>`)
+   * - (:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets file counts
 
   Dataset numbers are normally created via the Metadata Manager (MM). Action
