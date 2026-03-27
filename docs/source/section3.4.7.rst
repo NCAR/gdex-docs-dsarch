@@ -41,17 +41,17 @@ updates Quasar backup file records
    :widths: auto
    :header-rows: 0
 
-   * - \-(:ref:`BG|BackGround <BG>`)
+   * - ``-``(:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - \-(:ref:`MD|MyDataset <MD>`)
+   * - ``-``(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - \-(:ref:`NE|NoEmail <NE>`)
+   * - ``-``(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - \-(:ref:`NT|NoTrim <NT>`)
+   * - ``-``(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - \-(:ref:`RO|ResetOrder <RO>`)
+   * - ``-``(:ref:`RO|ResetOrder <RO>`)
      - resets display order indices to match the order files are given per -:ref:`QF <QF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset
-   * - \-(:ref:`SC|SetChecksum <SC>`)
+   * - ``-``(:ref:`SC|SetChecksum <SC>`)
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
   Quasar file names must be provided via -:ref:`QF <QF>` (-QuasarFile) unless -:ref:`ON <ON>`

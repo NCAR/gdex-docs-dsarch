@@ -32,7 +32,7 @@ retrieves Quasar backup file records
    :widths: auto
    :header-rows: 0
 
-   * - \-(:ref:`FO|FormatOutput <FO>`)
+   * - ``-``(:ref:`FO|FormatOutput <FO>`)
      - formats each column to a uniform fixed width
 
   Use -:ref:`FN <FN>` (-FieldNames) to specify which Quasar file fields to retrieve. Defaults
@@ -48,43 +48,43 @@ retrieves Quasar backup file records
      - :ref:`Info Options <section5>`
      - Descriptions
    * - F
-     - \-(:ref:`QF|QuasarFile <QF>`)
+     - ``-``(:ref:`QF|QuasarFile <QF>`)
      - Quasar file names with relative paths
    * - T
-     - \-(:ref:`QT|QuasarFileType <QT>`)
+     - ``-``(:ref:`QT|QuasarFileType <QT>`)
      - Quasar file archiving types
    * - C
-     - \-(:ref:`MC|MD5Checksum <MC>`)
+     - ``-``(:ref:`MC|MD5Checksum <MC>`)
      - Saved file MD5 Checksum
    * - N
-     - \-(:ref:`DF|DataFormat <DF>`)
+     - ``-``(:ref:`DF|DataFormat <DF>`)
      - data content formats
    * - M
-     - \-(:ref:`AF|ArchiveFormat <AF>`)
+     - ``-``(:ref:`AF|ArchiveFormat <AF>`)
      - file archive formats
    * - O
-     - \-(:ref:`DO|DisplayOrder <DO>`)
+     - ``-``(:ref:`DO|DisplayOrder <DO>`)
      - display order indices
    * - B
-     - \-(:ref:`QF|QuasarFile <QF>`)
+     - ``-``(:ref:`QF|QuasarFile <QF>`)
      - Quasar backup file names
    * - Q
-     - \-(:ref:`QT|QuasarType <QT>`)
+     - ``-``(:ref:`QT|QuasarType <QT>`)
      - Quasar backup file types
    * - H
-     - \-(:ref:`FS|FileStatus <FS>`)
+     - ``-``(:ref:`FS|FileStatus <FS>`)
      - Quasar file archiving status
    * - S
-     - \-(:ref:`SZ|Size <SZ>`)
+     - ``-``(:ref:`SZ|Size <SZ>`)
      - Quasar file sizes
    * - J
-     - \-(:ref:`FD|FileDate <FD>`)
+     - ``-``(:ref:`FD|FileDate <FD>`)
      - date data last modified on
    * - K
-     - \-(:ref:`FT|FileTime <FT>`)
+     - ``-``(:ref:`FT|FileTime <FT>`)
      - time data last modified at
    * - D
-     - \-(:ref:`DE|Description <DE>`)
+     - ``-``(:ref:`DE|Description <DE>`)
      - Quasar file descriptions
 
   A dataset number is required unless Quasar file names are provided. If file
