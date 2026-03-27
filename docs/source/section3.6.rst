@@ -18,6 +18,7 @@
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents
+
    section3.6.1
    section3.6.2
 

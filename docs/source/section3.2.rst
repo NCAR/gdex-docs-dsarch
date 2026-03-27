@@ -20,6 +20,7 @@
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents
+
    section3.2.1
    section3.2.2
    section3.2.3
