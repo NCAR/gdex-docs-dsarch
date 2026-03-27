@@ -29,9 +29,9 @@ reads and displays dataset record fields from GDEXDB
 
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
-   * - :ref:`PE or ShowPeriod <PE>`
+   * - :ref:`-(PE|ShowPeriod) <PE>`
      - includes associated period information for the dataset and any groups
-   * - :ref:`WN or WithFileNumber <WN>`
+   * - :ref:`-(WN|WithFileNumber) <WN>`
      - gathers and displays Saved/Web file counts
 
 
@@ -48,70 +48,28 @@ Valid dataset field names and their corresponding :ref:`Info options <section5>`
      - :ref:`Info Options <section5>`
      - Descriptions
    * - T
-     - (:ref:`TI|Title <TI>`)
+     - :ref:`-(TI|Title) <TI>`
      - dataset title
    * - S
-     - (:ref:`SP|SavedPath <SP>`)
+     - :ref:`-(SP|SavedPath) <SP>`
      - path relative to Saved home directory
    * - H
-     - (:ref:`WH|WebHome <WH>`)
+     - :ref:`-(WH|WebHome) <WH>`
      - path for the web data home directory
    * - W
-     - (:ref:`WP|WebPath <WP>`)
+     - :ref:`-(WP|WebPath) <WP>`
      - path relative to web home directory
    * - F
-     - (:ref:`DF|DataFormat <DF>`)
+     - :ref:`-(DF|DataFormat) <DF>`
      - default data content format
    * - U
-     - (:ref:`UD|UseDSARCH <UD>`)
+     - :ref:`-(UD|UseDSARCH) <UD>`
      - use DSARCH flag
-   * - L
-     - (:ref:`LC|Location <LC>`)
-     - Online web file access location flags
-   * - Q
-     - (:ref:`BF|BackupFlag <BF>`)
-     - Quasar Backup flags
-   * - A
-     - (:ref:`DA|DataAccessFlag <DA>`)
-     - dataset data file list access flags
-   * - V
-     - (:ref:`GL|GroupLevel <GL>`)
-     - number of group levels to display
-   * - C
-     - (:ref:`FL|FileLimit <FL>`)
-     - file count limit for separate group filelists
-   * - B
-     - (:ref:`BL|ButtonLimit <BL>`)
-     - file count limit for showing script buttons
-   * - M
-     - (:ref:`ML|MetaLink <ML>`)
-     - a link to content meta at the dataset level
-   * - W
-     - (:ref:`NW|NoteWeb <NW>`)
-     - web data description
-   * - I
-     - (:ref:`NI|NoteInternal <NI>`)
-     - internal data description
-   * - D
-     - (:ref:`ND|NoteDocument <ND>`)
-     - document description
-   * - N
-     - (:ref:`NS|NoteSoftware <NS>`)
-     - software description
-   * - G
-     - (:ref:`GI|GroupIndex <GI>`)
-     - Group Indices to identify groups for periods
-   * - J
-     - (:ref:`BD|BeginDate <BD>`)
-     - date data begin for dataset/group
-   * - K
-     - (:ref:`BT|BeginTime <BT>`)
-     - time data begin for dataset/group
    * - X
-     - (:ref:`ED|EndDate <ED>`)
+     - :ref:`-(ED|EndDate) <ED>`
      - date data end for dataset/group
    * - Y
-     - (:ref:`ET|EndTime <ET>`)
+     - :ref:`-(ET|EndTime) <ET>`
      - time data end for dataset/group
 
 
