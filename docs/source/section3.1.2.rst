@@ -19,6 +19,7 @@ reads and displays dataset record fields from GDEXDB
 |           [-(:ref:`OF|OutputFile <OF>`) OutputFileName]
 |           [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
+
 .. _mode3.1.2:
 
 .. list-table:: :ref:`Mode options <section4>` that can be specified for this action
