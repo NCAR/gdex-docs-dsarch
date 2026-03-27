@@ -13,58 +13,58 @@ Action Option -**GD** (-**GetDataset**) :
 reads and displays dataset record fields from GDEXDB
   for the specified dataset.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](GD|GetDataset) [`Mode Options <mode_>`_]
-|         [-(`FN|FieldNames <field_>`_) FieldNameString]
-|         [-(`KV|KeyValue <section5.2_>`_) KeyNames]
-|         [-(`OF|OutputFile <section5.1_>`_) OutputFileName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](GD|GetDataset) [:ref:`Mode Options <mode3.1.2>`]
+|         [-(:ref:`FN|FieldNames <FN>`) FieldNameString]
+|         [-(:ref:`KV|KeyValue <KV>`) KeyNames]
+|         [-(:ref:`OF|OutputFile <OF>`) OutputFileName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.1.2:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`FO|FormatOutput <section4_>`_)
+   * - -(:ref:`FO|FormatOutput <FO>`)
      - formats each column to a uniform fixed width
-   * - -(`PE|ShowPeriod <section4_>`_)
+   * - -(:ref:`PE|ShowPeriod <PE>`)
      - includes associated period information for the dataset and any groups
-   * - -(`WN|WithFileNumber <section4_>`_)
+   * - -(:ref:`WN|WithFileNumber <WN>`)
      - gathers and displays Saved/Web file counts
 
-  Use -`FN <section5.1_>`_ (-FieldNames) to select which dataset fields to include. Defaults
-  to 'SWFULQ'. Use -`FN <section5.1_>`_ ALL to retrieve every available field.
+  Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
+  to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
-  Valid dataset field names and their corresponding `Info <section5>`_ options:
+  Valid dataset field names and their corresponding :ref:`Info options <section5>`:
 
-=  =====  =====================================  =============================================
-   Names  `Info Options <section5>`_             Descriptions                                 
-   T      -(`TI|Title <section5.2_>`_)           dataset title                                
-   S      -(`SP|SavedPath <section5.2_>`_)       path relative to Saved home directory        
-   H      -(`WH|WebHome <section5.2_>`_)         path for the web data home directory         
-   W      -(`WP|WebPath <section5.2_>`_)         path relative to web home directory          
-   F      -(`DF|DataFormat <section5.2_>`_)      default data content format                  
-   U      -(`UD|UseDSARCH <section5.1_>`_)       use DSARCH flag                              
-   L      -(`LC|Location <section5.2_>`_)        Online web file access location flags        
-   Q      -(`BF|BackupFlag <section5.2_>`_)      Quasar Backup flags                          
-   A      -(`DA|DataAccessFlag <section5.2_>`_)  dataset data file list access flags          
-   V      -(`GL|GroupLevel <section5.2_>`_)      number of group levels to display            
-   C      -(`FL|FileLimit <section5.1_>`_)       file count limit for separate group filelists
-   B      -(`BL|ButtonLimit <section5.1_>`_)     file count limit for showing script buttons  
-   M      -(`ML|MetaLink <section5.2_>`_)        a link to content meta at the dataset level  
-   W      -(`NW|NoteWeb <section5.2_>`_)         web data description                         
-   I      -(`NI|NoteInternal <section5.2_>`_)    internal data description                    
-   D      -(`ND|NoteDocument <section5.2_>`_)    document description                         
-   N      -(`NS|NoteSoftware <section5.2_>`_)    software description                         
-   G      -(`GI|GroupIndex <section5.2_>`_)      Group Indices to identify groups for periods 
-   J      -(`BD|BeginDate <section5.2_>`_)       date data begin for dataset/group            
-   K      -(`BT|BeginTime <section5.2_>`_)       time data begin for dataset/group            
-   X      -(`ED|EndDate <section5.2_>`_)         date data end for dataset/group              
-   Y      -(`ET|EndTime <section5.2_>`_)         time data end for dataset/group              
-=  =====  =====================================  =============================================
+=  =====  ================================  =============================================
+   Names  :ref:`Info Options <section5>`    Descriptions                                 
+   T      -(:ref:`TI|Title <TI>`)           dataset title                                
+   S      -(:ref:`SP|SavedPath <SP>`)       path relative to Saved home directory        
+   H      -(:ref:`WH|WebHome <WH>`)         path for the web data home directory         
+   W      -(:ref:`WP|WebPath <WP>`)         path relative to web home directory          
+   F      -(:ref:`DF|DataFormat <DF>`)      default data content format                  
+   U      -(:ref:`UD|UseDSARCH <UD>`)       use DSARCH flag                              
+   L      -(:ref:`LC|Location <LC>`)        Online web file access location flags        
+   Q      -(:ref:`BF|BackupFlag <BF>`)      Quasar Backup flags                          
+   A      -(:ref:`DA|DataAccessFlag <DA>`)  dataset data file list access flags          
+   V      -(:ref:`GL|GroupLevel <GL>`)      number of group levels to display            
+   C      -(:ref:`FL|FileLimit <FL>`)       file count limit for separate group filelists
+   B      -(:ref:`BL|ButtonLimit <BL>`)     file count limit for showing script buttons  
+   M      -(:ref:`ML|MetaLink <ML>`)        a link to content meta at the dataset level  
+   W      -(:ref:`NW|NoteWeb <NW>`)         web data description                         
+   I      -(:ref:`NI|NoteInternal <NI>`)    internal data description                    
+   D      -(:ref:`ND|NoteDocument <ND>`)    document description                         
+   N      -(:ref:`NS|NoteSoftware <NS>`)    software description                         
+   G      -(:ref:`GI|GroupIndex <GI>`)      Group Indices to identify groups for periods 
+   J      -(:ref:`BD|BeginDate <BD>`)       date data begin for dataset/group            
+   K      -(:ref:`BT|BeginTime <BT>`)       time data begin for dataset/group            
+   X      -(:ref:`ED|EndDate <ED>`)         date data end for dataset/group              
+   Y      -(:ref:`ET|EndTime <ET>`)         time data end for dataset/group              
+=  =====  ================================  =============================================
 
-  Use -`OF <section5.1_>`_ (-OutputFile) to save the retrieved information to a file. Without
+  Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
   it, results are displayed on screen.
 
 
@@ -72,7 +72,7 @@ reads and displays dataset record fields from GDEXDB
 
 **EXAMPLE 2. To retrieve all dataset fields for d260001 and save to a file:**
 
-  dsarch d260001 GD -`FN <section5.1_>`_ ALL -`PE <section4_>`_ -OF d260001.ds
+  dsarch d260001 GD -:ref:`FN <FN>` ALL -:ref:`PE <PE>` -OF d260001.ds
 
 Content of output file d260001.ds:
 

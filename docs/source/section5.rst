@@ -10,9 +10,9 @@ forms:
 .. list-table::
    :widths: auto
 
-   * - `Single-Value Info Options <section5.1>`_
+   * - :ref:`Single-Value Info Options <section5.1>`
      - accept exactly one value per invocation
-   * - `Multi-Value Info Options <section5.2>`_
+   * - :ref:`Multi-Value Info Options <section5.2>`
      - accept one or more values per invocation
 
 .. toctree::

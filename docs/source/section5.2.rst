@@ -70,10 +70,10 @@ Info Option -**BP** (-**BatchProcess**) (Aliases: -**d**, -**DelayedMode**) :
 
 defers execution: the
   command is written to GDEXDB and run later by the 'dscheck' daemon. One
-  or more host names may follow -`BP`_ to target or exclude specific hosts
+  or more host names may follow -:ref:`BP <BP>` to target or exclude specific hosts
   (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99)
   can also be specified, e.g., '-d 5'; defaults to 2. Archive actions
-  (-`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, -`AH <section3.4.11_>`_, -`AQ <section3.4.12_>`_) retry automatically after storage system outages.
+  (-:ref:`AS <AS>`, -:ref:`AW <AW>`, -:ref:`AH <AH>`, -:ref:`AQ <AQ>`) retry automatically after storage system outages.
 
 
 .. _BS:
@@ -142,8 +142,8 @@ Info Option -**DE** (-**Description**) (Aliases: -**Desc**, -**Note**, -**FileDe
 
 a
   free-text description for a data file or version record. Multi-line values
-  are supported in input files (-`IF`_). Quote values containing spaces on the
-  command line. With version control actions (-`SV <section3.2.1_>`_), this becomes the version
+  are supported in input files (-:ref:`IF <IF>`). Quote values containing spaces on the
+  command line. With version control actions (-:ref:`SV <SV>`), this becomes the version
   note.
 
 
@@ -154,7 +154,7 @@ Info Option -**DF** (-**DataFormat**) (Aliases: -**TF**, -**ContentFormat**) :
 
 the
   scientific format of the data content (e.g., NetCDF, IMMA, BINARY). A
-  dataset-level default can be set via -`SD <section3.1.1_>`_ and is applied automatically when
+  dataset-level default can be set via -:ref:`SD <SD>` and is applied automatically when
   no format is specified at archive time.
 
 
@@ -173,7 +173,7 @@ Info Option -**DO** (-**DisplayOrder**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 explicit display position indices for files within a
-  group or across the dataset. Overridden by -`RO <section4_>`_ (-ResetOrder) when both are
+  group or across the dataset. Overridden by -:ref:`RO <RO>` (-ResetOrder) when both are
   present.
 
 
@@ -244,10 +244,10 @@ Info Option -**GI** (-**GroupIndex**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 assigns files to a specific group within a dataset.
-  Groups must be created first via -`SG <section3.3.1_>`_ (-SetGroup). Use 1, 2, 3, ... for
+  Groups must be created first via -:ref:`SG <SG>` (-SetGroup). Use 1, 2, 3, ... for
   specific groups; 0 means no group assignment (default).
 
-  When omitted for -`AS <section3.4.9_>`_ or -`AW <section3.4.10_>`_, **dsarch** attempts to assign groups
+  When omitted for -:ref:`AS <AS>` or -:ref:`AW <AW>`, **dsarch** attempts to assign groups
   automatically by matching file names against patterns stored in GDEXDB.
 
 
@@ -267,7 +267,7 @@ Info Option -**GN** (-**GroupName**) (Alias: -**GroupID**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 a short human-readable identifier for
-  a group (up to 20 characters). Set via -`SG <section3.3.1_>`_ (-SetGroup). Names can be used
+  a group (up to 20 characters). Set via -:ref:`SG <SG>` (-SetGroup). Names can be used
   wherever group indices are accepted, and appear on file list webpages.
 
 
@@ -277,7 +277,7 @@ Info Option -**GP** (-**GroupPattern**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 wildcard patterns that **dsarch** uses to automatically
-  assign files to the right group during archiving. Stored per group via -`SG <section3.3.1_>`_.
+  assign files to the right group during archiving. Stored per group via -:ref:`SG <SG>`.
 
 
 .. _GT:
@@ -299,7 +299,7 @@ Info Option -**HF** (-**HelpFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the destination names for Help files on the GDEX Server.
-  Defaults to the local file names from -`LF`_ unless overridden explicitly.
+  Defaults to the local file names from -:ref:`LF <LF>` unless overridden explicitly.
 
 
 .. _HT:
@@ -331,14 +331,14 @@ Info Option -**IF** (-**InputFile**) :
 
 one or more input file names provided on the command
   line. Each file name must start with the dataset number (format 'dNNNNNN.*')
-  and match the -`DS <section5.1_>`_ value. This naming rule is a safeguard against accidentally
+  and match the -:ref:`DS <DS>` value. This naming rule is a safeguard against accidentally
   running an action on the wrong dataset.
 
   Input file format rules:
 
 #. Lines beginning with '#' are comments and are ignored.
 * Option names may be short, long, or alias forms.
-* `Action <section3>`_/Mode options: OptionName<!>  (marker changeable via -AO)
+* :ref:`Action <section3>`/Mode options: OptionName<!>  (marker changeable via -AO)
 * Single-value assignments: OptionName<=>Value, one per line
        (delimiter changeable via -ES; default '<=>')
 * Multi-value (tabular) assignments: a title row followed by data rows,
@@ -364,27 +364,27 @@ a minor revision counter within the same DOI.
 Info Option -**KV** (-**KeyValue**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-custom key/value metadata pairs for a dataset. Use -`SD <section3.1.1_>`_
-  to set them and -`GD <section3.1.2_>`_ to view them. Keys: up to 40 characters; values: up to
+custom key/value metadata pairs for a dataset. Use -:ref:`SD <SD>`
+  to set them and -:ref:`GD <GD>` to view them. Keys: up to 40 characters; values: up to
   128 characters.
 
   Set a pair:
 
-=  ========================================
-   dsarch d540000 SD -`KV`_ 'test=>test it'
-=  ========================================
+=  =================================================
+   dsarch d540000 SD -:ref:`KV <KV>` 'test=>test it'
+=  =================================================
 
   View a specific key:
 
-=  =============================
-   dsarch d540000 GD -`KV`_ test
-=  =============================
+=  ======================================
+   dsarch d540000 GD -:ref:`KV <KV>` test
+=  ======================================
 
   View all pairs:
 
-=  ============================
-   dsarch d540000 GD -`KV`_ all
-=  ============================
+=  =====================================
+   dsarch d540000 GD -:ref:`KV <KV>` all
+=  =====================================
 
 
 .. _LC:
@@ -415,7 +415,7 @@ Info Option -**LF** (-**LocalFile**) (Aliases: -**LocFile**, -**SourceFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the local source files to
-  archive via -`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, or -`AH <section3.4.11_>`_. UNIX wildcards ('*', '?') are accepted on
+  archive via -:ref:`AS <AS>`, -:ref:`AW <AW>`, or -:ref:`AH <AH>`. UNIX wildcards ('*', '?') are accepted on
   the command line. Use absolute or relative paths for files outside the
   current directory.
 
@@ -436,7 +436,7 @@ Info Option -**ML** (-**MetaLink**) (Alias: -**MetadataLink**) :
 
 a URL pointing to the content
   metadata page for a dataset, group, or file. Normally set automatically by
-  **gatherxml** when -`GX <section4_>`_ is used. A custom value may be provided and will
+  **gatherxml** when -:ref:`GX <GX>` is used. A custom value may be provided and will
   take precedence over the auto-generated link.
 
 
@@ -482,7 +482,7 @@ Info Option -**OB** (-**OrderBy**) (Alias: -**OrderByPattern**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 a date/time pattern that guides
-  temporal sorting when combined with -`ON <section5.1_>`_. For example, 'YYYYmon' sorts by
+  temporal sorting when combined with -:ref:`ON <ON>`. For example, 'YYYYmon' sorts by
   4-digit year followed by 3-letter month abbreviation.
 
 
@@ -492,7 +492,7 @@ Info Option -**OD** (-**OriginDataset**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the dataset the files are being moved from when
-  using -`MV <section3.4.14_>`_ (-MoveFile).
+  using -:ref:`MV <MV>` (-MoveFile).
 
 
 .. _OG:
@@ -501,7 +501,7 @@ Info Option -**OG** (-**OriginGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the existing group indices to be renumbered by
-  -`CG <section3.3.4_>`_ (-ChangeGroup).
+  -:ref:`CG <CG>` (-ChangeGroup).
 
 
 .. _OT:
@@ -510,7 +510,7 @@ Info Option -**OT** (-**OriginType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the source file type when converting between types
-  (e.g., Web to Saved) during a -`MV <section3.4.14_>`_ (-MoveFile) operation.
+  (e.g., Web to Saved) during a -:ref:`MV <MV>` (-MoveFile) operation.
 
 
 .. _PI:
@@ -528,7 +528,7 @@ Info Option -**QF** (-**QuasarFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the name of the Quasar backup (tar) file, required
-  for -`AQ <section3.4.12_>`_ (-ArchiveQuasarFile).
+  for -:ref:`AQ <AQ>` (-ArchiveQuasarFile).
 
 
 .. _QT:
@@ -548,8 +548,8 @@ the backup scope:
 Info Option -**RF** (-**OriginFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-the source file names for -`MV <section3.4.14_>`_ (-MoveFile) when they
-  differ from the destination names given via -`SF`_, -`WF`_, or -`HF`_.
+the source file names for -:ref:`MV <MV>` (-MoveFile) when they
+  differ from the destination names given via -:ref:`SF <SF>`, -:ref:`WF <WF>`, or -:ref:`HF <HF>`.
 
 
 .. _SF:
@@ -558,7 +558,7 @@ Info Option -**SF** (-**SavedFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the destination names for Saved files on the GDEX Server.
-  For -`AS <section3.4.9_>`_ (-ArchiveSavedFile), defaults to the local file names from -`LF`_
+  For -:ref:`AS <AS>` (-ArchiveSavedFile), defaults to the local file names from -:ref:`LF <LF>`
   unless specified explicitly.
 
 
@@ -568,8 +568,8 @@ Info Option -**SP** (-**SavedPath**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the directory path for Saved files, relative to the
-  Saved data home directory. For -`AS <section3.4.9_>`_, the dataset or group's stored path is
-  used by default. For -`SG <section3.3.1_>`_ and -`SD <section3.1.1_>`_, this value is written to GDEXDB.
+  Saved data home directory. For -:ref:`AS <AS>`, the dataset or group's stored path is
+  used by default. For -:ref:`SG <SG>` and -:ref:`SD <SD>`, this value is written to GDEXDB.
 
   Keeping Saved paths accurate is important: NCAR users browse data through
   'rdals' using these paths. Each top-level group should map to one directory,
@@ -672,7 +672,7 @@ Info Option -**WF** (-**WebFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the destination names for Web files on the GDEX Server.
-  For -`AW <section3.4.10_>`_ (-ArchiveWebFile), defaults to the local file names from -`LF`_
+  For -:ref:`AW <AW>` (-ArchiveWebFile), defaults to the local file names from -:ref:`LF <LF>`
   unless specified explicitly.
 
 
@@ -682,7 +682,7 @@ Info Option -**WH** (-**WebHome**) (Alias: -**WebDataHome**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 an alternative Web data home
-  directory for a dataset. Stored in GDEXDB via -`SD <section3.1.1_>`_ (-SetDataset).
+  directory for a dataset. Stored in GDEXDB via -:ref:`SD <SD>` (-SetDataset).
 
 
 .. _WP:
@@ -691,8 +691,8 @@ Info Option -**WP** (-**WebPath**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the directory path for Web files, relative to the Web
-  data home directory. For -`AW <section3.4.10_>`_, the dataset or group's stored path is used
-  by default. For -`SG <section3.3.1_>`_ and -`SD <section3.1.1_>`_, this value is written to GDEXDB.
+  data home directory. For -:ref:`AW <AW>`, the dataset or group's stored path is used
+  by default. For -:ref:`SG <SG>` and -:ref:`SD <SD>`, this value is written to GDEXDB.
 
   Keeping Web paths accurate is important: NCAR users browse data through
   'rdals' using these paths. Each top-level group should map to one directory,
@@ -715,7 +715,7 @@ Info Option -**WU** (-**WebURL**) (Aliases: -**URL**, -**WebAddress**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the full URL of a Help file
-  hosted remotely (e.g., on GitHub). Use with -`SH <section3.4.5_>`_ (-SetHelpFile) to register
+  hosted remotely (e.g., on GitHub). Use with -:ref:`SH <SH>` (-SetHelpFile) to register
   the file in GDEXDB without needing a local copy on the GDEX Server.
 
 

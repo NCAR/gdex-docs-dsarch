@@ -10,9 +10,9 @@
 .. list-table::
    :widths: auto
 
-   * - `Get All Information <section3.5.1>`_
+   * - :ref:`Get All Information <section3.5.1>`
      - export all dataset, group, and file records to a file
-   * - `Set All Information <section3.5.2>`_
+   * - :ref:`Set All Information <section3.5.2>`
      - import and apply changes to all record types at once
 
 .. toctree::

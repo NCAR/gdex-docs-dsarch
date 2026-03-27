@@ -23,8 +23,8 @@ caps the number of
 Info Option -**AO** (-**ActionOption**) (Alias: -**ActOption**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-the token that marks `Action <section3>`_ and
-  `Mode <section4>`_ options in input files. Defaults to '<!>'. Change this if your input
+the token that marks :ref:`Action <section3>` and
+  :ref:`Mode options <section4>` in input files. Defaults to '<!>'. Change this if your input
   data contains the default token.
 
 
@@ -44,7 +44,7 @@ Info Option -**DD** (-**DeleteDir**) (Aliases: -**DeleteDirLevel**, -**DeleteEmp
 
 how many levels
   of empty parent directories to prune after files are deleted or moved.
-  Applies to -`DL <section3.4.15_>`_, -`MV <section3.4.14_>`_, and -`CL <section4_>`_ (when used with -`AS <section3.4.9_>`_ or -`AW <section3.4.10_>`_).
+  Applies to -:ref:`DL <DL>`, -:ref:`MV <MV>`, and -:ref:`CL <CL>` (when used with -:ref:`AS <AS>` or -:ref:`AW <AW>`).
 
 
 .. _DS:
@@ -139,15 +139,15 @@ Info Option -**ON** (-**OrderNames**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 a string of single-letter field codes controlling the
-  sort order of GET action results (-`GG <section3.3.2_>`_, -`GS <section3.4.2_>`_, -`GW <section3.4.4_>`_, -`GH <section3.4.6_>`_, -`GQ <section3.4.8_>`_). Uppercase means
+  sort order of GET action results (-:ref:`GG <GG>`, -:ref:`GS <GS>`, -:ref:`GW <GW>`, -:ref:`GH <GH>`, -:ref:`GQ <GQ>`). Uppercase means
   ascending; lowercase means descending. When file records are modified via
-  -`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, -`SS <section3.4.1_>`_, -`SW <section3.4.3_>`_, -`DL <section3.4.15_>`_, or -`MV <section3.4.14_>`_, files in affected groups are reordered too.
+  -:ref:`AS <AS>`, -:ref:`AW <AW>`, -:ref:`SS <SS>`, -:ref:`SW <SW>`, -:ref:`DL <DL>`, or -:ref:`MV <MV>`, files in affected groups are reordered too.
 
-  To reorder an existing file list without other changes, use -`SW <section3.4.3_>`_ with -`ON`_:
+  To reorder an existing file list without other changes, use -:ref:`SW <SW>` with -:ref:`ON <ON>`:
 
-=  =============================================================================================
-   dsarch dNNNNNN -`SW <section3.4.3_>`_ -ON OrderNameString [-`GI <section5.2_>`_ GroupIndices]
-=  =============================================================================================
+=  =================================================================================
+   dsarch dNNNNNN -:ref:`SW <SW>` -ON OrderNameString [-:ref:`GI <GI>` GroupIndices]
+=  =================================================================================
 
   Without group indices, reordering applies to all files in the dataset.
 
@@ -171,7 +171,7 @@ Info Option -**QS** (-**QsubOptions**) (Alias: -**PBSOptions**) :
 
 passes options to qsub when
   running **dsarch** as a PBS batch job. Quote the value on the command line,
-  e.g., -`QS`_ '-l walltime=12:00:00'.
+  e.g., -:ref:`QS <QS>` '-l walltime=12:00:00'.
 
 
 .. _UD:
@@ -180,7 +180,7 @@ Info Option -**UD** (-**UseDSARCH**) (Alias: -**UseRDADB**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 the gating flag that controls
-  **dsarch** access to a dataset. Set via -`SD <section3.1.1_>`_ (-SetDataset). Values:
+  **dsarch** access to a dataset. Set via -:ref:`SD <SD>` (-SetDataset). Values:
 
 .. list-table::
    :widths: auto
@@ -212,8 +212,8 @@ Info Option -**WI** (-**WaitInternval**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 how long **dsarch** waits before rechecking whether a
-  background process slot has freed up (see -`AL`_). Units: S (seconds),
-  M (minutes), H (hours), D (days) — e.g., '-`WI`_ 5M'. A bare number is
+  background process slot has freed up (see -:ref:`AL <AL>`). Units: S (seconds),
+  M (minutes), H (hours), D (days) — e.g., '-:ref:`WI <WI>` 5M'. A bare number is
   treated as seconds.
 
 

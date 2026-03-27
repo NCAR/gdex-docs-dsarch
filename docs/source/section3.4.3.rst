@@ -14,72 +14,72 @@ creates new or updates existing Web file
   records in GDEXDB for the specified dataset. Multiple records can be
   processed in a single run.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN -(SW|SetWebFile) [`Mode Options <mode_>`_]
-|         [-(`WF|WebFile <section5.2_>`_) webFileNames]
-|         [-(`ON|OrderNames <section5.1_>`_) OrderNameString]
-|         [-(`OB|OrderBy <section5.2_>`_) OrderByPattern]
-|         [-(`GI|GroupIndex <section5.2_>`_) GroupIndices]
-|         [-(`GN|GroupName <section5.2_>`_) GroupNames]
-|         [-(`TG|TopGroupIndex <section5.2_>`_) TopGroupIndices]
-|         [-(`PO|PatternOffset <section5.1_>`_) PatternStringOffset]
-|         [-(`WT|WebFileType <section5.2_>`_) WebFileTypes]
-|         [-(`LC|Location <section5.2_>`_) StorageLocationFlags]
-|         [-(`FS|FileStatus <section5.2_>`_) WebFileStatus]
-|         [-(`FF|FileFlag <section5.2_>`_) FilesOrPaths]
-|         [-(`DF|DataFormat <section5.2_>`_) DataFormats]
-|         [-(`AF|ArchiveFormat <section5.2_>`_) FileArchiveFormats]
-|         [-(`DO|DisplayOrder <section5.2_>`_) DisplayOrderIndices]
-|         [-(`SZ|Size <section5.2_>`_) FileSizes]
-|         [-(`MC|MD5Checksum <section5.2_>`_) MD5ChecksumValues]
-|         [-(`FD|FileDate <section5.2_>`_) DateModified]
-|         [-(`FT|FileTime <section5.2_>`_) TimeModified]
-|         [-(`ML|MetaLink <section5.2_>`_) MetadataLinks]
-|         [-(`TL|ThreddLink <section5.2_>`_) ThreddCatalogLinks]
-|         [-(`DE|Description <section5.2_>`_) WebFileDescriptions]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`AL|AsyncLimit <section5.1_>`_) AsyncProcessLimit]
-|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
-|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(SW|SetWebFile) [:ref:`Mode Options <mode3.4.3>`]
+|         [-(:ref:`WF|WebFile <WF>`) webFileNames]
+|         [-(:ref:`ON|OrderNames <ON>`) OrderNameString]
+|         [-(:ref:`OB|OrderBy <OB>`) OrderByPattern]
+|         [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
+|         [-(:ref:`GN|GroupName <GN>`) GroupNames]
+|         [-(:ref:`TG|TopGroupIndex <TG>`) TopGroupIndices]
+|         [-(:ref:`PO|PatternOffset <PO>`) PatternStringOffset]
+|         [-(:ref:`WT|WebFileType <WT>`) WebFileTypes]
+|         [-(:ref:`LC|Location <LC>`) StorageLocationFlags]
+|         [-(:ref:`FS|FileStatus <FS>`) WebFileStatus]
+|         [-(:ref:`FF|FileFlag <FF>`) FilesOrPaths]
+|         [-(:ref:`DF|DataFormat <DF>`) DataFormats]
+|         [-(:ref:`AF|ArchiveFormat <AF>`) FileArchiveFormats]
+|         [-(:ref:`DO|DisplayOrder <DO>`) DisplayOrderIndices]
+|         [-(:ref:`SZ|Size <SZ>`) FileSizes]
+|         [-(:ref:`MC|MD5Checksum <MC>`) MD5ChecksumValues]
+|         [-(:ref:`FD|FileDate <FD>`) DateModified]
+|         [-(:ref:`FT|FileTime <FT>`) TimeModified]
+|         [-(:ref:`ML|MetaLink <ML>`) MetadataLinks]
+|         [-(:ref:`TL|ThreddLink <TL>`) ThreddCatalogLinks]
+|         [-(:ref:`DE|Description <DE>`) WebFileDescriptions]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`AL|AsyncLimit <AL>`) AsyncProcessLimit]
+|         [-(:ref:`QS|QsubOptions <QS>`)  PBSBatchOptions]
+|         [-(:ref:`BP|BatchProcess <BP>`) [BatchControlInfo]]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.4.3:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4_>`_)
+   * - -(:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - -(`DX|DeleteXML <section4_>`_)
+   * - -(:ref:`DX|DeleteXML <DX>`)
      - calls **dcm** to delete content metadata for the specified Web files
-   * - -(`EM|EMailNotice <section4_>`_)
+   * - -(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - -(`GX|GatherXML <section4_>`_)
+   * - -(:ref:`GX|GatherXML <GX>`)
      - calls **gatherxml** to evaluate file content metadata
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NE|NoEmail <section4_>`_)
+   * - -(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`RD|RemoveDir <section4_>`_)
+   * - -(:ref:`RD|RemoveDir <RD>`)
      - removes empty web directories after file changes
-   * - -(`RO|ResetOrder <section4_>`_)
-     - resets display order indices to match the order files are given per -`WF <section5.2_>`_. Alternatively, use -`ON <section5.1_>`_ (-OrderNames) to reorder all files in the dataset and affected groups
-   * - -(`RS|GXRSOptions <section4_>`_)
-     - passes options R and S to **gatherxml** for faster processing, used with -`GX <section4_>`_ (-GatherXML)
-   * - -(`SC|SetChecksum <section4_>`_)
+   * - -(:ref:`RO|ResetOrder <RO>`)
+     - resets display order indices to match the order files are given per -:ref:`WF <WF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
+   * - -(:ref:`RS|GXRSOptions <RS>`)
+     - passes options R and S to **gatherxml** for faster processing, used with -:ref:`GX <GX>` (-GatherXML)
+   * - -(:ref:`SC|SetChecksum <SC>`)
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
-  Web file names must be provided via -`WF <section5.2_>`_ (-WebFile) unless -`ON <section5.1_>`_ (-OrderNames)
-  is used to reorder files. The number of values supplied to other `Info <section5>`_ options
+  Web file names must be provided via -:ref:`WF <WF>` (-WebFile) unless -:ref:`ON <ON>` (-OrderNames)
+  is used to reorder files. The number of values supplied to other :ref:`Info <section5>` options
   must match the number of file names, except for options that accept a single
-  shared value, such as -`GI <section5.2_>`_ (-GroupIndex), -`AF <section5.2_>`_ (-ArchiveFormat), -`DF <section5.2_>`_
-  (-DataFormat), and -`WT <section5.2_>`_ (-WebFileType).
+  shared value, such as -:ref:`GI <GI>` (-GroupIndex), -:ref:`AF <AF>` (-ArchiveFormat), -:ref:`DF <DF>`
+  (-DataFormat), and -:ref:`WT <WT>` (-WebFileType).
 
-  If no group index is specified and -`PO <section5.1_>`_ (-PatternOffset) is present, file
-  names are matched against group patterns saved via -`SG <section3.3.1_>`_ (-SetGroup) to
+  If no group index is specified and -:ref:`PO <PO>` (-PatternOffset) is present, file
+  names are matched against group patterns saved via -:ref:`SG <SG>` (-SetGroup) to
   determine the group index automatically.
 
   The file status may be set to P (public) or I (internal) for data types D,

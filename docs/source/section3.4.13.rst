@@ -15,37 +15,37 @@ Action Option -**RQ** (-**RestoreQuasarFile**) (Aliases: -**RestoreQuasar**, -**
   downloads them from the Globus Quasar Server, and restores any files that
   are missing from the GDEX Server.
 
-| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(RQ|RestoreQuasarFile) [`Mode Options <mode_>`_]
-|         [-(`QF|QuasarFile <section5.2_>`_) QuasarFileNames]
-|         [-(`SF|SavedFile <section5.2_>`_) SavedFileNames]
-|         [-(`ST|SavedFileType <section5.2_>`_) SavedFileTypes]
-|         [-(`WF|WebFile <section5.2_>`_) webFileNames]
-|         [-(`WT|WebFileType <section5.2_>`_) WebFileTypes]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
-|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|dataset <DS>`)] dNNNNNN -(RQ|RestoreQuasarFile) [:ref:`Mode Options <mode3.4.13>`]
+|         [-(:ref:`QF|QuasarFile <QF>`) QuasarFileNames]
+|         [-(:ref:`SF|SavedFile <SF>`) SavedFileNames]
+|         [-(:ref:`ST|SavedFileType <ST>`) SavedFileTypes]
+|         [-(:ref:`WF|WebFile <WF>`) webFileNames]
+|         [-(:ref:`WT|WebFileType <WT>`) WebFileTypes]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`QS|QsubOptions <QS>`)  PBSBatchOptions]
+|         [-(:ref:`BP|BatchProcess <BP>`) [BatchControlInfo]]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.4.13:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4_>`_)
+   * - -(:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - -(`EM|EMailNotice <section4_>`_)
+   * - -(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NE|NoEmail <section4_>`_)
+   * - -(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
 
-  At least one Quasar, Saved, and/or Web file name must be provided via -`QF <section5.2_>`_,
-  -`SF <section5.2_>`_, and/or -`WF <section5.2_>`_. If only Quasar file names are given, the tar files are
+  At least one Quasar, Saved, and/or Web file name must be provided via -:ref:`QF <QF>`,
+  -:ref:`SF <SF>`, and/or -:ref:`WF <WF>`. If only Quasar file names are given, the tar files are
   retrieved from the server but no Saved or Web files are restored.
 
 

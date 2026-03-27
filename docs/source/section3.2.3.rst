@@ -13,26 +13,26 @@ Action Option -**TV** (-**TerminateVersion**) :
 closes a version control record in GDEXDB for the
   specified dataset, marking it as history or removing it if still pending.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](TV|TerminateVersion) [`Mode Options <mode_>`_]
-|          -(`VI|VersionIndex <section5.2_>`_) VersionIndex
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](TV|TerminateVersion) [:ref:`Mode Options <mode3.2.3>`]
+|          -(:ref:`VI|VersionIndex <VI>`) VersionIndex
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.2.3:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
 
-  Provide the version index via -`VI <section5.2_>`_ and the dataset number via -`DS <section5.1_>`_. Termination
+  Provide the version index via -:ref:`VI <VI>` and the dataset number via -:ref:`DS <DS>`. Termination
   is blocked if any Web files are still linked to that version. To work around
-  this, first list those files using -`GW <section3.4.4_>`_ (-GetWebFile), then either reassign
+  this, first list those files using -:ref:`GW <GW>` (-GetWebFile), then either reassign
   their version index (to 0 or another value) or convert them to Saved files;
   only then can the version be terminated.
 
@@ -41,7 +41,7 @@ closes a version control record in GDEXDB for the
 
 **EXAMPLE 5. To terminate version index 5 of d999009:**
 
-  dsarch d999009 TV -`VI <section5.2_>`_ 5
+  dsarch d999009 TV -:ref:`VI <VI>` 5
 
   Active records are moved to 'H' (History) status and kept for future
   reference. Pending records are deleted from GDEXDB entirely.

@@ -17,41 +17,41 @@ Action Option -**AQ** (-**ArchiveQuasarFile**) (Aliases: -**ArchiveQuasar**, -**
   files to back up, building optimally sized input lists (1-3 GB each), and
   calling this action. See 'dsquasar' help for details.
 
-| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(AQ|ArchiveQuasarFile) [`Mode Options <mode_>`_]
-|         [-(`SF|SavedFile <section5.2_>`_) SavedFileNames]
-|         [-(`ST|SavedFileType <section5.2_>`_) SavedFileTypes]
-|         [-(`WF|WebFile <section5.2_>`_) webFileNames]
-|         [-(`WT|WebFileType <section5.2_>`_) WebFileTypes]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
-|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|dataset <DS>`)] dNNNNNN -(AQ|ArchiveQuasarFile) [:ref:`Mode Options <mode3.4.12>`]
+|         [-(:ref:`SF|SavedFile <SF>`) SavedFileNames]
+|         [-(:ref:`ST|SavedFileType <ST>`) SavedFileTypes]
+|         [-(:ref:`WF|WebFile <WF>`) webFileNames]
+|         [-(:ref:`WT|WebFileType <WT>`) WebFileTypes]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`QS|QsubOptions <QS>`)  PBSBatchOptions]
+|         [-(:ref:`BP|BatchProcess <BP>`) [BatchControlInfo]]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.4.12:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4_>`_)
+   * - -(:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - -(`EM|EMailNotice <section4_>`_)
+   * - -(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NE|NoEmail <section4_>`_)
+   * - -(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`OE|OverrideExist <section4_>`_)
+   * - -(:ref:`OE|OverrideExist <OE>`)
      - overwrites existing Quasar files
-   * - -(`TO|TarOnly <section4_>`_)
+   * - -(:ref:`TO|TarOnly <TO>`)
      - creates the tar file only, without uploading it to the Globus Quasar Server
-   * - -(`XC|CrossCopy <section4_>`_)
+   * - -(:ref:`XC|CrossCopy <XC>`)
      - copies files from existing Quasar Backup and Disaster Recovery files to fill missing Backup/Drdata copies, using GDEXDB records for guidance
 
-  At least one Saved and/or Web file name must be provided via -`SF <section5.2_>`_ and/or -`WF <section5.2_>`_.
+  At least one Saved and/or Web file name must be provided via -:ref:`SF <SF>` and/or -:ref:`WF <WF>`.
 
 
 

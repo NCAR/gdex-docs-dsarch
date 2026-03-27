@@ -13,63 +13,63 @@ Action Option -**DL** (-**Delete**) (Aliases: -**RM**, -**Remove**, -**DeleteFil
 permanently
   removes files from GDEX Servers and deletes their records from GDEXDB.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN -(DL|Delete) [`Mode Options <mode_>`_]
-|         [-(`SF|SavedFile <section5.2_>`_) SavedFileNames]
-|         [-(`GI|GroupIndex <section5.2_>`_) GroupIndices]
-|          -(`ST|SavedFileType <section5.2_>`_) SavedFileTypes
-|         [-(`DD|DeleteDir <section5.1_>`_) DeleteDirLevel]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(DL|Delete) [:ref:`Mode Options <mode3.4.15>`]
+|         [-(:ref:`SF|SavedFile <SF>`) SavedFileNames]
+|         [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
+|          -(:ref:`ST|SavedFileType <ST>`) SavedFileTypes
+|         [-(:ref:`DD|DeleteDir <DD>`) DeleteDirLevel]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
       or
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN -(DL|Delete) [`Mode Options <mode_>`_]
-|         [-(`WF|WebFile <section5.2_>`_) WebFileNames]
-|         [-(`GI|GroupIndex <section5.2_>`_) GroupIndices]
-|          -(`WT|WebFileType <section5.2_>`_) WebFileTypes
-|         [-(`DD|DeleteDir <section5.1_>`_) DeleteDirLevel]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(DL|Delete) [:ref:`Mode Options <mode3.4.15>`]
+|         [-(:ref:`WF|WebFile <WF>`) WebFileNames]
+|         [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
+|          -(:ref:`WT|WebFileType <WT>`) WebFileTypes
+|         [-(:ref:`DD|DeleteDir <DD>`) DeleteDirLevel]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
       or
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN -(DL|Delete) [`Mode Options <mode_>`_]
-|         [-(`HF|HelpFile <section5.2_>`_) HelpFileNames]
-|          -(`HT|HelpFileType <section5.2_>`_) HelpFileTypes
-|         [-(`DD|DeleteDir <section5.1_>`_) DeleteDirLevel]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(DL|Delete) [:ref:`Mode Options <mode3.4.15>`]
+|         [-(:ref:`HF|HelpFile <HF>`) HelpFileNames]
+|          -(:ref:`HT|HelpFileType <HT>`) HelpFileTypes
+|         [-(:ref:`DD|DeleteDir <DD>`) DeleteDirLevel]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
       or
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN -(DL|Delete) [`Mode Options <mode_>`_]
-|         [-(`QF|QuasarFile <section5.2_>`_) QuasarFileNames]
-|          -(`QT|QuasarFileType <section5.2_>`_) QuasarFileTypes
-|         [-(`DD|DeleteDir <section5.1_>`_) DeleteDirLevel]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(DL|Delete) [:ref:`Mode Options <mode3.4.15>`]
+|         [-(:ref:`QF|QuasarFile <QF>`) QuasarFileNames]
+|          -(:ref:`QT|QuasarFileType <QT>`) QuasarFileTypes
+|         [-(:ref:`DD|DeleteDir <DD>`) DeleteDirLevel]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.4.15:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`DX|DeleteXML <section4_>`_)
+   * - -(:ref:`DX|DeleteXML <DX>`)
      - calls **dcm** to delete content metadata for the Web files being deleted
-   * - -(`EM|EMailNotice <section4_>`_)
+   * - -(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NE|NoEmail <section4_>`_)
+   * - -(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`RD|RemoveDir <section4_>`_)
+   * - -(:ref:`RD|RemoveDir <RD>`)
      - removes empty Saved or Web directories after deletion
 
-  Provide the file names to delete via -`SF <section5.2_>`_, -`WF <section5.2_>`_, -`HF <section5.2_>`_, or -`QF <section5.2_>`_. Use -`DD <section5.1_>`_
+  Provide the file names to delete via -:ref:`SF <SF>`, -:ref:`WF <WF>`, -:ref:`HF <HF>`, or -:ref:`QF <QF>`. Use -:ref:`DD <DD>`
   (-DeleteDir) to specify how many levels of empty parent directories to
   remove after deletion.
 

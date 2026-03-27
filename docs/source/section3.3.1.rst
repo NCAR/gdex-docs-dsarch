@@ -13,47 +13,47 @@ Action Option -**SG** (-**SetGroup**) :
 creates new or updates existing group records in GDEXDB
   for the specified dataset. Multiple records can be processed in one run.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](SG|SetGroup) [`Mode Options <mode_>`_]
-|         [-(`GI|GroupIndex <section5.2_>`_) GroupIndices]
-|         [-(`GN|GroupName <section5.2_>`_) GroupNames]
-|         [-(`PI|ParentIndex <section5.2_>`_) ParentGroupIndices]
-|         [-(`TI|Title <section5.2_>`_) GroupTitles]
-|         [-(`GT|GroupType <section5.2_>`_) GroupTypes]
-|         [-(`GP|GroupPattern <section5.2_>`_) FileNamePatterns]
-|         [-(`BF|BackupFlag <section5.2_>`_) QuasarBackupFlags]
-|         [-(`DA|AccessFlag <section5.2_>`_) DataAccessFlags]
-|         [-(`SP|SavedPath <section5.2_>`_) SavedFilePaths]
-|         [-(`WP|WebPath <section5.2_>`_) WebFilePaths]
-|         [-(`ML|MetaLink <section5.2_>`_) MetadataLinks]
-|         [-(`NW|NoteWeb <section5.2_>`_) WebNotes]
-|         [-(`NI|NoteInternal <section5.2_>`_) InternalNotes]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](SG|SetGroup) [:ref:`Mode Options <mode3.3.1>`]
+|         [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
+|         [-(:ref:`GN|GroupName <GN>`) GroupNames]
+|         [-(:ref:`PI|ParentIndex <PI>`) ParentGroupIndices]
+|         [-(:ref:`TI|Title <TI>`) GroupTitles]
+|         [-(:ref:`GT|GroupType <GT>`) GroupTypes]
+|         [-(:ref:`GP|GroupPattern <GP>`) FileNamePatterns]
+|         [-(:ref:`BF|BackupFlag <BF>`) QuasarBackupFlags]
+|         [-(:ref:`DA|AccessFlag <DA>`) DataAccessFlags]
+|         [-(:ref:`SP|SavedPath <SP>`) SavedFilePaths]
+|         [-(:ref:`WP|WebPath <WP>`) WebFilePaths]
+|         [-(:ref:`ML|MetaLink <ML>`) MetadataLinks]
+|         [-(:ref:`NW|NoteWeb <NW>`) WebNotes]
+|         [-(:ref:`NI|NoteInternal <NI>`) InternalNotes]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.3.1:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`RT|ResetTGroup <section4_>`_)
+   * - -(:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for Saved/Web file records in the affected group
-   * - -(`WM|WithMetadata <section4_>`_)
+   * - -(:ref:`WM|WithMetadata <WM>`)
      - re-gathers Web file content metadata at the group level
-   * - -(`WN|WithFileNumber <section4_>`_)
+   * - -(:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets Saved/Web file counts for the affected groups
 
   If the group index already exists in GDEXDB, the record is updated; otherwise
   a new group is created. New groups require a unique index.
 
-  To create a subgroup, set a parent index via -`PI <section5.2_>`_ (-ParentIndex). Groups can
+  To create a subgroup, set a parent index via -:ref:`PI <PI>` (-ParentIndex). Groups can
   be nested to any depth. By default, three levels are shown on group list
-  webpages; adjust this with -`GL <section5.2_>`_ (-GroupLevel) via -`SD <section3.1.1_>`_ (-SetDataset).
+  webpages; adjust this with -:ref:`GL <GL>` (-GroupLevel) via -:ref:`SD <SD>` (-SetDataset).
 
   Changing a group's type from P (public) to I (internal) automatically marks
   all its subgroups and associated Saved/Web files as internal too.
@@ -63,7 +63,7 @@ creates new or updates existing group records in GDEXDB
 
 **EXAMPLE 6. To set multiple group records for d744004 using an input file:**
 
-| **dsarch** `SG`_ -`IF <section5.2_>`_ d744004.grp
+| **dsarch** :ref:`SG <SG>` -:ref:`IF <IF>` d744004.grp
 
 Content of input file d744004.grp:
 

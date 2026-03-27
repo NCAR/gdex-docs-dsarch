@@ -10,9 +10,9 @@
 .. list-table::
    :widths: auto
 
-   * - `Regenerate Dataset Webpages <section3.6.1>`_
+   * - :ref:`Regenerate Dataset Webpages <section3.6.1>`
      - rebuild the main webpage and all file lists for the dataset
-   * - `Increment Cache Number <section3.6.2>`_
+   * - :ref:`Increment Cache Number <section3.6.2>`
      - bump the cache control number to signal that cached file lists should be reloaded
 
 .. toctree::
