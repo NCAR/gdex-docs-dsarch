@@ -21,7 +21,7 @@ reads and displays dataset record fields from GDEXDB
 
 .. _mode3.1.2:
 
-.. list-table:::ref:`Mode options <section4>` that can be specified for this action
+.. list-table:: :ref:`Mode options <section4>` that can be specified for this action
    :widths: auto
    :header-rows: 0
 
