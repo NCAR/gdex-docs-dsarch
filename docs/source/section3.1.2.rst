@@ -21,7 +21,8 @@ reads and displays dataset record fields from GDEXDB
 
 .. _mode3.1.2:
 
-  :ref:`Mode options <section4>` that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action
+
 
 .. list-table::
    :widths: auto
@@ -34,10 +35,12 @@ reads and displays dataset record fields from GDEXDB
    * - :ref:`WN|WithFileNumber <WN>`
      - gathers and displays Saved/Web file counts
 
+
   Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
   to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
-  Valid dataset field names and their corresponding :ref:`Info options <section5>`:
+  Valid dataset field names and their corresponding :ref:`Info options <section5>`
+
 
 .. list-table::
    :widths: auto
@@ -112,6 +115,7 @@ reads and displays dataset record fields from GDEXDB
    * - Y
      - (:ref:`ET|EndTime <ET>`)
      - time data end for dataset/group
+
 
   Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
   it, results are displayed on screen.
