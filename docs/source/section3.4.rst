@@ -45,6 +45,7 @@
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents
+
    section3.4.1
    section3.4.2
    section3.4.3

@@ -8,6 +8,7 @@ A GUIDE TO DSARCH
 .. toctree::
    :maxdepth: 3
    :caption: Table of Contents
+
    section1
    section2
    section3

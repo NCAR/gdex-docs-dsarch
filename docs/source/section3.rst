@@ -34,6 +34,7 @@ Actions are grouped into seven categories based on the information they handle:
 .. toctree::
    :maxdepth: 2
    :caption: Table of Contents
+
    section3.1
    section3.1.1
    section3.1.2
