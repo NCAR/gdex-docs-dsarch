@@ -10,122 +10,104 @@
 Action Option -**AW** (-**ArchiveWebFile**) (Aliases: -**ArchiveWeb**, -**ArchWeb**, -**ArchWebFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-archives
-  local data files onto RDA Server and saves information of the archived files
-  into RDADB for a given dataset. One or multiple local files can be archived
-  each time.
+copies
+  local files to the GDEX Server as publicly accessible Web files and registers
+  them in GDEXDB. One or more files may be archived per execution.
 
-| **dsarch** [-(`DS|dataset <section5.1.rst#DS>`_)] dsnnn.n -(AW|ArchiveWebFile) [`Mode Options <#mode>`_]
-|   [-(`LF|LocalFile <section5.2.rst#LF>`_) LocalFileNames]
-|   [-(`LD|LocalDirectory <section5.1.rst#LD>`_) LocalDirectoryName]
-|   [-(`LL|LocalFileList <section5.1.rst#LL>`_) LocalFileListName]
-|   [-(`WF|WebFile <section5.2.rst#WF>`_) webFileNames]
-|   [-(`GI|GroupIndex <section5.2.rst#GI>`_) GroupIndices]
-|   [-(`TG|TopGroupIndex <section5.2.rst#TG>`_) TopGroupIndices]
-|   [-(`GN|GroupName <section5.2.rst#GN>`_) GroupNames]
-|   [-(`PO|PatternOffset <section5.1.rst#PO>`_) PatternStringOffset]
-|   [-(`WT|WebFileType <section5.2.rst#WT>`_) WebFileTypes]
-|   [-(`FS|FileStatus <section5.2.rst#FS>`_) WebFileStatus]
-|   [-(`FF|FileFlag <section5.2.rst#FF>`_) FilesOrPaths]
-|   [-(`LC|Location <section5.2.rst#LC>`_) StorageLocationFlags]
-|   [-(`DF|DataFormat <section5.2.rst#DF>`_) DataFormat]
-|   [-(`AF|ArchiveFormat <section5.2.rst#AF>`_) FileArchiveFormat]
-|   [-(`DO <section5.2.rst#DO>`_|DisplayOrder] DisplayOrderIndices]
-|   [-(`SZ|Size <section5.2.rst#SZ>`_) FileSizes]
-|   [-(`MC|MD5Checksum <section5.2.rst#MC>`_) MD5ChecksumValues]
-|   [-(`DE <section5.2.rst#DE>`_|Description] WebFileDescriptions]
-|   [-(`VS|ValidSize <section5.1.rst#VS>`_) MinSizeForValidFile]
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`AL|AsyncLimit <section5.1.rst#AL>`_) AsyncProcessLimit]
-|   [-(`QS|QsubOptions <section5.1.rst#QS>`_)  PBSBatchOptions]
-|   [-(`BP|BatchProcess <section5.2.rst#BP>`_) [BatchControlInfo]]
-|   [-(`DD|DeleteDir <section5.1.rst#DD>`_) DeleteLocalDirLevel]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(AW|ArchiveWebFile) [`Mode Options <mode_>`_]
+|         [-(`LF|LocalFile <section5.2_>`_) LocalFileNames]
+|         [-(`LD|LocalDirectory <section5.1_>`_) LocalDirectoryName]
+|         [-(`LL|LocalFileList <section5.1_>`_) LocalFileListName]
+|         [-(`WF|WebFile <section5.2_>`_) webFileNames]
+|         [-(`GI|GroupIndex <section5.2_>`_) GroupIndices]
+|         [-(`TG|TopGroupIndex <section5.2_>`_) TopGroupIndices]
+|         [-(`GN|GroupName <section5.2_>`_) GroupNames]
+|         [-(`PO|PatternOffset <section5.1_>`_) PatternStringOffset]
+|         [-(`WT|WebFileType <section5.2_>`_) WebFileTypes]
+|         [-(`FS|FileStatus <section5.2_>`_) WebFileStatus]
+|         [-(`FF|FileFlag <section5.2_>`_) FilesOrPaths]
+|         [-(`LC|Location <section5.2_>`_) StorageLocationFlags]
+|         [-(`DF|DataFormat <section5.2_>`_) DataFormat]
+|         [-(`AF|ArchiveFormat <section5.2_>`_) FileArchiveFormat]
+|         [-(`DO|DisplayOrder <section5.2_>`_) DisplayOrderIndices]
+|         [-(`SZ|Size <section5.2_>`_) FileSizes]
+|         [-(`MC|MD5Checksum <section5.2_>`_) MD5ChecksumValues]
+|         [-(`DE|Description <section5.2_>`_) WebFileDescriptions]
+|         [-(`VS|ValidSize <section5.1_>`_) MinSizeForValidFile]
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`AL|AsyncLimit <section5.1_>`_) AsyncProcessLimit]
+|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
+|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
+|         [-(`DD|DeleteDir <section5.1_>`_) DeleteLocalDirLevel]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for archive web file action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4.rst#BG>`_)
-     - background process to turn off screen display for both standard outputs and errors
-   * - -(`CL|CleanLocal <section4.rst#CL>`_)
-     - cleans local files after they are all archived onto RDA Server successfully
-   * - -(`EM|EMailNotice <section4.rst#EM>`_)
-     - sends email for summary and errors for this action
-   * - -(`GX|GatherXML <section4.rst#GX>`_)
-     - evaluates file content metadata from local file directly by calling **gatherxml**
-   * - -(`GZ|GMTZone <section4.rst#GZ>`_)
-     - uses GMT dates/times as controlling times
-   * - -(`KP|KeepLocalPath <section4.rst#KP>`_)
-     - retains the path names of local files as relative paths to data home directory on RDA Server
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NE|NoEmail <section4.rst#NE>`_)
-     - does not send email to the specialist for failed action
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`OE|OverrideExist <section4.rst#OE>`_)
-     - overrides existing web files
-   * - -(`RO|ResetOrder <section4.rst#RO>`_)
-     - resets the ordering indices of the list of file names on RDA Server according to the order they are given per option -`SF <section5.2.rst#SF>`_. Reordering filelist can be also accomplished by giving option -`ON <section5.1.rst#ON>`_ (-OrderNames), which tells Action -`SS <section3.4.1.rst>`_ to reorder all the files of given dataset and the involved groups
-   * - -(`SC|SetChecksum <section4.rst#SC>`_)
-     - evaluates the md5 checksum values for data files on Saved Server and saves them into RDADB
-   * - -(`UZ|UpzipData <section4.rst#UZ>`_)
-     - uncompresses online data with one of the uncompressing utilities,  'gunzip', 'uncompress', 'unzip' or 'bunzip', according to the file name extensions of ".gz', '.Z', '.zip' or '.bz2', respectively
-   * - -(`XC|CrossCopy <section4.rst#XC>`_)
-     - copies files from existing web/Object data files to missing Object/Web files; information of the Web files saved in RDADB is used for missing data copies
-   * - -(`XM|CrossMove <section4.rst#XM>`_)
-     - moves files from existing web/Object data files to missing Object/Web files; information of the Web files saved in RDADB is used for missing data copies
-   * - -(`ZD|ZipData <section4.rst#ZD>`_)
-     - compresses online data with one of the compressing utilities,  'gzip', 'compress', 'zip' or 'bzip', according to the archiving format 'GZ', 'Z', 'ZIP' or 'BZ2' provided per option -`AF <section5.2.rst#AF>`_ (-ARchiveFormat), respectively
+   * - -(`BG|BackGround <section4_>`_)
+     - runs in background; suppresses screen output and errors
+   * - -(`CL|CleanLocal <section4_>`_)
+     - removes local files after all are successfully archived
+   * - -(`EM|EMailNotice <section4_>`_)
+     - sends an email summary (including any errors) when the action completes or aborts
+   * - -(`GX|GatherXML <section4_>`_)
+     - calls **gatherxml** to evaluate file content metadata directly from the local file
+   * - -(`GZ|GMTZone <section4_>`_)
+     - uses GMT rather than local time for archiving timestamps
+   * - -(`KP|KeepLocalPath <section4_>`_)
+     - uses local file paths as relative paths on the GDEX Server
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NE|NoEmail <section4_>`_)
+     - suppresses email notification on failure
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`OE|OverrideExist <section4_>`_)
+     - overwrites existing Web files
+   * - -(`RO|ResetOrder <section4_>`_)
+     - resets display order indices to match the order files are given per -`WF <section5.2_>`_. Alternatively, use -`ON <section5.1_>`_ (-OrderNames) to reorder all files in the dataset and affected groups
+   * - -(`SC|SetChecksum <section4_>`_)
+     - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
+   * - -(`UZ|UnzipData <section4_>`_)
+     - decompresses files using 'gunzip', 'uncompress', 'unzip', or 'bunzip' according to the extension: '.gz', '.Z', '.zip', or '.bz2', respectively
+   * - -(`XC|CrossCopy <section4_>`_)
+     - copies files from existing Web/Object storage to fill missing Object/Web copies, using GDEXDB records for guidance
+   * - -(`XM|CrossMove <section4_>`_)
+     - moves files from existing Web/Object storage to fill missing Object/Web copies (originals are removed)
+   * - -(`ZD|ZipData <section4_>`_)
+     - compresses files using 'gzip', 'compress', 'zip', or 'bzip' according to the archive format ('GZ', 'Z', 'ZIP', or 'BZ2') given via -`AF <section5.2_>`_ (-ArchiveFormat)
 
-  One or multiple local file names can be provided per option -`LF <section5.2.rst#LF>`_ (-LocalFile)
-  for this action to work. If option -`LF <section5.2.rst#LF>`_ is given on command line, '*' and '?'
-  can be used in local file names for wildcard match. File names must include
-  relative or absolute paths if local data files are not located in the
-  directory where **dsarch** is started. The local file names are gathered
-  recursively following the sub-directory tree if a local directory per `Info <section5.rst>`_
-  option -`LD <section5.1.rst#LD>`_ (-LocalDirectory) is present.
+  Local file names are provided via -`LF <section5.2_>`_ (-LocalFile). On the command line,
+  '*' and '?' wildcards are supported. Files not in the current directory must
+  include relative or absolute paths. If a directory is given via -`LD <section5.1_>`_
+  (-LocalDirectory), files are gathered recursively from that tree.
 
-  Local file names are used as default for Web file names unless they are
-  explicitly given per option -`WF <section5.2.rst#WF>`_ (-WebFile). Local files are archived onto
-  RDA Server under the dataset home directory as default, unless relative or
-  absolute paths are given per option -`WP <section5.2.rst#WP>`_ (-WebPath) or Web path information for
-  the given dataset, and groups if specified, previously saved in RDADB. The
-  original local file names, including paths, are used if `Mode <section4.rst>`_ option -`KP <section4.rst#KP>`_
-  (-KeepLocalPath) is specified. Option -`WP <section5.2.rst#WP>`_ is not allowed if `Mode <section4.rst>`_ option -`KP <section4.rst#KP>`_
-  is given.
+  Local file names are used as Web file names by default unless -`WF <section5.2_>`_ (-WebFile)
+  is given explicitly. Files are archived under the dataset home directory;
+  use -`WP <section5.2_>`_ (-WebPath) or the path stored in GDEXDB to override. When -`KP <section4_>`_
+  (-KeepLocalPath) is specified, local file paths are used as-is and -`WP <section5.2_>`_ is
+  not permitted.
 
-  Group information for data files to be archived are given per option -`GI <section5.2.rst#GI>`_
-  (-GroupIndex) or -`GN <section5.2.rst#GN>`_ (-GroupName). Pattern matching is used for identify a
-  group index for a given Web file if group index is not given explicitly, and
-  the file record not exists in RDADB yet or `Info <section5.rst>`_ option -`PO <section5.1.rst#PO>`_ (-PatternOffset)
-  if present. The Web or local file name is matched against group pattern values
-  that are previously saved in group records via Action -`SG <section3.3.1.rst>`_ (-SetGroup). If no
-  group index is provided and no group pattern matching, an index value of 0
-  is defaulted for a data file to indicate no group.
+  Assign files to a group via -`GI <section5.2_>`_ (-GroupIndex) or -`GN <section5.2_>`_ (-GroupName). If no
+  group is specified, pattern matching against group patterns saved via -`SG <section3.3.1_>`_
+  is attempted when -`PO <section5.1_>`_ (-PatternOffset) is present or the file is not yet in
+  GDEXDB. Unmatched files default to group index 0.
 
-  A web file can be archived as either P (public) or I (internal) for any data type
-  as D (data) or N (ncar data). For a Web file is archived to be under an Internal
-  group, its status is automatically forced to I.
+  Web files may be archived as P (public) or I (internal) for data types D or
+  N. Files assigned to an internal group are automatically set to I.
 
-  The number of values passed in per `Info <section5.rst>`_ options must be the same as the number
-  of local file names provided, except for the `Info <section5.rst>`_ options that are allowed to
-  pass in single values, such as options -`GI <section5.2.rst#GI>`_ (-GroupIndex), -`DF <section5.2.rst#DF>`_ (-DataFormat),
-  -`AF <section5.2.rst#AF>`_ (-ArchiveFormat), -`WT <section5.2.rst#WT>`_ (-WebFileType), and -`WP <section5.2.rst#WP>`_ (-WebPath). If a single
-  group index is provided for multiple given local file names, the group index
-  is shared by all the given data files.
+  The number of values supplied to `Info <section5>`_ options must match the number of local
+  file names, except for options that accept a single shared value: -`GI <section5.2_>`_, -`DF <section5.2_>`_,
+  -`AF <section5.2_>`_, -`WT <section5.2_>`_ (-WebFileType), and -`WP <section5.2_>`_.
 
-  The location flag is provided via option -`LC <section5.2.rst#LC>`_ (-Location). The defualt value
-  is 'G' for archiving a web file onto Glade Disk only.
+  The storage location is set via -`LC <section5.2_>`_ (-Location). Defaults to 'G' (Glade
+  Disk only).
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

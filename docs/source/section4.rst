@@ -4,8 +4,8 @@
 4 - MODE OPTIONS
 =====================
 
-Use proper Mode options to modify behaviors of `Action <section3.rst>`_ options. Mode options
-are all optional. No value is allowed to be passed in following any Mode option.
+Mode options adjust how an `Action <section3>`_ option behaves. They are all optional and
+take no values — simply include the flag to activate the behavior.
 
 
 .. _BG:
@@ -13,8 +13,8 @@ are all optional. No value is allowed to be passed in following any Mode option.
 Mode Option -**BG** (-**BackGround**) (Alias: -**b**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-background process. When it presents
-  screen display is turned off for both standard outputs and errors.
+runs the action as a background process,
+  suppressing all screen output and error messages.
 
 
 .. _CL:
@@ -22,12 +22,9 @@ background process. When it presents
 Mode Option -**CL** (-**CleanLocal**) (Aliases: -**CleanLocFile**, -**CleanLocalFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present for
-  archiving actions -`AS <section3.4.9.rst>`_, or -`AW <section3.4.10.rst>`_, cleans the local files after they are all archived
-  successfully. If local files are staged temporarily in sub-directories, the
-  sub-directories can be removed too after all the local files are cleaned inside
-  them. Add `Info <section5.rst>`_ option -`DD <section5.1.rst#DD>`_ DirectoryLevel to tell how many level of the local
-  empty directories to be removed.
+deletes local
+  source files once all have been successfully archived by -`AS <section3.4.9_>`_ or -`AW <section3.4.10_>`_. Pair
+  with -`DD <section5.1_>`_ (-DeleteDir) to also clean up any empty local directories.
 
 
 .. _DX:
@@ -35,9 +32,9 @@ when present for
 Mode Option -**DX** (-**DeleteXML**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if present, calls **dcm** to delete file content metadata
-  of given Web files for actions -`SW <section3.4.3.rst>`_ (-SetWebFile). This is the default Mode for
-  action -`DL <section3.4.15.rst>`_ (-Delete) of Web files provided via -`WF <section5.2.rst#WF>`_ (-WebFile).
+calls **dcm** to delete content metadata for the specified
+  Web files. With -`SW <section3.4.3_>`_ (-SetWebFile), it explicitly removes metadata; with -`DL <section3.4.15_>`_
+  (-Delete) when Web files are specified, this happens automatically.
 
 
 .. _EM:
@@ -45,18 +42,13 @@ if present, calls **dcm** to delete file content metadata
 Mode Option -**EM** (-**EmailNotice**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-sends an email notice to the specialist who executes the
-  dsarch for certain actions after a action is finished successfully or aborts
-  abnormally. The Actions working with this Mode option include -`AS <section3.4.9.rst>`_, -`AW <section3.4.10.rst>`_,, -`AH <section3.4.11.rst>`_,
-  -`AQ <section3.4.12.rst>`_, -`SS <section3.4.1.rst>`_, -`SW <section3.4.3.rst>`_, -`SH <section3.4.5.rst>`_, -`SQ <section3.4.7.rst>`_, -`RQ <section3.4.13.rst>`_, -`MV <section3.4.14.rst>`_ and -`DL <section3.4.15.rst>`_. An email notice includes errors
-  happening during the action and a brief summary to show the action progress.
-  This option is ignored if option -d is present.
+sends the executing specialist an email when an action
+  finishes or fails. Applies to -`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, -`AH <section3.4.11_>`_, -`AQ <section3.4.12_>`_, -`SS <section3.4.1_>`_, -`SW <section3.4.3_>`_, -`SH <section3.4.5_>`_, -`SQ <section3.4.7_>`_, -`RQ <section3.4.13_>`_,
+  -`MV <section3.4.14_>`_, and -`DL <section3.4.15_>`_. The email includes a brief summary and any errors encountered.
+  Ignored when -d (-`BP <section5.2_>`_) is present.
 
-  Specialists need to be cautious of adding this Mode option to run dsarch.
-  If you run dsarch to archive many files with one at a time, you will receive
-  one email for each file. To make it work better, you include all the files
-  you want to process into a single input file and run dsarch with option -`EM <#EM>`_
-  against the input file. This way you receive a single email notice instead.
+  Tip: when archiving many files, consolidate them into a single input file
+  and include -`EM`_ once — only one email is sent regardless of file count.
 
 
 .. _FO:
@@ -64,9 +56,8 @@ sends an email notice to the specialist who executes the
 Mode Option -**FO** (-**FormatOutput**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if present, formats column output results for get
-  actions.  A same width, evaluated dynamically, is applied for all values of a
-  given field.
+aligns GET action output into fixed-width columns,
+  making results easier to read at a glance.
 
 
 .. _GF:
@@ -74,14 +65,10 @@ if present, formats column output results for get
 Mode Option -**GF** (-**GrowingFile**) (Alias: -**GrowingDataFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if present, `Action <section3.rst>`_ -`AW <section3.4.10.rst>`_ (-ArchiveWebFile) will allow
-  existing Web files being overridden although the data files are
-  under DOI/Version control already. Normally an archived data file can not
-  changed if it is linked to a version control record. This Mode option
-  indicates that the data file is a growing one and needs to be updated.
-  If `Action <section3.rst>`_ -`AW <section3.4.10.rst>`_ of **dsarch** is controlled by configuration of `dsupdt <https://gdex-docs-dsupdt.readthedocs.io/en/latest/index.html>`_, a
-  growing file is automatically detected and this Mode option is added to the
-  **dsarch** command as needed.
+lifts the DOI/Version control lock on Web files so
+  that -`AW <section3.4.10_>`_ (-ArchiveWebFile) can overwrite them. Use this when a file is
+  actively being appended to and must be updated in place. When `dsupdt <https://gdex-docs-dsupdt.readthedocs.io/en/latest/index.html>`_
+  drives -`AW <section3.4.10_>`_, growing files are detected and handled automatically.
 
 
 .. _GX:
@@ -89,10 +76,10 @@ if present, `Action <section3.rst>`_ -`AW <section3.4.10.rst>`_ (-ArchiveWebFile
 Mode Option -**GX** (-**GatherXML**) (Alias: -**Grid2XML**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if present, calls **gatherxml** to
-  evaluate file content metadata of archived Web files. This is the default
-  Mode for action -`MV <section3.4.14.rst>`_ (-MoveFile) for Web files, to call **rcm** to move the
-  file content metadata too.
+calls **gatherxml** to extract and
+  record content metadata for archived Web files. For -`MV <section3.4.14_>`_ (-MoveFile), metadata
+  is transferred to the new file name automatically via **rcm** — -`GX`_ is not
+  needed for moves.
 
 
 .. _GZ:
@@ -100,8 +87,8 @@ if present, calls **gatherxml** to
 Mode Option -**GZ** (-**GMTZone**) (Aliases: -**GMT**, -**GreenwichZone**, -**UTC**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-uses GMT dates/times as
-  controlling times for archiving actions, instead of mountain time.
+records archiving
+  timestamps in GMT instead of local time.
 
 
 .. _KM:
@@ -109,9 +96,8 @@ uses GMT dates/times as
 Mode Option -**KM** (-**KeepMetadata**) (Alias: -**KeepMeta**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for actions -`MV <section3.4.14.rst>`_ (-MoveFile) with
-  option -`TS <#TS>`_ (-ToSaved) to keep the metadata record for later use after
-  the web file is moved to savefile.
+preserves the content metadata
+  record when a Web file is converted to a Saved file via -`MV <section3.4.14_>`_ with -`TS`_.
 
 
 .. _KP:
@@ -119,13 +105,10 @@ for actions -`MV <section3.4.14.rst>`_ (-MoveFile) with
 Mode Option -**KP** (-**KeepPath**) (Alias: -**KeepLocalPath**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--`AW <section3.4.10.rst>`_
-  (-ArchiveWebFile) and -`AH <section3.4.11.rst>`_ (-ArchiveHelpFile) to archive Saved/Web/Help files with
-  the same file names as the local ones specified by -`LF <section5.2.rst#LF>`_ (-LocalFile).  A relative
-  path is reta8ined if it is part of a local file name. Options -`SP <section5.2.rst#SP>`_ (-SavedPath)
-  and -`WP <section5.2.rst#WP>`_ (-WebPath) are ignored if -`KP <#KP>`_ is given. This Mode option is ignored if
-  Save/Web/Help file names are specified per options -`SF <section5.2.rst#SF>`_ (-SavedFile), -`WF <section5.2.rst#WF>`_ (-WebFile),
-  and -`HF <section5.2.rst#HF>`_ (-HelpFile), respectively.
+preserves local file paths as-is
+  on the GDEX Server during -`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, and -`AH <section3.4.11_>`_. When -`KP`_ is active, -`SP <section5.2_>`_ and -`WP <section5.2_>`_
+  are ignored. -`KP`_ is also ignored when destination file names are provided
+  explicitly via -`SF <section5.2_>`_, -`WF <section5.2_>`_, or -`HF <section5.2_>`_.
 
 
 .. _MD:
@@ -133,7 +116,8 @@ Mode Option -**KP** (-**KeepPath**) (Alias: -**KeepLocalPath**) :
 Mode Option -**MD** (-**MyDataset**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-allows a specialist to update dataset/group/file
+bypasses the dataset ownership check, allowing any
+  specialist to modify records in GDEXDB for any dataset.
 
 
 .. _NE:
@@ -141,7 +125,7 @@ allows a specialist to update dataset/group/file
 Mode Option -**NE** (-**NoEmail**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-does not send email notice to the specialist for failed action.
+suppresses the automatic failure email notification.
 
 
 .. _NT:
@@ -149,8 +133,8 @@ does not send email notice to the specialist for failed action.
 Mode Option -**NT** (-**NoTrim**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-skips trimming of spaces and comments from input values to
-  speed up reading input file(s).
+skips stripping leading/trailing spaces and inline comments
+  from input values. Use this to speed up processing of large input files.
 
 
 .. _NV:
@@ -158,8 +142,8 @@ skips trimming of spaces and comments from input values to
 Mode Option -**NV** (-**NewVersion**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-adds a new version control record for a specified dataset
-  if this Mode option is present for `Action <section3.rst>`_ -`SV <section3.2.1.rst>`_ (-SetVersion).
+required to create a new DOI/Version control record
+  when using -`SV <section3.2.1_>`_ (-SetVersion).
 
 
 .. _OE:
@@ -167,7 +151,9 @@ adds a new version control record for a specified dataset
 Mode Option -**OE** (-**OverrideExist**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if present, overrides an existing file.
+allows an existing file on the GDEX Server to be
+  overwritten at the target path. Without this flag, archiving fails if the
+  destination already exists.
 
 
 .. _PE:
@@ -175,8 +161,8 @@ if present, overrides an existing file.
 Mode Option -**PE** (-**ShowPeriod**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-shows period information for dataset, and groups if provided,
-  for action -`SD <section3.1.1.rst>`_ (-SetDataset).
+adds data period information (begin/end dates and times)
+  for the dataset and any specified groups to the output of -`GD <section3.1.2_>`_ (-GetDataset).
 
 
 .. _RA:
@@ -184,7 +170,8 @@ shows period information for dataset, and groups if provided,
 Mode Option -**RA** (-**RetryArchive**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-deprecated, does not do anything.
+deprecated; has no effect and may be removed in a
+  future version.
 
 
 .. _RD:
@@ -192,14 +179,12 @@ deprecated, does not do anything.
 Mode Option -**RD** (-**RemoveDir**) (Aliases: -**RemoveDirectory**, -**RemoveEmptyDir**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-it works with
-  Actions -`DL <section3.4.15.rst>`_, -`SS <section3.4.1.rst>`_ and -`SW <section3.4.3.rst>`_ to remove empty directories for a specified dataset,
-  and groups if specified.
+removes any
+  directories that become empty after file changes from -`DL <section3.4.15_>`_, -`SS <section3.4.1_>`_, or -`SW <section3.4.3_>`_.
 
-  If empty directories are not cleaned after deleting files. Use Actions -`SS <section3.4.1.rst>`_ or
-  -`SW <section3.4.3.rst>`_ with this Mode option, without Saved or Web file names specified, to clean
-  the empty Web or HPSS directories, respectively for a given dataset, and
-  groups if specified.
+  To clean up empty directories without modifying files, run -`SS <section3.4.1_>`_ or -`SW <section3.4.3_>`_ with
+  -`RD`_ and no file names; **dsarch** will prune empty Web or Saved directories
+  for the specified dataset and groups.
 
 
 .. _RG:
@@ -207,10 +192,9 @@ it works with
 Mode Option -**RG** (-**RecursiveGroup**) (Alias: -**RepeatGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present, gathers subgroups
-  and file information in subgroups recursively for actions -`GG <section3.3.2.rst>`_ (-GetGroup) and
-  -`GS <section3.4.2.rst>`_/GW (-GetSavedFile/GetWebfile), respectively. Group index must be provided
-  explicitly via `Info <section5.rst>`_ option -`GI <section5.2.rst#GI>`_ (-GroupIndex) for this Mode option to work.
+descends into subgroups
+  recursively when used with -`GG <section3.3.2_>`_, -`GS <section3.4.2_>`_, or -`GW <section3.4.4_>`_, gathering all nested records.
+  A group index must be provided via -`GI <section5.2_>`_ for this to take effect.
 
 
 .. _RN:
@@ -218,9 +202,8 @@ when present, gathers subgroups
 Mode Option -**RN** (-**RelativeName**) (Aliases: -**RelativePathName**, -**RelativeFileName**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for action -`GS <section3.4.2.rst>`_ (-GetSavedFile) and -`GW <section3.4.4.rst>`_ (-GetWebFile) to
-  show a file name with path relative to the Saved and Web paths set for
-  the dataset or group, respectively.
+returns file names as relative paths (relative to the
+  dataset or group's Saved or Web path) in the output of -`GS <section3.4.2_>`_ and -`GW <section3.4.4_>`_.
 
 
 .. _RO:
@@ -228,15 +211,12 @@ for action -`GS <section3.4.2.rst>`_ (-GetSavedFile) and -`GW <section3.4.4.rst>
 Mode Option -**RO** (-**ResetOrder**) (Alias: -**Reorder**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present, resets the display orders
-  of the given Saved/Web/Help/Quasar file lists as the orders the data files are
-  given for actions -`SS <section3.4.1.rst>`_ (-SetSavedFile), -`SW <section3.4.3.rst>`_ (-SetWebFile), -`SH <section3.4.5.rst>`_ (-SetHelpFile),
-  and -`SQ <section3.4.7.rst>`_ (-SetQuasarFile), respectively. Another way of reordering the data files
-  is to provide explicitly order index values per `Info <section5.rst>`_ option -`DO <section5.2.rst#DO>`_ (-DisplayOrder).
+sets display order indices to match
+  the order files are listed when passed to -`SS <section3.4.1_>`_, -`SW <section3.4.3_>`_, -`SH <section3.4.5_>`_, or -`SQ <section3.4.7_>`_. To set
+  explicit indices instead, use -`DO <section5.2_>`_ (-DisplayOrder).
 
-  Specify what fields to order on per option -`ON <section5.1.rst#ON>`_ (-OrderNames) to order the
-  files accord for the whole datasets or individual groups.  Check option -`ON <section5.1.rst#ON>`_
-  for examples of ordering Files.
+  For sorting files by field values across an entire dataset or individual
+  groups, use -`ON <section5.1_>`_ (-OrderNames).
 
 
 .. _RS:
@@ -244,8 +224,8 @@ when present, resets the display orders
 Mode Option -**RS** (-**GXRSOptions**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-works with Mode option -`GX <#GX>`_ (-GatherXML) to pass option
-  R and S to command gatherxml for speeding up.
+passes the R and S flags to **gatherxml** to speed up
+  metadata evaluation. Use alongside -`GX`_ (-GatherXML).
 
 
 .. _RT:
@@ -253,9 +233,9 @@ works with Mode option -`GX <#GX>`_ (-GatherXML) to pass option
 Mode Option -**RT** (-**ResetTIndex**) (Alias: -**ResetTopGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for setting actions to reset
-  the top group index for Saved or Web files for dataset, and groups if
-  specified.
+recalculates and resets the
+  top-level group index stored in Saved or Web file records for the dataset
+  and any specified groups.
 
 
 .. _SC:
@@ -263,8 +243,8 @@ for setting actions to reset
 Mode Option -**SC** (-**SetChecksum**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-if presents, evaluates the md5 checksum values for data
-  files on RDA Servers and saves them into RDADB
+calculates MD5 checksums for data files on the GDEX
+  Server and stores them in GDEXDB for integrity verification.
 
 
 .. _TO:
@@ -272,9 +252,8 @@ if presents, evaluates the md5 checksum values for data
 Mode Option -**TO** (-**TarOnly**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-works with `Action <section3.rst>`_ -`AQ <section3.4.12.rst>`_ (-ArchiveQuasarFile) to tar the given
-  Saved and/or Web files only, without physically backing up the Quasar file
-  onto the Globus Quasar Server.
+builds the Quasar tar file locally without uploading it
+  to the Globus Quasar Server. Useful for testing. Used with -`AQ <section3.4.12_>`_.
 
 
 .. _TS:
@@ -282,8 +261,8 @@ works with `Action <section3.rst>`_ -`AQ <section3.4.12.rst>`_ (-ArchiveQuasarFi
 Mode Option -**TS** (-**ToSaved**) (Aliases: -**ToSavedFile**, -**MovedToSaved**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present for `Action <section3.rst>`_ -`MV <section3.4.14.rst>`_ to
-  move Web files to Saved files.
+used with -`MV <section3.4.14_>`_ (-MoveFile)
+  to move Web files to Saved files.
 
 
 .. _TT:
@@ -291,8 +270,8 @@ when present for `Action <section3.rst>`_ -`MV <section3.4.14.rst>`_ to
 Mode Option -**TT** (-**TotalSummary**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present, gets the statistic summary information
-  for `Action <section3.rst>`_ options -`GS <section3.4.2.rst>`_ (-GetSavedFile) and -`GW <section3.4.4.rst>`_ (-GetWebFile).
+appends file count and size totals to the output
+  of -`GS <section3.4.2_>`_ (-GetSavedFile) and -`GW <section3.4.4_>`_ (-GetWebFile).
 
 
 .. _TW:
@@ -300,8 +279,8 @@ when present, gets the statistic summary information
 Mode Option -**TW** (-**ToWeb**) (Aliases: -**ToWebFile**, -**MovedToWeb**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present for `Action <section3.rst>`_ -`MV <section3.4.14.rst>`_ to
-  move Saved files to Web files.
+used with -`MV <section3.4.14_>`_ (-MoveFile)
+  to move Saved files to Web files.
 
 
 .. _UZ:
@@ -309,10 +288,9 @@ when present for `Action <section3.rst>`_ -`MV <section3.4.14.rst>`_ to
 Mode Option -**UZ** (-**UnzipData**) (Aliases: -**Uncompress**, -**UncompressData**, -**Unzip**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-uncompresses online data
-  with one of the uncompressing utilities, 'gunzip', 'uncompress', 'unzip'
-  or 'bunzip', according to the file name extensions of ".gz', '.Z', '.zip'
-  or '.bz2', respectively
+decompresses files during
+  archiving. The tool is selected by extension: 'gunzip' for '.gz', 'uncompress'
+  for '.Z', 'unzip' for '.zip', and 'bunzip' for '.bz2'.
 
 
 .. _WC:
@@ -320,8 +298,8 @@ uncompresses online data
 Mode Option -**WC** (-**WithChecksum**) (Aliases: -**ValidateChecksum**, -**WithMD5**, -**ValidateMD5**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present, checks the MD5 checksums in addition to
-  the data file sizes for online data files on RDA Server.
+adds MD5 checksum verification on top of size checks
+  when validating data files on the GDEX Server.
 
 
 .. _WM:
@@ -329,8 +307,8 @@ when present, checks the MD5 checksums in addition to
 Mode Option -**WM** (-**WithMetadata**) (Alias: -**WithMeta**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for setting actions to reset the dataset/group level
-  content metadata for action -`SD <section3.1.1.rst>`_/SG (-SetDataset/SetGroup).
+triggers a fresh **gatherxml** run at the dataset or
+  group level when used with -`SD <section3.1.1_>`_ (-SetDataset) or -`SG <section3.3.1_>`_ (-SetGroup).
 
 
 .. _WN:
@@ -338,10 +316,9 @@ for setting actions to reset the dataset/group level
 Mode Option -**WN** (-**WithFileNumber**) (Alias: -**WithNumber**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for setting actions to reevaluate and reset the
-  Saved or Web file counts for dataset, and groups if specified. These file
-  counts can also be viewed for action -`GD <section3.1.2.rst>`_ (-GetDataset) if this Mode option is
-  preset.
+recomputes and updates Saved/Web file counts for the
+  dataset and any specified groups. With -`GD <section3.1.2_>`_ (-GetDataset), the counts are
+  calculated on the fly and included in the output.
 
 
 .. _XC:
@@ -349,8 +326,9 @@ for setting actions to reevaluate and reset the
 Mode Option -**XC** (-**CrossCopy**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-works with action -`AW <section3.4.10.rst>`_/-AS to cross copy data files between
-  Web/Saved files on Glade disk and Object files on Object store.
+used with -`AW <section3.4.10_>`_ or -`AS <section3.4.9_>`_ to fill gaps in storage: copies
+  files from Glade disk to Object Store (or vice versa) wherever copies are
+  missing.
 
 
 .. _XM:
@@ -358,9 +336,8 @@ works with action -`AW <section3.4.10.rst>`_/-AS to cross copy data files betwee
 Mode Option -**XM** (-**CrossMove**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-works with action -`AW <section3.4.10.rst>`_/-AS to cross move data files between
-  Web/Saved files on Glade disk and Object files on Object store. This Mode option
-  is different from -`XC <#XC>`_ that the original files are removed.
+like -`XC`_ but moves instead of copying — the original
+  file is deleted once the destination copy is confirmed.
 
 
 .. _ZD:
@@ -368,20 +345,14 @@ works with action -`AW <section3.4.10.rst>`_/-AS to cross move data files betwee
 Mode Option -**ZD** (-**ZipData**) (Aliases: -**Compress**, -**CompressData**, -**Zip**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-when present, Actions -`AS <section3.4.9.rst>`_
-  (-ArchiveSavedFile) and -`AW <section3.4.10.rst>`_ (-ArchiveWebFile) compress online data with one
-  of the compressing utilities,  'gzip', 'compress', 'zip' and 'bzip', according
-  to the archiving format 'GZ', 'Z', 'ZIP' or 'BZ2' provided per option -`AF <section5.2.rst#AF>`_
-  (-ARchiveFormat), respectively. If the original data files are compressed already,
-  this Mode option is ignored if the same compression, and the files are uncompressed,
-  before compressing, with one of the uncompressing utilities, 'gunzip', 'uncompress',
-  'unzip' or 'bunzip', according to the file name extensions of ".gz', '.Z', '.zip'
-  or '.bz2', respectively.
+compresses files during -`AS <section3.4.9_>`_ or
+  -`AW <section3.4.10_>`_. The compression tool is selected by the format given via -`AF <section5.2_>`_: 'gzip' for
+  'GZ', 'compress' for 'Z', 'zip' for 'ZIP', 'bzip' for 'BZ2'. Files already
+  in the target format are skipped. Files compressed in a different format are
+  decompressed first (using the tool matched by extension: '.gz', '.Z', '.zip',
+  or '.bz2') before recompressing.
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

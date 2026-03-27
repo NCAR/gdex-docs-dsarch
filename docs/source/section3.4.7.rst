@@ -10,60 +10,55 @@
 Action Option -**SQ** (-**SetQuasarFile**) (Aliases: -**SetQuasar**, -**SetBackupFile**, -**SetBackup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-modifies information of the Quasar files
-  in RDADB for a given dataset. One or multiple files can be processed each time.
+updates Quasar backup file records
+  in GDEXDB for the specified dataset. Multiple records can be processed per
+  execution.
 
-| **dsarch** [-(`DS|Dataset <section5.1.rst#DS>`_)] dsnnn.n [-](SS|SetSavedFile) [`Mode Options <#mode>`_]
-|   [-(`QF|QuasarFile <section5.2.rst#QF>`_) QuasarFileNames]
-|   [-(`ON|OrderNames <section5.1.rst#ON>`_) OrderNameString]
-|   [-(`OB|OrderBy <section5.2.rst#OB>`_) OrderByPattern]
-|   [-(`QT|QuasarFileType <section5.2.rst#QT>`_) QuasarFileTypes]
-|   [-(`BS|BackupStatus <section5.2.rst#BS>`_) QuasarBackupFileStatus]
-|   [-(`DF|DataFormat <section5.2.rst#DF>`_) FileContentFormat]
-|   [-(`AF|ArchiveFormat <section5.2.rst#AF>`_) FileArchiveFormat]
-|   [-(`DO <section5.2.rst#DO>`_|DisplayOrder] DisplayOrderIndices]
-|   [-(`SZ|Size <section5.2.rst#SZ>`_) FileSizes]
-|   [-(`MC|MD5Checksum <section5.2.rst#MC>`_) MD5ChecksumValues]
-|   [-(`FD|FileDate <section5.2.rst#FD>`_) DateModified]
-|   [-(`FT|FileTime <section5.2.rst#FT>`_) TimeModified]
-|   [-(`DE <section5.2.rst#DE>`_|Description] SavedFileDescriptions]
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`QS|QsubOptions <section5.1.rst#QS>`_)  PBSBatchOptions]
-|   [-(`BP|BatchProcess <section5.2.rst#BP>`_) [BatchControlInfo]]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](SQ|SetQuasarFile) [`Mode Options <mode_>`_]
+|         [-(`QF|QuasarFile <section5.2_>`_) QuasarFileNames]
+|         [-(`ON|OrderNames <section5.1_>`_) OrderNameString]
+|         [-(`OB|OrderBy <section5.2_>`_) OrderByPattern]
+|         [-(`QT|QuasarFileType <section5.2_>`_) QuasarFileTypes]
+|         [-(`BS|BackupStatus <section5.2_>`_) QuasarBackupFileStatus]
+|         [-(`DF|DataFormat <section5.2_>`_) FileContentFormat]
+|         [-(`AF|ArchiveFormat <section5.2_>`_) FileArchiveFormat]
+|         [-(`DO|DisplayOrder <section5.2_>`_) DisplayOrderIndices]
+|         [-(`SZ|Size <section5.2_>`_) FileSizes]
+|         [-(`MC|MD5Checksum <section5.2_>`_) MD5ChecksumValues]
+|         [-(`FD|FileDate <section5.2_>`_) DateModified]
+|         [-(`FT|FileTime <section5.2_>`_) TimeModified]
+|         [-(`DE|Description <section5.2_>`_) SavedFileDescriptions]
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
+|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for setting Web file action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4.rst#BG>`_)
-     - background process to turn off screen display for both standard outputs and errors
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NE|NoEmail <section4.rst#NE>`_)
-     - does not send email to the specialist for failed action
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`RO|ResetOrder <section4.rst#RO>`_)
-     - resets the ordering indices of the list of file names on Quasar Server according to the order they are given per option -`QF <section5.2.rst#QF>`_. Reordering filelist can be also accomplished by giving option -`ON <section5.1.rst#ON>`_ (-OrderNames), which tells Action -`SQ <#SQ>`_ to reorder all the files of given dataset
-   * - -(`SC|SetChecksum <section4.rst#SC>`_)
-     - evaluates the md5 checksum values for data files on RDA Server and saves them into RDADB
+   * - -(`BG|BackGround <section4_>`_)
+     - runs in background; suppresses screen output and errors
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NE|NoEmail <section4_>`_)
+     - suppresses email notification on failure
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`RO|ResetOrder <section4_>`_)
+     - resets display order indices to match the order files are given per -`QF <section5.2_>`_. Alternatively, use -`ON <section5.1_>`_ (-OrderNames) to reorder all files in the dataset
+   * - -(`SC|SetChecksum <section4_>`_)
+     - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
-  Quasar file names must be provided per option -`QF <section5.2.rst#QF>`_ (-QuasarFile) for this action
-  to work, unless `Info Option <section5.rst>`_ -`ON <section5.1.rst#ON>`_ (-OrderNames) is provided to reorder the files
-  of specified dataset. The number of values passed in following `Info <section5.rst>`_ options
-  should match the number of file names given per option -`QF <section5.2.rst#QF>`_, except for options
-  related to dataset information and the `Info <section5.rst>`_ options that are allowed to pass in
-  as single values, such as -`AF <section5.2.rst#AF>`_ (-ArchiveFormat), -`DF <section5.2.rst#DF>`_ (-DataFormat), and -`QT <section5.2.rst#QT>`_
-  (-QuasarFileType).
+  Quasar file names must be provided via -`QF <section5.2_>`_ (-QuasarFile) unless -`ON <section5.1_>`_
+  (-OrderNames) is used to reorder files. The number of values supplied to other
+  `Info <section5>`_ options must match the number of file names, except for options that
+  accept a single shared value, such as -`AF <section5.2_>`_, -`DF <section5.2_>`_, and -`QT <section5.2_>`_ (-QuasarFileType).
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

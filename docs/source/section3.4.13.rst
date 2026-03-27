@@ -10,47 +10,45 @@
 Action Option -**RQ** (-**RestoreQuasarFile**) (Aliases: -**RestoreQuasar**, -**RestoreBackupFile**, -**RestoreBackup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- (Alias: -RestoreQuasar|RestoreBackupfile|-RestoreBackup),
-  identifies Quasar files from given saved and/or Web files, retrieves the tarfiles from
-  Globus Quasar Server, and restores the Saved and/or Web files if any missed.
+ (Alias: -RestoreQuasar|-RestoreBackupFile|-RestoreBackup),
+  finds the Quasar tar files that contain the specified Saved and/or Web files,
+  downloads them from the Globus Quasar Server, and restores any files that
+  are missing from the GDEX Server.
 
-| **dsarch** [-(`DS|dataset <section5.1.rst#DS>`_)] dsnnn.n -(RQ|RestoreQuasarFile) [`Mode Options <#mode>`_]
-|   [-(`QF|QuasarFile <section5.2.rst#QF>`_) QuasarFileNames]
-|   [-(`SF|SavedFile <section5.2.rst#SF>`_) SavedFileNames]
-|   [-(`ST|SavedFileType <section5.2.rst#ST>`_) SavedFileTypes]
-|   [-(`WF|WebFile <section5.2.rst#WF>`_) webFileNames]
-|   [-(`WT|WebFileType <section5.2.rst#WT>`_) WebFileTypes]
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`QS|QsubOptions <section5.1.rst#QS>`_)  PBSBatchOptions]
-|   [-(`BP|BatchProcess <section5.2.rst#BP>`_) [BatchControlInfo]]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(RQ|RestoreQuasarFile) [`Mode Options <mode_>`_]
+|         [-(`QF|QuasarFile <section5.2_>`_) QuasarFileNames]
+|         [-(`SF|SavedFile <section5.2_>`_) SavedFileNames]
+|         [-(`ST|SavedFileType <section5.2_>`_) SavedFileTypes]
+|         [-(`WF|WebFile <section5.2_>`_) webFileNames]
+|         [-(`WT|WebFileType <section5.2_>`_) WebFileTypes]
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
+|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for archive web file action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4.rst#BG>`_)
-     - background process to turn off screen display for both standard outputs and errors
-   * - -(`EM|EMailNotice <section4.rst#EM>`_)
-     - sends email for summary and errors for this action
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NE|NoEmail <section4.rst#NE>`_)
-     - does not send email to the specialist for failed action
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
+   * - -(`BG|BackGround <section4_>`_)
+     - runs in background; suppresses screen output and errors
+   * - -(`EM|EMailNotice <section4_>`_)
+     - sends an email summary (including any errors) when the action completes or aborts
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NE|NoEmail <section4_>`_)
+     - suppresses email notification on failure
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
 
-  One or multiple Quasar/Saved/Web file names can be provided per option -`QF <section5.2.rst#QF>`_-SF/-`WF <section5.2.rst#WF>`_,
-  for this action to work. If Only Quasar file names are provided, the quasar tarfiles
-  are retrieved from quasar Server, but no Saved or Web files are retored.
+  At least one Quasar, Saved, and/or Web file name must be provided via -`QF <section5.2_>`_,
+  -`SF <section5.2_>`_, and/or -`WF <section5.2_>`_. If only Quasar file names are given, the tar files are
+  retrieved from the server but no Saved or Web files are restored.
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

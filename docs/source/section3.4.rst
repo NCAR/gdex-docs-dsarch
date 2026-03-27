@@ -4,50 +4,68 @@
 3.4 - File Actions
 =====================
 
-  The saved, Web and Help files are archived and their information are recorded
-  into RDADB via actions described in this section. The files themselves, and
-  their recorded information can be manipulated via different file actions. The
-  file information recorded in RDADB can be viewed for given dataset and further
-  specified by other conditions. The file actions included in this section are:
+  This section covers the full lifecycle of files in GDEXDB: archiving,
+  querying, moving, and deleting Saved, Web, Help, and Quasar files.
+  Available actions:
 
 .. list-table::
    :widths: auto
 
-   * - `Set Saved File Information <section3.4.1.rst>`_
-     - create or modify information of Saved data files into RDADB
-   * - `Get Saved File Information <section3.4.2.rst>`_
-     - retrieve information of existing saved data files recorded in RDADB
-   * - `Set Web File Information <section3.4.3.rst>`_
-     - create or modify information of data files on RDA Server into RDADB
-   * - `Get Web File Information <section3.4.4.rst>`_
-     - retrieve information of existing data files on RDA Server recorded RDADB
-   * - `Set Help File Information <section3.4.5.rst>`_
-     - create or modify information of document and software Help files recorded in RDADB
-   * - `Get Help File Information <section3.4.6.rst>`_
-     - retrieve Quasar file information recorded in RDADB
-   * - `Set Quasar File Information <section3.4.7.rst>`_
-     - create or modify information of backup Quasar files recorded in RDADB
-   * - `Get Quasar File Information <section3.4.8.rst>`_
-     - retrieve Help file information recorded in RDADB
-   * - `Archive Saved Files <section3.4.9.rst>`_
-     - archive saved data files, and record new records into RDADB or modify records that are in RDADB
-   * - `Archive Web Files <section3.4.10.rst>`_
-     - archive web data files, and record new records into RDADB or modify records that are in RDADB
-   * - `Archive Help Files <section3.4.11.rst>`_
-     - archive Help files onto RDA Seb Servers, and record new records into RDADB or modify records that are in RDADB
-   * - `Backup Quasar Files <section3.4.12.rst>`_
-     - tar mulitple files from one or more datasets into a single file, and backup it onto Globus Quasar Server
-   * - `Restore Quasar Files <section3.4.13.rst>`_
-     - retrieve quasar files identified from given Saved and Web files, restore the untarrd Saved and Web files for missing ones
-   * - `Move Saved/Web/Help/Quasar Files <section3.4.14.rst>`_
-     - move physically the Saved, Web, Help and Quasar files from one dataset to another, or just inside of a single dataset, and cross move between Save and Web files
-   * - `Delete Saved/Web/Help/Quasar Files <section3.4.15.rst>`_
-     - delete one or multiple Saved, Web, Help, and Quasar files, and their information recorded in RDADB
+   * - `Set Saved File Information <section3.4.1>`_
+     - create or modify Saved file records in GDEXDB
+   * - `Get Saved File Information <section3.4.2>`_
+     - retrieve Saved file records from GDEXDB
+   * - `Set Web File Information <section3.4.3>`_
+     - create or modify Web file records in GDEXDB
+   * - `Get Web File Information <section3.4.4>`_
+     - retrieve Web file records from GDEXDB
+   * - `Set Help File Information <section3.4.5>`_
+     - create or modify Help file records in GDEXDB
+   * - `Get Help File Information <section3.4.6>`_
+     - retrieve Help file records from GDEXDB
+   * - `Set Quasar File Information <section3.4.7>`_
+     - create or modify Quasar backup file records
+   * - `Get Quasar File Information <section3.4.8>`_
+     - retrieve Quasar backup file records from GDEXDB
+   * - `Archive Saved Files <section3.4.9>`_
+     - archive local files as Saved files and record their information in GDEXDB
+   * - `Archive Web Files <section3.4.10>`_
+     - archive local files as Web files and record their information in GDEXDB
+   * - `Archive Help Files <section3.4.11>`_
+     - archive local files as Help files and record their information in GDEXDB
+   * - `Backup Quasar Files <section3.4.12>`_
+     - tar and upload files to the Globus Quasar Server
+   * - `Restore Quasar Files <section3.4.13>`_
+     - retrieve Quasar tar files and restore missing Saved or Web files
+   * - `Move Saved/Web/Help/Quasar Files <section3.4.14>`_
+     - move files between datasets, groups, or file types
+   * - `Delete Saved/Web/Help/Quasar Files <section3.4.15>`_
+     - delete files and remove their GDEXDB records
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Table of Contents
+   section3.4.1
+   section3.4.2
+   section3.4.3
+   section3.4.4
+   section3.4.5
+   section3.4.6
+   section3.4.7
+   section3.4.8
+   section3.4.9
+   section3.4.10
+   section3.4.11
+   section3.4.12
+   section3.4.13
+   section3.4.14
+   section3.4.15
+
+**Appendix A: List of Examples**
+
+- `A.10. Action Option -GW (-GetWebFile) <3.4.4_e10>`_
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

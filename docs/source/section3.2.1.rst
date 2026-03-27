@@ -10,77 +10,68 @@
 Action Option -**SV** (-**SetVersion**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-adds and modifies DOI/Version controls for a given dataset number.
+creates a new or updates an existing DOI/Version control
+  record for the specified dataset.
 
-| **dsarch** [-(`DS|Dataset <section5.1.rst#DS>`_)] dsnnn.n [-](SV|SetVersion) [`Mode Options <#mode>`_]
-|   [-(`VI|VersionIndex <section5.2.rst#VI>`_) VersionIndex]
-|   [-(`IV|InternalVersion <section5.2.rst#IV>`_) InternalVersionIndex]
-|   [-(`EV|ExternalVersion <section5.2.rst#EV>`_) AssignedVersionNumber]
-|   [-(`DN|DOINumber <section5.2.rst#DN>`_) DOInumber]
-|   [-(`VT|VersionStatus <section5.2.rst#VT>`_) VersionRecordStatus]
-|   [-(`BD|BeginDate <section5.2.rst#BD>`_) VersionStartdate]
-|   [-(`BT|BeginTime <section5.2.rst#BT>`_) VersionStartTime]
-|   [-(`ED|EndDate <section5.2.rst#ED>`_) VersionEnddate]
-|   [-(`ET|EndTime <section5.2.rst#ET>`_) VersionEndTime]
-|   [-(`DE|Description <section5.2.rst#DE>`_) VersionNote]
+| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](SV|SetVersion) [`Mode Options <mode_>`_]
+|         [-(`VI|VersionIndex <section5.2_>`_) VersionIndex]
+|         [-(`IV|InternalVersion <section5.2_>`_) InternalVersionIndex]
+|         [-(`EV|ExternalVersion <section5.2_>`_) AssignedVersionNumber]
+|         [-(`DN|DOINumber <section5.2_>`_) DOInumber]
+|         [-(`VT|VersionStatus <section5.2_>`_) VersionRecordStatus]
+|         [-(`BD|BeginDate <section5.2_>`_) VersionStartdate]
+|         [-(`BT|BeginTime <section5.2_>`_) VersionStartTime]
+|         [-(`ED|EndDate <section5.2_>`_) VersionEnddate]
+|         [-(`ET|EndTime <section5.2_>`_) VersionEndTime]
+|         [-(`DE|Description <section5.2_>`_) VersionNote]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for setting DOI/Version control action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skips trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`NV|NewVersion <section4.rst#NV>`_)
-     - adds a new version control record into RDADB
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`NV|NewVersion <section4_>`_)
+     - adds a new version control record to GDEXDB
 
-  If a version index is given and it is in RDADB already, its record is modified.
-  A new version control record is added if version control index is not given or it is
-  0 and `Mode <section4.rst>`_ option -`NV <section4.rst#NV>`_ (-NewVersion) is present.
+  If a version index is provided and already exists in GDEXDB, the record is
+  modified. A new record is created when no index is given (or it is 0) and `Mode <section4>`_
+  option -`NV <section4_>`_ (-NewVersion) is present.
 
-  When a version control record is first added into RDADB without DOI number specified,
-  it is in status of Pending. It can only be changed to Active if a DOI number
-  is provided. An active version control record is added with a new DOI number and a
-  version control index is auto-generated.
+  A newly created record with no DOI number is in Pending status and can only
+  transition to Active once a DOI number is supplied. When an active record is
+  created with a new DOI number, the version control index is auto-generated.
 
 
-.. _e3:
+.. _3.2.1_e3:
 
-**EXAMPLE 3. **
+**EXAMPLE 3. To place d999009 under DOI/Version control:**
 
-Put Dataset D999009 Under Doi/Version Control
+  dsarch d999009 SV -`NV <section4_>`_ -DN DOINumber
 
-  dsarch d999009 SV -`NV <section4.rst#NV>`_ -DN DOINumber
+  If the data of d999009 are substantially updated to a new version, run the
+  same command with a new DOI number. The previous active record is automatically
+  moved to History status and its DOI is superseded. Only one active version
+  control record may exist per dataset.
 
-  If the data of d999009 are updated mostly or completely to a newer version (set of
-  files) a new DOI number is needed. You may execute the same **dsarch** command to
-  add another new active version control record with a new DOI number. The previous
-  version control record is changed automatically to status of History and its DOI number
-  is superseded now by the current DOI number. Only one active version control record can
-  exist for a give dataset.
+  For minimal data changes under the same DOI, run the same command with the
+  existing DOI number to create a new internal version index. The previous
+  record is again moved to History.
 
-  If the data of d999009 are modified minimally a new internal version index is needed
-  with the same DOI number, you may execute the same **dsarch** command to add another
-  new version control record with a new internal version index but the same existing DOI
-  number. The previous version control record is also changed to status of History.
+  One common minimal-change case is replacing erroneous Web files. First, move
+  the affected files to different names using Action -`MV <section3.4.14_>`_ (their type is
+  automatically set to 'V' for Version-controlled). Optionally create a new
+  internal version at this point, then archive the replacement Web files.
 
-  One case of the minimal data change is to replace one or multiple erroneous Web
-  files under version control. The files are first moved to different filenames
-  via dsarch Action -`MV <section3.4.14.rst>`_. The file type is autmatically set to 'V' as Version
-  controlled type. A new internal version can be optionally added at this time. Then
-  new Web files are added as replacements.
-
-  Usage Note: Various RDA use cases are described here. It is recommended that you review
-  and know these use cases, so that the DOIs in the RDA are handled consistently.
+  Note: Various GDEX use cases are outlined above. Review them so that DOIs in
+  the GDEX are handled consistently.
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

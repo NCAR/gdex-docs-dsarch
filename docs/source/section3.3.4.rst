@@ -10,52 +10,43 @@
 Action Option -**CG** (-**ChangeGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-changes group indices from original groups given by
-  option -`OG <section5.2.rst#OG>`_ (-OriginGroup) to new groups specified by option -`GI <section5.2.rst#GI>`_ (-GroupIndex)
-  for a given dataset.
+renumbers group indices for the specified dataset,
+  mapping each original index (via -`OG <section5.2_>`_) to a new value (via -`GI <section5.2_>`_).
 
-| **dsarch** [-(`DS|dataset <section5.1.rst#DS>`_)] dsnnn.n [-](CG|ChangeGroup) [`Mode Options <#mode>`_]
-|   -(`OG|OriginGroup <section5.2.rst#OG>`_) OriginalGroupIndices
-|   -(`GI|GroupIndex <section5.2.rst#GI>`_) NewGroupIndices
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN [-](CG|ChangeGroup) [`Mode Options <mode_>`_]
+|          -(`OG|OriginGroup <section5.2_>`_) OriginalGroupIndices
+|          -(`GI|GroupIndex <section5.2_>`_) NewGroupIndices
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for changing group action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`RT|ResetTGroup <section4.rst#RT>`_)
-     - reset top group index for the HPSS/Web file records
-   * - -(`WN|WithFileNumber <section4.rst#WN>`_)
-     - reevaluates and resets HPSS/Web file counts for the affected groups
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`RT|ResetTGroup <section4_>`_)
+     - resets the top group index for file records in the affected group
+   * - -(`WN|WithFileNumber <section4_>`_)
+     - re-evaluates and resets file counts for the affected groups
 
-  A dataset group is identified by its group index. It can only be changed to
-  different value via this action -`CG <#CG>`_ and both original group indices per `Info <section5.rst>`_
-  option -`OG <section5.2.rst#OG>`_ (-OriginGroup) and new group indices per `Info <section5.rst>`_ option -`GI <section5.2.rst#GI>`_
-  (-GroupIndex) are present. The Saved and Web File namesassociated to the
-  original group indices are changed to new group indices correspondingly. The
-  original group indices must exist in RDADB for the given dataset.
+  Both -`OG <section5.2_>`_ (-OriginGroup) and -`GI <section5.2_>`_ (-GroupIndex) are required. All Saved and
+  Web file records linked to the original indices are updated to the new
+  values. The original indices must already exist in GDEXDB.
 
 
-.. _e9:
+.. _3.3.4_e9:
 
-**EXAMPLE 9. **
+**EXAMPLE 9. To reassign group indices 1 and 2 to 2 and 3 for d744004:**
 
- Change Group Indices 1 And 2, To 2 And 3 Of D744004
-
-  dsarch d744004 CG -`OG <section5.2.rst#OG>`_ 1 2 -`GI <section5.2.rst#GI>`_ 2 3
+  dsarch d744004 CG -`OG <section5.2_>`_ 1 2 -`GI <section5.2_>`_ 2 3
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

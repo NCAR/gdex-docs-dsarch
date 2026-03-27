@@ -4,21 +4,24 @@
 5 - INFORMATION OPTIONS
 =====================
 
-Information options are used to pass information, one or multiple values, into
-**dsarch**. Two types of Info options are used:
+Information (Info) options pass data values into **dsarch**. They come in two
+forms:
 
 .. list-table::
    :widths: auto
 
-   * - `Single-Value Info Options <section5.1.rst>`_
-     - pass a single value to **dsarch**
-   * - `Multi-Value Info Options <section5.2.rst>`_
-     - pass one or multiple values to **dsarch**
+   * - `Single-Value Info Options <section5.1>`_
+     - accept exactly one value per invocation
+   * - `Multi-Value Info Options <section5.2>`_
+     - accept one or more values per invocation
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Table of Contents
+   section5.1
+   section5.2
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

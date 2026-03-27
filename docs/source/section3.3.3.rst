@@ -10,52 +10,45 @@
 Action Option -**DG** (-**DeleteGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-deletes one or multiple groups from RDADB for given
-  group indices of a specified dataset.
+removes one or more group records from GDEXDB for the
+  specified dataset.
 
-| **dsarch** [-(`DS|Dataset <section5.1.rst#DS>`_)] dsnnn.n [-](DG|DeleteGroup) [`Mode Options <#mode>`_]
-|   -(`GI|GroupIndex <section5.2.rst#GI>`_) GroupIndices
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](DG|DeleteGroup) [`Mode Options <mode_>`_]
+|          -(`GI|GroupIndex <section5.2_>`_) GroupIndices
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for deleting group action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`RT|ResetTGroup <section4.rst#RT>`_)
-     - reset top group index for the HPSS/Web file records
-   * - -(`WN|WithFileNumber <section4.rst#WN>`_)
-     - reevaluates and resets HPSS/Web file counts for the affected groups
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`RT|ResetTGroup <section4_>`_)
+     - resets the top group index for file records in the affected group
+   * - -(`WN|WithFileNumber <section4_>`_)
+     - re-evaluates and resets file counts for the affected groups
 
-  The groups to be deleted are identified by group indices given per `Info <section5.rst>`_
-  option -`GI <section5.2.rst#GI>`_ (-GroupIndex) and dataset number per option -`DS <section5.1.rst#DS>`_. This action
-  is blocked if there exist any subgroups or data files under the groups to
-  be deleted.  To delete the groups with files under them, you gather the files
-  on Saved or RDA Server per action options, -`GS <section3.4.2.rst>`_ (-GetSavedFile) or -`GW <section3.4.4.rst>`_
-  (-GetWebFile), and set the group indices of the files to 0 or change them to
-  other group indices via action -`CG <section3.3.4.rst>`_ (-ChangeGroup), or delete the files
-  gathered per action -`DL <section3.4.15.rst>`_ (-Delete); then delete the groups.
+  Specify groups by index via -`GI <section5.2_>`_ and the dataset via -`DS <section5.1_>`_. Deletion is blocked
+  if a group still contains subgroups or data files. To delete a non-empty
+  group, first retrieve its files with -`GS <section3.4.2_>`_ (-GetSavedFile) or -`GW <section3.4.4_>`_
+  (-GetWebFile), then either move them to another group via -`CG <section3.3.4_>`_ (-ChangeGroup),
+  reset their group index to 0, or remove them with -`DL <section3.4.15_>`_ (-Delete). Once empty,
+  the group can be deleted.
 
 
-.. _e8:
+.. _3.3.3_e8:
 
-**EXAMPLE 8. **
+**EXAMPLE 8. To delete group indices 2 and 3 of d744004:**
 
- Delete Group Indices 2 And 3 Of D744004
-
-  dsarch d744004 DG -`GI <section5.2.rst#GI>`_ 2 3
+  dsarch d744004 DG -`GI <section5.2_>`_ 2 3
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`
