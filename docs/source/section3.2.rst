@@ -4,8 +4,8 @@
 3.2 - DOI/Version Actions
 =====================
 
-  DOI/Version controls establish citable, versioned snapshots of a dataset.
-  Manage them with the following actions:
+DOI/Version controls establish citable, versioned snapshots of a dataset.
+Manage them with the following actions:
 
 .. list-table::
    :widths: auto

@@ -4,9 +4,11 @@
 2 - GENERAL DSARCH USAGE
 =====================
 
-| **dsarch** [[-(:ref:`DS|Dataset <DS>`)] dNNNNNN] [:ref:`Action Option <section3>`] [:ref:`Mode Options <section4>`] [:ref:`Info Options <section5>`]
-|        or
-| **dsarch** [-(:ref:`IF|InputFile <IF>`)] InputFileNames
+.. code-block:: bash
+
+  **dsarch** [[:ref:`-(DS|Dataset) <DS>`] dNNNNNN] [:ref:`Action Option <section3>`] [:ref:`Mode Options <section4>`] [:ref:`Info Options <section5>`]
+      or
+  **dsarch** [:ref:`-(IF|InputFile) <IF>`] InputFileNames
 
 Brackets [] indicate optional elements. A pipe '|' within parentheses, as in
 (A|B), means either A or B may be used. Options fall into three categories:
@@ -65,7 +67,9 @@ equal to OptionValue' condition.
 
 The description of an individual option is shown when **dsarch** is run as
 
-| **dsarch** [Option] -(h|help) [Option]
+.. code-block:: bash
+
+  **dsarch** [Option] -(h|help) [Option]
 
 The description is shown for the option placed either before or after -(h|help).
 If no option is given, or **dsarch** is run without arguments, the full document
