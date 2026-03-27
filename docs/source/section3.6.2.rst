@@ -11,11 +11,13 @@ Action Option -**UC** (-**UpdateCache**) (Alias: -**UpdateCacheNumber**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 increments the cache control
-  number by 1 for the specified dataset, signalling that cached web content
-  should be refreshed.
+number by 1 for the specified dataset, signalling that cached web content
+should be refreshed.
 
-| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(UC|UpdateCache)
-|           [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
+.. code-block:: bash
+
+  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(UC|UpdateCache)
+         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 
 

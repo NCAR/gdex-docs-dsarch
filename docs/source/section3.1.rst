@@ -4,7 +4,7 @@
 3.1 - Dataset Actions
 =====================
 
-  Use the following actions to read or update a dataset's record in GDEXDB:
+Use the following actions to read or update a dataset's record in GDEXDB:
 
 .. list-table::
    :widths: auto

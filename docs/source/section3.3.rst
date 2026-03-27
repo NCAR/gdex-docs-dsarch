@@ -4,8 +4,8 @@
 3.3 - Group Actions
 =====================
 
-  Groups organize a dataset's files into named sub-products. Use the following
-  actions to manage group records in GDEXDB:
+Groups organize a dataset's files into named sub-products. Use the following
+actions to manage group records in GDEXDB:
 
 .. list-table::
    :widths: auto
