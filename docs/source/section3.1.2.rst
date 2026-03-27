@@ -27,11 +27,11 @@ reads and displays dataset record fields from GDEXDB
    :widths: auto
    :header-rows: 0
 
-   * - (:ref:`FO|FormatOutput <FO>`)
+   * - :ref:`FO|FormatOutput <FO>`
      - formats each column to a uniform fixed width
-   * - (:ref:`PE|ShowPeriod <PE>`)
+   * - :ref:`PE|ShowPeriod <PE>`
      - includes associated period information for the dataset and any groups
-   * - (:ref:`WN|WithFileNumber <WN>`)
+   * - :ref:`WN|WithFileNumber <WN>`
      - gathers and displays Saved/Web file counts
 
   Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
