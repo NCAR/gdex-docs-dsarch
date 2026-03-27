@@ -68,10 +68,10 @@ Valid dataset field names and their corresponding :ref:`Info options <section5>`
      - use DSARCH flag
    * - X
      - :ref:`-(ED|EndDate) <ED>`
-     - date data end for dataset/group
+     - date data end for dataset group
    * - Y
      - :ref:`-(ET|EndTime) <ET>`
-     - time data end for dataset/group
+     - time data end for dataset group
 
 
   Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
