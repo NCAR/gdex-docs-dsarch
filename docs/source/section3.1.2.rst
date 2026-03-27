@@ -41,7 +41,7 @@ to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
 
 .. list-table:: Optional Table Title
-   :widths: 20 20 60
+   :widths: auto
    :header-rows: 1
 
    * - Header Col 1
@@ -57,8 +57,9 @@ to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
      - Row 2, Cell 2
      - Row 2, Cell 3
 
+Valid dataset field names and their corresponding :ref:`Info options <section5>`
 
-.. list-table:: Valid dataset field names and their corresponding :ref:`Info options <section5>`
+.. list-table::
    :widths: 10 30 50
    :header-rows: 1
 
