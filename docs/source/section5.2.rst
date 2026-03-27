@@ -4,8 +4,8 @@
 5.2 - Multi-Value Info Options
 =====================
 
-  A multi-value Info option is used to pass multiple values for one Info option
-  into **dsarch**. At lease one value must follow each multi-value option.
+  A multi-value Info option accepts a list of one or more values. Supplying
+  zero values causes an error.
 
 
 .. _AF:
@@ -13,16 +13,24 @@
 Info Option -**AF** (-**ArchiveFormat**) (Aliases: -**FileFormat**, -**ExternalFormat**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for file
-  archiving formats of data files being archived onto RDA Servers. The file
-  archive format indicates post process of a data file. Option values, 'BI' -
-  binary blocked, 'C1' or 'CH' - ASCII/character blocked, can be passed
-  in for COS block information of data files; 'TAR' means a tarred file, 'Z'
-  means a compressed file and 'GZ' means a gzipped file, and 'BZ2' means a file
-  is compressed via bzip2. 'C1.TAR.GZ', for example, means a file is COS ASCII
-  blocked and then tarred and then gzipped; the order is important. The maximum
-  length of format string is 10. Additional characters are truncated for length
-  longer than 10.
+describes
+  how a data file has been packaged or compressed. Recognized values:
+
+.. list-table::
+   :widths: auto
+
+   * - 'BI'
+     - binary (COS) blocked
+   * - 'C1' or 'CH'
+     - ASCII/character blocked
+   * - 'TAR'
+     - tarred
+   * - 'Z'
+     - compressed
+   * - 'GZ'
+     - gzipped
+   * - 'BZ2'
+     - bzip2-compressed Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII blocked, then tarred, then gzipped. Maximum total length is 10 characters.
 
 
 .. _BD:
@@ -30,8 +38,8 @@ for file
 Info Option -**BD** (-**BeginDate**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for begin date of data files of a given group or the whole
-  dataset, or begin date of a version control record.
+the earliest date covered by the data, for a group,
+  the whole dataset, or a version control record.
 
 
 .. _BF:
@@ -39,11 +47,20 @@ for begin date of data files of a given group or the whole
 Info Option -**BF** (-**BackupFlag**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-flags set in Datasets and/or groups to control Quasar
-  auto-backup activities; N-No auto-backup (default value for Datasets),
-  B-auto-Backup onto Quasar backup endpoint, D-auto-Backup onto Quasar backup&drdata
-  endpoints, P-the same Backup flags set in parent groups (default values in groups,
-  and parent group index 0 means to follow flags in datasets).
+controls whether and how a dataset or group is backed
+  up to Quasar. Values:
+
+.. list-table::
+   :widths: auto
+
+   * - 'N'
+     - no auto-backup (dataset default)
+   * - 'P'
+     - inherit the setting from the parent (group default; index 0 inherits from the dataset)
+   * - 'B'
+     - back up files only
+   * - 'D'
+     - back up files and create a disaster recovery copy
 
 
 .. _BP:
@@ -51,19 +68,12 @@ flags set in Datasets and/or groups to control Quasar
 Info Option -**BP** (-**BatchProcess**) (Aliases: -**d**, -**DelayedMode**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-delayed mode execution. When
-  it presents, the **dsarch** command is not executed right way, but the command
-  information is recorded into RDADB instead and the command is executed later
-  by the centralized daemon 'dscheck'. One or multiple host names can be specified
-  after option -`BP <#BP>`_ to force the **dsarch** command be executed on or not on the hosts.
-  For examples, '-d rda-data' to run on host 'rda-data'; '-d rda-data:rda-web-prod'
-  to run on hosts 'rda-data' and 'rda-web-prod'; and '-d \!rda-web-prod:rda-data'
-  to run on all configured hosts other than 'rda-web-prod' and 'rda-data'. Character
-  '!' needs to be escaped for passing in on command line. A upper limit for number
-  of tries can also be passed in with this options, 1 to 99, as '-d 5' for example.
-  It default to 2 for command of **dsarch** if not specified. And also dsarch actions,
-  -(`AS <section3.4.9.rst>`_|AW|AH|AQ), will be restarted automatically when this option is present, if
-  the previous processes are failed due to storage system downs.
+defers execution: the
+  command is written to GDEXDB and run later by the 'dscheck' daemon. One
+  or more host names may follow -`BP`_ to target or exclude specific hosts
+  (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99)
+  can also be specified, e.g., '-d 5'; defaults to 2. Archive actions
+  (-`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, -`AH <section3.4.11_>`_, -`AQ <section3.4.12_>`_) retry automatically after storage system outages.
 
 
 .. _BS:
@@ -71,10 +81,17 @@ delayed mode execution. When
 Info Option -**BS** (-**BackStatus**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Quasar Backup File status, a single letter status flag,
-  A - files are backed up onto Globus Quasar servers; T - the backup tar files
-  are generated, waiting to be archived; and N - backup file records and input
-  files for Web/Saved file lists are created, waiting to be tarred.
+the current Quasar backup state for a file:
+
+.. list-table::
+   :widths: auto
+
+   * - 'A'
+     - archived to Quasar (complete)
+   * - 'T'
+     - tar file created, awaiting upload
+   * - 'N'
+     - record created, awaiting tar
 
 
 .. _BT:
@@ -82,8 +99,8 @@ Quasar Backup File status, a single letter status flag,
 Info Option -**BT** (-**BeginTime**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for begin time of data files of a given group or the whole
-  dataset, or begin time of a version control record.
+the time component of the data start, for a group,
+  the whole dataset, or a version control record.
 
 
 .. _DA:
@@ -91,9 +108,20 @@ for begin time of data files of a given group or the whole
 Info Option -**DA** (-**DataAccess**) (Aliases: -**DataAccessflag**, -**FileListFlag**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(Alias: -DataAccessFlag, -FileListFlag). flags to show web file
-  lists at Dataset and/or top group levels; B-Both Filelists,
-  C-Complete File List (default value), F-Faceted Browse or N-No File List.
+controls which
+  file list views are displayed at the dataset and/or top group level:
+
+.. list-table::
+   :widths: auto
+
+   * - 'B'
+     - both complete and faceted
+   * - 'C'
+     - complete list only (default)
+   * - 'F'
+     - faceted list only
+   * - 'N'
+     - none (no file list shown)
 
 
 .. _DB:
@@ -101,15 +129,10 @@ Info Option -**DA** (-**DataAccess**) (Aliases: -**DataAccessflag**, -**FileList
 Info Option -**DB** (-**Debug**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-to turn on debug mode with specified information. This option
-  provides up to 3 values, they are Debug Level, debug log file path and debug
-  log file name. The debug level is mandatory for this option. It can be a
-  single integer value, for example, 1000 means to log debug messages for debug
-  levels 1 to 1000; or a range of values, for example, 200-1000 means to log
-  debug messages from debug levels 200 to 1000. The default debug file path is
-  '$DECSHOME}/dssdb/log' and the default debug file name is 'mydss.dbg'. Provides
-  the second and third values for this option to override the default ones
-  respectively.
+enables debug logging. Up to 3 values may be given: debug
+  level (required), log file path, and log file name. The level can be a
+  single integer (e.g., 1000) or a range (e.g., 200-1000). Defaults: log
+  path '$DECSHOME/dssdb/log', file name 'mydss.dbg'.
 
 
 .. _DE:
@@ -117,12 +140,11 @@ to turn on debug mode with specified information. This option
 Info Option -**DE** (-**Description**) (Aliases: -**Desc**, -**Note**, -**FileDesc**, -**FileDescription**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for file
-  descriptions of data files. Multiple lines are allowed for a description if it is
-  passed in from an input file specified by Info option -`IF <#IF>`_ (-InputFile). On
-  commandline, a single line description with spaces between words must be quoted
-  in 'single quotes'. It presents a version control note if it is used with
-  version control Actions.
+a
+  free-text description for a data file or version record. Multi-line values
+  are supported in input files (-`IF`_). Quote values containing spaces on the
+  command line. With version control actions (-`SV <section3.2.1_>`_), this becomes the version
+  note.
 
 
 .. _DF:
@@ -130,12 +152,10 @@ for file
 Info Option -**DF** (-**DataFormat**) (Aliases: -**TF**, -**ContentFormat**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-data content
-  format of files being archived onto RDA Servers. This is content format of data
-  files. For examples, NetCDF, IMMA and etc.
-
-  A default data format can be set for a given dataset. It is used for archive
-  actions when the data format is not provided explicitly.
+the
+  scientific format of the data content (e.g., NetCDF, IMMA, BINARY). A
+  dataset-level default can be set via -`SD <section3.1.1_>`_ and is applied automatically when
+  no format is specified at archive time.
 
 
 .. _DN:
@@ -143,8 +163,8 @@ data content
 Info Option -**DN** (-**DOINumber**) (Aliases: -**DOI**, -**DOIName**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for DOI, a Digital Object
-  Identification, of a given dataset for public users to reference against.
+the Digital Object Identifier
+  assigned to a dataset version, providing a stable, citable reference.
 
 
 .. _DO:
@@ -152,9 +172,9 @@ for DOI, a Digital Object
 Info Option -**DO** (-**DisplayOrder**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for display order indices of files of a given group,
-  or of the whole dataset if no groups are set for the dataset. This Info option
-  is ignored if `Mode <section4.rst>`_ option -`RO <section4.rst#RO>`_ (-Reorder) is present.
+explicit display position indices for files within a
+  group or across the dataset. Overridden by -`RO <section4_>`_ (-ResetOrder) when both are
+  present.
 
 
 .. _ED:
@@ -162,8 +182,8 @@ for display order indices of files of a given group,
 Info Option -**ED** (-**EndDate**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for end date of data files of a given group or the whole
-  dataset, or end date of a version control record when it is terminated.
+the latest date covered by the data, for a group,
+  the whole dataset, or a version control record.
 
 
 .. _ET:
@@ -171,8 +191,8 @@ for end date of data files of a given group or the whole
 Info Option -**ET** (-**EndTime**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for end time of data files of a given group or the whole
-  dataset, or end time of a version control record when it is terminated.
+the time component of the data end, for a group,
+  the whole dataset, or a version control record.
 
 
 .. _EV:
@@ -180,8 +200,8 @@ for end time of data files of a given group or the whole
 Info Option -**EV** (-**ExternalVersion**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-external version number. It is only used if a public
-  version number is used for a dataset; otherwise it is defaulted to empty.
+the human-readable version label shown publicly
+  for a dataset (e.g., '2.0'). Empty by default.
 
 
 .. _FD:
@@ -189,7 +209,7 @@ external version number. It is only used if a public
 Info Option -**FD** (-**FileDate**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for date of a data file last modified on.
+the calendar date a data file was last modified.
 
 
 .. _FF:
@@ -197,7 +217,8 @@ for date of a data file last modified on.
 Info Option -**FF** (-**FileFlag**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-File type flag, F for File and P for Path.
+specifies whether an entry represents a regular file
+  ('F') or a directory path ('P').
 
 
 .. _FS:
@@ -205,8 +226,8 @@ File type flag, F for File and P for Path.
 Info Option -**FS** (-**FileStatus**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-File status, a single letter status flag, P - show file
-  to public users; and I - to show file to specialist only.
+the access level of a file: 'P' (public, visible to
+  all users) or 'I' (internal, visible to specialists only).
 
 
 .. _FT:
@@ -214,7 +235,7 @@ File status, a single letter status flag, P - show file
 Info Option -**FT** (-**FileTime**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for time of a data file last modified at.
+the time of day a data file was last modified.
 
 
 .. _GI:
@@ -222,16 +243,12 @@ for time of a data file last modified at.
 Info Option -**GI** (-**GroupIndex**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for group indices. This is considered only if a dataset
-  is divided further into groups. To make the grouping works, run this
-  utility program with action -`SG <section3.3.1.rst>`_ (-SetGroup) for a given dataset before
-  archiving files to the dataset. Valid group index values are 1, 2, 3, ....,
-  while 0 means no group which is the default index value.
+assigns files to a specific group within a dataset.
+  Groups must be created first via -`SG <section3.3.1_>`_ (-SetGroup). Use 1, 2, 3, ... for
+  specific groups; 0 means no group assignment (default).
 
-  If this option is omitted for file archiving options -`AS <section3.4.9.rst>`_ or -`AW <section3.4.10.rst>`_ of a dataset
-  with groups, pattern matching logic is automatically processed; a group index
-  is determined by matching the local file name to group patterns previously
-  saved in RDADB.
+  When omitted for -`AS <section3.4.9_>`_ or -`AW <section3.4.10_>`_, **dsarch** attempts to assign groups
+  automatically by matching file names against patterns stored in GDEXDB.
 
 
 .. _GL:
@@ -239,9 +256,9 @@ for group indices. This is considered only if a dataset
 Info Option -**GL** (-**GroupLevel**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-number of group/subgroup levels to be displayed in the
-  group lists. It defaults to 2. Set it to -2 to display one level initially
-  but the group list can be expanded up to 2 levels if the subgroups exist.
+the number of group nesting levels displayed on the
+  web interface. Defaults to 2. A value of -2 shows one level initially,
+  expanding to two when subgroups are present.
 
 
 .. _GN:
@@ -249,11 +266,9 @@ number of group/subgroup levels to be displayed in the
 Info Option -**GN** (-**GroupName**) (Alias: -**GroupID**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-a short string, up to 20 characters, for
-  group ID name. Group names can be set into RDADB for a given dataset per
-  action -`SG <section3.3.1.rst>`_ (-SetGroup). If set, they can be provided per this option to
-  identify group indices, and in addition, they are displayed on webpages of
-  Web filelists instead of group indices.
+a short human-readable identifier for
+  a group (up to 20 characters). Set via -`SG <section3.3.1_>`_ (-SetGroup). Names can be used
+  wherever group indices are accepted, and appear on file list webpages.
 
 
 .. _GP:
@@ -261,10 +276,8 @@ a short string, up to 20 characters, for
 Info Option -**GP** (-**GroupPattern**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-group patterns to match local file names with group
-  indices while archiving Saved or Web files. The group patterns from this
-  option are saved into RDADB for specified groups of a given dataset per
-  action -`SG <section3.3.1.rst>`_ (-SetGroup).
+wildcard patterns that **dsarch** uses to automatically
+  assign files to the right group during archiving. Stored per group via -`SG <section3.3.1_>`_.
 
 
 .. _GT:
@@ -272,10 +285,12 @@ group patterns to match local file names with group
 Info Option -**GT** (-**GroupType**) (Alias: -**GroupDataType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-set P for Public or I for
-  Internal group types. When a group type is set from P to I, all the public
-  subgroups under it are set to I recursively, and all the public Web files
-  under the groups or its subgroups are set to Internal too.
+the access level for a group:
+
+=  ======================================================================
+   'P' (public) or 'I' (internal). Changing from P to I recursively marks
+   all nested subgroups and their Web files as internal.                 
+=  ======================================================================
 
 
 .. _HF:
@@ -283,10 +298,8 @@ set P for Public or I for
 Info Option -**HF** (-**HelpFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for Help file names. During Document or software archiving
-  per action -`AH <section3.4.11.rst>`_ (-ArchiveHelpFile), the local file names given by option -`LF <#LF>`_
-  (-LocalFile) are used as default for the Help file names unless different
-  file names are specified by this option.
+the destination names for Help files on the GDEX Server.
+  Defaults to the local file names from -`LF`_ unless overridden explicitly.
 
 
 .. _HT:
@@ -294,9 +307,12 @@ for Help file names. During Document or software archiving
 Info Option -**HT** (-**HelpFileType**) (Alias: -**HelpType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Help file types,
-  a single letter property flag, D-Document and S-Software. If only one type
-  is passed in, all Help files are assumed to be the same type.
+the category of a Help file:
+
+=  =======================================================================
+   'D' (Document) or 'S' (Software). One value applies to all files in the
+   batch.                                                                 
+=  =======================================================================
 
 
 .. _ID:
@@ -304,8 +320,8 @@ Help file types,
 Info Option -**ID** (-**InitialDate**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for date of a Help, Document/Software, file last
-  Published/Released on.
+the original publication or release date of a Help,
+  Document, or Software file.
 
 
 .. _IF:
@@ -313,29 +329,24 @@ for date of a Help, Document/Software, file last
 Info Option -**IF** (-**InputFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for input file names; one or multiple file names may be
-  given on command line. A input file name must start with dataset number as
-  in format of 'dsnnn.n.*' and the dataset number must match the dataset number
-  given per option -`DS <section5.1.rst#DS>`_ (-Dataset). This restriction is for prevention that
-  specialists archive data files accidentally into a wrong dataset. Input files
-  are used to hold all valid options and the associated values of Info options
-  that need to be passed in for execution of **dsarch**.
+one or more input file names provided on the command
+  line. Each file name must start with the dataset number (format 'dNNNNNN.*')
+  and match the -`DS <section5.1_>`_ value. This naming rule is a safeguard against accidentally
+  running an action on the wrong dataset.
 
-  In a input file, lines start with sign '#' are considered as comments;
-  Option Names can be given either short, long or alias names. `Action <section3.rst>`_ and `Mode <section4.rst>`_
-  options are given in format of OptionName<!>. Single value Assignment is
-  given in format of OptionName<=>OptionValue. One option is given on each line.
-  Different setting sign of `Action <section3.rst>`_ and `Mode <section4.rst>`_ options can be provided by Info
-  option -AO (-ActOption, default to <!>); and different equal sign of single
-  value assignment can be provided by Info option -`ES <section5.1.rst#ES>`_, (-EqualSign, default to
-  '<=>'). Multi-value assignments can be given in columns delimited with
-  separator specified per option -SP (-Separator, default to '<:>'). It starts
-  with a column title line for multi-value option names and the rest holds
-  values corresponding to each column titles. The value information stops at
-  the end of the file or when a new column name line or another single value
-  assignment appears. If the last column is a multi-line value field, an
-  additional separator must be appended for each line, including the column
-  title line to end lines properly.
+  Input file format rules:
+
+#. Lines beginning with '#' are comments and are ignored.
+* Option names may be short, long, or alias forms.
+* `Action <section3>`_/Mode options: OptionName<!>  (marker changeable via -AO)
+* Single-value assignments: OptionName<=>Value, one per line
+       (delimiter changeable via -ES; default '<=>')
+* Multi-value (tabular) assignments: a title row followed by data rows,
+       with columns separated by '<:>' (changeable via -DV).
+* Tabular data ends at EOF or when a new title line or single-value
+       assignment is encountered.
+* If the last column contains multi-line text, append the separator
+       to every row (including the title line).
 
 
 .. _IV:
@@ -343,9 +354,9 @@ for input file names; one or multiple file names may be
 Info Option -**IV** (-**InternalVersion**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-internal version index. It is used to indicate a different
-  version of data with minimal changes under the same DOI number. It is defaulted
-  to 1 for a version control record with new created DOI number.
+a minor revision counter within the same DOI.
+  Increments when data are updated without changing the DOI itself. Starts
+  at 1 when a new DOI record is created.
 
 
 .. _KV:
@@ -353,29 +364,27 @@ internal version index. It is used to indicate a different
 Info Option -**KV** (-**KeyValue**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-to set specialist defined key/value pairs via action -`SD <section3.1.1.rst>`_
-  (-SetDataset). These special key/value pairs can be viewed per option -`GD <section3.1.2.rst>`_
-  (-GetDataset). Specialists can record key/value pair information for
-  specified datasets for personal or shared information. A key can be up to
-  40 characters and a value can be up to 128 characters.
+custom key/value metadata pairs for a dataset. Use -`SD <section3.1.1_>`_
+  to set them and -`GD <section3.1.2_>`_ to view them. Keys: up to 40 characters; values: up to
+  128 characters.
 
+  Set a pair:
 
-.. _e11:
+=  ========================================
+   dsarch d540000 SD -`KV`_ 'test=>test it'
+=  ========================================
 
-**EXAMPLE 11. **
+  View a specific key:
 
-Syntax To Set A Key/Value Pair Of 'Test/Test It' For D540000 On
-  command line
+=  =============================
+   dsarch d540000 GD -`KV`_ test
+=  =============================
 
-  dsarch d540000 SD -`KV <#KV>`_ 'test=>test it'
+  View all pairs:
 
-  and to view this pair
-
-  dsarch d540000 GD -`KV <#KV>`_ test
-
-  and to view all available key/value pairs
-
-  dsarch d540000 GD -`KV <#KV>`_ all
+=  ============================
+   dsarch d540000 GD -`KV`_ all
+=  ============================
 
 
 .. _LC:
@@ -383,12 +392,21 @@ Syntax To Set A Key/Value Pair Of 'Test/Test It' For D540000 On
 Info Option -**LC** (-**Location**) (Alias: -**LocationFlag**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Storage localtion flags for CGD data,
-  Web and Saved data files, and Help files, are C-CGD data, G-Glade Disk, O-Object
-  Store, and B-Both Storage Systems. For Help files, an additional flag R is for
-  Remote URL. This flag is also used in dataset table as web online file access
-  location. The valid values are G or O, which mean to access online file on Glade
-  or Object Store, respectively.
+where the file resides:
+
+.. list-table::
+   :widths: auto
+
+   * - 'C'
+     - CGD data path
+   * - 'G'
+     - Glade Disk (NCAR HPC filesystem)
+   * - 'O'
+     - Object Store
+   * - 'B'
+     - both Glade and Object Store
+   * - 'R'
+     - remote URL (Help files only) At the dataset level (as the online access location), only 'G' or 'O' are valid.
 
 
 .. _LF:
@@ -396,14 +414,10 @@ Storage localtion flags for CGD data,
 Info Option -**LF** (-**LocalFile**) (Aliases: -**LocFile**, -**SourceFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for local file names,
-  also called  original or source file names. A local file is a data file that
-  is ready to be archived as Saved, Web or Help file. It is later archived
-  onto RDA servers according to actions -`AS <section3.4.9.rst>`_ (-ArchiveSavedFile), -`AW <section3.4.10.rst>`_
-  (-ArchiveWebFile) or -`AH <section3.4.11.rst>`_ (-ArchiveHelpFile). UNIX wildcard is acceptable if
-  given on command line to match multiple local file names.  Absolute or
-  relative paths need to be added to the local file names if the data files are
-  not located in the directory where this application is running.
+the local source files to
+  archive via -`AS <section3.4.9_>`_, -`AW <section3.4.10_>`_, or -`AH <section3.4.11_>`_. UNIX wildcards ('*', '?') are accepted on
+  the command line. Use absolute or relative paths for files outside the
+  current directory.
 
 
 .. _MC:
@@ -411,8 +425,8 @@ for local file names,
 Info Option -**MC** (-**MD5Checksum**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-providing md5 checksum IDs of of the given data files
-  on RDA Servers.
+the MD5 checksum of a data file on the GDEX Server,
+  used for integrity verification.
 
 
 .. _ML:
@@ -420,14 +434,10 @@ providing md5 checksum IDs of of the given data files
 Info Option -**ML** (-**MetaLink**) (Alias: -**MetadataLink**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-providing a link to dataset, group or
-  file level content metadata page. This link is normally auto-generated from
-  inside of utility program **gatherxml**, which is triggered when `Mode <section4.rst>`_ option
-  -`GX <section4.rst#GX>`_ is present for actions of archiving or setting Web data files.
-
-  Although it is not recommended, specialists are allowed, under certain
-  circumstances, to generate their own detail content meta data and put a link
-  via this option, and it overrides the auto-generated link.
+a URL pointing to the content
+  metadata page for a dataset, group, or file. Normally set automatically by
+  **gatherxml** when -`GX <section4_>`_ is used. A custom value may be provided and will
+  take precedence over the auto-generated link.
 
 
 .. _ND:
@@ -435,8 +445,8 @@ providing a link to dataset, group or
 Info Option -**ND** (-**NoteDocument**) (Aliases: -**DocumentNote**, -**DescDocument**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for Document
-  descriptions of a given dataset.
+a brief
+  description of the documentation available for a dataset.
 
 
 .. _NI:
@@ -444,8 +454,8 @@ for Document
 Info Option -**NI** (-**NoteInternal**) (Aliases: -**InternalNote**, -**DescInternal**, -**DI**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for internal
-  data descriptions of a given group or the dataset itself.
+an internal
+  note about a group's or dataset's data, visible to specialists only.
 
 
 .. _NS:
@@ -453,8 +463,8 @@ for internal
 Info Option -**NS** (-**NoteSoftware**) (Aliases: -**SoftwareNote**, -**DescSoftware**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for Software
-  descriptions of a given dataset.
+a description of
+  any software tools or scripts associated with a dataset.
 
 
 .. _NW:
@@ -462,8 +472,8 @@ for Software
 Info Option -**NW** (-**NoteWeb**) (Aliases: -**WebNote**, -**DescWeb**, -**DW**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for descriptions
-  of Web data on RDA Server of a given group or the dataset itself.
+a public-facing description
+  of the web-accessible data for a group or the dataset as a whole.
 
 
 .. _OB:
@@ -471,12 +481,9 @@ for descriptions
 Info Option -**OB** (-**OrderBy**) (Alias: -**OrderByPattern**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-temporal patterns used to order
-  filelist according to the string values of field names specified per
-  option -`ON <section5.1.rst#ON>`_ (-OrderNames). 'YYYYmon', for example, means the order should
-  be based on on 4 digit year and three letter lowercase month names as 'jan',
-  'feb', and etc. Check option -`ON <section5.1.rst#ON>`_ (-OrderNames) for example of ordering
-  files by temporal patterns.
+a date/time pattern that guides
+  temporal sorting when combined with -`ON <section5.1_>`_. For example, 'YYYYmon' sorts by
+  4-digit year followed by 3-letter month abbreviation.
 
 
 .. _OD:
@@ -484,8 +491,8 @@ temporal patterns used to order
 Info Option -**OD** (-**OriginDataset**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for an original dataset number; used for action
-  -`MV <section3.4.14.rst>`_ (-MoveFile).
+the dataset the files are being moved from when
+  using -`MV <section3.4.14_>`_ (-MoveFile).
 
 
 .. _OG:
@@ -493,9 +500,8 @@ for an original dataset number; used for action
 Info Option -**OG** (-**OriginGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for original group indices, used for action -`CG <section3.3.4.rst>`_
-  (-ChangeGroup) to change group indices of specified data files of a
-  given dataset. Check option -`GI <#GI>`_ (-GroupIndex) for more information.
+the existing group indices to be renumbered by
+  -`CG <section3.3.4_>`_ (-ChangeGroup).
 
 
 .. _OT:
@@ -503,8 +509,8 @@ for original group indices, used for action -`CG <section3.3.4.rst>`_
 Info Option -**OT** (-**OriginType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-original web file types. This option is used only
-  for action -`MV <section3.4.14.rst>`_ (-MoveFile) to move files by changing file types.
+the source file type when converting between types
+  (e.g., Web to Saved) during a -`MV <section3.4.14_>`_ (-MoveFile) operation.
 
 
 .. _PI:
@@ -512,9 +518,8 @@ original web file types. This option is used only
 Info Option -**PI** (-**ParentIndex**) (Alias: -**ParentGroupIndex**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for parent group indices.
-  This is considered only if a group is divided further into subgroups.
-  Subgrouping can continue going down to as many levels as needed.
+the index of the parent
+  group for a subgroup. Groups can be nested to any depth.
 
 
 .. _QF:
@@ -522,9 +527,8 @@ for parent group indices.
 Info Option -**QF** (-**QuasarFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for Quasar backup file names. During Quasar backing up
-  per action -`AQ <section3.4.12.rst>`_ (-ArchiveQuasarFile), a quasar file name must be specified
-  by this option.
+the name of the Quasar backup (tar) file, required
+  for -`AQ <section3.4.12_>`_ (-ArchiveQuasarFile).
 
 
 .. _QT:
@@ -532,9 +536,11 @@ for Quasar backup file names. During Quasar backing up
 Info Option -**QT** (-**QuasarFileType**) (Aliases: -**QuasarType**, -**BackupType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Quasar file
-  types, a single letter property flag, B-Quasar Backup only and D-Quasar
-  Backup and Drdata.
+the backup scope:
+
+=  ==============================================================
+   'B' (backup only) or 'D' (backup plus disaster recovery copy).
+=  ==============================================================
 
 
 .. _RF:
@@ -542,11 +548,8 @@ Quasar file
 Info Option -**RF** (-**OriginFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for original Web file names used for action -`MV <section3.4.14.rst>`_
-  (-MoveFile) to move data files from one dataset specified by option -`OD <#OD>`_
-  (-OriginDataset) to a new dataset specified by option -`DS <section5.1.rst#DS>`_ (-Dataset).
-  Set this option only when original file names are different from the new
-  ones.
+the source file names for -`MV <section3.4.14_>`_ (-MoveFile) when they
+  differ from the destination names given via -`SF`_, -`WF`_, or -`HF`_.
 
 
 .. _SF:
@@ -554,10 +557,9 @@ for original Web file names used for action -`MV <section3.4.14.rst>`_
 Info Option -**SF** (-**SavedFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for Saved file names. During Saved data archiving
-  per action -`AS <section3.4.9.rst>`_ (-ArchiveSavedFile), the local file names given by option -`LF <#LF>`_
-  (-LocalFile) are used as default for the saved file names unless different
-  file names are specified by this option.
+the destination names for Saved files on the GDEX Server.
+  For -`AS <section3.4.9_>`_ (-ArchiveSavedFile), defaults to the local file names from -`LF`_
+  unless specified explicitly.
 
 
 .. _SP:
@@ -565,19 +567,13 @@ for Saved file names. During Saved data archiving
 Info Option -**SP** (-**SavedPath**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for saved file paths relative to the saved data home directory.
-  For action -`AS <section3.4.9.rst>`_ (-ArchiveSavedFile), if this option is not specified, the path
-  values previously saved in RDADB for given dataset, and groups if specified,
-  are used. For action -`SG <section3.3.1.rst>`_ (-SetGroup) and -`SD <section3.1.1.rst>`_ -(-SetDataset), path values given by
-  this option are saved into RDADB for the specified groups and dataset.
+the directory path for Saved files, relative to the
+  Saved data home directory. For -`AS <section3.4.9_>`_, the dataset or group's stored path is
+  used by default. For -`SG <section3.3.1_>`_ and -`SD <section3.1.1_>`_, this value is written to GDEXDB.
 
-  The group saved paths matching well with groups are important for NCAR internal
-  users to list group/file information on the the data storage disks directly via
-  utility program 'rdals'. One and only one single directory must be assign to a
-  top level group, one additional directory should be appended for each sub-group
-  down. A web path relative to the web data home directory is saved in each group
-  record. In this way, the web path values match exactly the physical directory
-  tree of a specified dataset.
+  Keeping Saved paths accurate is important: NCAR users browse data through
+  'rdals' using these paths. Each top-level group should map to one directory,
+  with one subdirectory per subgroup level, mirroring the physical layout.
 
 
 .. _SR:
@@ -585,7 +581,8 @@ for saved file paths relative to the saved data home directory.
 Info Option -**SR** (-**Source**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for source of a Help file contributed from.
+the person, team, or organization that contributed or
+  produced a Help file.
 
 
 .. _ST:
@@ -593,10 +590,22 @@ for source of a Help file contributed from.
 Info Option -**ST** (-**SavedFileType**) (Aliases: -**SavedType**, -**SavedArchiveType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Saved file types,
-  a single letter property flag, P-Primary, R-Original, W-Work, S-Scratch,
-  and V-Version control. If only one type is passed in, all Saved files are
-  assumed to be the same type.
+the role of a
+  Saved file:
+
+.. list-table::
+   :widths: auto
+
+   * - 'P'
+     - Primary (main dataset file)
+   * - 'R'
+     - Original (source/raw copy)
+   * - 'W'
+     - Work (working/intermediate file)
+   * - 'S'
+     - Scratch (temporary file)
+   * - 'V'
+     - Version-controlled (locked under DOI) One value applies to all files in the batch.
 
 
 .. _SZ:
@@ -604,9 +613,8 @@ Saved file types,
 Info Option -**SZ** (-**Size**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for file sizes in bytes. During data archiving the sizes of data
-  files are gathered dynamically from the local files given per option -`LF <#LF>`_
-  (-LocalFile) unless the sizes are specified by this option otherwise.
+the file size in bytes. Measured automatically from local
+  files during archiving; provide explicitly to override.
 
 
 .. _TG:
@@ -614,8 +622,9 @@ for file sizes in bytes. During data archiving the sizes of data
 Info Option -**TG** (-**TopGroupIndex**) (Alias: -**TopGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-top group index values for Saved/Web
-  files belong to the top group or its subgroups.
+the index of the outermost
+  (top-level) group that a Saved or Web file belongs to within a group
+  hierarchy.
 
 
 .. _TI:
@@ -623,8 +632,8 @@ top group index values for Saved/Web
 Info Option -**TI** (-**Title**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for dataset or group titles. Dataset title is readonly for
-  **dsarch**; use Metadata Editor to modify it.
+the display title for a dataset or group. Dataset titles
+  cannot be changed through **dsarch** — use the Metadata Editor instead.
 
 
 .. _TL:
@@ -632,8 +641,8 @@ for dataset or group titles. Dataset title is readonly for
 Info Option -**TL** (-**ThreddLink**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-providing a link to file level Thredd Catalog page.
-  Set this value to Y if Thredd Catalog information is gathered for a file.
+a URL to the THREDDS Catalog page for a specific file.
+  Set to 'Y' to indicate that THREDDS Catalog information has been gathered.
 
 
 .. _VI:
@@ -641,8 +650,8 @@ providing a link to file level Thredd Catalog page.
 Info Option -**VI** (-**VersionIndex**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-version control index to have DOI/Version control on
-  a given dataset.
+the numeric identifier of a specific DOI/Version
+  control record for a dataset.
 
 
 .. _VT:
@@ -650,7 +659,11 @@ version control index to have DOI/Version control on
 Info Option -**VT** (-**VersionStatus**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-version control status, A-Active, P-Pending and H-History.
+the lifecycle state of a version control record:
+
+=  ========================================================================
+   'A' (Active), 'P' (Pending — no DOI yet), or 'H' (History — terminated).
+=  ========================================================================
 
 
 .. _WF:
@@ -658,10 +671,9 @@ version control status, A-Active, P-Pending and H-History.
 Info Option -**WF** (-**WebFile**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for file names on RDA Servers. During Web data archiving
-  per action -`AW <section3.4.10.rst>`_ (-ArchiveWebFile), the local file names given by option -`LF <#LF>`_
-  (-LocalFile) are used as default for the Web file names unless different
-  file names are specified by this option.
+the destination names for Web files on the GDEX Server.
+  For -`AW <section3.4.10_>`_ (-ArchiveWebFile), defaults to the local file names from -`LF`_
+  unless specified explicitly.
 
 
 .. _WH:
@@ -669,9 +681,8 @@ for file names on RDA Servers. During Web data archiving
 Info Option -**WH** (-**WebHome**) (Alias: -**WebDataHome**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-(Alias: -WebDataHome), for web Web data home directory
-  other than the default location. Use -`SD <section3.1.1.rst>`_ -(-SetDataset), to set web data
-  home directory into RDADB for the specified dataset.
+an alternative Web data home
+  directory for a dataset. Stored in GDEXDB via -`SD <section3.1.1_>`_ (-SetDataset).
 
 
 .. _WP:
@@ -679,19 +690,13 @@ Info Option -**WH** (-**WebHome**) (Alias: -**WebDataHome**) :
 Info Option -**WP** (-**WebPath**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-for web file paths relative to the Web data home directory. For
-  action -`AW <section3.4.10.rst>`_ (-ArchiveWebFile), if this option is not specified, the path
-  values previously saved in RDADB for given dataset, and groups if specified,
-  are used. For action -`SG <section3.3.1.rst>`_ (-SetGroup) and -`SD <section3.1.1.rst>`_ -(-SetDataset), path values given by
-  this option are saved into RDADB for the specified groups and dataset.
+the directory path for Web files, relative to the Web
+  data home directory. For -`AW <section3.4.10_>`_, the dataset or group's stored path is used
+  by default. For -`SG <section3.3.1_>`_ and -`SD <section3.1.1_>`_, this value is written to GDEXDB.
 
-  The group web paths matching well with groups are important for NCAR internal
-  users to list group/file information on the the data storage disks directly via
-  utility program 'rdals'. One and only one single directory must be assign to a
-  top level group, one additional directory should be appended for each sub-group
-  down. A web path relative to the web data home directory is saved in each group
-  record. In this way, the web path values match exactly the physical directory
-  tree of a specified dataset.
+  Keeping Web paths accurate is important: NCAR users browse data through
+  'rdals' using these paths. Each top-level group should map to one directory,
+  with one subdirectory per subgroup level, mirroring the physical layout.
 
 
 .. _WT:
@@ -699,9 +704,9 @@ for web file paths relative to the Web data home directory. For
 Info Option -**WT** (-**WebFileType**) (Aliases: -**WebType**, -**WebArchiveType**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-web file types,
-  D-Data and N-NCAR Data. If only one type is passed in, all Saved files are
-  assumed to be the same type.
+the accessibility of
+  a Web file: 'D' (public data) or 'N' (NCAR internal data only). One value
+  applies to all files in the batch.
 
 
 .. _WU:
@@ -709,15 +714,11 @@ web file types,
 Info Option -**WU** (-**WebURL**) (Aliases: -**URL**, -**WebAddress**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Web URL for a Help file to link it to
-  a remote web server, such as github.com. This option works with `Action <section3.rst>`_ -`SH <section3.4.5.rst>`_
-  (-SetHelpFile) to create a remote Document or Software file record in RDADB
-  without local copy on RDA Servers.
+the full URL of a Help file
+  hosted remotely (e.g., on GitHub). Use with -`SH <section3.4.5_>`_ (-SetHelpFile) to register
+  the file in GDEXDB without needing a local copy on the GDEX Server.
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

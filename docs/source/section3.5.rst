@@ -4,21 +4,24 @@
 3.5 - All Info Actions
 =====================
 
-  Information of dataset, groups and data files on RDA Servers can be
-  created, modified and viewed together via actions included in this section:
+  These two actions work across all record types at once, making it easy to
+  snapshot or bulk-update a dataset:
 
 .. list-table::
    :widths: auto
 
-   * - `Get All Information <section3.5.1.rst>`_
-     - retrieve information of dataset, groups, and files on RDA Server together for a specified dataset
-   * - `Set All Information <section3.5.2.rst>`_
-     - modify information of existing dataset, groups and data files on RDA Server of a given dataset, and create new records for groups and data files if they are not recorded in RDADB yet
+   * - `Get All Information <section3.5.1>`_
+     - export all dataset, group, and file records to a file
+   * - `Set All Information <section3.5.2>`_
+     - import and apply changes to all record types at once
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Table of Contents
+   section3.5.1
+   section3.5.2
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

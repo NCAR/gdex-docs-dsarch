@@ -9,8 +9,5 @@ d260001-G2: DS-552780725 DC-522 WC-522 SS-465789806 SC-51
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

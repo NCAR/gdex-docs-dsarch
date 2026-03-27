@@ -11,55 +11,49 @@ Action Option -**AQ** (-**ArchiveQuasarFile**) (Aliases: -**ArchiveQuasar**, -**
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  (Alias: -ArchiveQuasar|-ArchiveBackupFile|-ArchiveBackup),
-  backs the archived saved and/or Web files up onto Globus Quasar Servers and saves
-  their information into RDADB. All the provided saved and/or web files are backed
-  up into a single Quasar backup file at a time. Another utility program, dsquasar,
-  is normally used to check and collect the newly archived saved and web files.
-  The dsquasar builds input files between 1 and 3 GB, and then call the dsarch to
-  build a tarfile and back the tar file onto Quasar server. Reference to dsquasar
-  help document for detail information.
+  packages archived Saved and/or Web files into a single tar file and uploads it
+  to the Globus Quasar Server for long-term backup, recording the result in
+  GDEXDB. In practice, the companion utility 'dsquasar' handles identifying
+  files to back up, building optimally sized input lists (1-3 GB each), and
+  calling this action. See 'dsquasar' help for details.
 
-| **dsarch** [-(`DS|dataset <section5.1.rst#DS>`_)] dsnnn.n -(AQ|ArchiveQuasarFile) [`Mode Options <#mode>`_]
-|   [-(`SF|SavedFile <section5.2.rst#SF>`_) SavedFileNames]
-|   [-(`ST|SavedFileType <section5.2.rst#ST>`_) SavedFileTypes]
-|   [-(`WF|WebFile <section5.2.rst#WF>`_) webFileNames]
-|   [-(`WT|WebFileType <section5.2.rst#WT>`_) WebFileTypes]
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`QS|QsubOptions <section5.1.rst#QS>`_)  PBSBatchOptions]
-|   [-(`BP|BatchProcess <section5.2.rst#BP>`_) [BatchControlInfo]]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(AQ|ArchiveQuasarFile) [`Mode Options <mode_>`_]
+|         [-(`SF|SavedFile <section5.2_>`_) SavedFileNames]
+|         [-(`ST|SavedFileType <section5.2_>`_) SavedFileTypes]
+|         [-(`WF|WebFile <section5.2_>`_) webFileNames]
+|         [-(`WT|WebFileType <section5.2_>`_) WebFileTypes]
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
+|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for archive web file action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4.rst#BG>`_)
-     - background process to turn off screen display for both standard outputs and errors
-   * - -(`EM|EMailNotice <section4.rst#EM>`_)
-     - sends email for summary and errors for this action
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NE|NoEmail <section4.rst#NE>`_)
-     - does not send email to the specialist for failed action
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`OE|OverrideExist <section4.rst#OE>`_)
-     - overrides existing web files
-   * - -(`TO|TarOnly <section4.rst#TO>`_)
-     - to tar the given Saved and/or Web files only, without physically backing up the Quasar file onto the Globus Quasar Server.
-   * - -(`XC|CrossCopy <section4.rst#XC>`_)
-     - copies files from existing Quasar Backup and Disaster Recovery files to missing Backup/Drdata files; information of the quasar backup files saved in RDADB is used for missing data copies
+   * - -(`BG|BackGround <section4_>`_)
+     - runs in background; suppresses screen output and errors
+   * - -(`EM|EMailNotice <section4_>`_)
+     - sends an email summary (including any errors) when the action completes or aborts
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NE|NoEmail <section4_>`_)
+     - suppresses email notification on failure
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`OE|OverrideExist <section4_>`_)
+     - overwrites existing Quasar files
+   * - -(`TO|TarOnly <section4_>`_)
+     - creates the tar file only, without uploading it to the Globus Quasar Server
+   * - -(`XC|CrossCopy <section4_>`_)
+     - copies files from existing Quasar Backup and Disaster Recovery files to fill missing Backup/Drdata copies, using GDEXDB records for guidance
 
-  One or multiple Saved/Web file names can be provided per option -`SF <section5.2.rst#SF>`_/-WF,
-  respectively, and for this action to work.
-
+  At least one Saved and/or Web file name must be provided via -`SF <section5.2_>`_ and/or -`WF <section5.2_>`_.
 
 
-.. raw:: html
 
-   <br>
 
 :ref:`Back to Top <index>`

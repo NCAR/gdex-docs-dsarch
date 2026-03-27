@@ -11,84 +11,76 @@ Action Option -**AH** (-**ArchiveHelpFile**) (Aliases: -**ArchiveHelp**, -**Arch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  (Alias: -ArchiveHelp|-ArchHelp|-ArchHelpFile),
-  archives local files as files and saved information of the archived files
-  into RDADB for a given dataset. One or multiple local files can be archived
-  each time.
+  copies local files to the GDEX Server as Help files (Documents and Software)
+  and registers them in GDEXDB. One or more files may be archived per execution.
 
-| **dsarch** [-(`DS|dataset <section5.1.rst#DS>`_)] dsnnn.n -(AH|ArchiveHelpFile) [`Mode Options <#mode>`_]
-|   -(`LF|LocalFile <section5.2.rst#LF>`_) LocalFileNames
-|   [-(`HF|HelpFile <section5.2.rst#HF>`_) HelpFileNames]
-|   [-(`HT|HelpFileType <section5.2.rst#HT>`_) HelpFileTypes]
-|   [-(`FS|FileStatus <section5.2.rst#FS>`_) HelpFileStatus]
-|   [-(`FF|FileFlag <section5.2.rst#FF>`_) FilesOrPaths]
-|   [-(`DF|DataFormat <section5.2.rst#DF>`_) FileContentFormat]
-|   [-(`AF|ArchiveFormat <section5.2.rst#AF>`_) FileArchiveFormat]
-|   [-(`DO <section5.2.rst#DO>`_|DisplayOrder] DisplayOrderIndices]
-|   [-(`SZ|Size <section5.2.rst#SZ>`_) FileSizes]
-|   [-(`LC|Location <section5.2.rst#LC>`_) StorageLocationFlags]
-|   [-(`MC|MD5Checksum <section5.2.rst#MC>`_) MD5ChecksumValues]
-|   [-(`DE <section5.2.rst#DE>`_|Description] SavedFileDescriptions]
-|   [-(`VS|ValidSize <section5.1.rst#VS>`_) MinSizeForValidFile]
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`QS|QsubOptions <section5.1.rst#QS>`_)  PBSBatchOptions]
-|   [-(`BP|BatchProcess <section5.2.rst#BP>`_) [BatchControlInfo]]
-|   [-(`DD|DeleteDir <section5.1.rst#DD>`_) DeleteLocalDirLevel]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(AH|ArchiveHelpFile) [`Mode Options <mode_>`_]
+|         -(`LF|LocalFile <section5.2_>`_) LocalFileNames
+|         [-(`HF|HelpFile <section5.2_>`_) HelpFileNames]
+|         [-(`HT|HelpFileType <section5.2_>`_) HelpFileTypes]
+|         [-(`FS|FileStatus <section5.2_>`_) HelpFileStatus]
+|         [-(`FF|FileFlag <section5.2_>`_) FilesOrPaths]
+|         [-(`DF|DataFormat <section5.2_>`_) FileContentFormat]
+|         [-(`AF|ArchiveFormat <section5.2_>`_) FileArchiveFormat]
+|         [-(`DO|DisplayOrder <section5.2_>`_) DisplayOrderIndices]
+|         [-(`SZ|Size <section5.2_>`_) FileSizes]
+|         [-(`LC|Location <section5.2_>`_) StorageLocationFlags]
+|         [-(`MC|MD5Checksum <section5.2_>`_) MD5ChecksumValues]
+|         [-(`DE|Description <section5.2_>`_) SavedFileDescriptions]
+|         [-(`VS|ValidSize <section5.1_>`_) MinSizeForValidFile]
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`QS|QsubOptions <section5.1_>`_)  PBSBatchOptions]
+|         [-(`BP|BatchProcess <section5.2_>`_) [BatchControlInfo]]
+|         [-(`DD|DeleteDir <section5.1_>`_) DeleteLocalDirLevel]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for archive help file action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4.rst#BG>`_)
-     - background process to turn off screen display for both standard outputs and errors
-   * - -(`CL|CleanLocal <section4.rst#CL>`_)
-     - cleans local files after they are all archived onto RDA Web Server successfully
-   * - -(`EM|EMailNotice <section4.rst#EM>`_)
-     - sends email for summary and errors for this action
-   * - -(`GZ|GMTZone <section4.rst#GZ>`_)
-     - uses GMT dates/times as controlling times
-   * - -(`KP|KeepLocalPath <section4.rst#KP>`_)
-     - retains the path names of local files as relative paths to data home directory on RDA Server
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NE|NoEmail <section4.rst#NE>`_)
-     - does not send email to the specialist for failed action
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
-   * - -(`OE|OverrideExist <section4.rst#OE>`_)
-     - overrides existing web files
-   * - -(`RO|ResetOrder <section4.rst#RO>`_)
-     - resets the ordering indices of the list of file names on RDA Server according to the order they are given per option -`HF <section5.2.rst#HF>`_. Reordering filelist can be also accomplished by giving option -`ON <section5.1.rst#ON>`_ (-OrderNames), which tells Action -`SH <section3.4.5.rst>`_ to reorder all the files of given dataset and the involved groups
-   * - -(`SC|SetChecksum <section4.rst#SC>`_)
-     - evaluates the md5 checksum values for the help files and saves them into RDADB
+   * - -(`BG|BackGround <section4_>`_)
+     - runs in background; suppresses screen output and errors
+   * - -(`CL|CleanLocal <section4_>`_)
+     - removes local files after all are successfully archived
+   * - -(`EM|EMailNotice <section4_>`_)
+     - sends an email summary (including any errors) when the action completes or aborts
+   * - -(`GZ|GMTZone <section4_>`_)
+     - uses GMT rather than local time for archiving timestamps
+   * - -(`KP|KeepLocalPath <section4_>`_)
+     - uses local file paths as relative paths on the GDEX Server
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NE|NoEmail <section4_>`_)
+     - suppresses email notification on failure
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
+   * - -(`OE|OverrideExist <section4_>`_)
+     - overwrites existing Help files
+   * - -(`RO|ResetOrder <section4_>`_)
+     - resets display order indices to match the order files are given per -`HF <section5.2_>`_. Alternatively, use -`ON <section5.1_>`_ (-OrderNames) to reorder all files in the dataset and affected groups
+   * - -(`SC|SetChecksum <section4_>`_)
+     - computes MD5 checksums for Help files and saves them to GDEXDB
 
-  One or multiple local file names can be provided per option -`LF <section5.2.rst#LF>`_ (-LocalFile)
-  for this action to work. If option -`LF <section5.2.rst#LF>`_ is given on command line, '*' and '?'
-  can be used in local file names for wildcard match. File names must include
-  relative or absolute paths if local data files are not located in the
-  directory where **dsarch** is started. The local file names are gathered
-  recursively following the sub-directory tree if a local directory per `Info <section5.rst>`_
-  option -`LD <section5.1.rst#LD>`_ (-LocalDirectory) is present.
+  Local file names are provided via -`LF <section5.2_>`_ (-LocalFile). On the command line,
+  '*' and '?' wildcards are supported. Files not in the current directory must
+  include relative or absolute paths. If a directory is given via -`LD <section5.1_>`_
+  (-LocalDirectory), files are gathered recursively.
 
-  Local file names are used as default for Saved file names unless they are
-  explicitly given per option -`SF <section5.2.rst#SF>`_ (-SavedFile). The original local file names,
-  including paths, are used if `Mode <section4.rst>`_ option -`KP <section4.rst#KP>`_ (-KeepLocalPath) is specified.
+  Local file names are used as Help file names by default unless -`HF <section5.2_>`_ (-HelpFile)
+  is given explicitly. When -`KP <section4_>`_ (-KeepLocalPath) is specified, local file paths
+  are used as-is on the GDEX Server.
 
-  The number of values passed in per `Info <section5.rst>`_ options must be the same as the number
-  of local file names provided, except for the `Info <section5.rst>`_ options that are allowed to
-  pass in single values, such as options -`DF <section5.2.rst#DF>`_ (-DataFormat), -`AF <section5.2.rst#AF>`_ (-ArchiveFormat),
-  and -`HT <section5.2.rst#HT>`_ (-HelpFileType).
+  The number of values supplied to `Info <section5>`_ options must match the number of local
+  file names, except for options that accept a single shared value: -`DF <section5.2_>`_, -`AF <section5.2_>`_,
+  and -`HT <section5.2_>`_ (-HelpFileType).
 
-  The location flag is provided via option -`LC <section5.2.rst#LC>`_ (-Location). The defualt value
-  is 'B' for archiving a help file onto both Web Disk and Object Store.
+  The storage location is set via -`LC <section5.2_>`_ (-Location). Defaults to 'B' (both Web
+  Disk and Object Store).
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

@@ -10,50 +10,43 @@
 Action Option -**TV** (-**TerminateVersion**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-terminates a version control from RDADB for a specified dataset.
+closes a version control record in GDEXDB for the
+  specified dataset, marking it as history or removing it if still pending.
 
-| **dsarch** [-(`DS|Dataset <section5.1.rst#DS>`_)] dsnnn.n [-](TV|TerminateVersion) [`Mode Options <#mode>`_]
-|   -(`VI|VersionIndex <section5.2.rst#VI>`_) VersionIndix
-|   [-(`LN|LoginName <section5.1.rst#LN>`_) LoginAccountName]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](TV|TerminateVersion) [`Mode Options <mode_>`_]
+|          -(`VI|VersionIndex <section5.2_>`_) VersionIndex
+|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
 .. _mode:
 
-  `Mode <section4.rst>`_ options that can be specified for terminating version control action:
+  `Mode <section4>`_ options that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4.rst#MD>`_)
-     - overrides the default specialist and enables RDADB information to be set by any one
-   * - -(`NT|NoTrim <section4.rst#NT>`_)
-     - skip trimming of spaces and comments from input values to speed up reading input file(s)
+   * - -(`MD|MyDataset <section4_>`_)
+     - allows any specialist to set GDEXDB information, regardless of dataset ownership
+   * - -(`NT|NoTrim <section4_>`_)
+     - skips trimming of spaces and comments from input values, speeding up input file processing
 
-  The version control record to be terminated is identified by the version index given
-  per `Info <section5.rst>`_ option -`VI <section5.2.rst#VI>`_ (-VersionIndex) and dataset number per option -`DS <section5.1.rst#DS>`_. This action
-  is blocked if there exist any Web data files lined to the version index. To terminate
-  the version control record with Web files under it, you gather the Web file names per
-  action option -`GW <section3.4.4.rst>`_ (-GetWebFile), and either set the version index value to 0 or a
-  different index, or move the Web files to Saved files; then terminate the version
-  control.
+  Provide the version index via -`VI <section5.2_>`_ and the dataset number via -`DS <section5.1_>`_. Termination
+  is blocked if any Web files are still linked to that version. To work around
+  this, first list those files using -`GW <section3.4.4_>`_ (-GetWebFile), then either reassign
+  their version index (to 0 or another value) or convert them to Saved files;
+  only then can the version be terminated.
 
 
-.. _e5:
+.. _3.2.3_e5:
 
-**EXAMPLE 5. **
+**EXAMPLE 5. To terminate version index 5 of d999009:**
 
- Terminate Version Index 5 Of D999009
+  dsarch d999009 TV -`VI <section5.2_>`_ 5
 
-  dsarch d999009 TV -`VI <section5.2.rst#VI>`_ 5
-
-  After termination, an active version control record is changed to status 'H' and the
-  record is retained for future references, but for a Pending version control record, it
-  is completely removed from RDADB if it is terminated.
+  Active records are moved to 'H' (History) status and kept for future
+  reference. Pending records are deleted from GDEXDB entirely.
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`

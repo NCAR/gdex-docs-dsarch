@@ -10,32 +10,25 @@
 Action Option -**GA** (-**GetALL**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-retrieves dataset, group and Saved/Web/Help/Quasar file
-  information for a given dataset. This is a comprehensive action, combining all Get
-  Actions, -`GD <section3.1.2.rst>`_ (-GetDataset), -`GG <section3.3.2.rst>`_ (-GetGroup), -`GS <section3.4.2.rst>`_ (-GetSavedFile), -`GW <section3.4.4.rst>`_ (-GetWebFile),
-  -`GH <section3.4.6.rst>`_ (-GetHelpFile), and -`GQ <section3.4.8.rst>`_ (-GetQuasarFile.
+exports all dataset, group, and Saved/Web/Help/Quasar file
+  records for a dataset in one step. Equivalent to running -`GD <section3.1.2_>`_, -`GG <section3.3.2_>`_, -`GS <section3.4.2_>`_, -`GW <section3.4.4_>`_,
+  -`GH <section3.4.6_>`_, and -`GQ <section3.4.8_>`_ together.
 
-| **dsarch** [-(`DS|dataset <section5.1.rst#DS>`_)] dsnnn.n -(GA|GetAll)
-|   [-(`OF <section5.1.rst#OF>`_|OutputFile|>) OutputFileName]
-|   [-(`DB|Debug <section5.2.rst#DB>`_) DebugModeInfo]
+| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(GA|GetAll)
+|         [-(`OF|OutputFile <section5.1_>`_) OutputFileName]
+|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
 
-  No `Mode <section4.rst>`_ option is applied to this action. Information of all available fields
-  is retrieved for dataset, groups and files.
+  No `Mode <section4>`_ options apply to this action; all available fields are retrieved
+  for every record type.
 
-  Section headers are generated as [DATASET] for dataset, [DSGROUP] for
-  groups, [SAVEDFILE] for Saved file information, [WEBFILE] for Web file information,
-  [HELPFILE] for Help file information, and [QUASARFILE] for Quasar file information.
+  Output is organized under [DATASET], [DSGROUP], [SAVEDFILE], [WEBFILE],
+  [HELPFILE], and [QUASARFILE] sections.
 
-  `Info <section5.rst>`_ option -`OF <section5.1.rst#OF>`_ (-OutputFile|>) is normally used to specify a file name to
-  save the retrieved information for later usage. Result of this action is
-  displayed on screen if no output file is provided. The output file can be
-  edited and treated as a input file to save the changes back to RDADB per
-  action -`SA <section3.5.2.rst>`_ (-SetAll).
+  Use -`OF <section5.1_>`_ (-OutputFile) to write results to a file; without it, results print
+  to screen. The output file can be edited and fed back to -`SA <section3.5.2_>`_ (-SetAll) to
+  apply changes in bulk.
 
 
 
-.. raw:: html
-
-   <br>
 
 :ref:`Back to Top <index>`
