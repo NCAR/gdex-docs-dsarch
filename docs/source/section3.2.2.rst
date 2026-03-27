@@ -27,7 +27,7 @@ retrieves DOI/Version control records from GDEXDB for a
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`FO|FormatOutput <FO>`)
+   * - (:ref:`FO|FormatOutput <FO>`)
      - formats each column to a uniform fixed width
 
   Use -:ref:`FN <FN>` (-FieldNames) to specify which version control fields to retrieve.
@@ -43,34 +43,34 @@ retrieves DOI/Version control records from GDEXDB for a
      - :ref:`Info Options <section5>`
      - Descriptions
    * - V
-     - ``-``(:ref:`VI|VersionIndex <VI>`)
+     - (:ref:`VI|VersionIndex <VI>`)
      - version control index
    * - I
-     - ``-``(:ref:`IV|InternalVersion <IV>`)
+     - (:ref:`IV|InternalVersion <IV>`)
      - Internal version number
    * - E
-     - ``-``(:ref:`EV|ExternalVersion <EV>`)
+     - (:ref:`EV|ExternalVersion <EV>`)
      - External version number to publish
    * - D
-     - ``-``(:ref:`DN|DOINumber <DN>`)
+     - (:ref:`DN|DOINumber <DN>`)
      - DOI number created for the version control
    * - S
-     - ``-``(:ref:`VT|VersionStatus <VT>`)
+     - (:ref:`VT|VersionStatus <VT>`)
      - version control status, A-Active, P-Pending and H-History
    * - J
-     - ``-``(:ref:`BD|BeginDate <BD>`)
+     - (:ref:`BD|BeginDate <BD>`)
      - date the version control starts at
    * - K
-     - ``-``(:ref:`BT|BeginTime <BT>`)
+     - (:ref:`BT|BeginTime <BT>`)
      - time the version control starts at
    * - X
-     - ``-``(:ref:`ED|EndDate <ED>`)
+     - (:ref:`ED|EndDate <ED>`)
      - date the terminated version control ends by
    * - Y
-     - ``-``(:ref:`ET|EndTime <ET>`)
+     - (:ref:`ET|EndTime <ET>`)
      - time the terminated version control ends by
    * - N
-     - ``-``(:ref:`DE|Description <DE>`)
+     - (:ref:`DE|Description <DE>`)
      - note for the version control record
 
   Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without

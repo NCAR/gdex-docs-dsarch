@@ -94,17 +94,17 @@ relocates archived files — across datasets, between groups,
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - ``-``(:ref:`NE|NoEmail <NE>`)
+   * - (:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - ``-``(:ref:`TS|ToSaved <TS>`)
+   * - (:ref:`TS|ToSaved <TS>`)
      - moves Web files to Saved files
-   * - ``-``(:ref:`TW|ToWeb <TW>`)
+   * - (:ref:`TW|ToWeb <TW>`)
      - moves Saved files to Web files
-   * - ``-``(:ref:`KM|KeepMetadata <KM>`)
+   * - (:ref:`KM|KeepMetadata <KM>`)
      - used with -:ref:`TW <TW>` to retain the metadata record after the Web file is moved to a Saved file
 
   Provide the file names to move via -:ref:`SF <SF>`, -:ref:`WF <WF>`, -:ref:`HF <HF>`, or -:ref:`QF <QF>`. Files are

@@ -38,15 +38,15 @@ creates new or updates existing group records in GDEXDB
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - ``-``(:ref:`RT|ResetTGroup <RT>`)
+   * - (:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for Saved/Web file records in the affected group
-   * - ``-``(:ref:`WM|WithMetadata <WM>`)
+   * - (:ref:`WM|WithMetadata <WM>`)
      - re-gathers Web file content metadata at the group level
-   * - ``-``(:ref:`WN|WithFileNumber <WN>`)
+   * - (:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets Saved/Web file counts for the affected groups
 
   If the group index already exists in GDEXDB, the record is updated; otherwise

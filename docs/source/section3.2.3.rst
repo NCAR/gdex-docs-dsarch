@@ -26,9 +26,9 @@ closes a version control record in GDEXDB for the
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
 
   Provide the version index via -:ref:`VI <VI>` and the dataset number via -:ref:`DS <DS>`. Termination

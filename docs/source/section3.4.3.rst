@@ -50,27 +50,27 @@ creates new or updates existing Web file
    :widths: auto
    :header-rows: 0
 
-   * - ``-``(:ref:`BG|BackGround <BG>`)
+   * - (:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - ``-``(:ref:`DX|DeleteXML <DX>`)
+   * - (:ref:`DX|DeleteXML <DX>`)
      - calls **dcm** to delete content metadata for the specified Web files
-   * - ``-``(:ref:`EM|EMailNotice <EM>`)
+   * - (:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - ``-``(:ref:`GX|GatherXML <GX>`)
+   * - (:ref:`GX|GatherXML <GX>`)
      - calls **gatherxml** to evaluate file content metadata
-   * - ``-``(:ref:`MD|MyDataset <MD>`)
+   * - (:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - ``-``(:ref:`NE|NoEmail <NE>`)
+   * - (:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - ``-``(:ref:`NT|NoTrim <NT>`)
+   * - (:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - ``-``(:ref:`RD|RemoveDir <RD>`)
+   * - (:ref:`RD|RemoveDir <RD>`)
      - removes empty web directories after file changes
-   * - ``-``(:ref:`RO|ResetOrder <RO>`)
+   * - (:ref:`RO|ResetOrder <RO>`)
      - resets display order indices to match the order files are given per -:ref:`WF <WF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
-   * - ``-``(:ref:`RS|GXRSOptions <RS>`)
+   * - (:ref:`RS|GXRSOptions <RS>`)
      - passes options R and S to **gatherxml** for faster processing, used with -:ref:`GX <GX>` (-GatherXML)
-   * - ``-``(:ref:`SC|SetChecksum <SC>`)
+   * - (:ref:`SC|SetChecksum <SC>`)
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
   Web file names must be provided via -:ref:`WF <WF>` (-WebFile) unless -:ref:`ON <ON>` (-OrderNames)
