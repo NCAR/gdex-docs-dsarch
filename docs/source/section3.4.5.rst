@@ -14,57 +14,57 @@ creates new or updates existing Help
   file records (Documents and Software) in GDEXDB for the specified dataset.
   Multiple records can be processed in a single run.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN -(SH|SetHelpFile) [`Mode Options <mode_>`_]
-|         [-(`HF|HelpFile <section5.2_>`_) HelpFileNames]
-|         [-(`WU|WebURL <section5.2_>`_) RemoteFileWebURL]
-|         [-(`SR|Source <section5.2_>`_) ContributionSource]
-|         [-(`ON|OrderNames <section5.1_>`_) OrderNameString]
-|         [-(`OB|OrderBy <section5.2_>`_) OrderByPattern]
-|         [-(`HT|HelpFileType <section5.2_>`_) HelpFileTypes]
-|         [-(`FS|FileStatus <section5.2_>`_) HelpFileStatus]
-|         [-(`FF|FileFlag <section5.2_>`_) FilesOrPaths]
-|         [-(`LC|Location <section5.2_>`_) StorageLocationFlags]
-|         [-(`DF|DataFormat <section5.2_>`_) DataFormats]
-|         [-(`AF|ArchiveFormat <section5.2_>`_) FileArchiveFormats]
-|         [-(`DO|DisplayOrder <section5.2_>`_) DisplayOrderIndices]
-|         [-(`SZ|Size <section5.2_>`_) FileSizes]
-|         [-(`MC|MD5Checksum <section5.2_>`_) MD5ChecksumValues]
-|         [-(`ID|InitialDate <section5.2_>`_) HelpFileInitialDate]
-|         [-(`FD|FileDate <section5.2_>`_) DateModified]
-|         [-(`FT|FileTime <section5.2_>`_) TimeModified]
-|         [-(`DE|Description <section5.2_>`_) SavedFileDescriptions]
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN -(SH|SetHelpFile) [:ref:`Mode Options <mode3.4.5>`]
+|         [-(:ref:`HF|HelpFile <HF>`) HelpFileNames]
+|         [-(:ref:`WU|WebURL <WU>`) RemoteFileWebURL]
+|         [-(:ref:`SR|Source <SR>`) ContributionSource]
+|         [-(:ref:`ON|OrderNames <ON>`) OrderNameString]
+|         [-(:ref:`OB|OrderBy <OB>`) OrderByPattern]
+|         [-(:ref:`HT|HelpFileType <HT>`) HelpFileTypes]
+|         [-(:ref:`FS|FileStatus <FS>`) HelpFileStatus]
+|         [-(:ref:`FF|FileFlag <FF>`) FilesOrPaths]
+|         [-(:ref:`LC|Location <LC>`) StorageLocationFlags]
+|         [-(:ref:`DF|DataFormat <DF>`) DataFormats]
+|         [-(:ref:`AF|ArchiveFormat <AF>`) FileArchiveFormats]
+|         [-(:ref:`DO|DisplayOrder <DO>`) DisplayOrderIndices]
+|         [-(:ref:`SZ|Size <SZ>`) FileSizes]
+|         [-(:ref:`MC|MD5Checksum <MC>`) MD5ChecksumValues]
+|         [-(:ref:`ID|InitialDate <ID>`) HelpFileInitialDate]
+|         [-(:ref:`FD|FileDate <FD>`) DateModified]
+|         [-(:ref:`FT|FileTime <FT>`) TimeModified]
+|         [-(:ref:`DE|Description <DE>`) SavedFileDescriptions]
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.4.5:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`BG|BackGround <section4_>`_)
+   * - -(:ref:`BG|BackGround <BG>`)
      - runs in background; suppresses screen output and errors
-   * - -(`EM|EMailNotice <section4_>`_)
+   * - -(:ref:`EM|EMailNotice <EM>`)
      - sends an email summary (including any errors) when the action completes or aborts
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NE|NoEmail <section4_>`_)
+   * - -(:ref:`NE|NoEmail <NE>`)
      - suppresses email notification on failure
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`RO|ResetOrder <section4_>`_)
+   * - -(:ref:`RO|ResetOrder <RO>`)
      - resets display order indices to match the order files are provided
-   * - -(`SC|SetChecksum <section4_>`_)
+   * - -(:ref:`SC|SetChecksum <SC>`)
      - computes MD5 checksums for Help files and saves them to GDEXDB
 
-  Help file names must be provided via -`HF <section5.2_>`_ (-HelpFile) unless -`ON <section5.1_>`_ (-OrderNames)
-  is used to reorder files. The number of values supplied to other `Info <section5>`_ options
+  Help file names must be provided via -:ref:`HF <HF>` (-HelpFile) unless -:ref:`ON <ON>` (-OrderNames)
+  is used to reorder files. The number of values supplied to other :ref:`Info <section5>` options
   must match the number of file names, except for options that accept a single
-  shared value, such as -`AF <section5.2_>`_, -`DF <section5.2_>`_, and -`HT <section5.2_>`_ (-HelpFileType).
+  shared value, such as -:ref:`AF <AF>`, -:ref:`DF <DF>`, and -:ref:`HT <HT>` (-HelpFileType).
 
   For remotely hosted Help files (e.g., on GitHub), provide the full URL via
-  -`WU <section5.2_>`_ (-WebURL) to add a record without a local copy on the GDEX Server.
+  -:ref:`WU <WU>` (-WebURL) to add a record without a local copy on the GDEX Server.
 
 
 

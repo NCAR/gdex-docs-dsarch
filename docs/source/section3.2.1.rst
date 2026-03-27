@@ -13,35 +13,35 @@ Action Option -**SV** (-**SetVersion**) :
 creates a new or updates an existing DOI/Version control
   record for the specified dataset.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](SV|SetVersion) [`Mode Options <mode_>`_]
-|         [-(`VI|VersionIndex <section5.2_>`_) VersionIndex]
-|         [-(`IV|InternalVersion <section5.2_>`_) InternalVersionIndex]
-|         [-(`EV|ExternalVersion <section5.2_>`_) AssignedVersionNumber]
-|         [-(`DN|DOINumber <section5.2_>`_) DOInumber]
-|         [-(`VT|VersionStatus <section5.2_>`_) VersionRecordStatus]
-|         [-(`BD|BeginDate <section5.2_>`_) VersionStartdate]
-|         [-(`BT|BeginTime <section5.2_>`_) VersionStartTime]
-|         [-(`ED|EndDate <section5.2_>`_) VersionEnddate]
-|         [-(`ET|EndTime <section5.2_>`_) VersionEndTime]
-|         [-(`DE|Description <section5.2_>`_) VersionNote]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](SV|SetVersion) [:ref:`Mode Options <mode3.2.1>`]
+|         [-(:ref:`VI|VersionIndex <VI>`) VersionIndex]
+|         [-(:ref:`IV|InternalVersion <IV>`) InternalVersionIndex]
+|         [-(:ref:`EV|ExternalVersion <EV>`) AssignedVersionNumber]
+|         [-(:ref:`DN|DOINumber <DN>`) DOInumber]
+|         [-(:ref:`VT|VersionStatus <VT>`) VersionRecordStatus]
+|         [-(:ref:`BD|BeginDate <BD>`) VersionStartdate]
+|         [-(:ref:`BT|BeginTime <BT>`) VersionStartTime]
+|         [-(:ref:`ED|EndDate <ED>`) VersionEnddate]
+|         [-(:ref:`ET|EndTime <ET>`) VersionEndTime]
+|         [-(:ref:`DE|Description <DE>`) VersionNote]
 
-.. _mode:
+.. _mode3.2.1:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`NV|NewVersion <section4_>`_)
+   * - -(:ref:`NV|NewVersion <NV>`)
      - adds a new version control record to GDEXDB
 
   If a version index is provided and already exists in GDEXDB, the record is
-  modified. A new record is created when no index is given (or it is 0) and `Mode <section4>`_
-  option -`NV <section4_>`_ (-NewVersion) is present.
+  modified. A new record is created when no index is given (or it is 0) and :ref:`Mode <section4>`
+  option -:ref:`NV <NV>` (-NewVersion) is present.
 
   A newly created record with no DOI number is in Pending status and can only
   transition to Active once a DOI number is supplied. When an active record is
@@ -52,7 +52,7 @@ creates a new or updates an existing DOI/Version control
 
 **EXAMPLE 3. To place d999009 under DOI/Version control:**
 
-  dsarch d999009 SV -`NV <section4_>`_ -DN DOINumber
+  dsarch d999009 SV -:ref:`NV <NV>` -DN DOINumber
 
   If the data of d999009 are substantially updated to a new version, run the
   same command with a new DOI number. The previous active record is automatically
@@ -64,7 +64,7 @@ creates a new or updates an existing DOI/Version control
   record is again moved to History.
 
   One common minimal-change case is replacing erroneous Web files. First, move
-  the affected files to different names using Action -`MV <section3.4.14_>`_ (their type is
+  the affected files to different names using Action -:ref:`MV <MV>` (their type is
   automatically set to 'V' for Version-controlled). Optionally create a new
   internal version at this point, then archive the replacement Web files.
 

@@ -10,11 +10,11 @@
 .. list-table::
    :widths: auto
 
-   * - `Set Version Control <section3.2.1>`_
+   * - :ref:`Set Version Control <section3.2.1>`
      - create or update a DOI/Version control record
-   * - `Get Version Control <section3.2.2>`_
+   * - :ref:`Get Version Control <section3.2.2>`
      - retrieve DOI/Version control record details
-   * - `Terminate Version Control <section3.2.3>`_
+   * - :ref:`Terminate Version Control <section3.2.3>`
      - close an active DOI/Version control record
 
 .. toctree::
@@ -27,9 +27,9 @@
 
 **Appendix A: List of Examples**
 
-- `A.3. Action Option -SV (-SetVersion) <3.2.1_e3>`_
-- `A.4. Action Option -GV (-GetVersion) <3.2.2_e4>`_
-- `A.5. Action Option -TV (-TerminateVersion) <3.2.3_e5>`_
+- :ref:`A.3. Action Option -SV (-SetVersion) <3.2.1_e3>`
+- :ref:`A.4. Action Option -GV (-GetVersion) <3.2.2_e4>`
+- :ref:`A.5. Action Option -TV (-TerminateVersion) <3.2.3_e5>`
 
 
 

@@ -9,9 +9,9 @@
 .. list-table::
    :widths: auto
 
-   * - `Set Dataset Information <section3.1.1>`_
+   * - :ref:`Set Dataset Information <section3.1.1>`
      - update properties of an existing dataset record
-   * - `Get Dataset Information <section3.1.2>`_
+   * - :ref:`Get Dataset Information <section3.1.2>`
      - retrieve and display dataset record fields
 
 .. toctree::
@@ -23,8 +23,8 @@
 
 **Appendix A: List of Examples**
 
-- `A.1. Action Option -SD (-SetDataset) <3.1.1_e1>`_
-- `A.2. Action Option -GD (-GetDataset) <3.1.2_e2>`_
+- :ref:`A.1. Action Option -SD (-SetDataset) <3.1.1_e1>`
+- :ref:`A.2. Action Option -GD (-GetDataset) <3.1.2_e2>`
 
 
 

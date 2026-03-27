@@ -10,13 +10,13 @@
 .. list-table::
    :widths: auto
 
-   * - `Set Group Information <section3.3.1>`_
+   * - :ref:`Set Group Information <section3.3.1>`
      - create or update group records
-   * - `Get Group Information <section3.3.2>`_
+   * - :ref:`Get Group Information <section3.3.2>`
      - list and filter existing group records
-   * - `Delete Group Information <section3.3.3>`_
+   * - :ref:`Delete Group Information <section3.3.3>`
      - remove one or more group records
-   * - `Change Group Information <section3.3.4>`_
+   * - :ref:`Change Group Information <section3.3.4>`
      - renumber group indices
 
 .. toctree::
@@ -30,10 +30,10 @@
 
 **Appendix A: List of Examples**
 
-- `A.6. Action Option -SG (-SetGroup) <3.3.1_e6>`_
-- `A.7. Action Option -GG (-GetGroup) <3.3.2_e7>`_
-- `A.8. Action Option -DG (-DeleteGroup) <3.3.3_e8>`_
-- `A.9. Action Option -CG (-ChangeGroup) <3.3.4_e9>`_
+- :ref:`A.6. Action Option -SG (-SetGroup) <3.3.1_e6>`
+- :ref:`A.7. Action Option -GG (-GetGroup) <3.3.2_e7>`
+- :ref:`A.8. Action Option -DG (-DeleteGroup) <3.3.3_e8>`
+- :ref:`A.9. Action Option -CG (-ChangeGroup) <3.3.4_e9>`
 
 
 

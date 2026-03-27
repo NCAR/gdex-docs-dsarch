@@ -11,35 +11,35 @@
 .. list-table::
    :widths: auto
 
-   * - `Set Saved File Information <section3.4.1>`_
+   * - :ref:`Set Saved File Information <section3.4.1>`
      - create or modify Saved file records in GDEXDB
-   * - `Get Saved File Information <section3.4.2>`_
+   * - :ref:`Get Saved File Information <section3.4.2>`
      - retrieve Saved file records from GDEXDB
-   * - `Set Web File Information <section3.4.3>`_
+   * - :ref:`Set Web File Information <section3.4.3>`
      - create or modify Web file records in GDEXDB
-   * - `Get Web File Information <section3.4.4>`_
+   * - :ref:`Get Web File Information <section3.4.4>`
      - retrieve Web file records from GDEXDB
-   * - `Set Help File Information <section3.4.5>`_
+   * - :ref:`Set Help File Information <section3.4.5>`
      - create or modify Help file records in GDEXDB
-   * - `Get Help File Information <section3.4.6>`_
+   * - :ref:`Get Help File Information <section3.4.6>`
      - retrieve Help file records from GDEXDB
-   * - `Set Quasar File Information <section3.4.7>`_
+   * - :ref:`Set Quasar File Information <section3.4.7>`
      - create or modify Quasar backup file records
-   * - `Get Quasar File Information <section3.4.8>`_
+   * - :ref:`Get Quasar File Information <section3.4.8>`
      - retrieve Quasar backup file records from GDEXDB
-   * - `Archive Saved Files <section3.4.9>`_
+   * - :ref:`Archive Saved Files <section3.4.9>`
      - archive local files as Saved files and record their information in GDEXDB
-   * - `Archive Web Files <section3.4.10>`_
+   * - :ref:`Archive Web Files <section3.4.10>`
      - archive local files as Web files and record their information in GDEXDB
-   * - `Archive Help Files <section3.4.11>`_
+   * - :ref:`Archive Help Files <section3.4.11>`
      - archive local files as Help files and record their information in GDEXDB
-   * - `Backup Quasar Files <section3.4.12>`_
+   * - :ref:`Backup Quasar Files <section3.4.12>`
      - tar and upload files to the Globus Quasar Server
-   * - `Restore Quasar Files <section3.4.13>`_
+   * - :ref:`Restore Quasar Files <section3.4.13>`
      - retrieve Quasar tar files and restore missing Saved or Web files
-   * - `Move Saved/Web/Help/Quasar Files <section3.4.14>`_
+   * - :ref:`Move Saved/Web/Help/Quasar Files <section3.4.14>`
      - move files between datasets, groups, or file types
-   * - `Delete Saved/Web/Help/Quasar Files <section3.4.15>`_
+   * - :ref:`Delete Saved/Web/Help/Quasar Files <section3.4.15>`
      - delete files and remove their GDEXDB records
 
 .. toctree::
@@ -64,7 +64,7 @@
 
 **Appendix A: List of Examples**
 
-- `A.10. Action Option -GW (-GetWebFile) <3.4.4_e10>`_
+- :ref:`A.10. Action Option -GW (-GetWebFile) <3.4.4_e10>`
 
 
 

@@ -11,21 +11,21 @@ Action Option -**GA** (-**GetALL**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 exports all dataset, group, and Saved/Web/Help/Quasar file
-  records for a dataset in one step. Equivalent to running -`GD <section3.1.2_>`_, -`GG <section3.3.2_>`_, -`GS <section3.4.2_>`_, -`GW <section3.4.4_>`_,
-  -`GH <section3.4.6_>`_, and -`GQ <section3.4.8_>`_ together.
+  records for a dataset in one step. Equivalent to running -:ref:`GD <GD>`, -:ref:`GG <GG>`, -:ref:`GS <GS>`, -:ref:`GW <GW>`,
+  -:ref:`GH <GH>`, and -:ref:`GQ <GQ>` together.
 
-| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN -(GA|GetAll)
-|         [-(`OF|OutputFile <section5.1_>`_) OutputFileName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|dataset <DS>`)] dNNNNNN -(GA|GetAll)
+|         [-(:ref:`OF|OutputFile <OF>`) OutputFileName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-  No `Mode <section4>`_ options apply to this action; all available fields are retrieved
+  No :ref:`Mode options <section4>` apply to this action; all available fields are retrieved
   for every record type.
 
   Output is organized under [DATASET], [DSGROUP], [SAVEDFILE], [WEBFILE],
   [HELPFILE], and [QUASARFILE] sections.
 
-  Use -`OF <section5.1_>`_ (-OutputFile) to write results to a file; without it, results print
-  to screen. The output file can be edited and fed back to -`SA <section3.5.2_>`_ (-SetAll) to
+  Use -:ref:`OF <OF>` (-OutputFile) to write results to a file; without it, results print
+  to screen. The output file can be edited and fed back to -:ref:`SA <SA>` (-SetAll) to
   apply changes in bulk.
 
 

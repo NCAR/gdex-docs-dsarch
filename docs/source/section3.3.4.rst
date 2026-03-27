@@ -11,31 +11,31 @@ Action Option -**CG** (-**ChangeGroup**) :
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 renumbers group indices for the specified dataset,
-  mapping each original index (via -`OG <section5.2_>`_) to a new value (via -`GI <section5.2_>`_).
+  mapping each original index (via -:ref:`OG <OG>`) to a new value (via -:ref:`GI <GI>`).
 
-| **dsarch** [-(`DS|dataset <section5.1_>`_)] dNNNNNN [-](CG|ChangeGroup) [`Mode Options <mode_>`_]
-|          -(`OG|OriginGroup <section5.2_>`_) OriginalGroupIndices
-|          -(`GI|GroupIndex <section5.2_>`_) NewGroupIndices
-|         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|dataset <DS>`)] dNNNNNN [-](CG|ChangeGroup) [:ref:`Mode Options <mode3.3.4>`]
+|          -(:ref:`OG|OriginGroup <OG>`) OriginalGroupIndices
+|          -(:ref:`GI|GroupIndex <GI>`) NewGroupIndices
+|         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.3.4:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`RT|ResetTGroup <section4_>`_)
+   * - -(:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for file records in the affected group
-   * - -(`WN|WithFileNumber <section4_>`_)
+   * - -(:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets file counts for the affected groups
 
-  Both -`OG <section5.2_>`_ (-OriginGroup) and -`GI <section5.2_>`_ (-GroupIndex) are required. All Saved and
+  Both -:ref:`OG <OG>` (-OriginGroup) and -:ref:`GI <GI>` (-GroupIndex) are required. All Saved and
   Web file records linked to the original indices are updated to the new
   values. The original indices must already exist in GDEXDB.
 
@@ -44,7 +44,7 @@ renumbers group indices for the specified dataset,
 
 **EXAMPLE 9. To reassign group indices 1 and 2 to 2 and 3 for d744004:**
 
-  dsarch d744004 CG -`OG <section5.2_>`_ 1 2 -`GI <section5.2_>`_ 2 3
+  dsarch d744004 CG -:ref:`OG <OG>` 1 2 -:ref:`GI <GI>` 2 3
 
 
 

@@ -13,42 +13,42 @@ Action Option -**GV** (-**GetVersion**) :
 retrieves DOI/Version control records from GDEXDB for a
   given dataset.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](GV|GetVersion) [`Mode Option <mode_>`_]
-|         [-(`FN|FieldNames <field_>`_) FieldNameString]
-|         [-(`KV|KeyValue <section5.2_>`_) KeyNames]
-|         [-(`OF|OutputFile <section5.1_>`_) OutputFileName]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](GV|GetVersion) [:ref:`Mode Option <mode3.2.2>`]
+|         [-(:ref:`FN|FieldNames <FN>`) FieldNameString]
+|         [-(:ref:`KV|KeyValue <KV>`) KeyNames]
+|         [-(:ref:`OF|OutputFile <OF>`) OutputFileName]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-.. _mode:
+.. _mode3.2.2:
 
-  `Mode <section4>`_ option that can be specified for this action:
+  :ref:`Mode option <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`FO|FormatOutput <section4_>`_)
+   * - -(:ref:`FO|FormatOutput <FO>`)
      - formats each column to a uniform fixed width
 
-  Use -`FN <section5.1_>`_ (-FieldNames) to specify which version control fields to retrieve.
-  Defaults to 'VIEDSJX'. Use -`FN <section5.1_>`_ ALL to retrieve all available fields.
+  Use -:ref:`FN <FN>` (-FieldNames) to specify which version control fields to retrieve.
+  Defaults to 'VIEDSJX'. Use -:ref:`FN <FN>` ALL to retrieve all available fields.
 
-  Valid version control field names and their corresponding `Info <section5>`_ options:
+  Valid version control field names and their corresponding :ref:`Info options <section5>`:
 
-=  =====  ======================================  =========================================================
-   Names  `Info Options <section5>`_              Descriptions                                             
-   V      -(`VI|VersionIndex <section5.2_>`_)     version control index                                    
-   I      -(`IV|InternalVersion <section5.2_>`_)  Internal version number                                  
-   E      -(`EV|ExternalVersion <section5.2_>`_)  External version number to publish                       
-   D      -(`DN|DOINumber <section5.2_>`_)        DOI number created for the version control               
-   S      -(`VT|VersionStatus <section5.2_>`_)    version control status, A-Active, P-Pending and H-History
-   J      -(`BD|BeginDate <section5.2_>`_)        date the version control starts at                       
-   K      -(`BT|BeginTime <section5.2_>`_)        time the version control starts at                       
-   X      -(`ED|EndDate <section5.2_>`_)          date the terminated version control ends by              
-   Y      -(`ET|EndTime <section5.2_>`_)          time the terminated version control ends by              
-   N      -(`DE|Description <section5.2_>`_)      note for the version control record                      
-=  =====  ======================================  =========================================================
+=  =====  =================================  =========================================================
+   Names  :ref:`Info Options <section5>`     Descriptions                                             
+   V      -(:ref:`VI|VersionIndex <VI>`)     version control index                                    
+   I      -(:ref:`IV|InternalVersion <IV>`)  Internal version number                                  
+   E      -(:ref:`EV|ExternalVersion <EV>`)  External version number to publish                       
+   D      -(:ref:`DN|DOINumber <DN>`)        DOI number created for the version control               
+   S      -(:ref:`VT|VersionStatus <VT>`)    version control status, A-Active, P-Pending and H-History
+   J      -(:ref:`BD|BeginDate <BD>`)        date the version control starts at                       
+   K      -(:ref:`BT|BeginTime <BT>`)        time the version control starts at                       
+   X      -(:ref:`ED|EndDate <ED>`)          date the terminated version control ends by              
+   Y      -(:ref:`ET|EndTime <ET>`)          time the terminated version control ends by              
+   N      -(:ref:`DE|Description <DE>`)      note for the version control record                      
+=  =====  =================================  =========================================================
 
-  Use -`OF <section5.1_>`_ (-OutputFile) to save the retrieved information to a file. Without
+  Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
   it, results are displayed on screen.
 
 
@@ -56,7 +56,7 @@ retrieves DOI/Version control records from GDEXDB for a
 
 **EXAMPLE 4. To retrieve all version control fields for d132000 and save to a file:**
 
-  dsarch d132000 GV -`FN <section5.1_>`_ ALL -`OF <section5.1_>`_ d132000.vrsn
+  dsarch d132000 GV -:ref:`FN <FN>` ALL -:ref:`OF <OF>` d132000.vrsn
 
 Content of output file d132000.vrsn:
 

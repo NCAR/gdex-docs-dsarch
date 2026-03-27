@@ -12,17 +12,17 @@ Action Option -**SA** (-**SetALL**) :
 
 creates and updates all dataset, group, and
   Saved/Web/Help/Quasar file records for a dataset in one step. Equivalent to
-  running -`SD <section3.1.1_>`_, -`SG <section3.3.1_>`_, -`SS <section3.4.1_>`_, -`SW <section3.4.3_>`_, -`SH <section3.4.5_>`_, and -`SQ <section3.4.7_>`_ together.
+  running -:ref:`SD <SD>`, -:ref:`SG <SG>`, -:ref:`SS <SS>`, -:ref:`SW <SW>`, -:ref:`SH <SH>`, and -:ref:`SQ <SQ>` together.
 
-  dsarch  -(`SA|SetAll <SA_>`_) [`Mode Options <section4>`_]
-         [-(`LN|LoginName <section5.1_>`_) LoginAccountName]
-          -(`IF|InputFile <section5.2_>`_) Input Files
-         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
+  dsarch  -(:ref:`SA|SetAll <SA>`) [:ref:`Mode Options <section4>`]
+         [-(:ref:`LN|LoginName <LN>`) LoginAccountName]
+          -(:ref:`IF|InputFile <IF>`) Input Files
+         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
 
-  All `Mode <section4>`_ options applicable to the individual Set actions may be used with
-  -`SA`_. At least one input file is required, since section headers can only be
-  specified in an input file. A typical workflow: run -`GA <section3.5.1_>`_ (-GetAll) to export
-  all records, edit the output file as needed, then feed it back with -`SA`_.
+  All :ref:`Mode options <section4>` applicable to the individual Set actions may be used with
+  -:ref:`SA <SA>`. At least one input file is required, since section headers can only be
+  specified in an input file. A typical workflow: run -:ref:`GA <GA>` (-GetAll) to export
+  all records, edit the output file as needed, then feed it back with -:ref:`SA <SA>`.
 
 
 

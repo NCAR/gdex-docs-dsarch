@@ -13,55 +13,55 @@ Action Option -**SD** (-**SetDataset**) :
 updates properties of an existing dataset record in
   GDEXDB — such as paths, file count limits, access flags, and data periods.
 
-| **dsarch** [-(`DS|Dataset <section5.1_>`_)] dNNNNNN [-](SD|SetDataset) [`Mode Options <mode_>`_]
-|         [-(`UD|UseDSARCH <section5.1_>`_) UseDSARCHFlag]
-|         [-(`LC|Location <section5.2_>`_) AccessLocationFlag]
-|         [-(`BF|BackupFlag <section5.2_>`_) QuasarBackupFlag]
-|         [-(`DA|AccessFlag <section5.2_>`_) DataAccessFlags]
-|         [-(`DF|DataFormat <section5.2_>`_) DataFormat]
-|         [-(`WH|WebHome <section5.2_>`_) WebDataHomeDirectory]
-|         [-(`WP|WebPath <section5.2_>`_) WebFilePath]
-|         [-(`SP|SavedPath <section5.2_>`_) SavedFilePath]
-|         [-(`FL|FileLimit <section5.1_>`_) FileCountLimit]
-|         [-(`BL|ButtonLimit <section5.1_>`_) FileLimitShowButton]
-|         [-(`GL|GroupLevel <section5.2_>`_) NumberOfGroupDisplay]
-|         [-(`ML|MetaLink <section5.2_>`_) MetadataLink]
-|         [-(`NW|NoteWeb <section5.2_>`_) WebNote]
-|         [-(`ND|NoteDocument <section5.2_>`_) DocumentNote]
-|         [-(`NS|NoteSoftware <section5.2_>`_) SoftwareNote]
-|         [-(`NI|NoteInternal <section5.2_>`_) InternalNote]
-|         [-(`DB|Debug <section5.2_>`_) DebugModeInfo]
-|         [-(`KV|KeyValue <section5.2_>`_) KeyValuePairs]
-|         [-(`GI|GroupIndex <section5.2_>`_) GroupIndices]
-|         [-(`BD|BeginDate <section5.2_>`_) BeginOnDates]
-|         [-(`BT|BeginTime <section5.2_>`_) BeginAtTimes]
-|         [-(`ED|EndDate <section5.2_>`_) EndOnDates]
-|         [-(`ET|EndTime <section5.2_>`_) EndOnTimes]
+| **dsarch** [-(:ref:`DS|Dataset <DS>`)] dNNNNNN [-](SD|SetDataset) [:ref:`Mode Options <mode3.1.1>`]
+|         [-(:ref:`UD|UseDSARCH <UD>`) UseDSARCHFlag]
+|         [-(:ref:`LC|Location <LC>`) AccessLocationFlag]
+|         [-(:ref:`BF|BackupFlag <BF>`) QuasarBackupFlag]
+|         [-(:ref:`DA|AccessFlag <DA>`) DataAccessFlags]
+|         [-(:ref:`DF|DataFormat <DF>`) DataFormat]
+|         [-(:ref:`WH|WebHome <WH>`) WebDataHomeDirectory]
+|         [-(:ref:`WP|WebPath <WP>`) WebFilePath]
+|         [-(:ref:`SP|SavedPath <SP>`) SavedFilePath]
+|         [-(:ref:`FL|FileLimit <FL>`) FileCountLimit]
+|         [-(:ref:`BL|ButtonLimit <BL>`) FileLimitShowButton]
+|         [-(:ref:`GL|GroupLevel <GL>`) NumberOfGroupDisplay]
+|         [-(:ref:`ML|MetaLink <ML>`) MetadataLink]
+|         [-(:ref:`NW|NoteWeb <NW>`) WebNote]
+|         [-(:ref:`ND|NoteDocument <ND>`) DocumentNote]
+|         [-(:ref:`NS|NoteSoftware <NS>`) SoftwareNote]
+|         [-(:ref:`NI|NoteInternal <NI>`) InternalNote]
+|         [-(:ref:`DB|Debug <DB>`) DebugModeInfo]
+|         [-(:ref:`KV|KeyValue <KV>`) KeyValuePairs]
+|         [-(:ref:`GI|GroupIndex <GI>`) GroupIndices]
+|         [-(:ref:`BD|BeginDate <BD>`) BeginOnDates]
+|         [-(:ref:`BT|BeginTime <BT>`) BeginAtTimes]
+|         [-(:ref:`ED|EndDate <ED>`) EndOnDates]
+|         [-(:ref:`ET|EndTime <ET>`) EndOnTimes]
 
-.. _mode:
+.. _mode3.1.1:
 
-  `Mode <section4>`_ options that can be specified for this action:
+  :ref:`Mode options <section4>` that can be specified for this action:
 
 .. list-table::
    :widths: auto
 
-   * - -(`MD|MyDataset <section4_>`_)
+   * - -(:ref:`MD|MyDataset <MD>`)
      - allows any specialist to set GDEXDB information, regardless of dataset ownership
-   * - -(`NT|NoTrim <section4_>`_)
+   * - -(:ref:`NT|NoTrim <NT>`)
      - skips trimming of spaces and comments from input values, speeding up input file processing
-   * - -(`RT|ResetTGroup <section4_>`_)
+   * - -(:ref:`RT|ResetTGroup <RT>`)
      - resets the top group index for all Saved/Web file records
-   * - -(`WM|WithMetadata <section4_>`_)
+   * - -(:ref:`WM|WithMetadata <WM>`)
      - re-gathers Web file content metadata at dataset level
-   * - -(`WN|WithFileNumber <section4_>`_)
+   * - -(:ref:`WN|WithFileNumber <WN>`)
      - re-evaluates and resets file counts
 
   Dataset numbers are normally created via the Metadata Manager (MM). Action
-  -`SD`_ modifies the dataset record and any associated group data periods.
+  -:ref:`SD <SD>` modifies the dataset record and any associated group data periods.
   Data periods for groups can be modified by **dsarch**, but must be created
   or removed through MM.
 
-  The web file access location flag is set via -`LC <section5.2_>`_ (-Location). The default
+  The web file access location flag is set via -:ref:`LC <LC>` (-Location). The default
   is 'G' (Glade Disk) when any web data files exist. The default becomes 'O'
   if all web files reside on Object Store, or 'C' if all are at the CGD data
   path.
@@ -73,9 +73,9 @@ updates properties of an existing dataset record in
 
   set the beginning data date for dataset d744004:
 
-=  ==========================================================================
-   dsarch d744004 SD -`WN <section4_>`_ -UD Y -`BD <section5.2_>`_ 1999-07-01
-=  ==========================================================================
+=  ==================================================================
+   dsarch d744004 SD -:ref:`WN <WN>` -UD Y -:ref:`BD <BD>` 1999-07-01
+=  ==================================================================
 
 
 

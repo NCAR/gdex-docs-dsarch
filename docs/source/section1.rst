@@ -14,7 +14,7 @@ called groups, which nest to any depth. All metadata stored in GDEXDB can be
 retrieved and updated through **dsarch** as well.
 
 Before using **dsarch**, a dataset must first be registered in GDEXDB through
-Metadata Manager (`https://gdex.ucar.edu/metaman/) <https://gdex.ucar.edu/metaman/)>`_. Once registered,
+Metadata Manager (https://gdex.ucar.edu/metaman/). Once registered,
 **dsarch** can perform the following major functions:
 
 #. Set up a dataset and its groups/subgroups in GDEXDB to prepare it for
@@ -35,11 +35,11 @@ Metadata Manager (`https://gdex.ucar.edu/metaman/) <https://gdex.ucar.edu/metama
 * Automatically resume interrupted **dsarch** commands using records in GDEXDB
 * Regenerate filelist and main webpages on demand after dataset changes
 
-The dataset flag -`UD <section5.1_>`_ (-UseDSARCH) must be set to at least 'Y' before **dsarch**
+The dataset flag -:ref:`UD <UD>` (-UseDSARCH) must be set to at least 'Y' before **dsarch**
 can archive files or write to GDEXDB. This flag also controls file list
 publication: setting it to 'P' or 'W' publishes file lists for GDEX Server data
 files, making them visible in the dataset's user interface on the GDEX Web Server.
-See the -`SD <section3.1.1_>`_ (-SetDataset) action and -`UD <section5.1_>`_ (-UseDSARCH) option descriptions for
+See the -:ref:`SD <SD>` (-SetDataset) action and -:ref:`UD <UD>` (-UseDSARCH) option descriptions for
 details.
 
 When a file is moved and its name or path changes, **dsarch** records the new name
@@ -56,12 +56,12 @@ and upload them as tar files to the Quasar server.
 dataset. Input files must be named starting with the dataset number in the
 format 'dNNNNNN.*', where '*' matches one or more valid filename characters.
 **dsarch** also checks that the specialist running it is an authorized owner of
-the dataset; if not, execution stops — unless `Mode <section4>`_ option -`MD <section4_>`_ (-MyDataset) is
+the dataset; if not, execution stops — unless :ref:`Mode option <section4>` -:ref:`MD <MD>` (-MyDataset) is
 supplied, which overrides the ownership check.
 
-If an archive action (-`AW <section3.4.10_>`_, -`AS <section3.4.9_>`_, -`AH <section3.4.11_>`_, -`AQ <section3.4.12_>`_) fails because of a storage system
+If an archive action (-:ref:`AW <AW>`, -:ref:`AS <AS>`, -:ref:`AH <AH>`, -:ref:`AQ <AQ>`) fails because of a storage system
 outage, **dsarch** will automatically retry it once the system recovers. This
-retry behavior is only enabled when option -`BP <section5.2_>`_ (-d) is used to submit the
+retry behavior is only enabled when option -:ref:`BP <BP>` (-d) is used to submit the
 action as a background batch process; the retry state is tracked in GDEXDB.
 
 Once added, a DOI/Version control record cannot be removed, but it can be
@@ -75,8 +75,8 @@ Only Web data files are placed under DOI/Version control. Saved data staged on
 disk for internal use or NCAR user access is not version-controlled and remains
 the responsibility of the dataset owner.
 
-This document first covers general **dsarch** usage, then describes each `Action <section3>`_
-option in detail, followed by `Mode <section4>`_ and `Info <section5>`_ options. Examples are provided
+This document first covers general **dsarch** usage, then describes each :ref:`Action <section3>`
+option in detail, followed by :ref:`Mode <section4>` and :ref:`Info options <section5>`. Examples are provided
 throughout each section.
 
 
