@@ -38,10 +38,7 @@ reads and displays dataset record fields from GDEXDB
 Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
 to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
-
-**Valid dataset field names and their corresponding :ref:`Info options <section5>`**
-
-.. list-table:: Optional Table Title
+.. list-table:: Valid dataset field names and their corresponding :ref:`Info options <section5>`
    :widths: auto
    :header-rows: 1
 
@@ -74,8 +71,8 @@ to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
      - time data end for dataset group
 
 
-  Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
-  it, results are displayed on screen.
+Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
+it, results are displayed on screen.
 
 
 .. _3.1.2_e2:
