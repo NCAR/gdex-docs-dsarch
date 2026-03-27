@@ -13,32 +13,30 @@ Action Option -**SD** (-**SetDataset**) :
 updates properties of an existing dataset record in
 GDEXDB — such as paths, file count limits, access flags, and data periods.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SD|SetDataset) [:ref:`Mode Options <mode3.1.1>`]
-         [:ref:`-(UD|UseDSARCH) <UD>` UseDSARCHFlag]
-         [:ref:`-(LC|Location) <LC>` AccessLocationFlag]
-         [:ref:`-(BF|BackupFlag) <BF>` QuasarBackupFlag]
-         [:ref:`-(DA|AccessFlag) <DA>` DataAccessFlags]
-         [:ref:`-(DF|DataFormat) <DF>` DataFormat]
-         [:ref:`-(WH|WebHome) <WH>` WebDataHomeDirectory]
-         [:ref:`-(WP|WebPath) <WP>` WebFilePath]
-         [:ref:`-(SP|SavedPath) <SP>` SavedFilePath]
-         [:ref:`-(FL|FileLimit) <FL>` FileCountLimit]
-         [:ref:`-(BL|ButtonLimit) <BL>` FileLimitShowButton]
-         [:ref:`-(GL|GroupLevel) <GL>` NumberOfGroupDisplay]
-         [:ref:`-(ML|MetaLink) <ML>` MetadataLink]
-         [:ref:`-(NW|NoteWeb) <NW>` WebNote]
-         [:ref:`-(ND|NoteDocument) <ND>` DocumentNote]
-         [:ref:`-(NS|NoteSoftware) <NS>` SoftwareNote]
-         [:ref:`-(NI|NoteInternal) <NI>` InternalNote]
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
-         [:ref:`-(KV|KeyValue) <KV>` KeyValuePairs]
-         [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-         [:ref:`-(BD|BeginDate) <BD>` BeginOnDates]
-         [:ref:`-(BT|BeginTime) <BT>` BeginAtTimes]
-         [:ref:`-(ED|EndDate) <ED>` EndOnDates]
-         [:ref:`-(ET|EndTime) <ET>` EndOnTimes]
+|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SD|SetDataset) [:ref:`Mode Options <mode3.1.1>`]
+|             [:ref:`-(UD|UseDSARCH) <UD>` UseDSARCHFlag]
+|             [:ref:`-(LC|Location) <LC>` AccessLocationFlag]
+|             [:ref:`-(BF|BackupFlag) <BF>` QuasarBackupFlag]
+|             [:ref:`-(DA|AccessFlag) <DA>` DataAccessFlags]
+|             [:ref:`-(DF|DataFormat) <DF>` DataFormat]
+|             [:ref:`-(WH|WebHome) <WH>` WebDataHomeDirectory]
+|             [:ref:`-(WP|WebPath) <WP>` WebFilePath]
+|             [:ref:`-(SP|SavedPath) <SP>` SavedFilePath]
+|             [:ref:`-(FL|FileLimit) <FL>` FileCountLimit]
+|             [:ref:`-(BL|ButtonLimit) <BL>` FileLimitShowButton]
+|             [:ref:`-(GL|GroupLevel) <GL>` NumberOfGroupDisplay]
+|             [:ref:`-(ML|MetaLink) <ML>` MetadataLink]
+|             [:ref:`-(NW|NoteWeb) <NW>` WebNote]
+|             [:ref:`-(ND|NoteDocument) <ND>` DocumentNote]
+|             [:ref:`-(NS|NoteSoftware) <NS>` SoftwareNote]
+|             [:ref:`-(NI|NoteInternal) <NI>` InternalNote]
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|             [:ref:`-(KV|KeyValue) <KV>` KeyValuePairs]
+|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|             [:ref:`-(BD|BeginDate) <BD>` BeginOnDates]
+|             [:ref:`-(BT|BeginTime) <BT>` BeginAtTimes]
+|             [:ref:`-(ED|EndDate) <ED>` EndOnDates]
+|             [:ref:`-(ET|EndTime) <ET>` EndOnTimes]
 
 .. _mode3.1.1:
 
@@ -74,9 +72,7 @@ path.
 
 **EXAMPLE 1. To set the UseDSARCH flag, reset file counts and data size, and set the beginning data date for dataset d744004:**
 
-.. code-block:: bash
-
-  **dsarch** d744004 :ref:`SD <SD>` -:ref:`WN <WN>` -:ref:`UD <UD>` Y -:ref:`BD <BD>` 1999-07-01
+|  **dsarch** d744004 :ref:`SD <SD>` -:ref:`WN <WN>` -:ref:`UD <UD>` Y -:ref:`BD <BD>` 1999-07-01
 
 
 
