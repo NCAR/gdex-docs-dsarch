@@ -39,7 +39,7 @@ Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Def
 to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
 
 
-Valid dataset field names and their corresponding :ref:`Info options <section5>`
+**Valid dataset field names and their corresponding :ref:`Info options <section5>`**
 
 .. list-table:: Optional Table Title
    :widths: auto
