@@ -14,26 +14,24 @@ updates Quasar backup file records
 in GDEXDB for the specified dataset. Multiple records can be processed per
 execution.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SQ|SetQuasarFile) [:ref:`Mode Options <mode3.4.7>`]
-         [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
-         [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-         [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
-         [:ref:`-(QT|QuasarFileType) <QT>` QuasarFileTypes]
-         [:ref:`-(BS|BackupStatus) <BS>` QuasarBackupFileStatus]
-         [:ref:`-(DF|DataFormat) <DF>` FileContentFormat]
-         [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
-         [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
-         [:ref:`-(SZ|Size) <SZ>` FileSizes]
-         [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
-         [:ref:`-(FD|FileDate) <FD>` DateModified]
-         [:ref:`-(FT|FileTime) <FT>` TimeModified]
-         [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
-         [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-         [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-         [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SQ|SetQuasarFile) [:ref:`Mode Options <mode3.4.7>`]
+|             [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
+|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|             [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
+|             [:ref:`-(QT|QuasarFileType) <QT>` QuasarFileTypes]
+|             [:ref:`-(BS|BackupStatus) <BS>` QuasarBackupFileStatus]
+|             [:ref:`-(DF|DataFormat) <DF>` FileContentFormat]
+|             [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
+|             [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
+|             [:ref:`-(SZ|Size) <SZ>` FileSizes]
+|             [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
+|             [:ref:`-(FD|FileDate) <FD>` DateModified]
+|             [:ref:`-(FT|FileTime) <FT>` TimeModified]
+|             [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
+|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.7:
 

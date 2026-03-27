@@ -17,17 +17,15 @@ GDEXDB. In practice, the companion utility 'dsquasar' handles identifying
 files to back up, building optimally sized input lists (1-3 GB each), and
 calling this action. See 'dsquasar' help for details.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AQ|ArchiveQuasarFile) [:ref:`Mode Options <mode3.4.12>`]
-         [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
-         [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
-         [:ref:`-(WF|WebFile) <WF>` webFileNames]
-         [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
-         [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-         [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-         [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AQ|ArchiveQuasarFile) [:ref:`Mode Options <mode3.4.12>`]
+|             [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
+|             [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
+|             [:ref:`-(WF|WebFile) <WF>` webFileNames]
+|             [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
+|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.12:
 

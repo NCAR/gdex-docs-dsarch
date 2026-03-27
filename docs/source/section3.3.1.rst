@@ -13,24 +13,22 @@ Action Option -**SG** (-**SetGroup**) :
 creates new or updates existing group records in GDEXDB
 for the specified dataset. Multiple records can be processed in one run.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SG|SetGroup) [:ref:`Mode Options <mode3.3.1>`]
-         [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-         [:ref:`-(GN|GroupName) <GN>` GroupNames]
-         [:ref:`-(PI|ParentIndex) <PI>` ParentGroupIndices]
-         [:ref:`-(TI|Title) <TI>` GroupTitles]
-         [:ref:`-(GT|GroupType) <GT>` GroupTypes]
-         [:ref:`-(GP|GroupPattern) <GP>` FileNamePatterns]
-         [:ref:`-(BF|BackupFlag) <BF>` QuasarBackupFlags]
-         [:ref:`-(DA|AccessFlag) <DA>` DataAccessFlags]
-         [:ref:`-(SP|SavedPath) <SP>` SavedFilePaths]
-         [:ref:`-(WP|WebPath) <WP>` WebFilePaths]
-         [:ref:`-(ML|MetaLink) <ML>` MetadataLinks]
-         [:ref:`-(NW|NoteWeb) <NW>` WebNotes]
-         [:ref:`-(NI|NoteInternal) <NI>` InternalNotes]
-         [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SG|SetGroup) [:ref:`Mode Options <mode3.3.1>`]
+|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|             [:ref:`-(PI|ParentIndex) <PI>` ParentGroupIndices]
+|             [:ref:`-(TI|Title) <TI>` GroupTitles]
+|             [:ref:`-(GT|GroupType) <GT>` GroupTypes]
+|             [:ref:`-(GP|GroupPattern) <GP>` FileNamePatterns]
+|             [:ref:`-(BF|BackupFlag) <BF>` QuasarBackupFlags]
+|             [:ref:`-(DA|AccessFlag) <DA>` DataAccessFlags]
+|             [:ref:`-(SP|SavedPath) <SP>` SavedFilePaths]
+|             [:ref:`-(WP|WebPath) <WP>` WebFilePaths]
+|             [:ref:`-(ML|MetaLink) <ML>` MetadataLinks]
+|             [:ref:`-(NW|NoteWeb) <NW>` WebNotes]
+|             [:ref:`-(NI|NoteInternal) <NI>` InternalNotes]
+|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.3.1:
 
@@ -66,9 +64,7 @@ all its subgroups and associated Saved/Web files as internal too.
 
 **EXAMPLE 6. To set multiple group records for d744004 using an input file:**
 
-.. code-block:: bash
-
-  **dsarch** :ref:`SG <SG>` -:ref:`IF <IF>` d744004.grp
+|  **dsarch** :ref:`SG <SG>` -:ref:`IF <IF>` d744004.grp
 
 Content of input file d744004.grp:
 

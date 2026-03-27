@@ -13,10 +13,8 @@ Action Option -**UW** (-**UpdateWeb**) :
 rebuilds the main and filelist webpages for the specified
 dataset so they reflect the current state of GDEXDB.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(UW|UpdateWeb)
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(UW|UpdateWeb)
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 Provide the dataset number to regenerate its web pages.
 

@@ -14,27 +14,25 @@ Action Option -**AH** (-**ArchiveHelpFile**) (Aliases: -**ArchiveHelp**, -**Arch
 copies local files to the GDEX Server as Help files (Documents and Software)
 and registers them in GDEXDB. One or more files may be archived per execution.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AH|ArchiveHelpFile) [:ref:`Mode Options <mode3.4.11>`]
-         :ref:`-(LF|LocalFile) <LF>` LocalFileNames
-         [:ref:`-(HF|HelpFile) <HF>` HelpFileNames]
-         [:ref:`-(HT|HelpFileType) <HT>` HelpFileTypes]
-         [:ref:`-(FS|FileStatus) <FS>` HelpFileStatus]
-         [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-         [:ref:`-(DF|DataFormat) <DF>` FileContentFormat]
-         [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
-         [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
-         [:ref:`-(SZ|Size) <SZ>` FileSizes]
-         [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-         [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
-         [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
-         [:ref:`-(VS|ValidSize) <VS>` MinSizeForValidFile]
-         [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-         [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-         [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-         [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AH|ArchiveHelpFile) [:ref:`Mode Options <mode3.4.11>`]
+|             :ref:`-(LF|LocalFile) <LF>` LocalFileNames
+|             [:ref:`-(HF|HelpFile) <HF>` HelpFileNames]
+|             [:ref:`-(HT|HelpFileType) <HT>` HelpFileTypes]
+|             [:ref:`-(FS|FileStatus) <FS>` HelpFileStatus]
+|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|             [:ref:`-(DF|DataFormat) <DF>` FileContentFormat]
+|             [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
+|             [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
+|             [:ref:`-(SZ|Size) <SZ>` FileSizes]
+|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|             [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
+|             [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
+|             [:ref:`-(VS|ValidSize) <VS>` MinSizeForValidFile]
+|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|             [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.11:
 

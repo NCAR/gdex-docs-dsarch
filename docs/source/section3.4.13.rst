@@ -15,18 +15,16 @@ finds the Quasar tar files that contain the specified Saved and/or Web files,
 downloads them from the Globus Quasar Server, and restores any files that
 are missing from the GDEX Server.
 
-.. code-block:: bash
-
-  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(RQ|RestoreQuasarFile) [:ref:`Mode Options <mode3.4.13>`]
-         [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
-         [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
-         [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
-         [:ref:`-(WF|WebFile) <WF>` webFileNames]
-         [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
-         [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-         [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-         [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-         [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+|  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(RQ|RestoreQuasarFile) [:ref:`Mode Options <mode3.4.13>`]
+|             [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
+|             [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
+|             [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
+|             [:ref:`-(WF|WebFile) <WF>` webFileNames]
+|             [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
+|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.13:
 
