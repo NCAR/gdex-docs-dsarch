@@ -19,7 +19,7 @@ Brackets [] indicate optional elements. A pipe '|' within parentheses, as in
      - specify what task to execute
    * - :ref:`Mode options <section4>`
      - modify how an action behaves
-   * - Info options
+   * - :ref:`Info options <section5>`
      - supply values to the action
 
 Options may be given in short or long form (e.g., :ref:`-DS <DS>` or -Dataset). Some
