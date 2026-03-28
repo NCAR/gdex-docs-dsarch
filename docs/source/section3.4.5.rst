@@ -69,5 +69,6 @@ For remotely hosted Help files (e.g., on GitHub), provide the full URL via
 
 
 
+:ref:`Back to Top <section3.4.5>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

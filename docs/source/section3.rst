@@ -58,5 +58,6 @@ Actions are grouped into seven categories based on the information they handle:
 
 
 
+:ref:`Back to Top <section3>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

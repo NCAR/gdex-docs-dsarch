@@ -77,5 +77,6 @@ Examples are provided throughout each section.
 
 
 
+:ref:`Back to Top <section1>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

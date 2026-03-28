@@ -25,5 +25,6 @@ snapshot or bulk-update a dataset:
 
 
 
+:ref:`Back to Top <section3.5>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

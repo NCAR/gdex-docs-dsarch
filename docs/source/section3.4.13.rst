@@ -51,5 +51,6 @@ retrieved from the server but no Saved or Web files are restored.
 
 
 
+:ref:`Back to Top <section3.4.13>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

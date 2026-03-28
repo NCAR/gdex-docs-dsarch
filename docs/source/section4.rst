@@ -354,5 +354,6 @@ or '.bz2') before compressed again.
 
 
 
+:ref:`Back to Top <section4>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

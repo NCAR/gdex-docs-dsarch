@@ -29,5 +29,6 @@ Use the following actions to read or update a dataset's record in GDEXDB:
 
 
 
+:ref:`Back to Top <section3.1>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

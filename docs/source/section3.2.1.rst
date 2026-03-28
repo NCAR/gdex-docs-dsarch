@@ -74,5 +74,6 @@ the GDEX are handled consistently.
 
 
 
+:ref:`Back to Top <section3.2.1>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

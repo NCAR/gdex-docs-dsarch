@@ -25,5 +25,6 @@ Changes made through other utilities may not trigger this; use :ref:`-UC <UC>`
 
 
 
+:ref:`Back to Top <section3.6.1>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

@@ -73,5 +73,6 @@ is displayed using the UNIX 'more' utility.
 
 
 
+:ref:`Back to Top <section2>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`
