@@ -37,8 +37,8 @@ Filter results by providing group indices, names, or a parent index.
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - gathers and displays file counts for groups
 
-Use -:ref:`FN <FN>` (-FieldNames) to specify which group fields to retrieve. Defaults
-to 'IGXTQSW'. Use -:ref:`FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which group fields to retrieve. Defaults
+to 'IGXTQSW'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid group field names and their corresponding :ref:`Info options <section5>`:
 
@@ -89,15 +89,15 @@ Valid group field names and their corresponding :ref:`Info options <section5>`:
      - :ref:`-(NI|NoteInternal) <NI>`
      - group description of internal HPSS data
 
-Results can be filtered by group index (-:ref:`GI <GI>`), name (-:ref:`GN <GN>`), or parent index
-(-:ref:`PI <PI>`). The -:ref:`GN <GN>` option accepts the '%' wildcard.
+Results can be filtered by group index (:ref:`-GI <GI>`), name (:ref:`-GN <GN>`), or parent index
+(:ref:`-PI <PI>`). The :ref:`-GN <GN>` option accepts the '%' wildcard.
 
 
 .. _3.3.2_e7:
 
 **EXAMPLE 7. To retrieve the default group fields and file counts for groups 1 and 2 of d260001:**
 
-|  **dsarch** d260001 :ref:`GG <GG>` -:ref:`WN <WN>` -:ref:`GI <GI>` 1 2
+|  **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` :ref:`-GI <GI>` 1 2
 
 Content of the output:
 
@@ -113,5 +113,6 @@ Content of the output:
 
 
 
+:ref:`Back to Top <section3.3.2>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

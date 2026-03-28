@@ -35,11 +35,11 @@ specified dataset.
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - re-evaluates and resets file counts for the affected groups
 
-Specify groups by index via -:ref:`GI <GI>` and the dataset via -:ref:`DS <DS>`. Deletion is blocked
+Specify groups by index via :ref:`-GI <GI>` and the dataset via :ref:`-DS <DS>`. Deletion is blocked
 if a group still contains subgroups or data files. To delete a non-empty
-group, first retrieve its files with -:ref:`GS <GS>` (-GetSavedFile) or -:ref:`GW <GW>`
-(-GetWebFile), then either move them to another group via -:ref:`CG <CG>` (-ChangeGroup),
-reset their group index to 0, or remove them with -:ref:`DL <DL>` (-Delete). Once empty,
+group, first retrieve its files with :ref:`-GS <GS>` (-GetSavedFile) or :ref:`-GW <GW>`
+(-GetWebFile), then either move them to another group via :ref:`-CG <CG>` (-ChangeGroup),
+reset their group index to 0, or remove them with :ref:`-DL <DL>` (-Delete). Once empty,
 the group can be deleted.
 
 
@@ -47,9 +47,10 @@ the group can be deleted.
 
 **EXAMPLE 8. To delete group indices 2 and 3 of d744004:**
 
-|  **dsarch** d744004 :ref:`DG <DG>` -:ref:`GI <GI>` 2 3
+|  **dsarch** d744004 :ref:`DG <DG>` :ref:`-GI <GI>` 2 3
 
 
 
+:ref:`Back to Top <section3.3.3>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

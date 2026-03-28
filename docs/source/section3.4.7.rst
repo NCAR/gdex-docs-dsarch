@@ -50,16 +50,17 @@ execution.
    * - :ref:`-(NT|NoTrim) <NT>`
      - skips trimming of spaces and comments from input values, speeding up input file processing
    * - :ref:`-(RO|ResetOrder) <RO>`
-     - resets display order indices to match the order files are given per -:ref:`QF <QF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset
+     - resets display order indices to match the order files are given per :ref:`-QF <QF>`. Alternatively, use :ref:`-ON <ON>` (-OrderNames) to reorder all files in the dataset
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
-Quasar file names must be provided via -:ref:`QF <QF>` (-QuasarFile) unless -:ref:`ON <ON>`
+Quasar file names must be provided via :ref:`-QF <QF>` (-QuasarFile) unless :ref:`-ON <ON>`
 (-OrderNames) is used to reorder files. The number of values supplied to other
 :ref:`Info options <section5>` must match the number of file names, except for options that
-accept a single shared value, such as -:ref:`AF <AF>`, -:ref:`DF <DF>`, and -:ref:`QT <QT>` (-QuasarFileType).
+accept a single shared value, such as :ref:`-AF <AF>`, :ref:`-DF <DF>`, and :ref:`-QT <QT>` (-QuasarFileType).
 
 
 
+:ref:`Back to Top <section3.4.7>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

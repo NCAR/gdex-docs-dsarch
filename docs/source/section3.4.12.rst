@@ -52,9 +52,10 @@ calling this action. See 'dsquasar' help for details.
    * - :ref:`-(XC|CrossCopy) <XC>`
      - copies files from existing Quasar Backup and Disaster Recovery files to fill missing Backup/Drdata copies, using GDEXDB records for guidance
 
-At least one Saved and/or Web file name must be provided via -:ref:`SF <SF>` and/or -:ref:`WF <WF>`.
+At least one Saved and/or Web file name must be provided via :ref:`-SF <SF>` and/or :ref:`-WF <WF>`.
 
 
 
+:ref:`Back to Top <section3.4.12>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

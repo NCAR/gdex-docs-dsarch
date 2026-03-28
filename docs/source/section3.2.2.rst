@@ -30,8 +30,8 @@ given dataset.
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
 
-Use -:ref:`FN <FN>` (-FieldNames) to specify which version control fields to retrieve.
-Defaults to 'VIEDSJX'. Use -:ref:`FN <FN>` ALL to retrieve all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which version control fields to retrieve.
+Defaults to 'VIEDSJX'. Use :ref:`-FN <FN>` ALL to retrieve all available fields.
 
 Valid version control field names and their corresponding :ref:`Info options <section5>`:
 
@@ -73,7 +73,7 @@ Valid version control field names and their corresponding :ref:`Info options <se
      - :ref:`-(DE|Description) <DE>`
      - note for the version control record
 
-Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
+Use :ref:`-OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
 it, results are displayed on screen.
 
 
@@ -81,7 +81,7 @@ it, results are displayed on screen.
 
 **EXAMPLE 4. To retrieve all version control fields for d132000 and save to a file:**
 
-|  **dsarch** d132000 :ref:`GV <GV>` -:ref:`FN <FN>` ALL -:ref:`OF <OF>` d132000.vrsn
+|  **dsarch** d132000 :ref:`GV <GV>` :ref:`-FN <FN>` ALL :ref:`-OF <OF>` d132000.vrsn
 
 Content of output file d132000.vrsn:
 
@@ -93,5 +93,6 @@ Content of output file d132000.vrsn:
 
 
 
+:ref:`Back to Top <section3.2.2>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

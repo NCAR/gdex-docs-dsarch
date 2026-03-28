@@ -44,8 +44,8 @@ for the specified dataset, optionally filtered by file name.
    * - :ref:`-(RN|RelativeName) <RN>`
      - returns file names with paths relative to the Web path of the dataset or group
 
-Use -:ref:`FN <FN>` (-FieldNames) to specify which Web file fields to retrieve. Defaults
-to 'FINMTHS'. Use -:ref:`FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Web file fields to retrieve. Defaults
+to 'FINMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Web file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -122,15 +122,15 @@ names match multiple datasets and no dataset number is given, an error prompts
 the specialist to specify one and rerun. Incomplete file paths are expanded
 relative to the dataset Web Home Directory.
 
-Results can be filtered by archive type (-:ref:`WT <WT>`), group (-:ref:`GI <GI>` or -:ref:`GN <GN>`), and
-description (-:ref:`DE <DE>`). The -:ref:`WF <WF>`, -:ref:`GN <GN>`, and -:ref:`DE <DE>` options accept the '%' wildcard.
+Results can be filtered by archive type (:ref:`-WT <WT>`), group (:ref:`-GI <GI>` or :ref:`-GN <GN>`), and
+description (:ref:`-DE <DE>`). The :ref:`-WF <WF>`, :ref:`-GN <GN>`, and :ref:`-DE <DE>` options accept the '%' wildcard.
 
 
 .. _3.4.4_e10:
 
 **EXAMPLE 10. To retrieve the default Web file fields for d540000, filtered to Data type and file names containing '200':**
 
-|  **dsarch** d540000 :ref:`GW <GW>` -:ref:`WT <WT>` D -:ref:`WF <WF>` %200%
+|  **dsarch** d540000 :ref:`GW <GW>` :ref:`-WT <WT>` D :ref:`-WF <WF>` %200%
 
 Content of the output:
 
@@ -147,5 +147,6 @@ Content of the output:
 
 
 
+:ref:`Back to Top <section3.4.4>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

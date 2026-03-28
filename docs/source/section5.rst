@@ -4,8 +4,8 @@
 5 - INFORMATION OPTIONS
 =====================
 
-Information (Info) options pass data values into **dsarch**. They come in two
-forms:
+Information (Info for short) options pass data values into **dsarch**.
+They come in two forms:
 
 .. list-table::
    :widths: auto
@@ -25,5 +25,6 @@ forms:
 
 
 
+:ref:`Back to Top <section5>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

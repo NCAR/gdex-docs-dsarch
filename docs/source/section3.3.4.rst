@@ -11,7 +11,7 @@ Action Option -**CG** (-**ChangeGroup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 renumbers group indices for the specified dataset,
-mapping each original index (via -:ref:`OG <OG>`) to a new value (via -:ref:`GI <GI>`).
+mapping each original index (via :ref:`-OG <OG>`) to a new value (via :ref:`-GI <GI>`).
 
 |  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN [-](CG|ChangeGroup) [:ref:`Mode Options <mode3.3.4>`]
 |              :ref:`-(OG|OriginGroup) <OG>` OriginalGroupIndices
@@ -36,7 +36,7 @@ mapping each original index (via -:ref:`OG <OG>`) to a new value (via -:ref:`GI 
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - re-evaluates and resets file counts for the affected groups
 
-Both -:ref:`OG <OG>` (-OriginGroup) and -:ref:`GI <GI>` (-GroupIndex) are required. All Saved and
+Both :ref:`-OG <OG>` (-OriginGroup) and :ref:`-GI <GI>` (-GroupIndex) are required. All Saved and
 Web file records linked to the original indices are updated to the new
 values. The original indices must already exist in GDEXDB.
 
@@ -45,9 +45,10 @@ values. The original indices must already exist in GDEXDB.
 
 **EXAMPLE 9. To reassign group indices 1 and 2 to 2 and 3 for d744004:**
 
-|  **dsarch** d744004 :ref:`CG <CG>` -:ref:`OG <OG>` 1 2 -:ref:`GI <GI>` 2 3
+|  **dsarch** d744004 :ref:`CG <CG>` :ref:`-OG <OG>` 1 2 :ref:`-GI <GI>` 2 3
 
 
 
+:ref:`Back to Top <section3.3.4>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

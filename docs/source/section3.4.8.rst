@@ -35,8 +35,8 @@ from GDEXDB for the specified dataset, optionally filtered by file name.
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
 
-Use -:ref:`FN <FN>` (-FieldNames) to specify which Quasar file fields to retrieve. Defaults
-to 'FNMTHS'. Use -:ref:`FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Quasar file fields to retrieve. Defaults
+to 'FNMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Quasar file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -92,10 +92,11 @@ names match multiple datasets and no dataset number is given, an error prompts
 the specialist to specify one and rerun. Incomplete file paths are expanded
 relative to the dataset Home Directory.
 
-Results can be filtered by archive type (-:ref:`QT <QT>`) and description (-:ref:`DE <DE>`). Both
--:ref:`QF <QF>` and -:ref:`DE <DE>` accept the '%' wildcard.
+Results can be filtered by archive type (:ref:`-QT <QT>`) and description (:ref:`-DE <DE>`). Both
+:ref:`-QF <QF>` and :ref:`-DE <DE>` accept the '%' wildcard.
 
 
 
+:ref:`Back to Top <section3.4.8>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

@@ -17,7 +17,7 @@ When a file's name or path changes, **dsarch** keeps the original name in GDEXDB
 as a linked alias pointing to the new name.
 
 Files can also be converted between types (Web to Saved or Saved to Web)
-using -:ref:`TS <TS>` (-ToSaved) or -:ref:`TW <TW>` (-ToWeb).
+using :ref:`-TS <TS>` (-ToSaved) or :ref:`-TW <TW>` (-ToWeb).
 
 |  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(MV|MoveFile) [:ref:`Mode Options <mode3.4.14>`]
 |             [:ref:`-(OD|OriginDataset) <OD>` OriginalDataset]
@@ -73,7 +73,7 @@ or
 
 or
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(MV|MoveFile) [-:ref:`TS <TS>`|-:ref:`TW <TW>`] [:ref:`Mode Options <mode3.4.14>`]
+|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(MV|MoveFile) [:ref:`-TS <TS>`|:ref:`-TW <TW>`] [:ref:`Mode Options <mode3.4.14>`]
 |             [:ref:`-(OD|OriginDataset) <OD>` OriginalDataset]
 |             [:ref:`-(OG|OriginGroup) <OG>` OriginalGroupIndices]
 |             [:ref:`-(WF|WebFile) <WF>` WebFileNames]
@@ -105,12 +105,12 @@ or
    * - :ref:`-(TW|ToWeb) <TW>`
      - moves Saved files to Web files
    * - :ref:`-(KM|KeepMetadata) <KM>`
-     - used with -:ref:`TW <TW>` to retain the metadata record after the Web file is moved to a Saved file
+     - used with :ref:`-TW <TW>` to retain the metadata record after the Web file is moved to a Saved file
 
-Provide the file names to move via -:ref:`SF <SF>`, -:ref:`WF <WF>`, -:ref:`HF <HF>`, or -:ref:`QF <QF>`. Files are
+Provide the file names to move via :ref:`-SF <SF>`, :ref:`-WF <WF>`, :ref:`-HF <HF>`, or :ref:`-QF <QF>`. Files are
 physically moved only when the new path differs from the original. Dataset
 links are updated to the new dataset number, and group indices are updated
-if -:ref:`GI <GI>` (-GroupIndex) is specified.
+if :ref:`-GI <GI>` (-GroupIndex) is specified.
 
 If content metadata exists for the original Web file, it is automatically
 transferred to the new file name via **rcm**.
@@ -120,5 +120,6 @@ file, its type is automatically set to 'V' (Version-controlled).
 
 
 
+:ref:`Back to Top <section3.4.14>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

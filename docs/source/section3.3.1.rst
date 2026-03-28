@@ -52,9 +52,9 @@ for the specified dataset. Multiple records can be processed in one run.
 If the group index already exists in GDEXDB, the record is updated; otherwise
 a new group is created. New groups require a unique index.
 
-To create a subgroup, set a parent index via -:ref:`PI <PI>` (-ParentIndex). Groups can
+To create a subgroup, set a parent index via :ref:`-PI <PI>` (-ParentIndex). Groups can
 be nested to any depth. By default, three levels are shown on group list
-webpages; adjust this with -:ref:`GL <GL>` (-GroupLevel) via -:ref:`SD <SD>` (-SetDataset).
+webpages; adjust this with :ref:`-GL <GL>` (-GroupLevel) via :ref:`-SD <SD>` (-SetDataset).
 
 Changing a group's type from P (public) to I (internal) automatically marks
 all its subgroups and associated Saved/Web files as internal too.
@@ -64,7 +64,7 @@ all its subgroups and associated Saved/Web files as internal too.
 
 **EXAMPLE 6. To set multiple group records for d744004 using an input file:**
 
-|  **dsarch** :ref:`SG <SG>` -:ref:`IF <IF>` d744004.grp
+|  **dsarch** :ref:`SG <SG>` :ref:`-IF <IF>` d744004.grp
 
 Content of input file d744004.grp:
 
@@ -87,5 +87,6 @@ Content of input file d744004.grp:
 
 
 
+:ref:`Back to Top <section3.3.1>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`

@@ -70,7 +70,7 @@ them in GDEXDB. One or more files may be archived per execution.
    * - :ref:`-(OE|OverrideExist) <OE>`
      - overwrites existing Web files
    * - :ref:`-(RO|ResetOrder) <RO>`
-     - resets display order indices to match the order files are given per -:ref:`WF <WF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
+     - resets display order indices to match the order files are given per :ref:`-WF <WF>`. Alternatively, use :ref:`-ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
    * - :ref:`-(UZ|UnzipData) <UZ>`
@@ -80,35 +80,36 @@ them in GDEXDB. One or more files may be archived per execution.
    * - :ref:`-(XM|CrossMove) <XM>`
      - moves files from existing Web/Object storage to fill missing Object/Web copies (originals are removed)
    * - :ref:`-(ZD|ZipData) <ZD>`
-     - compresses files using 'gzip', 'compress', 'zip', or 'bzip' according to the archive format ('GZ', 'Z', 'ZIP', or 'BZ2') given via -:ref:`AF <AF>` (-ArchiveFormat)
+     - compresses files using 'gzip', 'compress', 'zip', or 'bzip' according to the archive format ('GZ', 'Z', 'ZIP', or 'BZ2') given via :ref:`-AF <AF>` (-ArchiveFormat)
 
-Local file names are provided via -:ref:`LF <LF>` (-LocalFile). On the command line,
+Local file names are provided via :ref:`-LF <LF>` (-LocalFile). On the command line,
 '*' and '?' wildcards are supported. Files not in the current directory must
-include relative or absolute paths. If a directory is given via -:ref:`LD <LD>`
+include relative or absolute paths. If a directory is given via :ref:`-LD <LD>`
 (-LocalDirectory), files are gathered recursively from that tree.
 
-Local file names are used as Web file names by default unless -:ref:`WF <WF>` (-WebFile)
+Local file names are used as Web file names by default unless :ref:`-WF <WF>` (-WebFile)
 is given explicitly. Files are archived under the dataset home directory;
-use -:ref:`WP <WP>` (-WebPath) or the path stored in GDEXDB to override. When -:ref:`KP <KP>`
-(-KeepLocalPath) is specified, local file paths are used as-is and -:ref:`WP <WP>` is
+use :ref:`-WP <WP>` (-WebPath) or the path stored in GDEXDB to override. When :ref:`-KP <KP>`
+(-KeepLocalPath) is specified, local file paths are used as-is and :ref:`-WP <WP>` is
 not permitted.
 
-Assign files to a group via -:ref:`GI <GI>` (-GroupIndex) or -:ref:`GN <GN>` (-GroupName). If no
-group is specified, pattern matching against group patterns saved via -:ref:`SG <SG>`
-is attempted when -:ref:`PO <PO>` (-PatternOffset) is present or the file is not yet in
+Assign files to a group via :ref:`-GI <GI>` (-GroupIndex) or :ref:`-GN <GN>` (-GroupName). If no
+group is specified, pattern matching against group patterns saved via :ref:`-SG <SG>`
+is attempted when :ref:`-PO <PO>` (-PatternOffset) is present or the file is not yet in
 GDEXDB. Unmatched files default to group index 0.
 
 Web files may be archived as P (public) or I (internal) for data types D or
 N. Files assigned to an internal group are automatically set to I.
 
 The number of values supplied to :ref:`Info options <section5>` must match the number of local
-file names, except for options that accept a single shared value: -:ref:`GI <GI>`, -:ref:`DF <DF>`,
--:ref:`AF <AF>`, -:ref:`WT <WT>` (-WebFileType), and -:ref:`WP <WP>`.
+file names, except for options that accept a single shared value: :ref:`-GI <GI>`, :ref:`-DF <DF>`,
+:ref:`-AF <AF>`, :ref:`-WT <WT>` (-WebFileType), and :ref:`-WP <WP>`.
 
-The storage location is set via -:ref:`LC <LC>` (-Location). Defaults to 'G' (Glade
+The storage location is set via :ref:`-LC <LC>` (-Location). Defaults to 'G' (Glade
 Disk only).
 
 
 
+:ref:`Back to Top <section3.4.10>`
+:ref:`Back to Table of Contents <index>`
 
-:ref:`Back to Top <index>`
