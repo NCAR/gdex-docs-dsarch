@@ -58,11 +58,11 @@ GDEXDB — such as paths, file count limits, access flags, and data periods.
      - re-evaluates and resets file counts
 
 Dataset numbers are normally created via the Metadata Manager (MM). Action
--:ref:`SD <SD>` modifies the dataset record and any associated group data periods.
+:ref:`-SD <SD>` modifies the dataset record and any associated group data periods.
 Data periods for groups can be modified by **dsarch**, but must be created
 or removed through MM.
 
-The web file access location flag is set via -:ref:`LC <LC>` (-Location). The default
+The web file access location flag is set via :ref:`-LC <LC>` (-Location). The default
 is 'G' (Glade Disk) when any web data files exist. The default becomes 'O'
 if all web files reside on Object Store, or 'C' if all are at the CGD data
 path.
@@ -72,7 +72,7 @@ path.
 
 **EXAMPLE 1. To set the UseDSARCH flag, reset file counts and data size, and set the beginning data date for dataset d744004:**
 
-|  **dsarch** d744004 :ref:`SD <SD>` -:ref:`WN <WN>` -:ref:`UD <UD>` Y -:ref:`BD <BD>` 1999-07-01
+|  **dsarch** d744004 :ref:`SD <SD>` :ref:`-WN <WN>` :ref:`-UD <UD>` Y :ref:`-BD <BD>` 1999-07-01
 
 
 

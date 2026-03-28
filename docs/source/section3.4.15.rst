@@ -70,7 +70,7 @@ or
    * - :ref:`-(RD|RemoveDir) <RD>`
      - removes empty Saved or Web directories after deletion
 
-Provide the file names to delete via -:ref:`SF <SF>`, -:ref:`WF <WF>`, -:ref:`HF <HF>`, or -:ref:`QF <QF>`. Use -:ref:`DD <DD>`
+Provide the file names to delete via :ref:`-SF <SF>`, :ref:`-WF <WF>`, :ref:`-HF <HF>`, or :ref:`-QF <QF>`. Use :ref:`-DD <DD>`
 (-DeleteDir) to specify how many levels of empty parent directories to
 remove after deletion.
 

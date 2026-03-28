@@ -39,8 +39,8 @@ file name.
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
 
-Use -:ref:`FN <FN>` (-FieldNames) to specify which Help file fields to retrieve. Defaults
-to 'FINMTHSU'. Use -:ref:`FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Help file fields to retrieve. Defaults
+to 'FINMTHSU'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Help file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -101,8 +101,8 @@ A dataset number is required unless Help file names are provided. If file
 names match multiple datasets and no dataset number is given, an error prompts
 the specialist to specify one and rerun.
 
-Results can be filtered by type (-:ref:`HT <HT>`) and description (-:ref:`DE <DE>`). Both -:ref:`HF <HF>` and
--:ref:`DE <DE>` accept the '%' wildcard.
+Results can be filtered by type (:ref:`-HT <HT>`) and description (:ref:`-DE <DE>`). Both :ref:`-HF <HF>` and
+:ref:`-DE <DE>` accept the '%' wildcard.
 
 
 

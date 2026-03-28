@@ -60,18 +60,18 @@ can be processed in a single run.
    * - :ref:`-(RD|RemoveDir) <RD>`
      - removes empty directories after file changes
    * - :ref:`-(RO|ResetOrder) <RO>`
-     - resets display order indices to match the order files are given per -:ref:`SF <SF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
+     - resets display order indices to match the order files are given per :ref:`-SF <SF>`. Alternatively, use :ref:`-ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
-Saved file names must be provided via -:ref:`SF <SF>` (-SavedFile) unless -:ref:`ON <ON>`
+Saved file names must be provided via :ref:`-SF <SF>` (-SavedFile) unless :ref:`-ON <ON>`
 (-OrderNames) is used to reorder files. The number of values supplied to
 other :ref:`Info options <section5>` must match the number of file names, except for options
-that accept a single shared value, such as -:ref:`GI <GI>` (-GroupIndex), -:ref:`AF <AF>`
-(-ArchiveFormat), -:ref:`DF <DF>` (-DataFormat), and -:ref:`ST <ST>` (-SavedFileType).
+that accept a single shared value, such as :ref:`-GI <GI>` (-GroupIndex), :ref:`-AF <AF>`
+(-ArchiveFormat), :ref:`-DF <DF>` (-DataFormat), and :ref:`-ST <ST>` (-SavedFileType).
 
-If no group index is specified and -:ref:`PO <PO>` (-PatternOffset) is present, file
-names are matched against group patterns saved via -:ref:`SG <SG>` (-SetGroup) to
+If no group index is specified and :ref:`-PO <PO>` (-PatternOffset) is present, file
+names are matched against group patterns saved via :ref:`-SG <SG>` (-SetGroup) to
 determine the group index automatically.
 
 

@@ -67,20 +67,20 @@ processed in a single run.
    * - :ref:`-(RD|RemoveDir) <RD>`
      - removes empty web directories after file changes
    * - :ref:`-(RO|ResetOrder) <RO>`
-     - resets display order indices to match the order files are given per -:ref:`WF <WF>`. Alternatively, use -:ref:`ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
+     - resets display order indices to match the order files are given per :ref:`-WF <WF>`. Alternatively, use :ref:`-ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
    * - :ref:`-(RS|GXRSOptions) <RS>`
-     - passes options R and S to **gatherxml** for faster processing, used with -:ref:`GX <GX>` (-GatherXML)
+     - passes options R and S to **gatherxml** for faster processing, used with :ref:`-GX <GX>` (-GatherXML)
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
-Web file names must be provided via -:ref:`WF <WF>` (-WebFile) unless -:ref:`ON <ON>` (-OrderNames)
+Web file names must be provided via :ref:`-WF <WF>` (-WebFile) unless :ref:`-ON <ON>` (-OrderNames)
 is used to reorder files. The number of values supplied to other :ref:`Info <section5>` options
 must match the number of file names, except for options that accept a single
-shared value, such as -:ref:`GI <GI>` (-GroupIndex), -:ref:`AF <AF>` (-ArchiveFormat), -:ref:`DF <DF>`
-(-DataFormat), and -:ref:`WT <WT>` (-WebFileType).
+shared value, such as :ref:`-GI <GI>` (-GroupIndex), :ref:`-AF <AF>` (-ArchiveFormat), :ref:`-DF <DF>`
+(-DataFormat), and :ref:`-WT <WT>` (-WebFileType).
 
-If no group index is specified and -:ref:`PO <PO>` (-PatternOffset) is present, file
-names are matched against group patterns saved via -:ref:`SG <SG>` (-SetGroup) to
+If no group index is specified and :ref:`-PO <PO>` (-PatternOffset) is present, file
+names are matched against group patterns saved via :ref:`-SG <SG>` (-SetGroup) to
 determine the group index automatically.
 
 The file status may be set to P (public) or I (internal) for data types D,

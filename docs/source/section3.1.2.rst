@@ -34,8 +34,8 @@ for the specified dataset.
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - gathers and displays Saved/Web file counts
 
-Use -:ref:`FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
-to 'SWFULQ'. Use -:ref:`FN <FN>` ALL to retrieve every available field.
+Use :ref:`-FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
+to 'SWFULQ'. Use :ref:`-FN <FN>` ALL to retrieve every available field.
 
 Valid dataset field names and their corresponding :ref:`Info options <section5>`:
 
@@ -113,7 +113,7 @@ Valid dataset field names and their corresponding :ref:`Info options <section5>`
      - :ref:`-(ET|EndTime) <ET>`
      - time data end for dataset/group
 
-Use -:ref:`OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
+Use :ref:`-OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
 it, results are displayed on screen.
 
 
@@ -121,7 +121,7 @@ it, results are displayed on screen.
 
 **EXAMPLE 2. To retrieve all dataset fields for d260001 and save to a file:**
 
-|  **dsarch** d260001 :ref:`GD <GD>` -:ref:`FN <FN>` ALL -:ref:`PE <PE>` -:ref:`OF <OF>` d260001.ds
+|  **dsarch** d260001 :ref:`GD <GD>` :ref:`-FN <FN>` ALL :ref:`-PE <PE>` :ref:`-OF <OF>` d260001.ds
 
 Content of output file d260001.ds:
 

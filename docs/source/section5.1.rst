@@ -44,7 +44,7 @@ Info Option -**DD** (-**DeleteDir**) (Aliases: -**DeleteDirLevel**, -**DeleteEmp
 
 how many levels
 of empty parent directories to prune after files are deleted or moved.
-Applies to -:ref:`DL <DL>`, -:ref:`MV <MV>`, and -:ref:`CL <CL>` (when used with -:ref:`AS <AS>` or -:ref:`AW <AW>`).
+Applies to :ref:`-DL <DL>`, :ref:`-MV <MV>`, and :ref:`-CL <CL>` (when used with :ref:`-AS <AS>` or :ref:`-AW <AW>`).
 
 
 .. _DS:
@@ -139,17 +139,17 @@ Info Option -**ON** (-**OrderNames**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 a string of single-letter field codes controlling the
-sort order of GET action results (-:ref:`GG <GG>`, -:ref:`GS <GS>`, -:ref:`GW <GW>`, -:ref:`GH <GH>`, -:ref:`GQ <GQ>`). Uppercase means
+sort order of GET action results (:ref:`-GG <GG>`, :ref:`-GS <GS>`, :ref:`-GW <GW>`, :ref:`-GH <GH>`, :ref:`-GQ <GQ>`). Uppercase means
 ascending; lowercase means descending. When file records are modified via
--:ref:`AS <AS>`, -:ref:`AW <AW>`, -:ref:`SS <SS>`, -:ref:`SW <SW>`, -:ref:`DL <DL>`, or -:ref:`MV <MV>`, files in affected groups are reordered too.
+:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-SS <SS>`, :ref:`-SW <SW>`, :ref:`-DL <DL>`, or :ref:`-MV <MV>`, files in affected groups are reordered too.
 
-To reorder an existing file list without other changes, use -:ref:`SW <SW>` with -:ref:`ON <ON>`:
+To reorder an existing file list without other changes, use :ref:`-SW <SW>` with :ref:`-ON <ON>`:
 
 .. list-table::
    :widths: auto
    :header-rows: 1
 
-   * - dsarch dNNNNNN -:ref:`SW <SW>` -ON OrderNameString [-:ref:`GI <GI>` GroupIndices]
+   * - dsarch dNNNNNN :ref:`-SW <SW>` -ON OrderNameString [:ref:`-GI <GI>` GroupIndices]
 
 Without group indices, reordering applies to all files in the dataset.
 
@@ -173,7 +173,7 @@ Info Option -**QS** (-**QsubOptions**) (Alias: -**PBSOptions**) :
 
 passes options to qsub when
 running **dsarch** as a PBS batch job. Quote the value on the command line,
-e.g., -:ref:`QS <QS>` '-l walltime=12:00:00'.
+e.g., :ref:`-QS <QS>` '-l walltime=12:00:00'.
 
 
 .. _UD:
@@ -182,7 +182,7 @@ Info Option -**UD** (-**UseDSARCH**) (Alias: -**UseRDADB**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 the gating flag that controls
-**dsarch** access to a dataset. Set via -:ref:`SD <SD>` (-SetDataset). Values:
+**dsarch** access to a dataset. Set via :ref:`-SD <SD>` (-SetDataset). Values:
 
 .. list-table::
    :widths: auto
@@ -215,8 +215,8 @@ Info Option -**WI** (-**WaitInternval**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 how long **dsarch** waits before rechecking whether a
-background process slot has freed up (see -:ref:`AL <AL>`). Units: S (seconds),
-M (minutes), H (hours), D (days) — e.g., '-:ref:`WI <WI>` 5M'. A bare number is
+background process slot has freed up (see :ref:`-AL <AL>`). Units: S (seconds),
+M (minutes), H (hours), D (days) — e.g., ':ref:`-WI <WI>` 5M'. A bare number is
 treated as seconds.
 
 

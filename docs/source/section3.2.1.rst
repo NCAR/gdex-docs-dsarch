@@ -42,7 +42,7 @@ record for the specified dataset.
 
 If a version index is provided and already exists in GDEXDB, the record is
 modified. A new record is created when no index is given (or it is 0) and :ref:`Mode <section4>`
-option -:ref:`NV <NV>` (-NewVersion) is present.
+option :ref:`-NV <NV>` (-NewVersion) is present.
 
 A newly created record with no DOI number is in Pending status and can only
 transition to Active once a DOI number is supplied. When an active record is
@@ -53,7 +53,7 @@ created with a new DOI number, the version control index is auto-generated.
 
 **EXAMPLE 3. To place d999009 under DOI/Version control:**
 
-|  **dsarch** d999009 :ref:`SV <SV>` -:ref:`NV <NV>` -:ref:`DN <DN>` DOINumber
+|  **dsarch** d999009 :ref:`SV <SV>` :ref:`-NV <NV>` :ref:`-DN <DN>` DOINumber
 
 If the data of d999009 are substantially updated to a new version, run the
 same command with a new DOI number. The previous active record is automatically
@@ -65,7 +65,7 @@ existing DOI number to create a new internal version index. The previous
 record is again moved to History.
 
 One common minimal-change case is replacing erroneous Web files. First, move
-the affected files to different names using Action -:ref:`MV <MV>` (their type is
+the affected files to different names using Action :ref:`-MV <MV>` (their type is
 automatically set to 'V' for Version-controlled). Optionally create a new
 internal version at this point, then archive the replacement Web files.
 

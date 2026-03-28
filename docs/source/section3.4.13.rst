@@ -45,8 +45,8 @@ are missing from the GDEX Server.
    * - :ref:`-(NT|NoTrim) <NT>`
      - skips trimming of spaces and comments from input values, speeding up input file processing
 
-At least one Quasar, Saved, and/or Web file name must be provided via -:ref:`QF <QF>`,
--:ref:`SF <SF>`, and/or -:ref:`WF <WF>`. If only Quasar file names are given, the tar files are
+At least one Quasar, Saved, and/or Web file name must be provided via :ref:`-QF <QF>`,
+:ref:`-SF <SF>`, and/or :ref:`-WF <WF>`. If only Quasar file names are given, the tar files are
 retrieved from the server but no Saved or Web files are restored.
 
 

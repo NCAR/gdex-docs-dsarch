@@ -15,31 +15,31 @@ Brackets [] indicate optional elements. A pipe '|' within parentheses, as in
    :widths: auto
    :header-rows: 0
 
-   * - Action options
+   * - :ref:`Action options <section3>`
      - specify what task to execute
-   * - Mode options
+   * - :ref:`Mode options <section4>`
      - modify how an action behaves
    * - Info options
      - supply values to the action
 
-Options may be given in short or long form (e.g., -:ref:`DS <DS>` or -Dataset). Some
-options have alias names; for example, -UseRDADB is an alias for -:ref:`UD <UD>`
+Options may be given in short or long form (e.g., :ref:`-DS <DS>` or -Dataset). Some
+options have alias names; for example, -UseRDADB is an alias for :ref:`-UD <UD>`
 (-UseDSARCH). Option names are case-insensitive,
 but values following :ref:`Info options <section5>` are case-sensitive.
 
-Option -:ref:`DS <DS>` specifies the dataset number. It is listed separately because most
-actions require it. When -:ref:`DS <DS>` is the first argument after **dsarch**, the option
+Option :ref:`-DS <DS>` specifies the dataset number. It is listed separately because most
+actions require it. When :ref:`-DS <DS>` is the first argument after **dsarch**, the option
 name itself may be omitted — just supply the dataset number directly.
 
 Specify exactly one :ref:`Action option <section3>` per **dsarch** invocation. Each action has its
 own set of required and optional :ref:`Info options <section5>`, and may accept specific :ref:`Mode <section4>`
 options that adjust its behavior.
 
-All options except -:ref:`IF <IF>` (-InputFile) may be given either on the command line or
-in input files. Input file names are specified via -:ref:`IF <IF>` and can only be supplied
-on the command line. See the -:ref:`IF <IF>` option description for details on how to
+All options except :ref:`-IF <IF>` (-InputFile) may be given either on the command line or
+in input files. Input file names are specified via :ref:`-IF <IF>` and can only be supplied
+on the command line. See the :ref:`-IF <IF>` option description for details on how to
 format options in input files. One or more input files may be combined with
-command-line options. The -:ref:`IF <IF>` option name itself may be omitted when a single
+command-line options. The :ref:`-IF <IF>` option name itself may be omitted when a single
 input file is given on the command line and all action and option information
 is contained within that file.
 
