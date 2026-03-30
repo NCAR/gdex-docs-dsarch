@@ -1,5 +1,5 @@
-Read the Docs documentation for dscheck
-=======================================
+Read the Docs documentation for dsarch
+======================================
 
 Read the tutorial here:
 
