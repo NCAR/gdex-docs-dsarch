@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DSARCH Guide'
-copyright = '2026, zji@ucar.edu'
+copyright = '2026, GDEX@NCAR, https://gdex.ucar.edu/'
 author = 'Zaihua Ji'
 
 release = '0.1'
