@@ -143,9 +143,12 @@ sort order of GET action results (:ref:`-GG <GG>`, :ref:`-GS <GS>`, :ref:`-GW <G
 ascending; lowercase means descending. When file records are modified via
 :ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-SS <SS>`, :ref:`-SW <SW>`, :ref:`-DL <DL>`, or :ref:`-MV <MV>`, files in affected groups are reordered too.
 
-To reorder an existing file list without other changes, use :ref:`-SW <SW>` with :ref:`-ON <ON>`:
 
-|  **dsarch** dNNNNNN :ref:`-SW <SW>` :ref:`-ON <ON>` OrderNameString [:ref:`-GI <GI>` GroupIndices]
+.. _5.1_e11:
+
+**EXAMPLE 11. To reorder an existing file list without other changes, use -SW with -ON:**
+
+dsarch dNNNNNN :ref:`-SW <SW>` -ON OrderNameString [:ref:`-GI <GI>` GroupIndices]
 
 Without group indices, reordering applies to all files in the dataset.
 
@@ -209,8 +212,8 @@ archiving. Files smaller than this threshold are rejected. Defaults to 100.
 
 .. _WI:
 
-Info Option -**WI** (-**WaitInterval**) :
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Info Option -**WI** (-**WaitInternval**) :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 how long **dsarch** waits before rechecking whether a
 background process slot has freed up (see :ref:`-AL <AL>`). Units: S (seconds),

@@ -33,7 +33,8 @@ how a data file has been packaged or compressed. Recognized values:
    * - 'BZ2'
      - bzip2-compressed
 
-Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII blocked, then tarred, then gzipped. Maximum total length is 10 characters.
+Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII blocked,
+then tarred, then gzipped. Maximum total length is 20 characters.
 
 
 .. _BD:
@@ -77,7 +78,7 @@ command is written to GDEXDB and run later by the 'dscheck' daemon. One
 or more host names may follow :ref:`-BP <BP>` to target or exclude specific hosts
 (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99)
 can also be specified, e.g., '-d 5'; defaults to 2. Archive actions
-(:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-AH <AH>`, :ref:`-AQ <AQ>`) retry automatically after storage system outages.
+(:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-AH <AH>`, :ref:`-AQ <AQ>`) retry automatically after storage system outage.
 
 
 .. _BS:
@@ -232,7 +233,7 @@ specifies whether an entry represents a regular file
 Info Option -**FS** (-**FileStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level of a file: 'P' (public, visible to
+the access level of a file, 'P' (public, visible to
 all users) or 'I' (internal, visible to specialists only).
 
 
@@ -291,9 +292,9 @@ assign files to the right group during archiving. Stored per group via :ref:`-SG
 Info Option -**GT** (-**GroupType**) (Alias: -**GroupDataType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level for a group: 'P' (public) or 'I' (internal). Changing a group
-from 'P' to 'I' recursively marks all nested subgroups and their Web files as
-internal.
+the access level for a group,
+'P' (public) or 'I' (internal). Changing from P to I recursively marks
+all nested subgroups and their Web files as internal.
 
 
 .. _HF:
@@ -310,8 +311,9 @@ Defaults to the local file names from :ref:`-LF <LF>` unless overridden explicit
 Info Option -**HT** (-**HelpFileType**) (Alias: -**HelpType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the category of a Help file: 'D' (Document) or 'S' (Software). One value
-applies to all files in the batch.
+the category of a Help file,
+'D' (Document) or 'S' (Software). One value applies to all files in the
+batch.
 
 
 .. _ID:
@@ -365,15 +367,24 @@ to set them and :ref:`-GD <GD>` to view them. Keys: up to 40 characters; values:
 
 Set a pair:
 
-|  **dsarch** d540000 :ref:`-SD <SD>` :ref:`-KV <KV>` 'test=>test it'
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ dsarch d540000 SD :ref:`-KV <KV>` 'test=>test it'
 
 View a specific key:
 
-|  **dsarch** d540000 :ref:`-GD <GD>` :ref:`-KV <KV>` test
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ dsarch d540000 GD :ref:`-KV <KV>` test
 
 View all pairs:
 
-|  **dsarch** d540000 :ref:`-GD <GD>` :ref:`-KV <KV>` all
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ dsarch d540000 GD :ref:`-KV <KV>` all
 
 
 .. _LC:
@@ -398,7 +409,8 @@ where the file resides:
    * - 'R'
      - remote URL (Help files only)
 
-At the dataset level (as the online access location), only 'G' or 'O' are valid.
+At the dataset level (as the online access location), only 'G' or 'O'
+are valid.
 
 
 .. _LF:
@@ -528,7 +540,12 @@ for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).
 Info Option -**QT** (-**QuasarFileType**) (Aliases: -**QuasarType**, -**BackupType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the backup scope: 'B' (backup only) or 'D' (backup plus disaster recovery copy).
+the backup scope:
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ 'B' (backup only) or 'D' (backup plus disaster recovery copy).
 
 
 .. _RF:
@@ -650,8 +667,12 @@ control record for a dataset.
 Info Option -**VT** (-**VersionStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the lifecycle state of a version control record: 'A' (Active), 'P' (Pending —
-no DOI yet), or 'H' (History — terminated).
+the lifecycle state of a version control record:
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ 'A' (Active), 'P' (Pending — no DOI yet), or 'H' (History — terminated).
 
 
 .. _WF:
@@ -693,7 +714,7 @@ Info Option -**WT** (-**WebFileType**) (Aliases: -**WebType**, -**WebArchiveType
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 the accessibility of
-a Web file: 'D' (public data) or 'N' (NCAR internal data only). One value
+a Web file, 'D' (public data) or 'N' (NCAR internal data only). One value
 applies to all files in the batch.
 
 
