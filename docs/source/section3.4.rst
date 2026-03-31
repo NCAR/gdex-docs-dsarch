@@ -2,7 +2,7 @@
 .. _section3.4:
 
 3.4 - File Actions
-=====================
+=================================
 
 This section covers the full lifecycle of files in GDEXDB: archiving,
 querying, moving, and deleting Saved, Web, Help, and Quasar files.
@@ -69,6 +69,5 @@ Available actions:
 
 
 
-:ref:`Back to Top <section3.4>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4>`
+| :ref:`Back to Table of Contents <index>`

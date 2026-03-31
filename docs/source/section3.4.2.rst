@@ -2,7 +2,7 @@
 .. _section3.4.2:
 
 3.4.2 - Get Saved File Information
-=====================
+==================================
 
 
 .. _GS:
@@ -13,21 +13,21 @@ Action Option -**GS** (-**GetSavedFile**) (Alias: -**GetSaved**) :
 retrieves Saved file records from
 GDEXDB for the specified dataset, optionally filtered by file name.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GS|GetSavedFile) [:ref:`Mode Options <mode3.4.2>`]
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-|             [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
-|             [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
-|             [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
-|             [:ref:`-(FS|FileStatus) <FS>` SavedFileStatus]
-|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
-|             [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
-|             [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GS|GetSavedFile) [:ref:`Mode Options <mode3.4.2>`]
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|           [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
+|           [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
+|           [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
+|           [:ref:`-(FS|FileStatus) <FS>` SavedFileStatus]
+|           [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|           [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|           [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|           [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
+|           [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.2:
 
@@ -121,6 +121,5 @@ description (:ref:`-DE <DE>`). The :ref:`-SF <SF>`, :ref:`-GN <GN>`, and :ref:`-
 
 
 
-:ref:`Back to Top <section3.4.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.2>`
+| :ref:`Back to Table of Contents <index>`

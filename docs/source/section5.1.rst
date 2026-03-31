@@ -2,7 +2,7 @@
 .. _section5.1:
 
 5.1 - Single-Value Info Options
-=====================
+=================================
 
 A single-value Info option accepts exactly one value. Providing no value or
 more than one causes an error.
@@ -145,11 +145,7 @@ ascending; lowercase means descending. When file records are modified via
 
 To reorder an existing file list without other changes, use :ref:`-SW <SW>` with :ref:`-ON <ON>`:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - dsarch dNNNNNN :ref:`-SW <SW>` -ON OrderNameString [:ref:`-GI <GI>` GroupIndices]
+|  **dsarch** dNNNNNN :ref:`-SW <SW>` :ref:`-ON <ON>` OrderNameString [:ref:`-GI <GI>` GroupIndices]
 
 Without group indices, reordering applies to all files in the dataset.
 
@@ -197,7 +193,9 @@ the gating flag that controls
    * - 'P'
      - enabled and file lists are published publicly
    * - 'W'
-     - file list publication only Any value except 'N' must be set before **dsarch** can write to GDEXDB.
+     - file list publication only
+
+Any value except 'N' must be set before **dsarch** can write to GDEXDB.
 
 
 .. _VS:
@@ -211,8 +209,8 @@ archiving. Files smaller than this threshold are rejected. Defaults to 100.
 
 .. _WI:
 
-Info Option -**WI** (-**WaitInternval**) :
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Info Option -**WI** (-**WaitInterval**) :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 how long **dsarch** waits before rechecking whether a
 background process slot has freed up (see :ref:`-AL <AL>`). Units: S (seconds),
@@ -221,6 +219,5 @@ treated as seconds.
 
 
 
-:ref:`Back to Top <section5.1>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section5.1>`
+| :ref:`Back to Table of Contents <index>`

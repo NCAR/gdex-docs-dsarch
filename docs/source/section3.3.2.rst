@@ -2,7 +2,7 @@
 .. _section3.3.2:
 
 3.3.2 - Get Group Information
-=====================
+=================================
 
 
 .. _GG:
@@ -13,14 +13,14 @@ Action Option -**GG** (-**GetGroup**) :
 retrieves group records for the specified dataset.
 Filter results by providing group indices, names, or a parent index.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GG|GetGroup)
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
-|             [:ref:`-(PI|ParentGroupIndex) <PI>` ParentGroupIndices]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GG|GetGroup)
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|           [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|           [:ref:`-(PI|ParentGroupIndex) <PI>` ParentGroupIndices]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.3.2:
 
@@ -97,7 +97,7 @@ Results can be filtered by group index (:ref:`-GI <GI>`), name (:ref:`-GN <GN>`)
 
 **EXAMPLE 7. To retrieve the default group fields and file counts for groups 1 and 2 of d260001:**
 
-|  **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` :ref:`-GI <GI>` 1 2
+| **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` :ref:`-GI <GI>` 1 2
 
 Content of the output:
 
@@ -113,6 +113,5 @@ Content of the output:
 
 
 
-:ref:`Back to Top <section3.3.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.3.2>`
+| :ref:`Back to Table of Contents <index>`

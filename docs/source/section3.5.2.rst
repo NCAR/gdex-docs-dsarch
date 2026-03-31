@@ -2,7 +2,7 @@
 .. _section3.5.2:
 
 3.5.2 - Set All Information
-=====================
+=================================
 
 
 .. _SA:
@@ -26,6 +26,5 @@ all records, edit the output file as needed, then feed it back with :ref:`-SA <S
 
 
 
-:ref:`Back to Top <section3.5.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.5.2>`
+| :ref:`Back to Table of Contents <index>`

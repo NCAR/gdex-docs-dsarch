@@ -2,7 +2,7 @@
 .. _section5.2:
 
 5.2 - Multi-Value Info Options
-=====================
+=================================
 
 A multi-value Info option accepts a list of one or more values. Supplying
 zero values causes an error.
@@ -31,7 +31,9 @@ how a data file has been packaged or compressed. Recognized values:
    * - 'GZ'
      - gzipped
    * - 'BZ2'
-     - bzip2-compressed Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII blocked, then tarred, then gzipped. Maximum total length is 10 characters.
+     - bzip2-compressed
+
+Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII blocked, then tarred, then gzipped. Maximum total length is 10 characters.
 
 
 .. _BD:
@@ -289,14 +291,9 @@ assign files to the right group during archiving. Stored per group via :ref:`-SG
 Info Option -**GT** (-**GroupType**) (Alias: -**GroupDataType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level for a group:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - 'P' (public) or 'I' (internal). Changing from P to I recursively marks
-   * - all nested subgroups and their Web files as internal.
+the access level for a group: 'P' (public) or 'I' (internal). Changing a group
+from 'P' to 'I' recursively marks all nested subgroups and their Web files as
+internal.
 
 
 .. _HF:
@@ -313,14 +310,8 @@ Defaults to the local file names from :ref:`-LF <LF>` unless overridden explicit
 Info Option -**HT** (-**HelpFileType**) (Alias: -**HelpType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the category of a Help file:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - 'D' (Document) or 'S' (Software). One value applies to all files in the
-   * - batch.
+the category of a Help file: 'D' (Document) or 'S' (Software). One value
+applies to all files in the batch.
 
 
 .. _ID:
@@ -374,27 +365,15 @@ to set them and :ref:`-GD <GD>` to view them. Keys: up to 40 characters; values:
 
 Set a pair:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - dsarch d540000 SD :ref:`-KV <KV>` 'test=>test it'
+|  **dsarch** d540000 :ref:`-SD <SD>` :ref:`-KV <KV>` 'test=>test it'
 
 View a specific key:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - dsarch d540000 GD :ref:`-KV <KV>` test
+|  **dsarch** d540000 :ref:`-GD <GD>` :ref:`-KV <KV>` test
 
 View all pairs:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - dsarch d540000 GD :ref:`-KV <KV>` all
+|  **dsarch** d540000 :ref:`-GD <GD>` :ref:`-KV <KV>` all
 
 
 .. _LC:
@@ -417,7 +396,9 @@ where the file resides:
    * - 'B'
      - both Glade and Object Store
    * - 'R'
-     - remote URL (Help files only) At the dataset level (as the online access location), only 'G' or 'O' are valid.
+     - remote URL (Help files only)
+
+At the dataset level (as the online access location), only 'G' or 'O' are valid.
 
 
 .. _LF:
@@ -547,13 +528,7 @@ for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).
 Info Option -**QT** (-**QuasarFileType**) (Aliases: -**QuasarType**, -**BackupType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the backup scope:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - 'B' (backup only) or 'D' (backup plus disaster recovery copy).
+the backup scope: 'B' (backup only) or 'D' (backup plus disaster recovery copy).
 
 
 .. _RF:
@@ -619,7 +594,9 @@ Saved file:
    * - 'S'
      - Scratch (temporary file)
    * - 'V'
-     - Version-controlled (locked under DOI) One value applies to all files in the batch.
+     - Version-controlled (locked under DOI)
+
+One value applies to all files in the batch.
 
 
 .. _SZ:
@@ -673,13 +650,8 @@ control record for a dataset.
 Info Option -**VT** (-**VersionStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the lifecycle state of a version control record:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
-
-   * - 'A' (Active), 'P' (Pending — no DOI yet), or 'H' (History — terminated).
+the lifecycle state of a version control record: 'A' (Active), 'P' (Pending —
+no DOI yet), or 'H' (History — terminated).
 
 
 .. _WF:
@@ -736,6 +708,5 @@ the file in GDEXDB without needing a local copy on the GDEX Server.
 
 
 
-:ref:`Back to Top <section5.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section5.2>`
+| :ref:`Back to Table of Contents <index>`

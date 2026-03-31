@@ -2,7 +2,7 @@
 .. _section3.6.1:
 
 3.6.1 - Regenerate Dataset Webpages
-=====================
+===================================
 
 
 .. _UW:
@@ -13,8 +13,8 @@ Action Option -**UW** (-**UpdateWeb**) :
 rebuilds the main and filelist webpages for the specified
 dataset so they reflect the current state of GDEXDB.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(UW|UpdateWeb)
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(UW|UpdateWeb)
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 Provide the dataset number to regenerate its web pages.
 
@@ -25,6 +25,5 @@ Changes made through other utilities may not trigger this; use :ref:`-UC <UC>`
 
 
 
-:ref:`Back to Top <section3.6.1>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.6.1>`
+| :ref:`Back to Table of Contents <index>`

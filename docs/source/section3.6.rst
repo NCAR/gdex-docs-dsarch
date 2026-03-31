@@ -2,7 +2,7 @@
 .. _section3.6:
 
 3.6 - Webpage Actions
-=====================
+=================================
 
 After updating GDEXDB records, use these actions to refresh the corresponding
 web pages:
@@ -25,6 +25,5 @@ web pages:
 
 
 
-:ref:`Back to Top <section3.6>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.6>`
+| :ref:`Back to Table of Contents <index>`

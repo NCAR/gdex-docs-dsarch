@@ -2,7 +2,7 @@
 .. _section3.2.1:
 
 3.2.1 - Set Version Control
-=====================
+=================================
 
 
 .. _SV:
@@ -13,17 +13,17 @@ Action Option -**SV** (-**SetVersion**) :
 creates a new or updates an existing DOI/Version control
 record for the specified dataset.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SV|SetVersion) [:ref:`Mode Options <mode3.2.1>`]
-|             [:ref:`-(VI|VersionIndex) <VI>` VersionIndex]
-|             [:ref:`-(IV|InternalVersion) <IV>` InternalVersionIndex]
-|             [:ref:`-(EV|ExternalVersion) <EV>` AssignedVersionNumber]
-|             [:ref:`-(DN|DOINumber) <DN>` DOInumber]
-|             [:ref:`-(VT|VersionStatus) <VT>` VersionRecordStatus]
-|             [:ref:`-(BD|BeginDate) <BD>` VersionStartdate]
-|             [:ref:`-(BT|BeginTime) <BT>` VersionStartTime]
-|             [:ref:`-(ED|EndDate) <ED>` VersionEnddate]
-|             [:ref:`-(ET|EndTime) <ET>` VersionEndTime]
-|             [:ref:`-(DE|Description) <DE>` VersionNote]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SV|SetVersion) [:ref:`Mode Options <mode3.2.1>`]
+|           [:ref:`-(VI|VersionIndex) <VI>` VersionIndex]
+|           [:ref:`-(IV|InternalVersion) <IV>` InternalVersionIndex]
+|           [:ref:`-(EV|ExternalVersion) <EV>` AssignedVersionNumber]
+|           [:ref:`-(DN|DOINumber) <DN>` DOInumber]
+|           [:ref:`-(VT|VersionStatus) <VT>` VersionRecordStatus]
+|           [:ref:`-(BD|BeginDate) <BD>` VersionStartdate]
+|           [:ref:`-(BT|BeginTime) <BT>` VersionStartTime]
+|           [:ref:`-(ED|EndDate) <ED>` VersionEnddate]
+|           [:ref:`-(ET|EndTime) <ET>` VersionEndTime]
+|           [:ref:`-(DE|Description) <DE>` VersionNote]
 
 .. _mode3.2.1:
 
@@ -53,7 +53,7 @@ created with a new DOI number, the version control index is auto-generated.
 
 **EXAMPLE 3. To place d999009 under DOI/Version control:**
 
-|  **dsarch** d999009 :ref:`SV <SV>` :ref:`-NV <NV>` :ref:`-DN <DN>` DOINumber
+| **dsarch** d999009 :ref:`SV <SV>` :ref:`-NV <NV>` :ref:`-DN <DN>` DOINumber
 
 If the data of d999009 are substantially updated to a new version, run the
 same command with a new DOI number. The previous active record is automatically
@@ -74,6 +74,5 @@ the GDEX are handled consistently.
 
 
 
-:ref:`Back to Top <section3.2.1>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.2.1>`
+| :ref:`Back to Table of Contents <index>`

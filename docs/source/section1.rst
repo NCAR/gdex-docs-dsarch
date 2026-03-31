@@ -2,7 +2,7 @@
 .. _section1:
 
 1 - INTRODUCTION
-=====================
+=================================
 
 **dsarch** is the primary tool for archiving geoscience data onto CISL's Geoscience
 Data Exchange (GDEX) Servers. It records metadata about each dataset — file names,
@@ -77,6 +77,5 @@ Examples are provided throughout each section.
 
 
 
-:ref:`Back to Top <section1>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section1>`
+| :ref:`Back to Table of Contents <index>`

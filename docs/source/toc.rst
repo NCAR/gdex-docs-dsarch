@@ -21,7 +21,6 @@ Table of Contents
    - `3.3. Group Actions <section3.3.rst>`_
       - `3.3.1. Set Group Information <section3.3.1.rst>`_
       - `3.3.2. Get Group Information <section3.3.2.rst>`_
-- `2. group records retrieved <section2.rst>`_
       - `3.3.3. Delete Group Information <section3.3.3.rst>`_
       - `3.3.4. Change Group Information <section3.3.4.rst>`_
    - `3.4. File Actions <section3.4.rst>`_

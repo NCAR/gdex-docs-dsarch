@@ -2,7 +2,7 @@
 .. _section3.2.3:
 
 3.2.3 - Terminate Version Control
-=====================
+=================================
 
 
 .. _TV:
@@ -13,10 +13,10 @@ Action Option -**TV** (-**TerminateVersion**) :
 closes a version control record in GDEXDB for the
 specified dataset, marking it as history or removing it if still pending.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](TV|TerminateVersion) [:ref:`Mode Options <mode3.2.3>`]
-|              :ref:`-(VI|VersionIndex) <VI>` VersionIndex
-|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](TV|TerminateVersion) [:ref:`Mode Options <mode3.2.3>`]
+|            :ref:`-(VI|VersionIndex) <VI>` VersionIndex
+|           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.2.3:
 
@@ -42,13 +42,12 @@ only then can the version be terminated.
 
 **EXAMPLE 5. To terminate version index 5 of d999009:**
 
-|  **dsarch** d999009 :ref:`TV <TV>` :ref:`-VI <VI>` 5
+| **dsarch** d999009 :ref:`TV <TV>` :ref:`-VI <VI>` 5
 
 Active records are moved to 'H' (History) status and kept for future
 reference. Pending records are deleted from GDEXDB entirely.
 
 
 
-:ref:`Back to Top <section3.2.3>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.2.3>`
+| :ref:`Back to Table of Contents <index>`

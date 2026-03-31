@@ -2,7 +2,7 @@
 .. _section3.4.6:
 
 3.4.6 - Get Help File Information
-=====================
+=================================
 
 
 .. _GH:
@@ -14,19 +14,19 @@ retrieves Help file records (Documents
 and Software) from GDEXDB for the specified dataset, optionally filtered by
 file name.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GH|GetHelpFile) [:ref:`Mode Options <mode3.4.6>`]
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-|             [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
-|             [:ref:`-(HF|HelpFile) <HF>` HelpFileNames]
-|             [:ref:`-(HT|HelpFileType) <HT>` HelpFileTypes]
-|             [:ref:`-(FS|FileStatus) <FS>` SavedFileStatus]
-|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-|             [:ref:`-(SR|Source) <SR>` ContributionSource]
-|             [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GH|GetHelpFile) [:ref:`Mode Options <mode3.4.6>`]
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|           [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
+|           [:ref:`-(HF|HelpFile) <HF>` HelpFileNames]
+|           [:ref:`-(HT|HelpFileType) <HT>` HelpFileTypes]
+|           [:ref:`-(FS|FileStatus) <FS>` SavedFileStatus]
+|           [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|           [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|           [:ref:`-(SR|Source) <SR>` ContributionSource]
+|           [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.6:
 
@@ -106,6 +106,5 @@ Results can be filtered by type (:ref:`-HT <HT>`) and description (:ref:`-DE <DE
 
 
 
-:ref:`Back to Top <section3.4.6>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.6>`
+| :ref:`Back to Table of Contents <index>`

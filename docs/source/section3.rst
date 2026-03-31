@@ -2,7 +2,7 @@
 .. _section3:
 
 3 - ACTION OPTIONS
-=====================
+=================================
 
 Action options tell **dsarch** what to do. They take no values. Some actions
 perform a single task; others bundle multiple tasks together and may trigger
@@ -58,6 +58,5 @@ Actions are grouped into seven categories based on the information they handle:
 
 
 
-:ref:`Back to Top <section3>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3>`
+| :ref:`Back to Table of Contents <index>`

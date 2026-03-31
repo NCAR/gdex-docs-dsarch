@@ -30,5 +30,4 @@ A GUIDE TO DSARCH
 
 
 
-:ref:`Back to Top <index>`
-
+| :ref:`Back to Top <index>`

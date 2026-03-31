@@ -2,7 +2,7 @@
 .. _section3.4.9:
 
 3.4.9 - Archive Saved Files
-=====================
+=================================
 
 
 .. _AS:
@@ -14,32 +14,32 @@ Action Option -**AS** (-**ArchiveSavedFile**) (Aliases: -**ArchiveSaved**, -**Ar
 copies local files to the GDEX Server as Saved files and registers them in
 GDEXDB. One or more files may be archived per execution.
 
-|  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AS|ArchiveSavedFile) [:ref:`Mode Options <mode3.4.9>`]
-|             [:ref:`-(LF|LocalFile) <LF>` LocalFileNames]
-|             [:ref:`-(LD|LocalDirectory) <LD>` LocalDirectoryName]
-|             [:ref:`-(LL|LocalFileList) <LL>` LocalFileListName]
-|             [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
-|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
-|             [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
-|             [:ref:`-(PO|PatternOffset) <PO>` PatternStringOffset]
-|             [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
-|             [:ref:`-(FS|FileStatus) <FS>` SavedFileStatus]
-|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-|             [:ref:`-(DF|DataFormat) <DF>` DataFormat]
-|             [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
-|             [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
-|             [:ref:`-(SZ|Size) <SZ>` FileSizes]
-|             [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
-|             [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
-|             [:ref:`-(VS|ValidSize) <VS>` MinSizeForValidFile]
-|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-|             [:ref:`-(AL|AsyncLimit) <AL>` AsyncProcessLimit]
-|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-|             [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AS|ArchiveSavedFile) [:ref:`Mode Options <mode3.4.9>`]
+|           [:ref:`-(LF|LocalFile) <LF>` LocalFileNames]
+|           [:ref:`-(LD|LocalDirectory) <LD>` LocalDirectoryName]
+|           [:ref:`-(LL|LocalFileList) <LL>` LocalFileListName]
+|           [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
+|           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|           [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|           [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
+|           [:ref:`-(PO|PatternOffset) <PO>` PatternStringOffset]
+|           [:ref:`-(ST|SavedFileType) <ST>` SavedFileTypes]
+|           [:ref:`-(FS|FileStatus) <FS>` SavedFileStatus]
+|           [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|           [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|           [:ref:`-(DF|DataFormat) <DF>` DataFormat]
+|           [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
+|           [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
+|           [:ref:`-(SZ|Size) <SZ>` FileSizes]
+|           [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
+|           [:ref:`-(DE|Description) <DE>` SavedFileDescriptions]
+|           [:ref:`-(VS|ValidSize) <VS>` MinSizeForValidFile]
+|           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|           [:ref:`-(AL|AsyncLimit) <AL>` AsyncProcessLimit]
+|           [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|           [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|           [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.9:
 
@@ -105,6 +105,5 @@ Disk only).
 
 
 
-:ref:`Back to Top <section3.4.9>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.9>`
+| :ref:`Back to Table of Contents <index>`

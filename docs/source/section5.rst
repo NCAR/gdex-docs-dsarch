@@ -2,7 +2,7 @@
 .. _section5:
 
 5 - INFORMATION OPTIONS
-=====================
+=================================
 
 Information (Info for short) options pass data values into **dsarch**.
 They come in two forms:
@@ -25,6 +25,5 @@ They come in two forms:
 
 
 
-:ref:`Back to Top <section5>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section5>`
+| :ref:`Back to Table of Contents <index>`

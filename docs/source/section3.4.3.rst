@@ -2,7 +2,7 @@
 .. _section3.4.3:
 
 3.4.3 - Set Web File Information
-=====================
+=================================
 
 
 .. _SW:
@@ -14,33 +14,33 @@ creates new or updates existing Web file
 records in GDEXDB for the specified dataset. Multiple records can be
 processed in a single run.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(SW|SetWebFile) [:ref:`Mode Options <mode3.4.3>`]
-|             [:ref:`-(WF|WebFile) <WF>` webFileNames]
-|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-|             [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
-|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
-|             [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
-|             [:ref:`-(PO|PatternOffset) <PO>` PatternStringOffset]
-|             [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
-|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-|             [:ref:`-(FS|FileStatus) <FS>` WebFileStatus]
-|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-|             [:ref:`-(DF|DataFormat) <DF>` DataFormats]
-|             [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormats]
-|             [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
-|             [:ref:`-(SZ|Size) <SZ>` FileSizes]
-|             [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
-|             [:ref:`-(FD|FileDate) <FD>` DateModified]
-|             [:ref:`-(FT|FileTime) <FT>` TimeModified]
-|             [:ref:`-(ML|MetaLink) <ML>` MetadataLinks]
-|             [:ref:`-(TL|ThreddLink) <TL>` ThreddCatalogLinks]
-|             [:ref:`-(DE|Description) <DE>` WebFileDescriptions]
-|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-|             [:ref:`-(AL|AsyncLimit) <AL>` AsyncProcessLimit]
-|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(SW|SetWebFile) [:ref:`Mode Options <mode3.4.3>`]
+|           [:ref:`-(WF|WebFile) <WF>` webFileNames]
+|           [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|           [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
+|           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|           [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|           [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
+|           [:ref:`-(PO|PatternOffset) <PO>` PatternStringOffset]
+|           [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
+|           [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|           [:ref:`-(FS|FileStatus) <FS>` WebFileStatus]
+|           [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|           [:ref:`-(DF|DataFormat) <DF>` DataFormats]
+|           [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormats]
+|           [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
+|           [:ref:`-(SZ|Size) <SZ>` FileSizes]
+|           [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
+|           [:ref:`-(FD|FileDate) <FD>` DateModified]
+|           [:ref:`-(FT|FileTime) <FT>` TimeModified]
+|           [:ref:`-(ML|MetaLink) <ML>` MetadataLinks]
+|           [:ref:`-(TL|ThreddLink) <TL>` ThreddCatalogLinks]
+|           [:ref:`-(DE|Description) <DE>` WebFileDescriptions]
+|           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|           [:ref:`-(AL|AsyncLimit) <AL>` AsyncProcessLimit]
+|           [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|           [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.3:
 
@@ -88,6 +88,5 @@ N, O, and S. Files assigned to an internal group are automatically set to I.
 
 
 
-:ref:`Back to Top <section3.4.3>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.3>`
+| :ref:`Back to Table of Contents <index>`
