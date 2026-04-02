@@ -2,7 +2,7 @@
 .. _section3.3.3:
 
 3.3.3 - Delete Group Information
-=====================
+=================================
 
 
 .. _DG:
@@ -13,10 +13,10 @@ Action Option -**DG** (-**DeleteGroup**) :
 removes one or more group records from GDEXDB for the
 specified dataset.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](DG|DeleteGroup) [:ref:`Mode Options <mode3.3.3>`]
-|              :ref:`-(GI|GroupIndex) <GI>` GroupIndices
-|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](DG|DeleteGroup) [:ref:`Mode Options <mode3.3.3>`]
+|            :ref:`-(GI|GroupIndex) <GI>` GroupIndices
+|           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.3.3:
 
@@ -47,10 +47,9 @@ the group can be deleted.
 
 **EXAMPLE 8. To delete group indices 2 and 3 of d744004:**
 
-|  **dsarch** d744004 :ref:`DG <DG>` :ref:`-GI <GI>` 2 3
+| **dsarch** d744004 :ref:`DG <DG>` :ref:`-GI <GI>` 2 3
 
 
 
-:ref:`Back to Top <section3.3.3>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.3.3>`
+| :ref:`Back to Table of Contents <index>`

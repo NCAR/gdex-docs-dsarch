@@ -2,7 +2,7 @@
 .. _section4:
 
 4 - MODE OPTIONS
-=====================
+=================================
 
 Mode options adjust how an :ref:`Action option <section3>` behaves. They are all optional and
 take no values — simply include the flag to activate the behavior.
@@ -67,7 +67,7 @@ Mode Option -**GF** (-**GrowingFile**) (Alias: -**GrowingDataFile**) :
 
 lifts the DOI/Version control lock on Web files so
 that :ref:`-AW <AW>` (-ArchiveWebFile) can overwrite them. Use this when a file is
-actively being appended to and must be updated in place. When `dsupdt <https://gdex-docs-dsupdt.readthedocs.io/en/latest/index.html>`_
+actively being appended to and must be updated in place. When `dsupdt <https://gdex-docs-dsupdt.readthedocs.io>`_
 drives :ref:`-AW <AW>`, growing files are detected and handled automatically.
 
 
@@ -349,11 +349,10 @@ compresses files during :ref:`-AS <AS>` or
 :ref:`-AW <AW>`. The compression tool is selected by the format given via :ref:`-AF <AF>`: 'gzip' for
 'GZ', 'compress' for 'Z', 'zip' for 'ZIP', 'bzip' for 'BZ2'. Files already
 in the target format are skipped. Files compressed in a different format are
-uncompressed first (using the tool matched by extension: '.gz', '.Z', '.zip',
-or '.bz2') before compressed again.
+decompressed first (using the tool matched by extension: '.gz', '.Z', '.zip',
+or '.bz2') before being recompressed into the target format.
 
 
 
-:ref:`Back to Top <section4>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section4>`
+| :ref:`Back to Table of Contents <index>`

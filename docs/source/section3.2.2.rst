@@ -2,7 +2,7 @@
 .. _section3.2.2:
 
 3.2.2 - Get Version Control
-=====================
+=================================
 
 
 .. _GV:
@@ -13,11 +13,11 @@ Action Option -**GV** (-**GetVersion**) :
 retrieves DOI/Version control records from GDEXDB for a
 given dataset.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GV|GetVersion) [:ref:`Mode Option <mode3.2.2>`]
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(KV|KeyValue) <KV>` KeyNames]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GV|GetVersion) [:ref:`Mode Option <mode3.2.2>`]
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(KV|KeyValue) <KV>` KeyNames]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.2.2:
 
@@ -81,7 +81,7 @@ it, results are displayed on screen.
 
 **EXAMPLE 4. To retrieve all version control fields for d132000 and save to a file:**
 
-|  **dsarch** d132000 :ref:`GV <GV>` :ref:`-FN <FN>` ALL :ref:`-OF <OF>` d132000.vrsn
+| **dsarch** d132000 :ref:`GV <GV>` :ref:`-FN <FN>` ALL :ref:`-OF <OF>` d132000.vrsn
 
 Content of output file d132000.vrsn:
 
@@ -93,6 +93,5 @@ Content of output file d132000.vrsn:
 
 
 
-:ref:`Back to Top <section3.2.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.2.2>`
+| :ref:`Back to Table of Contents <index>`

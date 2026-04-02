@@ -2,7 +2,7 @@
 .. _section3.4.10:
 
 3.4.10 - Archive Web Files
-=====================
+=================================
 
 
 .. _AW:
@@ -14,32 +14,32 @@ copies
 local files to the GDEX Server as publicly accessible Web files and registers
 them in GDEXDB. One or more files may be archived per execution.
 
-|  **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AW|ArchiveWebFile) [:ref:`Mode Options <mode3.4.10>`]
-|             [:ref:`-(LF|LocalFile) <LF>` LocalFileNames]
-|             [:ref:`-(LD|LocalDirectory) <LD>` LocalDirectoryName]
-|             [:ref:`-(LL|LocalFileList) <LL>` LocalFileListName]
-|             [:ref:`-(WF|WebFile) <WF>` webFileNames]
-|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-|             [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
-|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
-|             [:ref:`-(PO|PatternOffset) <PO>` PatternStringOffset]
-|             [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
-|             [:ref:`-(FS|FileStatus) <FS>` WebFileStatus]
-|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-|             [:ref:`-(DF|DataFormat) <DF>` DataFormat]
-|             [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
-|             [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
-|             [:ref:`-(SZ|Size) <SZ>` FileSizes]
-|             [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
-|             [:ref:`-(DE|Description) <DE>` WebFileDescriptions]
-|             [:ref:`-(VS|ValidSize) <VS>` MinSizeForValidFile]
-|             [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
-|             [:ref:`-(AL|AsyncLimit) <AL>` AsyncProcessLimit]
-|             [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
-|             [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
-|             [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AW|ArchiveWebFile) [:ref:`Mode Options <mode3.4.10>`]
+|           [:ref:`-(LF|LocalFile) <LF>` LocalFileNames]
+|           [:ref:`-(LD|LocalDirectory) <LD>` LocalDirectoryName]
+|           [:ref:`-(LL|LocalFileList) <LL>` LocalFileListName]
+|           [:ref:`-(WF|WebFile) <WF>` webFileNames]
+|           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|           [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
+|           [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|           [:ref:`-(PO|PatternOffset) <PO>` PatternStringOffset]
+|           [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
+|           [:ref:`-(FS|FileStatus) <FS>` WebFileStatus]
+|           [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|           [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|           [:ref:`-(DF|DataFormat) <DF>` DataFormat]
+|           [:ref:`-(AF|ArchiveFormat) <AF>` FileArchiveFormat]
+|           [:ref:`-(DO|DisplayOrder) <DO>` DisplayOrderIndices]
+|           [:ref:`-(SZ|Size) <SZ>` FileSizes]
+|           [:ref:`-(MC|MD5Checksum) <MC>` MD5ChecksumValues]
+|           [:ref:`-(DE|Description) <DE>` WebFileDescriptions]
+|           [:ref:`-(VS|ValidSize) <VS>` MinSizeForValidFile]
+|           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
+|           [:ref:`-(AL|AsyncLimit) <AL>` AsyncProcessLimit]
+|           [:ref:`-(QS|QsubOptions) <QS>`  PBSBatchOptions]
+|           [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
+|           [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.10:
 
@@ -110,6 +110,5 @@ Disk only).
 
 
 
-:ref:`Back to Top <section3.4.10>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.10>`
+| :ref:`Back to Table of Contents <index>`

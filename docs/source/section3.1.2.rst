@@ -2,7 +2,7 @@
 .. _section3.1.2:
 
 3.1.2 - Get Dataset Information
-=====================
+=================================
 
 
 .. _GD:
@@ -13,11 +13,11 @@ Action Option -**GD** (-**GetDataset**) :
 reads and displays dataset record fields from GDEXDB
 for the specified dataset.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GD|GetDataset) [:ref:`Mode Options <mode3.1.2>`]
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(KV|KeyValue) <KV>` KeyNames]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GD|GetDataset) [:ref:`Mode Options <mode3.1.2>`]
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(KV|KeyValue) <KV>` KeyNames]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.1.2:
 
@@ -121,7 +121,7 @@ it, results are displayed on screen.
 
 **EXAMPLE 2. To retrieve all dataset fields for d260001 and save to a file:**
 
-|  **dsarch** d260001 :ref:`GD <GD>` :ref:`-FN <FN>` ALL :ref:`-PE <PE>` :ref:`-OF <OF>` d260001.ds
+| **dsarch** d260001 :ref:`GD <GD>` :ref:`-FN <FN>` ALL :ref:`-PE <PE>` :ref:`-OF <OF>` d260001.ds
 
 Content of output file d260001.ds:
 
@@ -145,6 +145,5 @@ Content of output file d260001.ds:
 
 
 
-:ref:`Back to Top <section3.1.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.1.2>`
+| :ref:`Back to Table of Contents <index>`

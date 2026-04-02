@@ -2,7 +2,7 @@
 .. _section3.4.8:
 
 3.4.8 - Get Quasar File Information
-=====================
+=================================
 
 
 .. _GQ:
@@ -13,16 +13,16 @@ Action Option -**GQ** (-**GetQuasarFile**) (Aliases: -**GetQuasar**, -**GetBacku
 retrieves Quasar backup file records
 from GDEXDB for the specified dataset, optionally filtered by file name.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GQ|GetQuasarFile) [:ref:`Mode Options <mode3.4.8>`]
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-|             [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
-|             [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
-|             [:ref:`-(QT|QuasarFileType) <QT>` QuasarFileTypes]
-|             [:ref:`-(FS|FileStatus) <FS>` QuasarFileStatus]
-|             [:ref:`-(DE|Description) <DE>` QuasarFileDescriptions]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GQ|GetQuasarFile) [:ref:`Mode Options <mode3.4.8>`]
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|           [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
+|           [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
+|           [:ref:`-(QT|QuasarFileType) <QT>` QuasarFileTypes]
+|           [:ref:`-(FS|FileStatus) <FS>` QuasarFileStatus]
+|           [:ref:`-(DE|Description) <DE>` QuasarFileDescriptions]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.8:
 
@@ -97,6 +97,5 @@ Results can be filtered by archive type (:ref:`-QT <QT>`) and description (:ref:
 
 
 
-:ref:`Back to Top <section3.4.8>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.8>`
+| :ref:`Back to Table of Contents <index>`

@@ -2,7 +2,7 @@
 .. _section3.4.4:
 
 3.4.4 - Get Web File Information
-=====================
+=================================
 
 
 .. _GW:
@@ -13,21 +13,21 @@ Action Option -**GW** (-**GetWebFile**) (Alias: -**GetWeb**) :
 retrieves Web file records from GDEXDB
 for the specified dataset, optionally filtered by file name.
 
-|  **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GW|GetWebFile) [:ref:`Mode Options <mode3.4.4>`]
-|             [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
-|             [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
-|             [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
-|             [:ref:`-(WF|WebFile) <WF>` WebFileNames]
-|             [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
-|             [:ref:`-(FS|FileStatus) <FS>` WebFileStatus]
-|             [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
-|             [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
-|             [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
-|             [:ref:`-(GN|GroupName) <GN>` GroupNames]
-|             [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
-|             [:ref:`-(DE|Description) <DE>` WebFileDescriptions]
-|             [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
-|             [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GW|GetWebFile) [:ref:`Mode Options <mode3.4.4>`]
+|           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
+|           [:ref:`-(ON|OrderNames) <ON>` OrderNameString]
+|           [:ref:`-(OB|OrderBy) <OB>` OrderByPattern]
+|           [:ref:`-(WF|WebFile) <WF>` WebFileNames]
+|           [:ref:`-(WT|WebFileType) <WT>` WebFileTypes]
+|           [:ref:`-(FS|FileStatus) <FS>` WebFileStatus]
+|           [:ref:`-(FF|FileFlag) <FF>` FilesOrPaths]
+|           [:ref:`-(LC|Location) <LC>` StorageLocationFlags]
+|           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
+|           [:ref:`-(GN|GroupName) <GN>` GroupNames]
+|           [:ref:`-(TG|TopGroupIndex) <TG>` TopGroupIndices]
+|           [:ref:`-(DE|Description) <DE>` WebFileDescriptions]
+|           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
+|           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
 .. _mode3.4.4:
 
@@ -130,7 +130,7 @@ description (:ref:`-DE <DE>`). The :ref:`-WF <WF>`, :ref:`-GN <GN>`, and :ref:`-
 
 **EXAMPLE 10. To retrieve the default Web file fields for d540000, filtered to Data type and file names containing '200':**
 
-|  **dsarch** d540000 :ref:`GW <GW>` :ref:`-WT <WT>` D :ref:`-WF <WF>` %200%
+| **dsarch** d540000 :ref:`GW <GW>` :ref:`-WT <WT>` D :ref:`-WF <WF>` %200%
 
 Content of the output:
 
@@ -147,6 +147,5 @@ Content of the output:
 
 
 
-:ref:`Back to Top <section3.4.4>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.4.4>`
+| :ref:`Back to Table of Contents <index>`

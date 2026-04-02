@@ -2,7 +2,7 @@
 .. _section5.1:
 
 5.1 - Single-Value Info Options
-=====================
+=================================
 
 A single-value Info option accepts exactly one value. Providing no value or
 more than one causes an error.
@@ -143,13 +143,12 @@ sort order of GET action results (:ref:`-GG <GG>`, :ref:`-GS <GS>`, :ref:`-GW <G
 ascending; lowercase means descending. When file records are modified via
 :ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-SS <SS>`, :ref:`-SW <SW>`, :ref:`-DL <DL>`, or :ref:`-MV <MV>`, files in affected groups are reordered too.
 
-To reorder an existing file list without other changes, use :ref:`-SW <SW>` with :ref:`-ON <ON>`:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
+.. _5.1_e11:
 
-   * - dsarch dNNNNNN :ref:`-SW <SW>` -ON OrderNameString [:ref:`-GI <GI>` GroupIndices]
+**EXAMPLE 11. To reorder an existing file list without other changes, use -SW with -ON:**
+
+dsarch dNNNNNN :ref:`-SW <SW>` -ON OrderNameString [:ref:`-GI <GI>` GroupIndices]
 
 Without group indices, reordering applies to all files in the dataset.
 
@@ -197,7 +196,9 @@ the gating flag that controls
    * - 'P'
      - enabled and file lists are published publicly
    * - 'W'
-     - file list publication only Any value except 'N' must be set before **dsarch** can write to GDEXDB.
+     - file list publication only
+
+Any value except 'N' must be set before **dsarch** can write to GDEXDB.
 
 
 .. _VS:
@@ -221,6 +222,5 @@ treated as seconds.
 
 
 
-:ref:`Back to Top <section5.1>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section5.1>`
+| :ref:`Back to Table of Contents <index>`

@@ -2,7 +2,7 @@
 .. _section3.2:
 
 3.2 - DOI/Version Actions
-=====================
+=================================
 
 DOI/Version controls establish citable, versioned snapshots of a dataset.
 Manage them with the following actions:
@@ -34,6 +34,5 @@ Manage them with the following actions:
 
 
 
-:ref:`Back to Top <section3.2>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.2>`
+| :ref:`Back to Table of Contents <index>`

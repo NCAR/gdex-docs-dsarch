@@ -2,7 +2,7 @@
 .. _section3.5:
 
 3.5 - All Info Actions
-=====================
+=================================
 
 These two actions work across all record types at once, making it easy to
 snapshot or bulk-update a dataset:
@@ -25,6 +25,5 @@ snapshot or bulk-update a dataset:
 
 
 
-:ref:`Back to Top <section3.5>`
-:ref:`Back to Table of Contents <index>`
-
+| :ref:`Back to Top <section3.5>`
+| :ref:`Back to Table of Contents <index>`
