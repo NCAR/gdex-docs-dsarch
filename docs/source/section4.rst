@@ -67,7 +67,7 @@ Mode Option -**GF** (-**GrowingFile**) (Alias: -**GrowingDataFile**) :
 
 lifts the DOI/Version control lock on Web files so
 that :ref:`-AW <AW>` (-ArchiveWebFile) can overwrite them. Use this when a file is
-actively being appended to and must be updated in place. When `dsupdt <https://gdex-docs-dsupdt.readthedocs.io/en/latest/index.html>`_
+actively being appended to and must be updated in place. When `dsupdt <https://gdex-docs-dsupdt.readthedocs.io>`_
 drives :ref:`-AW <AW>`, growing files are detected and handled automatically.
 
 
