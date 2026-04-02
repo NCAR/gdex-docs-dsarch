@@ -74,7 +74,7 @@ Info Option -**BP** (-**BatchProcess**) (Aliases: -**d**, -**DelayedMode**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 defers execution: the
-command is written to GDEXDB and run later by the 'dscheck' daemon. One
+command is written to GDEXDB and run later by the `dscheck <https://gdex-docs-dscheck.readthedocs.io>`_ daemon. One
 or more host names may follow :ref:`-BP <BP>` to target or exclude specific hosts
 (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99)
 can also be specified, e.g., '-d 5'; defaults to 2. Archive actions
