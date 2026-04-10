@@ -11,10 +11,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Convert and Commit
+        env:
+          USGFILE: ${{ github.event.client_payload.usgfile }}
+          PYFILE: ${{ github.event.client_payload.pyfile }}
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pgrst -d docs/source -u ${{ github.event.client_payload.usgfile }} -p ${{ github.event.client_payload.pyfile }}
+          pgrst -d docs/source -u "$USGFILE" -p "$PYFILE"
           git config --global user.name "Workflow Bot"
           git add ./docs/source
           git commit -m "Converted dsarch.usg from Repo rda_python_dsarch"
