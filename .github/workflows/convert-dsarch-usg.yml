@@ -9,11 +9,13 @@ jobs:
     steps:
       - name: Checkout Repo gdex_docs_dsarch
         uses: actions/checkout@v4
+        with:
+          path: ./
       - name: Checkout Repo rda_python_dsarch
         uses: actions/checkout@v4
         with:
           repository: NCAR/rda-python-dsarch
-          path: dsarch
+          path: ./dsarch
           # Use the branch passed in the payload, defaulting to 'main' if not provided
           ref: ${{ github.event.client_payload.branch || 'main' }}
       - name: Convert and Commit
