@@ -11,4 +11,4 @@ https://github.com/NCAR/rda-python-dsarch
 
 The latest documentation for this repo can be viewed at
 
-https://gdex-docs-dsarch.readthedocs.io/en/latest/index.html
+https://gdex-docs-dsarch.readthedocs.io
