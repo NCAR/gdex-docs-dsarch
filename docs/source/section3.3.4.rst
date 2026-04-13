@@ -19,9 +19,7 @@ mapping each original index (via :ref:`-OG <OG>`) to a new value (via :ref:`-GI 
 |           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.3.4:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto

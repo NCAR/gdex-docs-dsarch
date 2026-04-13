@@ -327,7 +327,7 @@ Mode Option -**XC** (-**CrossCopy**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 used with :ref:`-AW <AW>` or :ref:`-AS <AS>` to fill gaps in storage: copies
-files from Glade disk to Object Store (or vice versa) wherever copies are
+files from Glade disk to bOreas (or vice versa) wherever copies are
 missing.
 
 

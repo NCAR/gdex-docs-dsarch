@@ -25,9 +25,7 @@ record for the specified dataset.
 |           [:ref:`-(ET|EndTime) <ET>` VersionEndTime]
 |           [:ref:`-(DE|Description) <DE>` VersionNote]
 
-.. _mode3.2.1:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto
@@ -41,7 +39,7 @@ record for the specified dataset.
      - adds a new version control record to GDEXDB
 
 If a version index is provided and already exists in GDEXDB, the record is
-modified. A new record is created when no index is given (or it is 0) and :ref:`Mode <section4>`
+updated. A new record is created when no index is given (or it is 0) and :ref:`Mode <section4>`
 option :ref:`-NV <NV>` (-NewVersion) is present.
 
 A newly created record with no DOI number is in Pending status and can only
@@ -55,8 +53,8 @@ created with a new DOI number, the version control index is auto-generated.
 
 | **dsarch** d999009 :ref:`SV <SV>` :ref:`-NV <NV>` :ref:`-DN <DN>` DOINumber
 
-If the data of d999009 are substantially updated to a new version, run the
-same command with a new DOI number. The previous active record is automatically
+If d999009's data are substantially updated to a new version, run the same
+command with a new DOI number. The previous active record is automatically
 moved to History status and its DOI is superseded. Only one active version
 control record may exist per dataset.
 
@@ -69,8 +67,8 @@ the affected files to different names using Action :ref:`-MV <MV>` (their type i
 automatically set to 'V' for Version-controlled). Optionally create a new
 internal version at this point, then archive the replacement Web files.
 
-Note: Various GDEX use cases are outlined above. Review them so that DOIs in
-the GDEX are handled consistently.
+Note: Review the use cases above to ensure DOIs in GDEX are handled
+consistently.
 
 
 

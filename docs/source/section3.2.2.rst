@@ -19,9 +19,7 @@ given dataset.
 |           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.2.2:
-
-:ref:`Mode option <section4>` that can be specified for this action:
+Available mode option:
 
 .. list-table::
    :widths: auto
