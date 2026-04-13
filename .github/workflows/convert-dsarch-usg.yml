@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Repo gdex_docs_dsarch
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Checkout Repo rda_python_dsarch
         uses: actions/checkout@v4
