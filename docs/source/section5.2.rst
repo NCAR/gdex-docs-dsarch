@@ -233,7 +233,7 @@ specifies whether an entry represents a regular file
 Info Option -**FS** (-**FileStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level of a file, 'P' (public, visible to
+the access level of a file: 'P' (public, visible to
 all users) or 'I' (internal, visible to specialists only).
 
 
@@ -292,9 +292,12 @@ assign files to the right group during archiving. Stored per group via :ref:`-SG
 Info Option -**GT** (-**GroupType**) (Alias: -**GroupDataType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level for a group,
-'P' (public) or 'I' (internal). Changing from P to I recursively marks
-all nested subgroups and their Web files as internal.
+the access level for a group:
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ 'P' (public) or 'I' (internal). Changing from P to I recursively marks all nested subgroups and their Web files as internal.
 
 
 .. _HF:
@@ -311,9 +314,12 @@ Defaults to the local file names from :ref:`-LF <LF>` unless overridden explicit
 Info Option -**HT** (-**HelpFileType**) (Alias: -**HelpType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the category of a Help file,
-'D' (Document) or 'S' (Software). One value applies to all files in the
-batch.
+the category of a Help file:
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ 'D' (Document) or 'S' (Software). One value applies to all files in the batch.
 
 
 .. _ID:
@@ -401,11 +407,11 @@ where the file resides:
    * - 'C'
      - CGD data path
    * - 'G'
-     - Glade Disk (NCAR HPC filesystem)
+     - Glade Disk (NCAR HPC file system)
    * - 'O'
-     - Object Store
+     - bOreas
    * - 'B'
-     - both Glade and Object Store
+     - both Glade and bOreas
    * - 'R'
      - remote URL (Help files only)
 
@@ -577,7 +583,7 @@ Saved data home directory. For :ref:`-AS <AS>`, the dataset or group's stored pa
 used by default. For :ref:`-SG <SG>` and :ref:`-SD <SD>`, this value is written to GDEXDB.
 
 Keeping Saved paths accurate is important: NCAR users browse data through
-'rdals' using these paths. Each top-level group should map to one directory,
+'gdexls' using these paths. Each top-level group should map to one directory,
 with one subdirectory per subgroup level, mirroring the physical layout.
 
 
@@ -667,7 +673,7 @@ control record for a dataset.
 Info Option -**VT** (-**VersionStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the lifecycle state of a version control record:
+the life cycle state of a version control record:
 
 .. list-table::
    :widths: auto
@@ -704,7 +710,7 @@ data home directory. For :ref:`-AW <AW>`, the dataset or group's stored path is 
 by default. For :ref:`-SG <SG>` and :ref:`-SD <SD>`, this value is written to GDEXDB.
 
 Keeping Web paths accurate is important: NCAR users browse data through
-'rdals' using these paths. Each top-level group should map to one directory,
+'gdexls' using these paths. Each top-level group should map to one directory,
 with one subdirectory per subgroup level, mirroring the physical layout.
 
 
@@ -714,7 +720,7 @@ Info Option -**WT** (-**WebFileType**) (Aliases: -**WebType**, -**WebArchiveType
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 the accessibility of
-a Web file, 'D' (public data) or 'N' (NCAR internal data only). One value
+a Web file: 'D' (public data) or 'N' (NCAR internal data only). One value
 applies to all files in the batch.
 
 
@@ -725,7 +731,7 @@ Info Option -**WU** (-**WebURL**) (Aliases: -**URL**, -**WebAddress**) :
 
 the full URL of a Help file
 hosted remotely (e.g., on GitHub). Use with :ref:`-SH <SH>` (-SetHelpFile) to register
-the file in GDEXDB without needing a local copy on the GDEX Server.
+the file in GDEXDB without a local copy on the GDEX Server.
 
 
 

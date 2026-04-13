@@ -27,9 +27,7 @@ calling this action. See 'dsquasar' help for details.
 |           [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.4.12:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto

@@ -36,9 +36,7 @@ Multiple records can be processed in a single run.
 |           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.4.5:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto
@@ -65,7 +63,8 @@ must match the number of file names, except for options that accept a single
 shared value, such as :ref:`-AF <AF>`, :ref:`-DF <DF>`, and :ref:`-HT <HT>` (-HelpFileType).
 
 For remotely hosted Help files (e.g., on GitHub), provide the full URL via
-:ref:`-WU <WU>` (-WebURL) to add a record without a local copy on the GDEX Server.
+:ref:`-WU <WU>` (-WebURL) to register the file in GDEXDB without a local copy on the
+GDEX Server.
 
 
 

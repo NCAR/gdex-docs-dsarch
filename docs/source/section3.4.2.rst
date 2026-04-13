@@ -29,9 +29,7 @@ GDEXDB for the specified dataset, optionally filtered by file name.
 |           [:ref:`-(OF|OutputFile) <OF>` OutputFileName]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.4.2:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto

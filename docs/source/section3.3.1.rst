@@ -30,9 +30,7 @@ for the specified dataset. Multiple records can be processed in one run.
 |           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.3.1:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto

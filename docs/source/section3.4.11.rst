@@ -34,9 +34,7 @@ and registers them in GDEXDB. One or more files may be archived per execution.
 |           [:ref:`-(DD|DeleteDir) <DD>` DeleteLocalDirLevel]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.4.11:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto
@@ -79,7 +77,7 @@ file names, except for options that accept a single shared value: :ref:`-DF <DF>
 and :ref:`-HT <HT>` (-HelpFileType).
 
 The storage location is set via :ref:`-LC <LC>` (-Location). Defaults to 'B' (both Web
-Disk and Object Store).
+Disk and bOreas).
 
 
 
