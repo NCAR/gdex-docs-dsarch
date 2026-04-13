@@ -13,8 +13,8 @@ Action Option -**MV** (-**MoveFile**) :
 relocates archived files — across datasets, between groups,
 or to a new name. One or more files may be moved per execution.
 
-When a file's name or path changes, **dsarch** keeps the original name in GDEXDB
-as a linked alias pointing to the new name.
+When a file's name or path changes, **dsarch** retains the original name in
+GDEXDB as a linked alias pointing to the new name.
 
 Files can also be converted between types (Web to Saved or Saved to Web)
 using :ref:`-TS <TS>` (-ToSaved) or :ref:`-TW <TW>` (-ToWeb).
@@ -86,9 +86,7 @@ or
 |           [:ref:`-(LN|LoginName) <LN>` LoginAccountName]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.4.14:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto

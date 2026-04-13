@@ -11,9 +11,9 @@ Action Option -**RQ** (-**RestoreQuasarFile**) (Aliases: -**RestoreQuasar**, -**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 (Alias: -RestoreQuasar|-RestoreBackupFile|-RestoreBackup),
-finds the Quasar tar files that contain the specified Saved and/or Web files,
-downloads them from the Globus Quasar Server, and restores any files that
-are missing from the GDEX Server.
+finds the Quasar tar files containing the specified Saved and/or Web files,
+downloads them from the Globus Quasar Server, and restores any files missing
+from the GDEX Server.
 
 | **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(RQ|RestoreQuasarFile) [:ref:`Mode Options <mode3.4.13>`]
 |           [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
@@ -26,9 +26,7 @@ are missing from the GDEX Server.
 |           [:ref:`-(BP|BatchProcess) <BP>` [BatchControlInfo]]
 |           [:ref:`-(DB|Debug) <DB>` DebugModeInfo]
 
-.. _mode3.4.13:
-
-:ref:`Mode options <section4>` that can be specified for this action:
+Available mode options:
 
 .. list-table::
    :widths: auto

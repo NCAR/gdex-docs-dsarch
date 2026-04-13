@@ -16,7 +16,7 @@ Brackets [] indicate optional elements. A pipe '|' within parentheses, as in
    :header-rows: 0
 
    * - :ref:`Action options <section3>`
-     - specify what task to execute
+     - specify the task to execute
    * - :ref:`Mode options <section4>`
      - modify how an action behaves
    * - :ref:`Info options <section5>`
@@ -69,7 +69,9 @@ The description of an individual option is shown when **dsarch** is run as
 
 The description is shown for the option placed either before or after -(h|help).
 If no option is given, or **dsarch** is run without arguments, the full document
-is displayed using the UNIX 'more' utility.
+is displayed using the UNIX 'more' utility. A hard copy of this document
+can be printed from the saved file, dsarch.usg, in the rda_python_dsarch
+Python package.
 
 
 
