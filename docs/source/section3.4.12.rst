@@ -11,11 +11,12 @@ Action Option -**AQ** (-**ArchiveQuasarFile**) (Aliases: -**ArchiveQuasar**, -**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 (Alias: -ArchiveQuasar|-ArchiveBackupFile|-ArchiveBackup),
-packages archived Saved and/or Web files into a single tar file and uploads it
-to the Globus Quasar Server for long-term backup, recording the result in
-GDEXDB. In practice, the companion utility 'dsquasar' handles identifying
-files to back up, building optimally sized input lists (1-3 GB each), and
-calling this action. See 'dsquasar' help for details.
+packages archived Saved and/or Web files into a single tar file and
+uploads it to the Globus Quasar Server for long-term backup,
+recording the result in GDEXDB. In practice, the companion utility
+'dsquasar' handles identifying files to back up, building optimally
+sized input lists (1-3 GB each), and calling this action. See
+'dsquasar' help for details.
 
 | **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AQ|ArchiveQuasarFile) [:ref:`Mode Options <mode3.4.12>`]
 |           [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
@@ -50,7 +51,8 @@ Available mode options:
    * - :ref:`-(XC|CrossCopy) <XC>`
      - copies files from existing Quasar Backup and Disaster Recovery files to fill missing Backup/Drdata copies, using GDEXDB records for guidance
 
-At least one Saved and/or Web file name must be provided via :ref:`-SF <SF>` and/or :ref:`-WF <WF>`.
+At least one Saved and/or Web file name must be provided via :ref:`-SF <SF>`
+and/or :ref:`-WF <WF>`.
 
 
 

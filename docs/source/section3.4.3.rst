@@ -10,9 +10,9 @@
 Action Option -**SW** (-**SetWebFile**) (Alias: -**SetWeb**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-creates new or updates existing Web file
-records in GDEXDB for the specified dataset. Multiple records can be
-processed in a single run.
+creates new or updates existing
+Web file records in GDEXDB for the specified dataset. Multiple
+records can be processed in a single run.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(SW|SetWebFile) [:ref:`Mode Options <mode3.4.3>`]
 |           [:ref:`-(WF|WebFile) <WF>` webFileNames]
@@ -71,18 +71,20 @@ Available mode options:
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
-Web file names must be provided via :ref:`-WF <WF>` (-WebFile) unless :ref:`-ON <ON>` (-OrderNames)
-is used to reorder files. The number of values supplied to other :ref:`Info <section5>` options
-must match the number of file names, except for options that accept a single
-shared value, such as :ref:`-GI <GI>` (-GroupIndex), :ref:`-AF <AF>` (-ArchiveFormat), :ref:`-DF <DF>`
-(-DataFormat), and :ref:`-WT <WT>` (-WebFileType).
+Web file names must be provided via :ref:`-WF <WF>` (-WebFile) unless :ref:`-ON <ON>`
+(-OrderNames) is used to reorder files. The number of values supplied
+to other :ref:`Info options <section5>` must match the number of file names, except
+for options that accept a single shared value, such as :ref:`-GI <GI>`
+(-GroupIndex), :ref:`-AF <AF>` (-ArchiveFormat), :ref:`-DF <DF>` (-DataFormat), and :ref:`-WT <WT>`
+(-WebFileType).
 
-If no group index is specified and :ref:`-PO <PO>` (-PatternOffset) is present, file
-names are matched against group patterns saved via :ref:`-SG <SG>` (-SetGroup) to
-determine the group index automatically.
+If no group index is specified and :ref:`-PO <PO>` (-PatternOffset) is present,
+file names are matched against group patterns saved via :ref:`-SG <SG>`
+(-SetGroup) to determine the group index automatically.
 
-The file status may be set to P (public) or I (internal) for data types D,
-N, O, and S. Files assigned to an internal group are automatically set to I.
+The file status may be set to P (public) or I (internal) for data
+types D, N, O, and S. Files assigned to an internal group are
+automatically set to I.
 
 
 

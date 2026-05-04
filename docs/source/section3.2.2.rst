@@ -10,8 +10,8 @@
 Action Option -**GV** (-**GetVersion**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-retrieves DOI/Version control records from GDEXDB for a
-given dataset.
+retrieves DOI/Version control records from GDEXDB
+for a given dataset.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GV|GetVersion) [:ref:`Mode Option <mode3.2.2>`]
 |           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
@@ -28,8 +28,9 @@ Available mode option:
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
 
-Use :ref:`-FN <FN>` (-FieldNames) to specify which version control fields to retrieve.
-Defaults to 'VIEDSJX'. Use :ref:`-FN <FN>` ALL to retrieve all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which version control fields to
+retrieve. Defaults to 'VIEDSJX'. Use :ref:`-FN <FN>` ALL to retrieve all
+available fields.
 
 Valid version control field names and their corresponding :ref:`Info options <section5>`:
 
@@ -71,8 +72,8 @@ Valid version control field names and their corresponding :ref:`Info options <se
      - :ref:`-(DE|Description) <DE>`
      - note for the version control record
 
-Use :ref:`-OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
-it, results are displayed on screen.
+Use :ref:`-OF <OF>` (-OutputFile) to save the retrieved information to a file.
+Without it, results are displayed on screen.
 
 
 .. _3.2.2_e4:

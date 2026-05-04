@@ -10,8 +10,8 @@
 Action Option -**GW** (-**GetWebFile**) (Alias: -**GetWeb**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-retrieves Web file records from GDEXDB
-for the specified dataset, optionally filtered by file name.
+retrieves Web file records from
+GDEXDB for the specified dataset, optionally filtered by file name.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GW|GetWebFile) [:ref:`Mode Options <mode3.4.4>`]
 |           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
@@ -42,8 +42,8 @@ Available mode options:
    * - :ref:`-(RN|RelativeName) <RN>`
      - returns file names with paths relative to the Web path of the dataset or group
 
-Use :ref:`-FN <FN>` (-FieldNames) to specify which Web file fields to retrieve. Defaults
-to 'FINMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Web file fields to retrieve.
+Defaults to 'FINMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Web file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -115,13 +115,14 @@ Valid Web file field names and their corresponding :ref:`Info options <section5>
      - :ref:`-(DE|Description) <DE>`
      - Web file descriptions
 
-A dataset number is required unless Web file names are provided. If file
-names match multiple datasets and no dataset number is given, an error prompts
-the specialist to specify one and rerun. Incomplete file paths are expanded
-relative to the dataset Web Home Directory.
+A dataset number is required unless Web file names are provided. If
+file names match multiple datasets and no dataset number is given,
+an error prompts the specialist to specify one and rerun. Incomplete
+file paths are expanded relative to the dataset Web Home Directory.
 
-Results can be filtered by archive type (:ref:`-WT <WT>`), group (:ref:`-GI <GI>` or :ref:`-GN <GN>`), and
-description (:ref:`-DE <DE>`). The :ref:`-WF <WF>`, :ref:`-GN <GN>`, and :ref:`-DE <DE>` options accept the '%' wildcard.
+Results can be filtered by archive type (:ref:`-WT <WT>`), group (:ref:`-GI <GI>` or :ref:`-GN <GN>`),
+and description (:ref:`-DE <DE>`). The :ref:`-WF <WF>`, :ref:`-GN <GN>`, and :ref:`-DE <DE>` options accept the '%'
+wildcard.
 
 
 .. _3.4.4_e10:

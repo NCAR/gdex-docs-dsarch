@@ -4,8 +4,8 @@
 3.5 - All Info Actions
 =================================
 
-These two actions work across all record types at once, making it easy to
-snapshot or bulk-update a dataset:
+These two actions work across all record types at once, making it
+easy to snapshot or bulk-update a dataset:
 
 .. list-table::
    :widths: auto

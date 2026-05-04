@@ -10,8 +10,8 @@
 Action Option -**GD** (-**GetDataset**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-reads and displays dataset record fields from GDEXDB
-for the specified dataset.
+reads and displays dataset record fields from
+GDEXDB for the specified dataset.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](GD|GetDataset) [:ref:`Mode Options <mode3.1.2>`]
 |           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
@@ -32,8 +32,8 @@ Available mode options:
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - gathers and displays Saved/Web file counts
 
-Use :ref:`-FN <FN>` (-FieldNames) to select which dataset fields to include. Defaults
-to 'SWFULQ'. Use :ref:`-FN <FN>` ALL to retrieve every available field.
+Use :ref:`-FN <FN>` (-FieldNames) to select which dataset fields to include.
+Defaults to 'SWFULQ'. Use :ref:`-FN <FN>` ALL to retrieve every available field.
 
 Valid dataset field names and their corresponding :ref:`Info options <section5>`:
 
@@ -111,8 +111,8 @@ Valid dataset field names and their corresponding :ref:`Info options <section5>`
      - :ref:`-(ET|EndTime) <ET>`
      - time data end for dataset/group
 
-Use :ref:`-OF <OF>` (-OutputFile) to save the retrieved information to a file. Without
-it, results are displayed on screen.
+Use :ref:`-OF <OF>` (-OutputFile) to save the retrieved information to a file.
+Without it, results are displayed on screen.
 
 
 .. _3.1.2_e2:

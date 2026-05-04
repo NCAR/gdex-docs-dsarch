@@ -10,9 +10,9 @@
 Action Option -**GH** (-**GetHelpFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-retrieves Help file records (Documents
-and Software) from GDEXDB for the specified dataset, optionally filtered by
-file name.
+retrieves Help file records
+(Documents and Software) from GDEXDB for the specified dataset,
+optionally filtered by file name.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GH|GetHelpFile) [:ref:`Mode Options <mode3.4.6>`]
 |           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
@@ -37,8 +37,8 @@ Available mode option:
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
 
-Use :ref:`-FN <FN>` (-FieldNames) to specify which Help file fields to retrieve. Defaults
-to 'FINMTHSU'. Use :ref:`-FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Help file fields to retrieve.
+Defaults to 'FINMTHSU'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Help file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -95,12 +95,12 @@ Valid Help file field names and their corresponding :ref:`Info options <section5
      - :ref:`-(DE|Description) <DE>`
      - file descriptions
 
-A dataset number is required unless Help file names are provided. If file
-names match multiple datasets and no dataset number is given, an error prompts
-the specialist to specify one and rerun.
+A dataset number is required unless Help file names are provided. If
+file names match multiple datasets and no dataset number is given,
+an error prompts the specialist to specify one and rerun.
 
-Results can be filtered by type (:ref:`-HT <HT>`) and description (:ref:`-DE <DE>`). Both :ref:`-HF <HF>` and
-:ref:`-DE <DE>` accept the '%' wildcard.
+Results can be filtered by type (:ref:`-HT <HT>`) and description (:ref:`-DE <DE>`). Both
+:ref:`-HF <HF>` and :ref:`-DE <DE>` accept the '%' wildcard.
 
 
 

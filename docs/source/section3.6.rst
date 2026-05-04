@@ -4,8 +4,8 @@
 3.6 - Webpage Actions
 =================================
 
-After updating GDEXDB records, use these actions to refresh the corresponding
-web pages:
+After updating GDEXDB records, use these actions to refresh the
+corresponding web pages:
 
 .. list-table::
    :widths: auto

@@ -10,8 +10,9 @@
 Action Option -**GS** (-**GetSavedFile**) (Alias: -**GetSaved**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-retrieves Saved file records from
-GDEXDB for the specified dataset, optionally filtered by file name.
+retrieves Saved file records
+from GDEXDB for the specified dataset, optionally filtered by file
+name.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GS|GetSavedFile) [:ref:`Mode Options <mode3.4.2>`]
 |           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
@@ -42,8 +43,8 @@ Available mode options:
    * - :ref:`-(RN|RelativeName) <RN>`
      - returns file names with paths relative to the Saved path of the dataset or group
 
-Use :ref:`-FN <FN>` (-FieldNames) to specify which Saved file fields to retrieve. Defaults
-to 'FINMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Saved file fields to retrieve.
+Defaults to 'FINMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Saved file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -109,13 +110,14 @@ Valid Saved file field names and their corresponding :ref:`Info options <section
      - :ref:`-(DE|Description) <DE>`
      - Saved file descriptions
 
-A dataset number is required unless Saved file names are provided. If file
-names match multiple datasets and no dataset number is given, an error prompts
-the specialist to specify one and rerun. Incomplete file paths are expanded
-relative to the dataset Saved Home Directory.
+A dataset number is required unless Saved file names are provided. If
+file names match multiple datasets and no dataset number is given, an
+error prompts the specialist to specify one and rerun. Incomplete
+file paths are expanded relative to the dataset Saved Home Directory.
 
-Results can be filtered by archive type (:ref:`-ST <ST>`), group (:ref:`-GI <GI>` or :ref:`-GN <GN>`), and
-description (:ref:`-DE <DE>`). The :ref:`-SF <SF>`, :ref:`-GN <GN>`, and :ref:`-DE <DE>` options accept the '%' wildcard.
+Results can be filtered by archive type (:ref:`-ST <ST>`), group (:ref:`-GI <GI>` or :ref:`-GN <GN>`),
+and description (:ref:`-DE <DE>`). The :ref:`-SF <SF>`, :ref:`-GN <GN>`, and :ref:`-DE <DE>` options accept the '%'
+wildcard.
 
 
 

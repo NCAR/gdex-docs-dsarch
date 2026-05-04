@@ -10,9 +10,9 @@
 Action Option -**SQ** (-**SetQuasarFile**) (Aliases: -**SetQuasar**, -**SetBackupFile**, -**SetBackup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-updates Quasar backup file records
-in GDEXDB for the specified dataset. Multiple records can be processed per
-execution.
+updates Quasar backup
+file records in GDEXDB for the specified dataset. Multiple records
+can be processed per execution.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SQ|SetQuasarFile) [:ref:`Mode Options <mode3.4.7>`]
 |           [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
@@ -53,9 +53,10 @@ Available mode options:
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
 Quasar file names must be provided via :ref:`-QF <QF>` (-QuasarFile) unless :ref:`-ON <ON>`
-(-OrderNames) is used to reorder files. The number of values supplied to other
-:ref:`Info options <section5>` must match the number of file names, except for options that
-accept a single shared value, such as :ref:`-AF <AF>`, :ref:`-DF <DF>`, and :ref:`-QT <QT>` (-QuasarFileType).
+(-OrderNames) is used to reorder files. The number of values supplied
+to other :ref:`Info options <section5>` must match the number of file names, except
+for options that accept a single shared value, such as :ref:`-AF <AF>`, :ref:`-DF <DF>`, and
+:ref:`-QT <QT>` (-QuasarFileType).
 
 
 

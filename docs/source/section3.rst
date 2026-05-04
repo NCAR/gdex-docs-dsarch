@@ -4,16 +4,17 @@
 3 - ACTION OPTIONS
 =================================
 
-Action options tell **dsarch** what to do. They take no values. Some actions
-perform a single task; others bundle multiple tasks together and may trigger
-additional steps when certain :ref:`Mode options <section4>` are present. Only one Action option
-may be specified per execution.
+Action options tell **dsarch** what to do. They take no values. Some
+actions perform a single task; others bundle multiple tasks together and
+may trigger additional steps when certain :ref:`Mode options <section4>` are present. Only
+one Action option may be specified per execution.
 
-Write actions require the :ref:`-UD <UD>` (-UseDSARCH) flag to be set to 'Y', 'I', 'P',
-or 'W' for the target dataset before they can modify GDEXDB. Read actions
-have no such requirement.
+Write actions require the :ref:`-UD <UD>` (-UseDSARCH) flag to be set to 'Y', 'I',
+'P', or 'W' for the target dataset before they can modify GDEXDB. Read
+actions have no such requirement.
 
-Actions are grouped into seven categories based on the information they handle:
+Actions are grouped into seven categories based on the information they
+handle:
 
 .. list-table::
    :widths: auto

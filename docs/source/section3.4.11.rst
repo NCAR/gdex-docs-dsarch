@@ -11,8 +11,9 @@ Action Option -**AH** (-**ArchiveHelpFile**) (Aliases: -**ArchiveHelp**, -**Arch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 (Alias: -ArchiveHelp|-ArchHelp|-ArchHelpFile),
-copies local files to the GDEX Server as Help files (Documents and Software)
-and registers them in GDEXDB. One or more files may be archived per execution.
+copies local files to the GDEX Server as Help files (Documents and
+Software) and registers them in GDEXDB. One or more files may be
+archived per execution.
 
 | **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(AH|ArchiveHelpFile) [:ref:`Mode Options <mode3.4.11>`]
 |           :ref:`-(LF|LocalFile) <LF>` LocalFileNames
@@ -63,21 +64,21 @@ Available mode options:
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for Help files and saves them to GDEXDB
 
-Local file names are provided via :ref:`-LF <LF>` (-LocalFile). On the command line,
-'*' and '?' wildcards are supported. Files not in the current directory must
-include relative or absolute paths. If a directory is given via :ref:`-LD <LD>`
-(-LocalDirectory), files are gathered recursively.
+Local file names are provided via :ref:`-LF <LF>` (-LocalFile). On the command
+line, '*' and '?' wildcards are supported. Files not in the current
+directory must include relative or absolute paths. If a directory is
+given via :ref:`-LD <LD>` (-LocalDirectory), files are gathered recursively.
 
-Local file names are used as Help file names by default unless :ref:`-HF <HF>` (-HelpFile)
-is given explicitly. When :ref:`-KP <KP>` (-KeepLocalPath) is specified, local file paths
-are used as-is on the GDEX Server.
+Local file names are used as Help file names by default unless :ref:`-HF <HF>`
+(-HelpFile) is given explicitly. When :ref:`-KP <KP>` (-KeepLocalPath) is
+specified, local file paths are used as-is on the GDEX Server.
 
-The number of values supplied to :ref:`Info options <section5>` must match the number of local
-file names, except for options that accept a single shared value: :ref:`-DF <DF>`, :ref:`-AF <AF>`,
-and :ref:`-HT <HT>` (-HelpFileType).
+The number of values supplied to :ref:`Info options <section5>` must match the number
+of local file names, except for options that accept a single shared
+value: :ref:`-DF <DF>`, :ref:`-AF <AF>`, and :ref:`-HT <HT>` (-HelpFileType).
 
-The storage location is set via :ref:`-LC <LC>` (-Location). Defaults to 'B' (both Web
-Disk and bOreas).
+The storage location is set via :ref:`-LC <LC>` (-Location). Defaults to 'B'
+(both Web Disk and bOreas).
 
 
 

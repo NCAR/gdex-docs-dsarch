@@ -10,8 +10,8 @@
 Action Option -**DG** (-**DeleteGroup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-removes one or more group records from GDEXDB for the
-specified dataset.
+removes one or more group records from GDEXDB
+for the specified dataset.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](DG|DeleteGroup) [:ref:`Mode Options <mode3.3.3>`]
 |            :ref:`-(GI|GroupIndex) <GI>` GroupIndices
@@ -33,12 +33,12 @@ Available mode options:
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - re-evaluates and resets file counts for the affected groups
 
-Specify groups by index via :ref:`-GI <GI>` and the dataset via :ref:`-DS <DS>`. Deletion is blocked
-if a group still contains subgroups or data files. To delete a non-empty
-group, first retrieve its files with :ref:`-GS <GS>` (-GetSavedFile) or :ref:`-GW <GW>`
-(-GetWebFile), then either move them to another group via :ref:`-CG <CG>` (-ChangeGroup),
-reset their group index to 0, or remove them with :ref:`-DL <DL>` (-Delete). Once empty,
-the group can be deleted.
+Specify groups by index via :ref:`-GI <GI>` and the dataset via :ref:`-DS <DS>`. Deletion is
+blocked if a group still contains subgroups or data files. To delete
+a non-empty group, first retrieve its files with :ref:`-GS <GS>` (-GetSavedFile)
+or :ref:`-GW <GW>` (-GetWebFile), then either move them to another group via :ref:`-CG <CG>`
+(-ChangeGroup), reset their group index to 0, or remove them with
+:ref:`-DL <DL>` (-Delete). Once empty, the group can be deleted.
 
 
 .. _3.3.3_e8:

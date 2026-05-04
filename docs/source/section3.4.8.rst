@@ -10,8 +10,9 @@
 Action Option -**GQ** (-**GetQuasarFile**) (Aliases: -**GetQuasar**, -**GetBackupFile**, -**GetBackup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-retrieves Quasar backup file records
-from GDEXDB for the specified dataset, optionally filtered by file name.
+retrieves Quasar backup
+file records from GDEXDB for the specified dataset, optionally
+filtered by file name.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(GQ|GetQuasarFile) [:ref:`Mode Options <mode3.4.8>`]
 |           [:ref:`-(FN|FieldNames) <FN>` FieldNameString]
@@ -33,8 +34,8 @@ Available mode option:
    * - :ref:`-(FO|FormatOutput) <FO>`
      - formats each column to a uniform fixed width
 
-Use :ref:`-FN <FN>` (-FieldNames) to specify which Quasar file fields to retrieve. Defaults
-to 'FNMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
+Use :ref:`-FN <FN>` (-FieldNames) to specify which Quasar file fields to
+retrieve. Defaults to 'FNMTHS'. Use :ref:`-FN <FN>` ALL for all available fields.
 
 Valid Quasar file field names and their corresponding :ref:`Info options <section5>`:
 
@@ -85,13 +86,13 @@ Valid Quasar file field names and their corresponding :ref:`Info options <sectio
      - :ref:`-(DE|Description) <DE>`
      - Quasar file descriptions
 
-A dataset number is required unless Quasar file names are provided. If file
-names match multiple datasets and no dataset number is given, an error prompts
-the specialist to specify one and rerun. Incomplete file paths are expanded
-relative to the dataset Home Directory.
+A dataset number is required unless Quasar file names are provided.
+If file names match multiple datasets and no dataset number is given,
+an error prompts the specialist to specify one and rerun. Incomplete
+file paths are expanded relative to the dataset Home Directory.
 
-Results can be filtered by archive type (:ref:`-QT <QT>`) and description (:ref:`-DE <DE>`). Both
-:ref:`-QF <QF>` and :ref:`-DE <DE>` accept the '%' wildcard.
+Results can be filtered by archive type (:ref:`-QT <QT>`) and description (:ref:`-DE <DE>`).
+Both :ref:`-QF <QF>` and :ref:`-DE <DE>` accept the '%' wildcard.
 
 
 

@@ -10,8 +10,9 @@
 Action Option -**TV** (-**TerminateVersion**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-closes a version control record in GDEXDB for the
-specified dataset, marking it as history or removing it if still pending.
+closes a version control record in GDEXDB
+for the specified dataset, marking it as history or removing it if
+still pending.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](TV|TerminateVersion) [:ref:`Mode Options <mode3.2.3>`]
 |            :ref:`-(VI|VersionIndex) <VI>` VersionIndex
@@ -29,11 +30,12 @@ Available mode options:
    * - :ref:`-(NT|NoTrim) <NT>`
      - skips trimming of spaces and comments from input values, speeding up input file processing
 
-Provide the version index via :ref:`-VI <VI>` and the dataset number via :ref:`-DS <DS>`. Termination
-is blocked if any Web files are still linked to that version. To resolve this,
-first list those files using :ref:`-GW <GW>` (-GetWebFile), then either reassign their
-version index (to 0 or another value) or convert them to Saved files; only
-then can the version be terminated.
+Provide the version index via :ref:`-VI <VI>` and the dataset number via :ref:`-DS <DS>`.
+Termination is blocked if any Web files are still linked to that
+version. To resolve this, first list those files using :ref:`-GW <GW>`
+(-GetWebFile), then either reassign their version index (to 0 or
+another value) or convert them to Saved files; only then can the
+version be terminated.
 
 
 .. _3.2.3_e5:
