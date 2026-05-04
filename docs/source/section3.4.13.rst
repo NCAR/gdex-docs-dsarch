@@ -11,9 +11,9 @@ Action Option -**RQ** (-**RestoreQuasarFile**) (Aliases: -**RestoreQuasar**, -**
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 (Alias: -RestoreQuasar|-RestoreBackupFile|-RestoreBackup),
-finds the Quasar tar files containing the specified Saved and/or Web files,
-downloads them from the Globus Quasar Server, and restores any files missing
-from the GDEX Server.
+finds the Quasar tar files containing the specified Saved and/or Web
+files, downloads them from the Globus Quasar Server, and restores
+any files missing from the GDEX Server.
 
 | **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN -(RQ|RestoreQuasarFile) [:ref:`Mode Options <mode3.4.13>`]
 |           [:ref:`-(QF|QuasarFile) <QF>` QuasarFileNames]
@@ -43,9 +43,10 @@ Available mode options:
    * - :ref:`-(NT|NoTrim) <NT>`
      - skips trimming of spaces and comments from input values, speeding up input file processing
 
-At least one Quasar, Saved, and/or Web file name must be provided via :ref:`-QF <QF>`,
-:ref:`-SF <SF>`, and/or :ref:`-WF <WF>`. If only Quasar file names are given, the tar files are
-retrieved from the server but no Saved or Web files are restored.
+At least one Quasar, Saved, and/or Web file name must be provided via
+:ref:`-QF <QF>`, :ref:`-SF <SF>`, and/or :ref:`-WF <WF>`. If only Quasar file names are given, the tar
+files are retrieved from the server but no Saved or Web files are
+restored.
 
 
 

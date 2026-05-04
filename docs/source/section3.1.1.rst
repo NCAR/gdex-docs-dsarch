@@ -10,8 +10,9 @@
 Action Option -**SD** (-**SetDataset**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-updates properties of an existing dataset record in
-GDEXDB — such as paths, file count limits, access flags, and data periods.
+updates properties of an existing dataset record
+in GDEXDB — such as paths, file count limits, access flags, and data
+periods.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SD|SetDataset) [:ref:`Mode Options <mode3.1.1>`]
 |           [:ref:`-(UD|UseDSARCH) <UD>` UseDSARCHFlag]
@@ -56,14 +57,14 @@ Available mode options:
      - re-evaluates and resets file counts
 
 Dataset numbers are normally created via the Metadata Manager. Action
-:ref:`-SD <SD>` modifies the dataset record and any associated group data periods.
-Data periods for groups can be modified in **dsarch**, but must be created
-or removed through Metadata Manager.
+:ref:`-SD <SD>` modifies the dataset record and any associated group data
+periods. Data periods for groups can be modified in **dsarch**, but
+must be created or removed through Metadata Manager.
 
-The web file access location flag is set via :ref:`-LC <LC>` (-Location). The default
-is 'G' (Glade Disk) when any web data files exist. The default becomes 'O'
-if all web files reside on bOreas, or 'C' if all are at the CGD data
-path.
+The web file access location flag is set via :ref:`-LC <LC>` (-Location). The
+default is 'G' (Glade Disk) when any web data files exist. The default
+becomes 'O' if all web files reside on bOreas, or 'C' if all are at
+the CGD data path.
 
 
 .. _3.1.1_e1:

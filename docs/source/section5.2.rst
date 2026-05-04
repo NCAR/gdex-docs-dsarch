@@ -4,8 +4,8 @@
 5.2 - Multi-Value Info Options
 =================================
 
-A multi-value Info option accepts a list of one or more values. Supplying
-zero values causes an error.
+A multi-value Info option accepts a list of one or more values.
+Supplying zero values causes an error.
 
 
 .. _AF:
@@ -13,8 +13,9 @@ zero values causes an error.
 Info Option -**AF** (-**ArchiveFormat**) (Aliases: -**FileFormat**, -**ExternalFormat**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-describes
-how a data file has been packaged or compressed. Recognized values:
+(Alias: :ref:`-FF <FF>`|-FileFormat),
+describes how a data file has been packaged or compressed.
+Recognized values:
 
 .. list-table::
    :widths: auto
@@ -33,8 +34,9 @@ how a data file has been packaged or compressed. Recognized values:
    * - 'BZ2'
      - bzip2-compressed
 
-Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII blocked,
-then tarred, then gzipped. Maximum total length is 20 characters.
+Combine values in processing order, e.g., 'C1.TAR.GZ' = COS ASCII
+blocked, then tarred, then gzipped. Maximum total length is 20
+characters.
 
 
 .. _BD:
@@ -42,8 +44,8 @@ then tarred, then gzipped. Maximum total length is 20 characters.
 Info Option -**BD** (-**BeginDate**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the earliest date covered by the data, for a group,
-the whole dataset, or a version control record.
+the earliest date covered by the data, for a
+group, the whole dataset, or a version control record.
 
 
 .. _BF:
@@ -51,8 +53,8 @@ the whole dataset, or a version control record.
 Info Option -**BF** (-**BackupFlag**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-controls whether and how a dataset or group is backed
-up to Quasar. Values:
+controls whether and how a dataset or group
+is backed up to Quasar. Values:
 
 .. list-table::
    :widths: auto
@@ -73,12 +75,12 @@ up to Quasar. Values:
 Info Option -**BP** (-**BatchProcess**) (Aliases: -**d**, -**DelayedMode**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-defers execution: the
-command is written to GDEXDB and run later by the `dscheck <https://gdex-docs-dscheck.readthedocs.io>`_ daemon. One
-or more host names may follow :ref:`-BP <BP>` to target or exclude specific hosts
-(e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99)
-can also be specified, e.g., '-d 5'; defaults to 2. Archive actions
-(:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-AH <AH>`, :ref:`-AQ <AQ>`) retry automatically after storage system outage.
+defers execution:
+
+.. list-table::
+   :widths: auto
+   :header-rows: 1
+ the command is written to GDEXDB and run later by the `dscheck <https://gdex-docs-dscheck.readthedocs.io>`_ daemon. One or more host names may follow :ref:`-BP <BP>` to target or exclude specific hosts (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99) can also be specified, e.g., '-d 5'; defaults to 2. Archive actions (:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-AH <AH>`, :ref:`-AQ <AQ>`) retry automatically after storage system outage.
 
 
 .. _BS:
@@ -105,8 +107,8 @@ the current Quasar backup state for a file:
 Info Option -**BT** (-**BeginTime**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the time component of the data start, for a group,
-the whole dataset, or a version control record.
+the time component of the data start, for a
+group, the whole dataset, or a version control record.
 
 
 .. _DA:
@@ -114,8 +116,9 @@ the whole dataset, or a version control record.
 Info Option -**DA** (-**DataAccess**) (Aliases: -**DataAccessflag**, -**FileListFlag**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-controls which
-file list views are displayed at the dataset and/or top group level:
+(Alias: -DataAccessFlag|-FileListFlag),
+controls which file list views are displayed at the dataset
+and/or top group level:
 
 .. list-table::
    :widths: auto
@@ -136,10 +139,11 @@ file list views are displayed at the dataset and/or top group level:
 Info Option -**DB** (-**Debug**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-enables debug logging. Up to 3 values may be given: debug
-level (required), log file path, and log file name. The level can be a
-single integer (e.g., 1000) or a range (e.g., 200-1000). Defaults: log
-path '$DECSHOME/dssdb/log', file name 'mydss.dbg'.
+enables debug logging. Up to 3 values may be
+given: debug level (required), log file path, and log file name.
+The level can be a single integer (e.g., 1000) or a range
+(e.g., 200-1000). Defaults: log path '$DSSHOME/dssdb/log', file
+name 'mydss.dbg'.
 
 
 .. _DE:
@@ -147,11 +151,11 @@ path '$DECSHOME/dssdb/log', file name 'mydss.dbg'.
 Info Option -**DE** (-**Description**) (Aliases: -**Desc**, -**Note**, -**FileDesc**, -**FileDescription**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a
-free-text description for a data file or version record. Multi-line values
-are supported in input files (:ref:`-IF <IF>`). Quote values containing spaces on the
-command line. With version control actions (:ref:`-SV <SV>`), this becomes the version
-note.
+(Alias: -Desc|-Note|-FileDesc|-FileDescription),
+a free-text description for a data file or version record.
+Multi-line values are supported in input files (:ref:`-IF <IF>`). Quote values
+containing spaces on the command line. With version control
+actions (:ref:`-SV <SV>`), this becomes the version note.
 
 
 .. _DF:
@@ -159,10 +163,10 @@ note.
 Info Option -**DF** (-**DataFormat**) (Aliases: -**TF**, -**ContentFormat**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the
-scientific format of the data content (e.g., NetCDF, IMMA, BINARY). A
-dataset-level default can be set via :ref:`-SD <SD>` and is applied automatically when
-no format is specified at archive time.
+(Alias: -TF|-ContentFormat),
+the scientific format of the data content (e.g., NetCDF, IMMA,
+BINARY). A dataset-level default can be set via :ref:`-SD <SD>` and is applied
+automatically when no format is specified at archive time.
 
 
 .. _DN:
@@ -170,8 +174,9 @@ no format is specified at archive time.
 Info Option -**DN** (-**DOINumber**) (Aliases: -**DOI**, -**DOIName**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the Digital Object Identifier
-assigned to a dataset version, providing a stable, citable reference.
+the Digital Object
+Identifier assigned to a dataset version, providing a stable,
+citable reference.
 
 
 .. _DO:
@@ -179,9 +184,9 @@ assigned to a dataset version, providing a stable, citable reference.
 Info Option -**DO** (-**DisplayOrder**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-explicit display position indices for files within a
-group or across the dataset. Overridden by :ref:`-RO <RO>` (-ResetOrder) when both are
-present.
+explicit display position indices for files
+within a group or across the dataset. Overridden by :ref:`-RO <RO>`
+(-ResetOrder) when both are present.
 
 
 .. _ED:
@@ -189,8 +194,8 @@ present.
 Info Option -**ED** (-**EndDate**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the latest date covered by the data, for a group,
-the whole dataset, or a version control record.
+the latest date covered by the data, for a
+group, the whole dataset, or a version control record.
 
 
 .. _ET:
@@ -198,8 +203,8 @@ the whole dataset, or a version control record.
 Info Option -**ET** (-**EndTime**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the time component of the data end, for a group,
-the whole dataset, or a version control record.
+the time component of the data end, for a
+group, the whole dataset, or a version control record.
 
 
 .. _EV:
@@ -207,8 +212,8 @@ the whole dataset, or a version control record.
 Info Option -**EV** (-**ExternalVersion**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the human-readable version label shown publicly
-for a dataset (e.g., '2.0'). Empty by default.
+the human-readable version label shown
+publicly for a dataset (e.g., '2.0'). Empty by default.
 
 
 .. _FD:
@@ -216,7 +221,8 @@ for a dataset (e.g., '2.0'). Empty by default.
 Info Option -**FD** (-**FileDate**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the calendar date a data file was last modified.
+the calendar date a data file was last
+modified.
 
 
 .. _FF:
@@ -224,8 +230,8 @@ the calendar date a data file was last modified.
 Info Option -**FF** (-**FileFlag**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-specifies whether an entry represents a regular file
-('F') or a directory path ('P').
+specifies whether an entry represents a regular
+file ('F') or a directory path ('P').
 
 
 .. _FS:
@@ -233,8 +239,9 @@ specifies whether an entry represents a regular file
 Info Option -**FS** (-**FileStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level of a file: 'P' (public, visible to
-all users) or 'I' (internal, visible to specialists only).
+the access level of a file: 'P' (public,
+visible to all users) or 'I' (internal, visible to specialists
+only).
 
 
 .. _FT:
@@ -250,12 +257,14 @@ the time of day a data file was last modified.
 Info Option -**GI** (-**GroupIndex**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-assigns files to a specific group within a dataset.
-Groups must be created first via :ref:`-SG <SG>` (-SetGroup). Use 1, 2, 3, ... for
-specific groups; 0 means no group assignment (default).
+assigns files to a specific group within a
+dataset. Groups must be created first via :ref:`-SG <SG>` (-SetGroup). Use
+1, 2, 3, ... for specific groups; 0 means no group assignment
+(default).
 
 When omitted for :ref:`-AS <AS>` or :ref:`-AW <AW>`, **dsarch** attempts to assign groups
-automatically by matching file names against patterns stored in GDEXDB.
+automatically by matching file names against patterns stored in
+GDEXDB.
 
 
 .. _GL:
@@ -263,9 +272,9 @@ automatically by matching file names against patterns stored in GDEXDB.
 Info Option -**GL** (-**GroupLevel**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the number of group nesting levels displayed on the
-web interface. Defaults to 2. A value of -2 shows one level initially,
-expanding to two when subgroups are present.
+the number of group nesting levels displayed
+on the web interface. Defaults to 2. A value of -2 shows one level
+initially, expanding to two when subgroups are present.
 
 
 .. _GN:
@@ -273,9 +282,10 @@ expanding to two when subgroups are present.
 Info Option -**GN** (-**GroupName**) (Alias: -**GroupID**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a short human-readable identifier for
-a group (up to 20 characters). Set via :ref:`-SG <SG>` (-SetGroup). Names can be used
-wherever group indices are accepted, and appear on file list webpages.
+a short human-readable
+identifier for a group (up to 20 characters). Set via :ref:`-SG <SG>`
+(-SetGroup). Names can be used wherever group indices are
+accepted, and appear on file list webpages.
 
 
 .. _GP:
@@ -283,8 +293,9 @@ wherever group indices are accepted, and appear on file list webpages.
 Info Option -**GP** (-**GroupPattern**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-wildcard patterns that **dsarch** uses to automatically
-assign files to the right group during archiving. Stored per group via :ref:`-SG <SG>`.
+wildcard patterns that **dsarch** uses to
+automatically assign files to the right group during archiving.
+Stored per group via :ref:`-SG <SG>`.
 
 
 .. _GT:
@@ -292,12 +303,10 @@ assign files to the right group during archiving. Stored per group via :ref:`-SG
 Info Option -**GT** (-**GroupType**) (Alias: -**GroupDataType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the access level for a group:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- 'P' (public) or 'I' (internal). Changing from P to I recursively marks all nested subgroups and their Web files as internal.
+the access level for a
+group: 'P' (public) or 'I' (internal). Changing from P to I
+recursively marks all nested subgroups and their Web files as
+internal.
 
 
 .. _HF:
@@ -305,8 +314,9 @@ the access level for a group:
 Info Option -**HF** (-**HelpFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the destination names for Help files on the GDEX Server.
-Defaults to the local file names from :ref:`-LF <LF>` unless overridden explicitly.
+the destination names for Help files on the
+GDEX Server. Defaults to the local file names from :ref:`-LF <LF>` unless
+overridden explicitly.
 
 
 .. _HT:
@@ -314,12 +324,9 @@ Defaults to the local file names from :ref:`-LF <LF>` unless overridden explicit
 Info Option -**HT** (-**HelpFileType**) (Alias: -**HelpType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the category of a Help file:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- 'D' (Document) or 'S' (Software). One value applies to all files in the batch.
+the category of a Help
+file: 'D' (Document) or 'S' (Software). One value applies to all
+files in the batch.
 
 
 .. _ID:
@@ -327,8 +334,8 @@ the category of a Help file:
 Info Option -**ID** (-**InitialDate**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the original publication or release date of a Help,
-Document, or Software file.
+the original publication or release date of
+a Help, Document, or Software file.
 
 
 .. _IF:
@@ -336,10 +343,11 @@ Document, or Software file.
 Info Option -**IF** (-**InputFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-one or more input file names provided on the command
-line. Each file name must start with the dataset number (format 'dNNNNNN.*')
-and match the :ref:`-DS <DS>` value. This naming rule is a safeguard against accidentally
-running an action on the wrong dataset.
+one or more input file names provided on the
+command line. Each file name must start with the dataset number
+(format 'dNNNNNN.*') and match the :ref:`-DS <DS>` value. This naming rule
+is a safeguard against accidentally running an action on the
+wrong dataset.
 
 Input file format rules:
 
@@ -357,9 +365,9 @@ Input file format rules:
 Info Option -**IV** (-**InternalVersion**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a minor revision counter within the same DOI.
-Increments when data are updated without changing the DOI itself. Starts
-at 1 when a new DOI record is created.
+a minor revision counter within the
+same DOI. Increments when data are updated without changing the
+DOI itself. Starts at 1 when a new DOI record is created.
 
 
 .. _KV:
@@ -367,9 +375,9 @@ at 1 when a new DOI record is created.
 Info Option -**KV** (-**KeyValue**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-custom key/value metadata pairs for a dataset. Use :ref:`-SD <SD>`
-to set them and :ref:`-GD <GD>` to view them. Keys: up to 40 characters; values: up to
-128 characters.
+custom key/value metadata pairs for a dataset.
+Use :ref:`-SD <SD>` to set them and :ref:`-GD <GD>` to view them. Keys: up to 40
+characters; values: up to 128 characters.
 
 Set a pair:
 
@@ -415,8 +423,8 @@ where the file resides:
    * - 'R'
      - remote URL (Help files only)
 
-At the dataset level (as the online access location), only 'G' or 'O'
-are valid.
+At the dataset level (as the online access location), only 'G'
+or 'O' are valid.
 
 
 .. _LF:
@@ -424,10 +432,10 @@ are valid.
 Info Option -**LF** (-**LocalFile**) (Aliases: -**LocFile**, -**SourceFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the local source files to
-archive via :ref:`-AS <AS>`, :ref:`-AW <AW>`, or :ref:`-AH <AH>`. UNIX wildcards ('*', '?') are accepted on
-the command line. Use absolute or relative paths for files outside the
-current directory.
+the local source
+files to archive via :ref:`-AS <AS>`, :ref:`-AW <AW>`, or :ref:`-AH <AH>`. UNIX wildcards ('*', '?')
+are accepted on the command line. Use absolute or relative paths
+for files outside the current directory.
 
 
 .. _MC:
@@ -435,8 +443,8 @@ current directory.
 Info Option -**MC** (-**MD5Checksum**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the MD5 checksum of a data file on the GDEX Server,
-used for integrity verification.
+the MD5 checksum of a data file on the GDEX
+Server, used for integrity verification.
 
 
 .. _ML:
@@ -444,10 +452,10 @@ used for integrity verification.
 Info Option -**ML** (-**MetaLink**) (Alias: -**MetadataLink**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a URL pointing to the content
-metadata page for a dataset, group, or file. Normally set automatically by
-**gatherxml** when :ref:`-GX <GX>` is used. A custom value may be provided and will
-take precedence over the auto-generated link.
+a URL pointing to the
+content metadata page for a dataset, group, or file. Normally set
+automatically by **gatherxml** when :ref:`-GX <GX>` is used. A custom value may
+be provided and will take precedence over the auto-generated link.
 
 
 .. _ND:
@@ -455,8 +463,8 @@ take precedence over the auto-generated link.
 Info Option -**ND** (-**NoteDocument**) (Aliases: -**DocumentNote**, -**DescDocument**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a brief
-description of the documentation available for a dataset.
+a
+brief description of the documentation available for a dataset.
 
 
 .. _NI:
@@ -464,8 +472,9 @@ description of the documentation available for a dataset.
 Info Option -**NI** (-**NoteInternal**) (Aliases: -**InternalNote**, -**DescInternal**, -**DI**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-an internal
-note about a group's or dataset's data, visible to specialists only.
+(Alias: -InternalNote|-DescInternal|-DI),
+an internal note about a group's or dataset's data, visible to
+specialists only.
 
 
 .. _NS:
@@ -473,8 +482,9 @@ note about a group's or dataset's data, visible to specialists only.
 Info Option -**NS** (-**NoteSoftware**) (Aliases: -**SoftwareNote**, -**DescSoftware**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a description of
-any software tools or scripts associated with a dataset.
+a
+description of any software tools or scripts associated with a
+dataset.
 
 
 .. _NW:
@@ -482,8 +492,9 @@ any software tools or scripts associated with a dataset.
 Info Option -**NW** (-**NoteWeb**) (Aliases: -**WebNote**, -**DescWeb**, -**DW**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a public-facing description
-of the web-accessible data for a group or the dataset as a whole.
+a public-facing
+description of the web-accessible data for a group or the dataset
+as a whole.
 
 
 .. _OB:
@@ -491,9 +502,10 @@ of the web-accessible data for a group or the dataset as a whole.
 Info Option -**OB** (-**OrderBy**) (Alias: -**OrderByPattern**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a date/time pattern that guides
-temporal sorting when combined with :ref:`-ON <ON>`. For example, 'YYYYmon' sorts by
-4-digit year followed by 3-letter month abbreviation.
+a date/time pattern
+that guides temporal sorting when combined with :ref:`-ON <ON>`. For example,
+'YYYYmon' sorts by 4-digit year followed by 3-letter month
+abbreviation.
 
 
 .. _OD:
@@ -501,8 +513,8 @@ temporal sorting when combined with :ref:`-ON <ON>`. For example, 'YYYYmon' sort
 Info Option -**OD** (-**OriginDataset**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the dataset the files are being moved from when
-using :ref:`-MV <MV>` (-MoveFile).
+the dataset the files are being moved
+from when using :ref:`-MV <MV>` (-MoveFile).
 
 
 .. _OG:
@@ -510,8 +522,8 @@ using :ref:`-MV <MV>` (-MoveFile).
 Info Option -**OG** (-**OriginGroup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the existing group indices to be renumbered by
-:ref:`-CG <CG>` (-ChangeGroup).
+the existing group indices to be renumbered
+by :ref:`-CG <CG>` (-ChangeGroup).
 
 
 .. _OT:
@@ -519,8 +531,8 @@ the existing group indices to be renumbered by
 Info Option -**OT** (-**OriginType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the source file type when converting between types
-(e.g., Web to Saved) during a :ref:`-MV <MV>` (-MoveFile) operation.
+the source file type when converting between
+types (e.g., Web to Saved) during a :ref:`-MV <MV>` (-MoveFile) operation.
 
 
 .. _PI:
@@ -528,8 +540,8 @@ the source file type when converting between types
 Info Option -**PI** (-**ParentIndex**) (Alias: -**ParentGroupIndex**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the index of the parent
-group for a subgroup. Groups can be nested to any depth.
+the index of the
+parent group for a subgroup. Groups can be nested to any depth.
 
 
 .. _QF:
@@ -537,8 +549,8 @@ group for a subgroup. Groups can be nested to any depth.
 Info Option -**QF** (-**QuasarFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the name of the Quasar backup (tar) file, required
-for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).
+the name of the Quasar backup (tar) file,
+required for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).
 
 
 .. _QT:
@@ -546,12 +558,9 @@ for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).
 Info Option -**QT** (-**QuasarFileType**) (Aliases: -**QuasarType**, -**BackupType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the backup scope:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- 'B' (backup only) or 'D' (backup plus disaster recovery copy).
+the
+backup scope: 'B' (backup only) or 'D' (backup plus disaster
+recovery copy).
 
 
 .. _RF:
@@ -559,8 +568,9 @@ the backup scope:
 Info Option -**RF** (-**OriginFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the source file names for :ref:`-MV <MV>` (-MoveFile) when they
-differ from the destination names given via :ref:`-SF <SF>`, :ref:`-WF <WF>`, or :ref:`-HF <HF>`.
+the source file names for :ref:`-MV <MV>` (-MoveFile)
+when they differ from the destination names given via :ref:`-SF <SF>`, :ref:`-WF <WF>`,
+or :ref:`-HF <HF>`.
 
 
 .. _SF:
@@ -568,9 +578,9 @@ differ from the destination names given via :ref:`-SF <SF>`, :ref:`-WF <WF>`, or
 Info Option -**SF** (-**SavedFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the destination names for Saved files on the GDEX Server.
-For :ref:`-AS <AS>` (-ArchiveSavedFile), defaults to the local file names from :ref:`-LF <LF>`
-unless specified explicitly.
+the destination names for Saved files on the
+GDEX Server. For :ref:`-AS <AS>` (-ArchiveSavedFile), defaults to the local
+file names from :ref:`-LF <LF>` unless specified explicitly.
 
 
 .. _SP:
@@ -578,13 +588,15 @@ unless specified explicitly.
 Info Option -**SP** (-**SavedPath**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the directory path for Saved files, relative to the
-Saved data home directory. For :ref:`-AS <AS>`, the dataset or group's stored path is
-used by default. For :ref:`-SG <SG>` and :ref:`-SD <SD>`, this value is written to GDEXDB.
+the directory path for Saved files, relative
+to the Saved data home directory. For :ref:`-AS <AS>`, the dataset or
+group's stored path is used by default. For :ref:`-SG <SG>` and :ref:`-SD <SD>`, this
+value is written to GDEXDB.
 
-Keeping Saved paths accurate is important: NCAR users browse data through
-'gdexls' using these paths. Each top-level group should map to one directory,
-with one subdirectory per subgroup level, mirroring the physical layout.
+Keeping Saved paths accurate is important: NCAR users browse
+data through 'gdexls' using these paths. Each top-level group
+should map to one directory, with one subdirectory per subgroup
+level, mirroring the physical layout.
 
 
 .. _SR:
@@ -592,8 +604,8 @@ with one subdirectory per subgroup level, mirroring the physical layout.
 Info Option -**SR** (-**Source**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the person, team, or organization that contributed or
-produced a Help file.
+the person, team, or organization that
+contributed or produced a Help file.
 
 
 .. _ST:
@@ -601,8 +613,8 @@ produced a Help file.
 Info Option -**ST** (-**SavedFileType**) (Aliases: -**SavedType**, -**SavedArchiveType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the role of a
-Saved file:
+the
+role of a Saved file:
 
 .. list-table::
    :widths: auto
@@ -627,8 +639,8 @@ One value applies to all files in the batch.
 Info Option -**SZ** (-**Size**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the file size in bytes. Measured automatically from local
-files during archiving; provide explicitly to override.
+the file size in bytes. Measured automatically from
+local files during archiving; provide explicitly to override.
 
 
 .. _TG:
@@ -636,9 +648,9 @@ files during archiving; provide explicitly to override.
 Info Option -**TG** (-**TopGroupIndex**) (Alias: -**TopGroup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the index of the outermost
-(top-level) group that a Saved or Web file belongs to within a group
-hierarchy.
+the index of the
+outermost (top-level) group that a Saved or Web file belongs to
+within a group hierarchy.
 
 
 .. _TI:
@@ -646,8 +658,9 @@ hierarchy.
 Info Option -**TI** (-**Title**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the display title for a dataset or group. Dataset titles
-cannot be changed through **dsarch** — use the Metadata Editor instead.
+the display title for a dataset or group. Dataset
+titles cannot be changed through **dsarch** — use the Metadata
+Editor instead.
 
 
 .. _TL:
@@ -655,8 +668,9 @@ cannot be changed through **dsarch** — use the Metadata Editor instead.
 Info Option -**TL** (-**ThreddLink**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-a URL to the THREDDS Catalog page for a specific file.
-Set to 'Y' to indicate that THREDDS Catalog information has been gathered.
+a URL to the THREDDS Catalog page for a
+specific file. Set to 'Y' to indicate that THREDDS Catalog
+information has been gathered.
 
 
 .. _VI:
@@ -664,8 +678,8 @@ Set to 'Y' to indicate that THREDDS Catalog information has been gathered.
 Info Option -**VI** (-**VersionIndex**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the numeric identifier of a specific DOI/Version
-control record for a dataset.
+the numeric identifier of a specific
+DOI/Version control record for a dataset.
 
 
 .. _VT:
@@ -673,12 +687,9 @@ control record for a dataset.
 Info Option -**VT** (-**VersionStatus**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the life cycle state of a version control record:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- 'A' (Active), 'P' (Pending — no DOI yet), or 'H' (History — terminated).
+the life cycle state of a version control
+record: 'A' (Active), 'P' (Pending — no DOI yet), or 'H' (History
+— terminated).
 
 
 .. _WF:
@@ -686,9 +697,9 @@ the life cycle state of a version control record:
 Info Option -**WF** (-**WebFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the destination names for Web files on the GDEX Server.
-For :ref:`-AW <AW>` (-ArchiveWebFile), defaults to the local file names from :ref:`-LF <LF>`
-unless specified explicitly.
+the destination names for Web files on the GDEX
+Server. For :ref:`-AW <AW>` (-ArchiveWebFile), defaults to the local file
+names from :ref:`-LF <LF>` unless specified explicitly.
 
 
 .. _WH:
@@ -696,8 +707,9 @@ unless specified explicitly.
 Info Option -**WH** (-**WebHome**) (Alias: -**WebDataHome**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-an alternative Web data home
-directory for a dataset. Stored in GDEXDB via :ref:`-SD <SD>` (-SetDataset).
+an alternative Web data
+home directory for a dataset. Stored in GDEXDB via :ref:`-SD <SD>`
+(-SetDataset).
 
 
 .. _WP:
@@ -705,13 +717,15 @@ directory for a dataset. Stored in GDEXDB via :ref:`-SD <SD>` (-SetDataset).
 Info Option -**WP** (-**WebPath**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the directory path for Web files, relative to the Web
-data home directory. For :ref:`-AW <AW>`, the dataset or group's stored path is used
-by default. For :ref:`-SG <SG>` and :ref:`-SD <SD>`, this value is written to GDEXDB.
+the directory path for Web files, relative to
+the Web data home directory. For :ref:`-AW <AW>`, the dataset or group's
+stored path is used by default. For :ref:`-SG <SG>` and :ref:`-SD <SD>`, this value is
+written to GDEXDB.
 
-Keeping Web paths accurate is important: NCAR users browse data through
-'gdexls' using these paths. Each top-level group should map to one directory,
-with one subdirectory per subgroup level, mirroring the physical layout.
+Keeping Web paths accurate is important: NCAR users browse data
+through 'gdexls' using these paths. Each top-level group should
+map to one directory, with one subdirectory per subgroup level,
+mirroring the physical layout.
 
 
 .. _WT:
@@ -719,9 +733,9 @@ with one subdirectory per subgroup level, mirroring the physical layout.
 Info Option -**WT** (-**WebFileType**) (Aliases: -**WebType**, -**WebArchiveType**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the accessibility of
-a Web file: 'D' (public data) or 'N' (NCAR internal data only). One value
-applies to all files in the batch.
+the
+accessibility of a Web file: 'D' (public data) or 'N' (NCAR
+internal data only). One value applies to all files in the batch.
 
 
 .. _WU:
@@ -729,9 +743,10 @@ applies to all files in the batch.
 Info Option -**WU** (-**WebURL**) (Aliases: -**URL**, -**WebAddress**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-the full URL of a Help file
-hosted remotely (e.g., on GitHub). Use with :ref:`-SH <SH>` (-SetHelpFile) to register
-the file in GDEXDB without a local copy on the GDEX Server.
+the full URL of a Help
+file hosted remotely (e.g., on GitHub). Use with :ref:`-SH <SH>` (-SetHelpFile)
+to register the file in GDEXDB without a local copy on the GDEX
+Server.
 
 
 

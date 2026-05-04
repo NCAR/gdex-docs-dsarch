@@ -10,8 +10,9 @@
 Action Option -**DL** (-**Delete**) (Aliases: -**RM**, -**Remove**, -**DeleteFile**, -**RemoveFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-permanently
-removes files from GDEX Servers and deletes their records from GDEXDB.
+(Alias: -RM|-Remove|-DeleteFile|-RemoveFile),
+permanently removes files from GDEX Servers and deletes their
+records from GDEXDB.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(DL|Delete) [:ref:`Mode Options <mode3.4.15>`]
 |           [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
@@ -69,8 +70,8 @@ Available mode options:
      - removes empty Saved or Web directories after deletion
 
 Provide the file names to delete via :ref:`-SF <SF>`, :ref:`-WF <WF>`, :ref:`-HF <HF>`, or :ref:`-QF <QF>`. Use :ref:`-DD <DD>`
-(-DeleteDir) to specify how many levels of empty parent directories to
-remove after deletion.
+(-DeleteDir) to specify how many levels of empty parent directories
+to remove after deletion.
 
 
 

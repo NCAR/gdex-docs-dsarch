@@ -10,8 +10,9 @@
 Action Option -**CG** (-**ChangeGroup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-renumbers group indices for the specified dataset,
-mapping each original index (via :ref:`-OG <OG>`) to a new value (via :ref:`-GI <GI>`).
+renumbers group indices for the specified
+dataset, mapping each original index (via :ref:`-OG <OG>`) to a new value (via
+:ref:`-GI <GI>`).
 
 | **dsarch** [:ref:`-(DS|dataset) <DS>`] dNNNNNN [-](CG|ChangeGroup) [:ref:`Mode Options <mode3.3.4>`]
 |            :ref:`-(OG|OriginGroup) <OG>` OriginalGroupIndices
@@ -34,9 +35,9 @@ Available mode options:
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - re-evaluates and resets file counts for the affected groups
 
-Both :ref:`-OG <OG>` (-OriginGroup) and :ref:`-GI <GI>` (-GroupIndex) are required. All Saved and
-Web file records linked to the original indices are updated to the new
-values. The original indices must already exist in GDEXDB.
+Both :ref:`-OG <OG>` (-OriginGroup) and :ref:`-GI <GI>` (-GroupIndex) are required. All Saved
+and Web file records linked to the original indices are updated to
+the new values. The original indices must already exist in GDEXDB.
 
 
 .. _3.3.4_e9:

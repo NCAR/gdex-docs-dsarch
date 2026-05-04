@@ -10,8 +10,9 @@
 Action Option -**SG** (-**SetGroup**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-creates new or updates existing group records in GDEXDB
-for the specified dataset. Multiple records can be processed in one run.
+creates new or updates existing group records in
+GDEXDB for the specified dataset. Multiple records can be processed
+in one run.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SG|SetGroup) [:ref:`Mode Options <mode3.3.1>`]
 |           [:ref:`-(GI|GroupIndex) <GI>` GroupIndices]
@@ -47,15 +48,16 @@ Available mode options:
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - re-evaluates and resets Saved/Web file counts for the affected groups
 
-If the group index already exists in GDEXDB, the record is updated; otherwise
-a new group is created. New groups require a unique index.
+If the group index already exists in GDEXDB, the record is updated;
+otherwise a new group is created. New groups require a unique index.
 
-To create a subgroup, set a parent index via :ref:`-PI <PI>` (-ParentIndex). Groups can
-be nested to any depth. By default, three levels are shown on group list
-webpages; adjust this with :ref:`-GL <GL>` (-GroupLevel) via :ref:`-SD <SD>` (-SetDataset).
+To create a subgroup, set a parent index via :ref:`-PI <PI>` (-ParentIndex).
+Groups can be nested to any depth. By default, three levels are shown
+on group list webpages; adjust this with :ref:`-GL <GL>` (-GroupLevel) via :ref:`-SD <SD>`
+(-SetDataset).
 
-Changing a group's type from P (public) to I (internal) automatically marks
-all its subgroups and associated Saved/Web files as internal too.
+Changing a group's type from P (public) to I (internal) automatically
+marks all its subgroups and associated Saved/Web files as internal too.
 
 
 .. _3.3.1_e6:

@@ -10,9 +10,10 @@
 Action Option -**SH** (-**SetHelpFile**) (Alias: -**SetHelp**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-creates new or updates existing Help
-file records (Documents and Software) in GDEXDB for the specified dataset.
-Multiple records can be processed in a single run.
+creates new or updates
+existing Help file records (Documents and Software) in GDEXDB for
+the specified dataset. Multiple records can be processed in a single
+run.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(SH|SetHelpFile) [:ref:`Mode Options <mode3.4.5>`]
 |           [:ref:`-(HF|HelpFile) <HF>` HelpFileNames]
@@ -57,14 +58,15 @@ Available mode options:
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for Help files and saves them to GDEXDB
 
-Help file names must be provided via :ref:`-HF <HF>` (-HelpFile) unless :ref:`-ON <ON>` (-OrderNames)
-is used to reorder files. The number of values supplied to other :ref:`Info <section5>` options
-must match the number of file names, except for options that accept a single
-shared value, such as :ref:`-AF <AF>`, :ref:`-DF <DF>`, and :ref:`-HT <HT>` (-HelpFileType).
+Help file names must be provided via :ref:`-HF <HF>` (-HelpFile) unless :ref:`-ON <ON>`
+(-OrderNames) is used to reorder files. The number of values supplied
+to other :ref:`Info options <section5>` must match the number of file names, except
+for options that accept a single shared value, such as :ref:`-AF <AF>`, :ref:`-DF <DF>`, and
+:ref:`-HT <HT>` (-HelpFileType).
 
-For remotely hosted Help files (e.g., on GitHub), provide the full URL via
-:ref:`-WU <WU>` (-WebURL) to register the file in GDEXDB without a local copy on the
-GDEX Server.
+For remotely hosted Help files (e.g., on GitHub), provide the full
+URL via :ref:`-WU <WU>` (-WebURL) to register the file in GDEXDB without a local
+copy on the GDEX Server.
 
 
 

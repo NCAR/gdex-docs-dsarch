@@ -10,9 +10,9 @@
 Action Option -**SS** (-**SetSavedFile**) (Alias: -**SetSaved**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-creates new or updates existing
-Saved file records in GDEXDB for the specified dataset. Multiple records
-can be processed in a single run.
+creates new or updates
+existing Saved file records in GDEXDB for the specified dataset.
+Multiple records can be processed in a single run.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SS|SetSavedFile) [:ref:`Mode Options <mode3.4.1>`]
 |           [:ref:`-(SF|SavedFile) <SF>` SavedFileNames]
@@ -63,14 +63,14 @@ Available mode options:
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
 
 Saved file names must be provided via :ref:`-SF <SF>` (-SavedFile) unless :ref:`-ON <ON>`
-(-OrderNames) is used to reorder files. The number of values supplied to
-other :ref:`Info options <section5>` must match the number of file names, except for options
-that accept a single shared value, such as :ref:`-GI <GI>` (-GroupIndex), :ref:`-AF <AF>`
-(-ArchiveFormat), :ref:`-DF <DF>` (-DataFormat), and :ref:`-ST <ST>` (-SavedFileType).
+(-OrderNames) is used to reorder files. The number of values supplied
+to other :ref:`Info options <section5>` must match the number of file names, except for
+options that accept a single shared value, such as :ref:`-GI <GI>` (-GroupIndex),
+:ref:`-AF <AF>` (-ArchiveFormat), :ref:`-DF <DF>` (-DataFormat), and :ref:`-ST <ST>` (-SavedFileType).
 
-If no group index is specified and :ref:`-PO <PO>` (-PatternOffset) is present, file
-names are matched against group patterns saved via :ref:`-SG <SG>` (-SetGroup) to
-determine the group index automatically.
+If no group index is specified and :ref:`-PO <PO>` (-PatternOffset) is present,
+file names are matched against group patterns saved via :ref:`-SG <SG>`
+(-SetGroup) to determine the group index automatically.
 
 
 
