@@ -343,6 +343,16 @@ counts for the dataset and any specified groups. With :ref:`-GD <GD>`
 in the output.
 
 
+.. _WS:
+
+Mode Option -**WS** (-**WithFileSize**) :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+rechecks Web file sizes and timestamps for
+provided web files with :ref:`-WF <WF>` (-WebFile), and updates them into GDEXDB
+This Mode option works with action :ref:`-SW <SW>` (SetWebFile) only.
+
+
 .. _XC:
 
 Mode Option -**XC** (-**CrossCopy**) :

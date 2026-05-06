@@ -232,7 +232,7 @@ whether a background process slot has freed up (see :ref:`-AL <AL>`). Units:
 .. list-table::
    :widths: auto
    :header-rows: 1
- S (seconds), M (minutes), H (hours), D (days) — e.g., ':ref:`-WI <WI>` 5M'. A bare number is treated as seconds.
+ S (seconds), M (minutes), H (hours), D (days) — e.g., '-WI 5M'. A bare number is treated as seconds.
 
 
 

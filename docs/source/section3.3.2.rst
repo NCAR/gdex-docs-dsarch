@@ -95,7 +95,7 @@ index (:ref:`-PI <PI>`). The :ref:`-GN <GN>` option accepts the '%' wildcard.
 
 **EXAMPLE 7. To retrieve the default group fields and file counts for groups 1 and 2 of d260001:**
 
-| **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` :ref:`-GI <GI>` 1 2
+| **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` -GI 1 2
 
 Content of the output:
 
