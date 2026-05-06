@@ -70,6 +70,8 @@ Available mode options:
      - passes options R and S to **gatherxml** for faster processing, used with :ref:`-GX <GX>` (-GatherXML)
    * - :ref:`-(SC|SetChecksum) <SC>`
      - computes MD5 checksums for files on the GDEX Server and saves them to GDEXDB
+   * - :ref:`-(WS|WithFileSize) <WS>`
+     - gathers file size information for Web files on the GDEX Server and saves them to GDEXDB
 
 Web file names must be provided via :ref:`-WF <WF>` (-WebFile) unless :ref:`-ON <ON>`
 (-OrderNames) is used to reorder files. The number of values supplied

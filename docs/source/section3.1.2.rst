@@ -119,7 +119,7 @@ Without it, results are displayed on screen.
 
 **EXAMPLE 2. To retrieve all dataset fields for d260001 and save to a file:**
 
-| **dsarch** d260001 :ref:`GD <GD>` :ref:`-FN <FN>` ALL :ref:`-PE <PE>` :ref:`-OF <OF>` d260001.ds
+| **dsarch** d260001 :ref:`GD <GD>` :ref:`-FN <FN>` ALL :ref:`-PE <PE>` -OF d260001.ds
 
 Content of output file d260001.ds:
 

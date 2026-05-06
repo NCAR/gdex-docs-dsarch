@@ -71,7 +71,7 @@ the CGD data path.
 
 **EXAMPLE 1. To set the UseDSARCH flag, reset file counts and data size, and set the beginning data date for dataset d744004:**
 
-| **dsarch** d744004 :ref:`SD <SD>` :ref:`-WN <WN>` :ref:`-UD <UD>` Y :ref:`-BD <BD>` 1999-07-01
+| **dsarch** d744004 :ref:`SD <SD>` :ref:`-WN <WN>` -UD Y :ref:`-BD <BD>` 1999-07-01
 
 
 

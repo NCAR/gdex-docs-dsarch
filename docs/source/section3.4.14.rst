@@ -74,7 +74,7 @@ or
 
 or
 
-| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(MV|MoveFile) [:ref:`-TS <TS>`|:ref:`-TW <TW>`] [:ref:`Mode Options <mode3.4.14>`]
+| **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN -(MV|MoveFile) [:ref:`-TS <TS>`|-TW] [:ref:`Mode Options <mode3.4.14>`]
 |           [:ref:`-(OD|OriginDataset) <OD>` OriginalDataset]
 |           [:ref:`-(OG|OriginGroup) <OG>` OriginalGroupIndices]
 |           [:ref:`-(WF|WebFile) <WF>` WebFileNames]

@@ -52,7 +52,7 @@ index is auto-generated.
 
 **EXAMPLE 3. To place d999009 under DOI/Version control:**
 
-| **dsarch** d999009 :ref:`SV <SV>` :ref:`-NV <NV>` :ref:`-DN <DN>` DOINumber
+| **dsarch** d999009 :ref:`SV <SV>` :ref:`-NV <NV>` -DN DOINumber
 
 If d999009's data are substantially updated to a new version, run the
 same command with a new DOI number. The previous active record is
