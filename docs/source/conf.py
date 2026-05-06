@@ -6,8 +6,8 @@ project = 'DSARCH Guide'
 copyright = '2026, GDEX@NCAR, https://gdex.ucar.edu/'
 author = 'Zaihua Ji'
 
-release = '0.6'
-version = '1.0.6'
+release = '0.7'
+version = '1.0.7'
 
 # -- General configuration
 
