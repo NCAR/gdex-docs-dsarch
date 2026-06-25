@@ -109,6 +109,16 @@ Only Web data files are placed under DOI/Version control. Saved data
 staged on disk for internal use or NCAR user access is not version-
 controlled and remains the responsibility of the dataset owner.
 
+This user guide is generated from this file. Opening a pull request that
+modifies it in the GitHub repository https://github.com/NCAR/rda-python-dsarch
+triggers an automated workflow that converts it into the RST source files,
+syncs the rda_python_dsarch version into the documentation, and opens a new
+pull request for review in the GitHub repository
+https://github.com/NCAR/gdex-docs-dsarch. Merging that pull request
+publishes the content as the 'latest' version at
+https://gdex-docs-dsarch.readthedocs.io, and creating a GitHub release
+there publishes it as the 'stable' version.
+
 This document first covers general **dsarch** usage, then describes each
 :ref:`Action option <section3>` in detail, followed by :ref:`Mode <section4>` and Information (:ref:`Info <section5>` for
 short) options. Examples are provided throughout each section.
