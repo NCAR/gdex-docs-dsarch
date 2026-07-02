@@ -120,9 +120,12 @@ publishes the user guide as the 'latest' version at
 https://gdex-docs-dsarch.readthedocs.io, and creating a GitHub release
 there publishes it as the 'stable' version.
 
-This document first covers general **dsarch** usage, then describes each
-:ref:`Action option <section3>` in detail, followed by :ref:`Mode <section4>` and Information (:ref:`Info <section5>` for
-short) options. Examples are provided throughout each section.
+The remainder of this document is organized as follows. Section 2 covers
+general usage and conventions. Section 3 describes :ref:`Action options <section3>` grouped
+by what they manipulate (dataset records, DOI/Version controls, groups,
+files, all-information, and webpages). Section 4 lists :ref:`Mode options <section4>` that
+modify how an action behaves. Section 5 lists Information options that
+pass values into an action.
 
 
 

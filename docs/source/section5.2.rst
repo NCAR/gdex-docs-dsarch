@@ -381,24 +381,21 @@ characters; values: up to 128 characters.
 
 Set a pair:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- dsarch d540000 SD :ref:`-KV <KV>` 'test=>test it'
+.. code-block:: none
+
+   dsarch d540000 SD -KV 'test=>test it'
 
 View a specific key:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- dsarch d540000 GD :ref:`-KV <KV>` test
+.. code-block:: none
+
+   dsarch d540000 GD -KV test
 
 View all pairs:
 
-.. list-table::
-   :widths: auto
-   :header-rows: 1
- dsarch d540000 GD :ref:`-KV <KV>` all
+.. code-block:: none
+
+   dsarch d540000 GD -KV all
 
 
 .. _LC:
@@ -550,7 +547,9 @@ Info Option -**QF** (-**QuasarFile**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 the name of the Quasar backup (tar) file,
-required for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).
+required for :ref:`-AQ <AQ>` (-ArchiveQuasarFile).  Give :ref:`-QF <QF>` 0 with :ref:`-DL <DL>`
+(-DeleteFile) to force delete a Web or Saved file that is Quasar
+backed up.
 
 
 .. _QT:
