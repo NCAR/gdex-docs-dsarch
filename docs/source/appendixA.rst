@@ -5,7 +5,7 @@
 Appendix A: List of Examples
 ============================
 
-- :ref:`A.1. Action Option -SD (-SetDataset): To set the UseDSARCH flag, reset file counts and data size, and set the beginning data date for dataset d744004 <3.1.1_e1>`
+- :ref:`A.1. Action Option -SD (-SetDataset): To reset file counts and data size, and set the beginning data date for dataset d744004 <3.1.1_e1>`
 - :ref:`A.2. Action Option -GD (-GetDataset): To retrieve all dataset fields for d260001 and save to a file <3.1.2_e2>`
 - :ref:`A.3. Action Option -SV (-SetVersion): To place d999009 under DOI/Version control <3.2.1_e3>`
 - :ref:`A.4. Action Option -GV (-GetVersion): To retrieve all version control fields for d132000 and save to a file <3.2.2_e4>`

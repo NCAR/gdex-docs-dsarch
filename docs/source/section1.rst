@@ -65,13 +65,6 @@ perform the following major functions:
 * Automatically resume interrupted **dsarch** commands using records in GDEXDB
 * Regenerate filelist and main webpages on demand after dataset changes
 
-The dataset flag :ref:`-UD <UD>` (-UseDSARCH) must be set to at least 'Y' before
-**dsarch** can archive files or write to GDEXDB. This flag also controls
-file list publication: setting it to 'P' or 'W' publishes file lists for
-GDEX Server data files, making them visible in the dataset's user
-interface on the GDEX Web Server. See the :ref:`-SD <SD>` (-SetDataset) action and
-the :ref:`-UD <UD>` (-UseDSARCH) option for details.
-
 When a file is moved and its name or path changes, **dsarch** records the
 new name as the primary entry in GDEXDB and retains the original as a
 linked alias. Both names resolve to the same file for usage tracking.
