@@ -22,12 +22,6 @@ Retrieve a dataset record from GDEXDB:
 
    dsarch d260001 -GD
 
-Set the UseDSARCH flag so the dataset can be archived:
-
-.. code-block:: none
-
-   dsarch d260001 -SD -UD Y
-
 Archive a local file as a Web file:
 
 .. code-block:: none

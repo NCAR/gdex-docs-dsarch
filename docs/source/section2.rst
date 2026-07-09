@@ -32,8 +32,8 @@ because most actions require it. When :ref:`-DS <DS>` is the first argument afte
 **dsarch**, the option name itself may be omitted — just supply the dataset
 number directly.
 
-Many options have an alias for convenience; for example, -UseRDADB is an
-alias for :ref:`-UD <UD>` (-UseDSARCH). Both short and long forms are accepted, and
+Many options have an alias for convenience; for example, -Compress is an
+alias for :ref:`-ZD <ZD>` (-ZipData). Both short and long forms are accepted, and
 aliases are noted with each option.
 
 .. toctree::

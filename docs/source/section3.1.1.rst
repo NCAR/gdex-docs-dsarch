@@ -15,7 +15,6 @@ in GDEXDB — such as paths, file count limits, access flags, and data
 periods.
 
 | **dsarch** [:ref:`-(DS|Dataset) <DS>`] dNNNNNN [-](SD|SetDataset) [:ref:`Mode Options <mode3.1.1>`]
-|           [:ref:`-(UD|UseDSARCH) <UD>` UseDSARCHFlag]
 |           [:ref:`-(LC|Location) <LC>` AccessLocationFlag]
 |           [:ref:`-(BF|BackupFlag) <BF>` QuasarBackupFlag]
 |           [:ref:`-(DA|AccessFlag) <DA>` DataAccessFlags]
@@ -56,10 +55,11 @@ Available mode options:
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - re-evaluates and resets file counts
 
-Dataset numbers are normally created via the Metadata Manager. Action
-:ref:`-SD <SD>` modifies the dataset record and any associated group data
-periods. Data periods for groups can be modified in **dsarch**, but
-must be created or removed through Metadata Manager.
+Dataset numbers are created via the Metadata Manager, not **dsarch**.
+Action :ref:`-SD <SD>` only modifies an existing dataset record and its associated
+group data periods; if no dataset record exists, :ref:`-SD <SD>` makes no change to
+it. Data periods for groups can be modified in **dsarch**, but the groups
+themselves must be created or removed through the Metadata Manager.
 
 The web file access location flag is set via :ref:`-LC <LC>` (-Location). The
 default is 'G' (Glade Disk) when any web data files exist. The default
@@ -69,9 +69,9 @@ the CGD data path.
 
 .. _3.1.1_e1:
 
-**EXAMPLE 1. To set the UseDSARCH flag, reset file counts and data size, and set the beginning data date for dataset d744004:**
+**EXAMPLE 1. To reset file counts and data size, and set the beginning data date for dataset d744004:**
 
-| **dsarch** d744004 :ref:`SD <SD>` :ref:`-WN <WN>` -UD Y :ref:`-BD <BD>` 1999-07-01
+| **dsarch** d744004 :ref:`SD <SD>` :ref:`-WN <WN>` -BD 1999-07-01
 
 
 

@@ -183,34 +183,6 @@ when running **dsarch** as a PBS batch job. Quote the value on the
 command line, e.g., :ref:`-QS <QS>` '-l walltime=12:00:00'.
 
 
-.. _UD:
-
-Info Option -**UD** (-**UseDSARCH**) (Alias: -**UseRDADB**) :
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-the gating flag that
-controls **dsarch** access to a dataset. Set via :ref:`-SD <SD>` (-SetDataset).
-Values:
-
-.. list-table::
-   :widths: auto
-   :header-rows: 0
-
-   * - 'N'
-     - disabled (default; blocks all **dsarch** writes)
-   * - 'Y'
-     - enabled for modification
-   * - 'I'
-     - enabled for internal users only
-   * - 'P'
-     - enabled and file lists are published publicly
-   * - 'W'
-     - file list publication only
-
-Any value except 'N' must be set before **dsarch** can write to
-GDEXDB.
-
-
 .. _VS:
 
 Info Option -**VS** (-**ValidSize**) :

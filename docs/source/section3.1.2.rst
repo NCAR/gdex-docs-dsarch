@@ -33,7 +33,7 @@ Available mode options:
      - gathers and displays Saved/Web file counts
 
 Use :ref:`-FN <FN>` (-FieldNames) to select which dataset fields to include.
-Defaults to 'SWFULQ'. Use :ref:`-FN <FN>` ALL to retrieve every available field.
+Defaults to 'SWFLQA'. Use :ref:`-FN <FN>` ALL to retrieve every available field.
 
 Valid dataset field names and their corresponding :ref:`Info options <section5>`:
 
@@ -59,9 +59,6 @@ Valid dataset field names and their corresponding :ref:`Info options <section5>`
    * - F
      - :ref:`-(DF|DataFormat) <DF>`
      - default data content format
-   * - U
-     - :ref:`-(UD|UseDSARCH) <UD>`
-     - use DSARCH flag
    * - L
      - :ref:`-(LC|Location) <LC>`
      - Online web file access location flags
@@ -131,7 +128,6 @@ Content of output file d260001.ds:
  WebPath<=>
  Location<=>G
  DataFormat<=>
- UseDSARCH<=>P
  GroupLevel<=>3
  FileLimit<=>500
  ButtonLimit<=>2
