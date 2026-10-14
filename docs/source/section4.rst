@@ -339,8 +339,9 @@ Mode Option -**WN** (-**WithFileNumber**) (Alias: -**WithNumber**) :
 
 recomputes and updates Saved/Web file
 counts for the dataset and any specified groups. With :ref:`-GD <GD>`
-(-GetDataset), the counts are calculated on the fly and included
-in the output.
+(-GetDataset) or :ref:`-GG <GG>` (-GetGroup), shows the Web/Saved file numbers
+of the dataset or each group, and checks their files as described
+below.
 
 
 .. _WS:
@@ -350,7 +351,16 @@ Mode Option -**WS** (-**WithFileSize**) :
 
 rechecks Web file sizes and timestamps for
 provided web files with :ref:`-WF <WF>` (-WebFile), and updates them into GDEXDB
-This Mode option works with action :ref:`-SW <SW>` (SetWebFile) only.
+with action :ref:`-SW <SW>` (SetWebFile). With :ref:`-GD <GD>` (-GetDataset) or :ref:`-GG <GG>`
+(-GetGroup), shows the Web/Saved file sizes of the dataset or each
+group, and checks their files as described below.
+
+With :ref:`-GD <GD>`/-GG, either :ref:`-WN <WN>` or :ref:`-WS <WS>` also checks every Web and Saved file
+(including the files of sub groups for a group) that is not deleted:
+
+* a file with Location Flag G or B must exist on Glade, and one with Location Flag O or B on Boreas (object store);
+* a Saved file on Glade (Location Flag G or B) is looked for in COLD_STORAGE, <decsdata>/COLD_STORAGE/<dsid> or <decsdata>/cold_storage_<YYYYMMDD>/COLD_STORAGE/<dsid>, and is counted as In COLD_STORAGE whether or not it is on Glade too;
+* its Quasar backup, by the backup file (bfile) of its Backup ID: type B for Quasar Backup, type D for Quasar Backup & Disaster Recovery, counted once the backup file status is A; Pending when it is not, and Not Backed Up when it has no Backup ID. Files with Location Flag C (CGD) or R (remote) are not stored by GDEX and are not checked. One summary line per file category shows the file counts with :ref:`-WN <WN>` and the total file sizes with :ref:`-WS <WS>` (both as Count(Size) when both options are given): the Total, the total Missing (each file counted once; a Saved file found in COLD_STORAGE is not missing), Missing but on Quasar (missing files that can still be restored from a finished Quasar backup with action :ref:`-RQ <RQ>`, so Missing minus it is what is lost), then the result of each check. It is followed by one line for every file missing or not backed up yet; the line of a missing file also tells its Quasar backup, or that it is not backed up.
 
 
 .. _XC:

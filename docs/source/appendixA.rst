@@ -11,7 +11,7 @@ Appendix A: List of Examples
 - :ref:`A.4. Action Option -GV (-GetVersion): To retrieve all version control fields for d132000 and save to a file <3.2.2_e4>`
 - :ref:`A.5. Action Option -TV (-TerminateVersion): To terminate version index 5 of d999009 <3.2.3_e5>`
 - :ref:`A.6. Action Option -SG (-SetGroup): To set multiple group records for d744004 using an input file <3.3.1_e6>`
-- :ref:`A.7. Action Option -GG (-GetGroup): To retrieve the default group fields and file counts for groups 1 and 2 of d260001 <3.3.2_e7>`
+- :ref:`A.7. Action Option -GG (-GetGroup): To retrieve the default group fields, the file numbers and sizes, and the storage and Quasar backup checks for groups 1 and 2 of d260001 <3.3.2_e7>`
 - :ref:`A.8. Action Option -DG (-DeleteGroup): To delete group indices 2 and 3 of d744004 <3.3.3_e8>`
 - :ref:`A.9. Action Option -CG (-ChangeGroup): To reassign group indices 1 and 2 to 2 and 3 for d744004 <3.3.4_e9>`
 - :ref:`A.10. Action Option -GW (-GetWebFile): To retrieve the default Web file fields for d540000, filtered to Data type and file names containing '200' <3.4.4_e10>`

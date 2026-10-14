@@ -93,9 +93,9 @@ index (:ref:`-PI <PI>`). The :ref:`-GN <GN>` option accepts the '%' wildcard.
 
 .. _3.3.2_e7:
 
-**EXAMPLE 7. To retrieve the default group fields and file counts for groups 1 and 2 of d260001:**
+**EXAMPLE 7. To retrieve the default group fields, the file numbers and sizes, and the storage and Quasar backup checks for groups 1 and 2 of d260001:**
 
-| **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` -GI 1 2
+| **dsarch** d260001 :ref:`GG <GG>` :ref:`-WN <WN>` -WS :ref:`-GI <GI>` 1 2
 
 Content of the output:
 
@@ -107,7 +107,13 @@ Content of the output:
  2<:>MONTHLY<:>0<:>MONTHLY OAFlux Products<:><:>P<:><:>monthly<:>
  2 group records retrieved
  d260001-G1: DS-11094192261 DC-327 WC-327 SS-8909173908 SC-51
+ d260001-G1 Web Files: Total 327(11094192261), Missing 0(0), Quasar Backup&DR 327(11094192261)
+ d260001-G1 Saved Files: Total 51(8909173908), Missing 0(0), Quasar Backup&DR 51(8909173908)
  d260001-G2: DS-552780725 DC-522 WC-522 SS-465789806 SC-51
+ d260001-G2 Web Files: Total 522(552780725), Missing 2(2116424), Missing but on Quasar 1(1058212), Missing on Glade 2(2116424), Quasar Backup&DR 521(551722513), Not Backed Up 1(1058212)
+ d260001-G2-W-D: monthly/2025/oaflux_202511.nc: Missing on Glade; on Quasar Backup&DR (Backup ID 3456789)
+ d260001-G2-W-D: monthly/2025/oaflux_202512.nc: Missing on Glade; Not Backed Up
+ d260001-G2 Saved Files: Total 51(465789806), Missing 0(0), Quasar Backup&DR 51(465789806)
 
 
 
