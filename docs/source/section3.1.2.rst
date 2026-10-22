@@ -29,6 +29,8 @@ Available mode options:
      - formats each column to a uniform fixed width
    * - :ref:`-(PE|ShowPeriod) <PE>`
      - includes associated period information for the dataset and any groups
+   * - :ref:`-(SO|ShowOwner) <SO>`
+     - includes the dataset owners (specialists) and their priorities, 1 for the primary specialist
    * - :ref:`-(WN|WithFileNumber) <WN>`
      - gathers and displays Saved/Web file counts
 

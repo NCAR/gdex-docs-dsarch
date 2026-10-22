@@ -262,6 +262,18 @@ the GDEX Server and stores them in GDEXDB for integrity
 verification.
 
 
+.. _SO:
+
+Mode Option -**SO** (-**ShowOwner**) (Aliases: -**ShowOwners**, -**ShowSpecialist**, -**ShowSpecialists**) :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+(Alias: -ShowOwners|-ShowSpecialist|-ShowSpecialists),
+adds the dataset owners from dsowner to the output of :ref:`-GD <GD>`
+(-GetDataset): login name, priority (1 = primary specialist) and
+name. The lines are written as comments starting with '#', so the
+output can still be read back with :ref:`-IF <IF>`.
+
+
 .. _TO:
 
 Mode Option -**TO** (-**TarOnly**) :
