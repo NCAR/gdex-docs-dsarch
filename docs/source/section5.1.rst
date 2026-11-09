@@ -13,9 +13,18 @@ value or more than one causes an error.
 Info Option -**AL** (-**AsyncLimit**) (Alias: -**AsynchronousLimit**) :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-caps the number of
-simultaneous background processes spawned for 'cp' and **gatherxml**
-calls. Has no effect when running as a PBS batch job.
+the number of
+processes that run at the same time. For :ref:`-AW <AW>`, :ref:`-AH <AH>` and :ref:`-AS <AS>` (also with
+:ref:`-XC <XC>`/-XM, and :ref:`-AQ <AQ>` -XC) and for :ref:`-MV <MV>` (also with :ref:`-TS <TS>`/-TW), up to this
+many child processes copy, cross copy or move the files in a first
+pass; a second pass then checks each one, redoes any that failed,
+deletes the sources of a cross move (:ref:`-XM <XM>`), and sets the file records
+as usual. It also caps the **gatherxml** and **dcm** calls run in the
+background, such as for :ref:`-GX <GX>` with :ref:`-AW <AW>` or :ref:`-SW <SW>`. Other actions, such as
+:ref:`-SS <SS>`, run one process and ignore it. Works with :ref:`-BP <BP>` (-d) too: when
+the action can use it, the PBS batch job gets one cpu and 1gb of
+memory per process (select=1:ncpus=N:mem=Ngb) unless :ref:`-QS <QS>` already
+requests select, ncpus or mem.
 
 
 .. _AO:
@@ -180,7 +189,9 @@ Info Option -**QS** (-**QsubOptions**) (Alias: -**PBSOptions**) :
 
 passes options to qsub
 when running **dsarch** as a PBS batch job. Quote the value on the
-command line, e.g., :ref:`-QS <QS>` '-l walltime=12:00:00'.
+command line, e.g., :ref:`-QS <QS>` '-l walltime=12:00:00'. With :ref:`-AL <AL>` N (N > 1),
+'select=1:ncpus=N:mem=Ngb' is added to these options unless they
+already request select, ncpus or mem.
 
 
 .. _VS:
