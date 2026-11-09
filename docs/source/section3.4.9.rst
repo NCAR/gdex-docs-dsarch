@@ -64,7 +64,7 @@ Available mode options:
    * - :ref:`-(NT|NoTrim) <NT>`
      - skips trimming of spaces and comments from input values, speeding up input file processing
    * - :ref:`-(OE|OverrideExist) <OE>`
-     - overwrites existing Saved files
+     - overwrites existing Saved files, even ones of the same size
    * - :ref:`-(RO|ResetOrder) <RO>`
      - resets display order indices to match the order files are given per :ref:`-SF <SF>`. Alternatively, use :ref:`-ON <ON>` (-OrderNames) to reorder all files in the dataset and affected groups
    * - :ref:`-(SC|SetChecksum) <SC>`

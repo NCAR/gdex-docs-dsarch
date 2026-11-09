@@ -80,7 +80,7 @@ defers execution:
 .. list-table::
    :widths: auto
    :header-rows: 1
- the command is written to GDEXDB and run later by the `dscheck <https://gdex-docs-dscheck.readthedocs.io>`_ daemon. One or more host names may follow :ref:`-BP <BP>` to target or exclude specific hosts (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99) can also be specified, e.g., '-d 5'; defaults to 2. Archive actions (:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-AH <AH>`, :ref:`-AQ <AQ>`) retry automatically after storage system outage.
+ the command is written to GDEXDB and run later by the `dscheck <https://gdex-docs-dscheck.readthedocs.io>`_ daemon. One or more host names may follow :ref:`-BP <BP>` to target or exclude specific hosts (e.g., '-d PBS' to use PBS batch hosts). An optional retry limit (1-99) can also be specified, e.g., '-d 5'; defaults to 2. Archive actions (:ref:`-AS <AS>`, :ref:`-AW <AW>`, :ref:`-AH <AH>`, :ref:`-AQ <AQ>`) retry automatically after storage system outage. Add :ref:`-AL <AL>` N to run the batch job with N parallel copies and a matching PBS cpu/memory request, e.g., '-d :ref:`-AL <AL>` 4'.
 
 
 .. _BS:
